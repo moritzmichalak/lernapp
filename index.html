@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lernumgebung mit Levels</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <h1>Lernumgebung: Level <span id="levelDisplay">1</span></h1>
+    <p>Punkte: <span id="punkteDisplay">0</span></p>
+
+    <h2>Fortschritt</h2>
+    <div id="progressContainer">
+        <div id="progressBar"></div>
+    </div>
+
+    <label for="schuelerSelect">Wähle deine ID:</label>
+    <select id="schuelerSelect">
+        <option value="">-- Bitte auswählen --</option>
+        <option value="Schueler-1">Schueler-1</option>
+        <option value="Schueler-2">Schueler-2</option>
+        <!-- ... -->
+        <option value="Schueler-20">Schueler-20</option>
+    </select>
+
+    <div class="sentence" id="sentence"></div>
+
+    <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <span>Hier ablegen</span>
+    </div>
+
+    <div class="words" id="words"></div>
+
+    <button onclick="checkAnswer()">Antwort prüfen</button>
+    <button id="nextLevelBtn" onclick="naechstesLevel()" style="display:none;">Weiter zum nächsten Level</button>
+
+    <p id="feedback"></p>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+
+    <!-- Deine Logik -->
+    <script src="script.js"></script>
+</body>
+</html>
