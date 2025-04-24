@@ -31,9 +31,13 @@ function ladeLevel() {
     
     const wordsDiv = document.getElementById('words');
     wordsDiv.innerHTML = "";
+    /*
     aufgabe.woerter.forEach((wort, index) => {
         wordsDiv.innerHTML += `<div class="word" draggable="true" ondragstart="drag(event)" id="word${index}">${wort}</div>`;
-    });
+    */
+    aufgabe.woerter.forEach((wort, index) => {
+        wordsDiv.innerHTML += `<div class="word" onclick="wordClick(event)" id="word${index}">${wort}</div>`;
+        });
 
     document.querySelector('.dropzone').innerHTML = "<span>Hier ablegen</span>";
     updateProgressBar();
@@ -47,7 +51,7 @@ function updateProgressBar() {
     progressBar.style.width = progressPercent + "%";
     progressBar.innerText = Math.round(progressPercent) + "%";
 }
-
+/*
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -62,6 +66,12 @@ function drop(ev) {
     var word = document.getElementById(data);
     ev.target.innerHTML = "";
     ev.target.appendChild(word);
+}
+*/
+function wordClick(event) {
+    const dropzone = document.querySelector('.dropzone');
+    dropzone.innerHTML = "";
+    dropzone.appendChild(event.target);
 }
 
 function checkAnswer() {
