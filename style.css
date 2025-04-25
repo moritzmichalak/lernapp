@@ -37,8 +37,8 @@ body {
     padding: 1px 1px;              /* Wenig Innenabstand */
     border: 2px dashed #aaa;       /* Dezente Umrandung */
     border-radius: 6px;
-    min-width: 50px;               /* Mindestgröße, falls leer */
-    min-height: 30px;
+    min-width: 20px;               /* Mindestgröße, falls leer */
+    min-height: 10px;
     margin: 0 5px;
     cursor: pointer;
     transition: border 0.3s;
