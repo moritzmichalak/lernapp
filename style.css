@@ -12,15 +12,22 @@ body {
 }
 
 .dropzone {
-    margin: 20px auto;
-    width: 200px;
-    height: 50px;
-    border: 2px dashed #4caf50;
-    border-radius: 8px;
-    line-height: 50px;
-    background-color: #f0fff0;
+    display: inline-block;
+    min-width: 100px;
+    min-height: 30px;
+    border: 2px dashed #aaa;
+    border-radius: 6px;
+    margin: 0 5px;
+    vertical-align: middle;
+    text-align: center;
+    padding: 4px;
+    cursor: pointer;
 }
 
+.dropzone .placeholder {
+    color: #ccc;
+    font-style: italic;
+}
 .words {
     display: flex;
     justify-content: center;

@@ -71,9 +71,14 @@ let punkte = 0;
 
 function ladeLevel() {
     const aufgabe = aufgaben[aktuellesLevel - 1];
+    const luecke = `<span class="dropzone"><span class="placeholder">...</span></span>`;
+    const satzMitLuecke = aufgabe.satz.replace("___", luecke);
+    document.getElementById('sentence').innerHTML = satzMitLuecke;
     document.getElementById('levelDisplay').innerText = aktuellesLevel;
     document.getElementById('punkteDisplay').innerText = punkte;
+    /*
     document.getElementById('sentence').innerText = aufgabe.satz;
+    */
     document.getElementById('feedback').innerText = "";
     document.getElementById('nextLevelBtn').style.display = "none";
 
