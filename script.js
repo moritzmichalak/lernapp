@@ -3,6 +3,7 @@ let schuelerId = "";
 
 // Auth-Check und Start der Lernumgebung
 firebase.auth().onAuthStateChanged(function(user) {
+    console.log("Auth-Zustand geprüft:", user);
     if (user) {
         const email = user.email;
         schuelerId = email.split('@')[0];
@@ -12,7 +13,9 @@ firebase.auth().onAuthStateChanged(function(user) {
         ladeLevel();
     } else {
         console.log("Kein User eingeloggt, Weiterleitung...");
+        /*
         window.location.href = "index.html";
+        */
     }
 });
 
