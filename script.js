@@ -121,7 +121,7 @@ function checkAnswer() {
         const richtigeAntwort = aufgaben[aktuellesLevel - 1].korrekt;
 
         if (droppedWord === richtigeAntwort) {
-            dropzone.style.border: 2px solid #4caf50;
+            dropzone.style.border: "2px solid #4caf50";
             feedback.innerText = "✅ Richtig! Du bekommst 10 Punkte!";
             punkte += 10;
 
@@ -155,7 +155,7 @@ function checkAnswer() {
 
         } else {
             feedback.innerText = "❌ Leider falsch. Versuch es nochmal.";
-            dropzone.style.border: 2px solid #FF0000;
+            dropzone.style.border: "2px solid #FF0000";
             db.collection("antworten").add({
                 schuelerId: schuelerId,
                 level: aktuellesLevel,
