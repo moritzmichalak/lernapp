@@ -31,7 +31,7 @@ body {
     */
 
 .dropzone {
-    display: inline-flex;          /* Flexibles Inline-Element */
+    display: inline-block;          /* Flexibles Inline-Element */
     align-items: center;           /* Vertikale Zentrierung */
     justify-content: center;       /* Horizontale Zentrierung */
     padding: 1px 1px;              /* Wenig Innenabstand */
