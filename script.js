@@ -1,12 +1,20 @@
-// Firebase initialisieren
-const firebaseConfig = {
-    apiKey: "DEIN_API_KEY",
-    authDomain: "DEIN_AUTH_DOMAIN",
-    projectId: "DEIN_PROJECT_ID"
-};
-
-firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
+let schuelerId = "";
+
+// Auth-Check und Start der Lernumgebung
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        const email = user.email;
+        schuelerId = email.split('@')[0];
+        document.getElementById('userInfo').innerText = "Eingeloggt als: " + schuelerId;
+
+        // Starte erst jetzt die Lernumgebung
+        ladeLevel();
+    } else {
+        console.log("Kein User eingeloggt, Weiterleitung...");
+        window.location.href = "index.html";
+    }
+});
 
 const aufgaben = [
     { satz: "Ich ___ gerne ein Buch.", woerter: ["lese", "renne", "trinke"], korrekt: "lese" },
@@ -23,26 +31,18 @@ function ladeLevel() {
     document.getElementById('punkteDisplay').innerText = punkte;
     document.getElementById('sentence').innerText = aufgabe.satz;
     document.getElementById('feedback').innerText = "";
-    
-    // 👉 Nur ausblenden, wenn es wirklich ein neues Level ist
-    if (aktuellesLevel <= aufgaben.length) {
-        document.getElementById('nextLevelBtn').style.display = "none";
-    }
-    
+    document.getElementById('nextLevelBtn').style.display = "none";
+
     const wordsDiv = document.getElementById('words');
     wordsDiv.innerHTML = "";
-    /*
-    aufgabe.woerter.forEach((wort, index) => {
-        wordsDiv.innerHTML += `<div class="word" draggable="true" ondragstart="drag(event)" id="word${index}">${wort}</div>`;
-    */
+
     aufgabe.woerter.forEach((wort, index) => {
         wordsDiv.innerHTML += `<div class="word" onclick="wordClick(event)" id="word${index}">${wort}</div>`;
-        });
+    });
 
     document.querySelector('.dropzone').innerHTML = "<span>Hier ablegen</span>";
     updateProgressBar();
 }
-
 
 function updateProgressBar() {
     const totalLevels = aufgaben.length;
@@ -51,23 +51,7 @@ function updateProgressBar() {
     progressBar.style.width = progressPercent + "%";
     progressBar.innerText = Math.round(progressPercent) + "%";
 }
-/*
-function allowDrop(ev) {
-    ev.preventDefault();
-}
 
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    var word = document.getElementById(data);
-    ev.target.innerHTML = "";
-    ev.target.appendChild(word);
-}
-*/
 function wordClick(event) {
     const dropzone = document.querySelector('.dropzone');
     dropzone.innerHTML = "";
@@ -75,12 +59,11 @@ function wordClick(event) {
 }
 
 function checkAnswer() {
-    const schuelerId = document.getElementById('schuelerSelect').value;
     const dropzone = document.querySelector('.dropzone');
     const feedback = document.getElementById('feedback');
 
     if (!schuelerId) {
-        feedback.innerText = "⚠️ Bitte wähle deine Schüler-ID aus.";
+        feedback.innerText = "⚠️ Keine Schüler-ID gefunden.";
         return;
     }
 
@@ -102,18 +85,15 @@ function checkAnswer() {
                 timestamp: new Date()
             });
 
-            const progressBar = document.getElementById('progressBar');
-
             if (aktuellesLevel < aufgaben.length) {
-                console.log("Button sollte jetzt sichtbar sein!");
                 document.getElementById('nextLevelBtn').style.display = "inline-block";
             } else {
                 feedback.innerText += " 🎉 Du hast alle Level geschafft!";
+                const progressBar = document.getElementById('progressBar');
                 progressBar.style.width = "100%";
                 progressBar.innerText = "100%";
                 progressBar.classList.add("full");
 
-                // 🎊 Konfetti
                 if (typeof confetti === "function") {
                     confetti({
                         particleCount: 150,
@@ -139,7 +119,7 @@ function checkAnswer() {
         document.getElementById('punkteDisplay').innerText = punkte;
 
     } else {
-        feedback.innerText = "Bitte ziehe ein Wort in die Lücke.";
+        feedback.innerText = "Bitte wähle ein Wort aus.";
     }
 }
 
@@ -150,5 +130,10 @@ function naechstesLevel() {
     }
 }
 
-// Initialisierung
-window.onload = ladeLevel;
+function logout() {
+    firebase.auth().signOut().then(() => {
+        window.location.href = "index.html";
+    }).catch((error) => {
+        alert("Fehler beim Logout: " + error.message);
+    });
+}
