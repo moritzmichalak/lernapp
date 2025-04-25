@@ -18,6 +18,12 @@ firebase.auth().onAuthStateChanged(function(user) {
         console.log("Kein User eingeloggt, Weiterleitung...");
         window.location.href = "index.html";
         */
+        if (firebase.auth().currentUser  && firebase.auth().currentUser.email) {
+            console.log("User doch gefunden!");
+        } else {
+            window.location.href = "index.html";
+        }
+        /*
         console.log("⚠️ Kein User erkannt. Warte 300ms vor Weiterleitung...");
         setTimeout(() => {
             if (firebase.auth().currentUser  && firebase.auth().currentUser.email) {
@@ -26,6 +32,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                 window.location.href = "index.html";
             }
         }, 300);
+        */
     }
 });
 
