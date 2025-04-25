@@ -4,8 +4,8 @@ let schuelerId = "";
 // Auth-Check und Start der Lernumgebung
 firebase.auth().onAuthStateChanged(function(user) {
     console.log("Auth-Zustand geprüft:", user);
-    if (user) {
-        console.log("Das klappt :)");
+    if (user && user.email) {
+        console.log("Das klappt :)", user.email);
         const email = user.email;
         schuelerId = email.split('@')[0];
         document.getElementById('userInfo').innerText = "Eingeloggt als: " + schuelerId;
@@ -20,7 +20,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         */
         console.log("⚠️ Kein User erkannt. Warte 300ms vor Weiterleitung...");
         setTimeout(() => {
-            if (firebase.auth().currentUser) {
+            if (firebase.auth().currentUser  && firebase.auth().currentUser.email) {
                 console.log("User doch gefunden!");
             } else {
                 window.location.href = "index.html";
