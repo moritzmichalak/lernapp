@@ -34,7 +34,7 @@ body {
     display: inline-flex;          /* Flexibles Inline-Element */
     align-items: center;           /* Vertikale Zentrierung */
     justify-content: center;       /* Horizontale Zentrierung */
-    padding: 4px 8px;              /* Wenig Innenabstand */
+    padding: 1px 1px;              /* Wenig Innenabstand */
     border: 2px dashed #aaa;       /* Dezente Umrandung */
     border-radius: 6px;
     min-width: 50px;               /* Mindestgröße, falls leer */
