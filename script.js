@@ -5,7 +5,9 @@ let schuelerId = "";
 firebase.auth().onAuthStateChanged(function(user) {
     console.log("Auth-Zustand geprüft:", user);
     if (user) {
+        /*
         console.log("Das klappt, hier die Daten zum User: ", user);
+        */
         const email = user.email;
         schuelerId = email.split('@')[0];
         document.getElementById('userInfo').innerText = "Eingeloggt als: " + schuelerId;
@@ -19,7 +21,11 @@ firebase.auth().onAuthStateChanged(function(user) {
         */
         console.log("⚠️ Kein User erkannt. Warte 300ms vor Weiterleitung...");
         setTimeout(() => {
-            firebase.auth().currentUser ? console.log("User doch gefunden!") : window.location.href = "index.html";
+            if (firebase.auth().currentUser) {
+                console.log("User doch gefunden!");
+            } else {
+                window.location.href = "index.html";
+            }
         }, 300);
     }
 });
