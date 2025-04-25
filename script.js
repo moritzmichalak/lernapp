@@ -36,11 +36,35 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
 });
 
+/*
 const aufgaben = [
     { satz: "Ich ___ gerne ein Buch.", woerter: ["lese", "renne", "trinke"], korrekt: "lese" },
     { satz: "Du ___ Fußball im Park.", woerter: ["spielst", "isst", "schläfst"], korrekt: "spielst" },
     { satz: "Wir ___ einen Kuchen.", woerter: ["backen", "fahren", "laufen"], korrekt: "backen" }
 ];
+*/
+
+// Hole das Thema aus der URL
+const urlParams = new URLSearchParams(window.location.search);
+const thema = urlParams.get('thema');
+
+// Definiere die Aufgaben je nach Thema
+let aufgaben = [];
+
+if (thema === "subjonctif") {
+    aufgaben = [
+        { satz: "Il faut que tu ___ (faire) tes devoirs.", woerter: ["fasses", "fait", "fera"], korrekt: "fasses" },
+        { satz: "Bien que nous ___ (être) fatigués, nous continuons.", woerter: ["soyons", "sommes", "sera"], korrekt: "soyons" }
+    ];
+} else if (thema === "conditionnel") {
+    aufgaben = [
+        { satz: "Si j'étais riche, je ___ (acheter) une maison.", woerter: ["achèterais", "achète", "acheterai"], korrekt: "achèterais" },
+        { satz: "Nous ___ (vouloir) voyager plus.", woerter: ["voudrions", "voulons", "voudrons"], korrekt: "voudrions" }
+    ];
+} else {
+    alert("Kein gültiges Thema gewählt. Du wirst zur Themenwahl zurückgeleitet.");
+    window.location.href = "themenwahl.html";
+}
 
 let aktuellesLevel = 1;
 let punkte = 0;
