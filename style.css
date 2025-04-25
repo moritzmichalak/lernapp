@@ -10,7 +10,7 @@ body {
     font-size: 24px;
     margin: 20px 0;
 }
-
+/*
 .dropzone {
     display: inline-block;
     min-width: 100px;
@@ -28,6 +28,28 @@ body {
     color: #ccc;
     font-style: italic;
 }
+    */
+
+.dropzone {
+    display: inline-flex;          /* Flexibles Inline-Element */
+    align-items: center;           /* Vertikale Zentrierung */
+    justify-content: center;       /* Horizontale Zentrierung */
+    padding: 4px 8px;              /* Wenig Innenabstand */
+    border: 2px dashed #aaa;       /* Dezente Umrandung */
+    border-radius: 6px;
+    min-width: 50px;               /* Mindestgröße, falls leer */
+    min-height: 30px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+.dropzone .placeholder {
+    color: #ccc;
+    font-style: italic;
+    font-size: 14px;
+}
+
 .words {
     display: flex;
     justify-content: center;
