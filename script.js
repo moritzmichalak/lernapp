@@ -181,3 +181,8 @@ function logout() {
         alert("Fehler beim Logout: " + error.message);
     });
 }
+
+function zurueckThemenwahl() {
+    window.location.href = "themenwahl.html";
+}
+
