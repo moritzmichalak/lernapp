@@ -14,7 +14,9 @@ firebase.auth().onAuthStateChanged(function(user) {
         ladeLevel();
     } else {
         console.log("Kein User eingeloggt, Weiterleitung...");
+        /*
         window.location.href = "index.html";
+        */
     }
 });
 
