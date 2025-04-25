@@ -13,10 +13,14 @@ firebase.auth().onAuthStateChanged(function(user) {
         // Starte erst jetzt die Lernumgebung
         ladeLevel();
     } else {
-        console.log("Kein User eingeloggt, Weiterleitung...");
         /*
+        console.log("Kein User eingeloggt, Weiterleitung...");
         window.location.href = "index.html";
         */
+        console.log("⚠️ Kein User erkannt. Warte 300ms vor Weiterleitung...");
+        setTimeout(() => {
+            firebase.auth().currentUser ? console.log("User doch gefunden!") : window.location.href = "index.html";
+        }, 300);
     }
 });
 
