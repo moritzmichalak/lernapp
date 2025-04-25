@@ -3,7 +3,7 @@ let schuelerId = "";
 
 // Auth-Check und Start der Lernumgebung
 firebase.auth().onAuthStateChanged(function(user) {
-    console.log("Auth-Zustand geprüft:", user);
+    console.log("Auth-Zustand geprüft:", user.email);
     if (user) {
         console.log("Das klappt :)");
         const email = user.email;
