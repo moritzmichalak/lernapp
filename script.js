@@ -5,7 +5,7 @@ let schuelerId = "";
 firebase.auth().onAuthStateChanged(function(user) {
     console.log("Auth-Zustand geprüft:", user);
     if (user && user.email) {
-        console.log("Das klappt :)", user.email);
+        console.log("✅ Eingeloggt als:", user.email);
         const email = user.email;
         schuelerId = email.split('@')[0];
         document.getElementById('userInfo').innerText = "Eingeloggt als: " + schuelerId;
