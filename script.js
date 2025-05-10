@@ -11,7 +11,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         document.getElementById('userInfo').innerText = "Eingeloggt als: " + schuelerId;
 
         // Starte erst jetzt die Lernumgebung
-        ladeLevel();
+        // ladeLevel();
     } else {
         console.log("Erstmal kein User erkannt");
         /*
@@ -147,6 +147,15 @@ function checkAnswer() {
                 aufgabe: aufgaben[aktuellesLevel - 1].satz,
                 antwort: droppedWord,
                 korrekt: true,
+                punkte: punkte,
+                timestamp: new Date()
+            });
+
+                        // HIER das neue Stück einfügen 👇
+            db.collection("lernstaende").doc(`${schuelerId}_${thema}`).set({
+                schuelerId: schuelerId,
+                thema: thema,
+                aktuellesLevel: aktuellesLevel,
                 punkte: punkte,
                 timestamp: new Date()
             });
