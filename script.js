@@ -12,6 +12,20 @@ firebase.auth().onAuthStateChanged(function(user) {
 
         // Starte erst jetzt die Lernumgebung
         // ladeLevel();
+        // Jetzt erst Lernstand laden!
+        db.collection("lernstaende").doc(`${schuelerId}_${thema}`).get().then((doc) => {
+            if (doc.exists) {
+                const data = doc.data();
+                console.log("Gefundener Lernstand:", data);
+                aktuellesLevel = data.aktuellesLevel;
+                punkte = data.punkte;
+            } else {
+                console.log("Kein gespeicherter Lernstand für dieses Thema gefunden.");
+                aktuellesLevel = 1;
+                punkte = 0;
+            }
+            ladeLevel();
+        });
     } else {
         console.log("Erstmal kein User erkannt");
         /*
@@ -151,7 +165,7 @@ function checkAnswer() {
                 timestamp: new Date()
             });
 
-                        // HIER das neue Stück einfügen 👇
+            // HIER das neue Stück einfügen 👇
             db.collection("lernstaende").doc(`${schuelerId}_${thema}`).set({
                 schuelerId: schuelerId,
                 thema: thema,
