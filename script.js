@@ -66,8 +66,24 @@ if (thema === "subjonctif") {
     window.location.href = "themenwahl.html";
 }
 
+/*
 let aktuellesLevel = 1;
 let punkte = 0;
+*/
+// Lernstand laden
+db.collection("lernstaende").doc(`${schuelerId}_${thema}`).get().then((doc) => {
+    if (doc.exists) {
+        const data = doc.data();
+        console.log("Gefundener Lernstand:", data);
+        aktuellesLevel = data.aktuellesLevel;
+        punkte = data.punkte;
+    } else {
+        console.log("Kein gespeicherter Lernstand für dieses Thema gefunden.");
+        aktuellesLevel = 1;
+        punkte = 0;
+    }
+    ladeLevel();
+});
 
 function ladeLevel() {
     const aufgabe = aufgaben[aktuellesLevel - 1];
