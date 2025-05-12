@@ -166,8 +166,9 @@ function checkAnswer() {
     if (dropzone.children.length > 0) {
         const droppedWord = dropzone.children[0].innerText;
         const richtigeAntwort = aufgaben[aktuellesLevel - 1].korrekt;
-
+        console.log("Aktuelles level (1. Check):", aktuellesLevel);
         if (droppedWord === richtigeAntwort) {
+            console.log("Aktuelles level (2. Check):", aktuellesLevel);
             dropzone.style.border = "2px solid #4caf50";
             feedback.innerText = "✅ Richtig! Du bekommst 10 Punkte!";
             punkte += 10;
