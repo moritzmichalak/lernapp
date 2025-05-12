@@ -193,6 +193,7 @@ function checkAnswer() {
                 showPopup(erklaerung.titel, erklaerung.text);
                 //localStorage.setItem(`popupShown_${thema}_${aktuellesLevel}`, "true");
             }
+            /*
             db.collection("antworten").add({
                 schuelerId: schuelerId,
                 level: aktuellesLevel,
@@ -211,6 +212,7 @@ function checkAnswer() {
                 punkte: punkte,
                 timestamp: new Date()
             });
+            */
             aktuellesLevel++;
             if (aktuellesLevel - 1 < aufgaben.length) {
                 console.log("Ich komm hier raus");
@@ -238,7 +240,23 @@ function checkAnswer() {
                     });
                 }
             }
-
+            db.collection("antworten").add({
+                schuelerId: schuelerId,
+                level: aktuellesLevel,
+                aufgabe: aufgaben[aktuellesLevel - 1].satz,
+                antwort: droppedWord,
+                korrekt: true,
+                punkte: punkte,
+                timestamp: new Date()
+            });
+            // HIER das neue Stück einfügen 👇
+            db.collection("lernstaende").doc(`${schuelerId}_${thema}`).set({
+                schuelerId: schuelerId,
+                thema: thema,
+                aktuellesLevel: aktuellesLevel,
+                punkte: punkte,
+                timestamp: new Date()
+            });
         } else {
             feedback.innerText = "❌ Leider falsch. Versuch es nochmal.";
             dropzone.style.border = "2px solid #FF0000";
