@@ -173,7 +173,7 @@ function checkAnswer() {
             dropzone.style.border = "2px solid #4caf50";
             feedback.innerText = "✅ Richtig! Du bekommst 10 Punkte!";
             punkte += 10;
-            aktuellesLevel++;
+            
             // 12.05.25
             // hier falls im vorletzten Level, dann: akutelleslevel ++
             const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
@@ -200,7 +200,7 @@ function checkAnswer() {
                 punkte: punkte,
                 timestamp: new Date()
             });
-
+            aktuellesLevel++;
             if (aktuellesLevel - 1 < aufgaben.length) {
                 console.log("Ich komm hier raus");
                 document.getElementById('nextLevelBtn').style.display = "inline-block";
