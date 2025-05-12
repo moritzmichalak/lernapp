@@ -129,7 +129,14 @@ function ladeLevel() {
 
     const wordsDiv = document.getElementById('words');
     wordsDiv.innerHTML = "";
-
+    if (aufgabe.bild) {
+        console.log("Wir haben ein Bild.");
+        document.getElementById('bildContainer').innerHTML = 
+        '<img src="${aufgabe.bild}" alt="Bild zur Aufgabe" class="aufgabenbild">';
+    } else {
+        console.log("Wir haben kein Bild.");
+        document.getElementById('bildContainer').innerHTML = "";
+    }
     aufgabe.woerter.forEach((wort, index) => {
         wordsDiv.innerHTML += `<div class="word" onclick="wordClick(event)" id="word${index}">${wort}</div>`;
     });
@@ -137,12 +144,7 @@ function ladeLevel() {
     document.querySelector('.dropzone').innerHTML = "<span>Hier ablegen</span>";
     console.log("Ich bin in lade level und sollte jetzt die ProgressBar abfeuern");
     updateProgressBar();
-    if (aufgabe.bild) {
-        document.getElementById('bildContainer').innerHTML = 
-        '<img src="${aufgabe.bild}" alt="Bild zur Aufgabe" class="aufgabenbild">';
-    } else {
-        document.getElementById('bildContainer').innerHTML = "";
-}
+
 }
 
 function updateProgressBar() {
