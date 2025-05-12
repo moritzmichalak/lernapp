@@ -160,10 +160,10 @@ function checkAnswer() {
             punkte += 10;
             // 12.05.25
             const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
-            console.log("Erklärugen für Popups:", erklaerung, erklaerungen, "Aktuelles Level: "aktuellesLevel);
+            console.log("Erklärugen für Popups:", erklaerung, erklaerungen, "Aktuelles Level: ", aktuellesLevel);
             if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
                 showPopup(erklaerung.titel, erklaerung.text);
-                // localStorage.setItem(`popupShown_${thema}_${aktuellesLevel}`, "true");
+                localStorage.setItem(`popupShown_${thema}_${aktuellesLevel}`, "true");
             }
             db.collection("antworten").add({
                 schuelerId: schuelerId,
@@ -275,5 +275,7 @@ const erklaerungen = {
     }
 };
 
+/*
 window.logout = logout;
 window.zurueckThemenwahl = zurueckThemenwahl;
+*/
