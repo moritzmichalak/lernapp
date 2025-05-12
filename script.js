@@ -172,6 +172,7 @@ function checkAnswer() {
             feedback.innerText = "✅ Richtig! Du bekommst 10 Punkte!";
             punkte += 10;
             // 12.05.25
+            // hier falls im vorletzten Level, dann: akutelleslevel ++
             const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
             console.log("Erklärugen für Popups:", erklaerung, erklaerungen);
             if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
@@ -200,6 +201,7 @@ function checkAnswer() {
             if (aktuellesLevel < aufgaben.length) {
                 document.getElementById('nextLevelBtn').style.display = "inline-block";
             } else {
+                // muss woanders hin:
                 aktuellesLevel++;
                 feedback.innerText += " 🎉 Du hast alle Level geschafft!";
                 // 12.05.25:
