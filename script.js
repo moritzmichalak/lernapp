@@ -221,6 +221,12 @@ function checkAnswer() {
                 feedback.innerText += " 🎉 Du hast alle Level geschafft!";
                 // 12.05.25:
                 updateProgressBar();
+                const aufgabe = aufgaben[aktuellesLevel - 1];
+                const luecke = '<span class="dropzone"><span class="placeholder">...</span></span>';
+                const satzMitLuecke = aufgabe.satz.replace("___", luecke);
+                document.getElementById('sentence').innerHTML = satzMitLuecke;
+                document.getElementById('levelDisplay').innerText = aktuellesLevel;
+                document.getElementById('punkteDisplay').innerText = punkte;
                 if (typeof confetti === "function") {
                     confetti({
                         particleCount: 150,
