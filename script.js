@@ -172,7 +172,7 @@ function checkAnswer() {
             dropzone.style.border = "2px solid #4caf50";
             feedback.innerText = "✅ Richtig! Du bekommst 10 Punkte!";
             punkte += 10;
-            aktuelleslevel++;
+            aktuellesLevel++;
             // 12.05.25
             // hier falls im vorletzten Level, dann: akutelleslevel ++
             const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
