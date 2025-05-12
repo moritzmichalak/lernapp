@@ -124,6 +124,7 @@ function ladeLevel() {
     });
 
     document.querySelector('.dropzone').innerHTML = "<span>Hier ablegen</span>";
+    console.log("Ich bin in lade level und sollte jetzt die ProgressBar abfeuern");
     updateProgressBar();
 }
 
@@ -241,9 +242,11 @@ function checkAnswer() {
 }
 
 function naechstesLevel() {
+    console.log("Ich bin in Funktion next level");
     if (aktuellesLevel < aufgaben.length) {
         // aktuellesLevel++;
         ladeLevel();
+        console.log("Ich habe next level geladen");
     }
 }
 
