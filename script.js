@@ -243,7 +243,7 @@ function checkAnswer() {
             db.collection("antworten").add({
                 schuelerId: schuelerId,
                 level: aktuellesLevel,
-                aufgabe: aufgaben[aktuellesLevel - 1].satz,
+                aufgabe: aufgaben[aktuellesLevel - 2].satz,
                 antwort: droppedWord,
                 korrekt: true,
                 punkte: punkte,
