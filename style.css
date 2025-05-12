@@ -205,3 +205,11 @@ body {
 .themen-button:hover {
     background-color: #45a049;
 }
+
+.aufgabenbild {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}

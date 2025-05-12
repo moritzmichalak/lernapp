@@ -85,7 +85,8 @@ if (thema === "subjonctif") {
         { satz: "Je vais à l'école ___  pied.", woerter: ["à", "en", "avec"], korrekt: "à" },
         { satz: "Nous allons à l'entrainement de football ___ voiture.", woerter: ["à", "en", "avec"], korrekt: "en" },
         { satz: "Il va chez ses grand-parents ___  vélo.", woerter: ["à", "en", "avec"], korrekt: "à" },
-        { satz: "Elle va à l'école ___ bus.", woerter: ["à", "en", "avec"], korrekt: "en" }
+        { satz: "Elle va à l'école ___ bus.", woerter: ["à", "en", "avec"], korrekt: "en" },
+        { satz: "Elle va à l'école ___ bus.", woerter: ["à", "en", "avec"], korrekt: "en", bild: "img/devoirs.jpg" },
     ];
 } /* else {
     alert("Kein gültiges Thema gewählt. Du wirst zur Themenwahl zurückgeleitet.");
@@ -136,6 +137,12 @@ function ladeLevel() {
     document.querySelector('.dropzone').innerHTML = "<span>Hier ablegen</span>";
     console.log("Ich bin in lade level und sollte jetzt die ProgressBar abfeuern");
     updateProgressBar();
+    if (aufgabe.bild) {
+        document.getElementById('bildContainer').innerHTML = 
+        '<img src="${aufgabe.bild}" alt="Bild zur Aufgabe" class="aufgabenbild">';
+    } else {
+        document.getElementById('bildContainer').innerHTML = "";
+}
 }
 
 function updateProgressBar() {
