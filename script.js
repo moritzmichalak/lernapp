@@ -171,6 +171,7 @@ function checkAnswer() {
             dropzone.style.border = "2px solid #4caf50";
             feedback.innerText = "✅ Richtig! Du bekommst 10 Punkte!";
             punkte += 10;
+            aktuelleslevel++;
             // 12.05.25
             // hier falls im vorletzten Level, dann: akutelleslevel ++
             const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
@@ -202,7 +203,7 @@ function checkAnswer() {
                 document.getElementById('nextLevelBtn').style.display = "inline-block";
             } else {
                 // muss woanders hin:
-                aktuellesLevel++;
+                // aktuellesLevel++;
                 feedback.innerText += " 🎉 Du hast alle Level geschafft!";
                 // 12.05.25:
                 updateProgressBar();
@@ -238,7 +239,7 @@ function checkAnswer() {
 
 function naechstesLevel() {
     if (aktuellesLevel < aufgaben.length) {
-        aktuellesLevel++;
+        // aktuellesLevel++;
         ladeLevel();
     }
 }
