@@ -274,3 +274,6 @@ const erklaerungen = {
         }
     }
 };
+
+window.logout = logout;
+window.zurueckThemenwahl = zurueckThemenwahl;
