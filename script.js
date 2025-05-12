@@ -163,7 +163,7 @@ function checkAnswer() {
             console.log("Erklärugen für Popups:", erklaerung, erklaerungen);
             if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
                 showPopup(erklaerung.titel, erklaerung.text);
-                localStorage.setItem(`popupShown_${thema}_${aktuellesLevel}`, "true");
+                //localStorage.setItem(`popupShown_${thema}_${aktuellesLevel}`, "true");
             }
             db.collection("antworten").add({
                 schuelerId: schuelerId,
