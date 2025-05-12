@@ -200,8 +200,10 @@ function checkAnswer() {
             });
 
             if (aktuellesLevel < aufgaben.length) {
+                console.log("Ich komm hier raus");
                 document.getElementById('nextLevelBtn').style.display = "inline-block";
             } else {
+                console.log("Ich komm da raus");
                 // muss woanders hin:
                 // aktuellesLevel++;
                 feedback.innerText += " 🎉 Du hast alle Level geschafft!";
