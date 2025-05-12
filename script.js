@@ -131,8 +131,21 @@ function updateProgressBar() {
     const totalLevels = aufgaben.length;
     const progressPercent = ((aktuellesLevel - 1) / totalLevels) * 100;
     const progressBar = document.getElementById('progressBar');
-    progressBar.style.width = progressPercent + "%";
-    progressBar.innerText = Math.round(progressPercent) + "%";
+    if (progressPercent === 100) {
+        progressBar.style.width = "100%";
+        progressBar.innerText = "100%";
+        progressBar.classList.add("full");    
+    } else {
+        progressBar.style.width = progressPercent + "%";
+        progressBar.innerText = Math.round(progressPercent) + "%";
+
+    }
+    /*
+    const progressBar = document.getElementById('progressBar');
+    progressBar.style.width = "100%";
+    progressBar.innerText = "100%";
+    progressBar.classList.add("full");
+    */
 }
 
 function wordClick(event) {
@@ -187,12 +200,10 @@ function checkAnswer() {
             if (aktuellesLevel < aufgaben.length) {
                 document.getElementById('nextLevelBtn').style.display = "inline-block";
             } else {
+                aktuellesLevel++;
                 feedback.innerText += " 🎉 Du hast alle Level geschafft!";
-                const progressBar = document.getElementById('progressBar');
-                progressBar.style.width = "100%";
-                progressBar.innerText = "100%";
-                progressBar.classList.add("full");
-
+                // 12.05.25:
+                updateProgressBar();
                 if (typeof confetti === "function") {
                     confetti({
                         particleCount: 150,
