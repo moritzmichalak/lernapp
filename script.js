@@ -19,6 +19,8 @@ firebase.auth().onAuthStateChanged(function(user) {
                 console.log("Gefundener Lernstand:", data);
                 aktuellesLevel = data.aktuellesLevel;
                 punkte = data.punkte;
+                // 12.05.25
+                updateProgressBar();
             } else {
                 console.log("Kein gespeicherter Lernstand für dieses Thema gefunden.");
                 aktuellesLevel = 1;
@@ -91,6 +93,8 @@ db.collection("lernstaende").doc(`${schuelerId}_${thema}`).get().then((doc) => {
         console.log("Gefundener Lernstand:", data);
         aktuellesLevel = data.aktuellesLevel;
         punkte = data.punkte;
+        // 12.05.25
+        updateProgressBar();
     } else {
         console.log("Kein gespeicherter Lernstand für dieses Thema gefunden.");
         aktuellesLevel = 1;
