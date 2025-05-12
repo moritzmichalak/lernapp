@@ -221,7 +221,7 @@ function checkAnswer() {
                 // aktuellesLevel++;
                 feedback.innerText += " 🎉 Du hast alle Level geschafft!";
                 // 12.05.25:
-                const aufgabe = aufgaben[aktuellesLevel - 1];
+                const aufgabe = aufgaben[aktuellesLevel - 2];
                 console.log("Aktuelles Level:", aktuellesLevel);
                 console.log("Aufgabe:", aufgabe);
                 const luecke = '<span class="dropzone"><span class="placeholder">...</span></span>';
