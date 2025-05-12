@@ -75,10 +75,10 @@ if (thema === "subjonctif") {
         { satz: "Si j'étais riche, je ___ (acheter) une maison.", woerter: ["achèterais", "achète", "acheterai"], korrekt: "achèterais" },
         { satz: "Nous ___ (vouloir) voyager plus.", woerter: ["voudrions", "voulons", "voudrons"], korrekt: "voudrions" }
     ];
-} else {
+} /* else {
     alert("Kein gültiges Thema gewählt. Du wirst zur Themenwahl zurückgeleitet.");
     window.location.href = "themenwahl.html";
-}
+} */
 
 /*
 let aktuellesLevel = 1;
