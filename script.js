@@ -83,9 +83,9 @@ if (thema === "subjonctif") {
 } else if (thema === "partie 1") {
     aufgaben = [
         { satz: "Je vais à l'école ___  pied.", woerter: ["à, en, avec"], korrekt: "à" },
-        { satz: "Nous allons à l'entrainement de football ___ voiture.", woerter: ["à, en, avec"], korrekt: "en" },
-        { satz: "Il va chez ses grand-parents ___  vélo.", woerter: ["à, en, avec"], korrekt: "à" },
-        { satz: "Elle va à l'école ___ bus.", woerter: ["à, en, avec"], korrekt: "en" }
+        { satz: "Nous allons à l'entrainement de football ___ voiture.", woerter: ["à", "en", "avec"], korrekt: "en" },
+        { satz: "Il va chez ses grand-parents ___  vélo.", woerter: ["à", "en", "avec"], korrekt: "à" },
+        { satz: "Elle va à l'école ___ bus.", woerter: ["à", "en", "avec"], korrekt: "en" }
     ];
 } /* else {
     alert("Kein gültiges Thema gewählt. Du wirst zur Themenwahl zurückgeleitet.");
