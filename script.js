@@ -160,6 +160,7 @@ function checkAnswer() {
             punkte += 10;
             // 12.05.25
             const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
+            console.log("Erklärugen für Popups:", erklaerung, erklaerungen);
             if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
                 showPopup(erklaerung.titel, erklaerung.text);
                 localStorage.setItem(`popupShown_${thema}_${aktuellesLevel}`, "true");
