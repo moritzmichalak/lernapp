@@ -159,8 +159,10 @@ function checkAnswer() {
             feedback.innerText = "✅ Richtig! Du bekommst 10 Punkte!";
             punkte += 10;
             // 12.05.25
-            if (punkte === 10 && thema === "conditionnel") {
-                showPopup();
+            const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
+            if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
+                showPopup(erklaerung.titel, erklaerung.text);
+                localStorage.setItem(`popupShown_${thema}_${aktuellesLevel}`, "true");
             }
             db.collection("antworten").add({
                 schuelerId: schuelerId,
@@ -240,12 +242,34 @@ function zurueckThemenwahl() {
 }
 
 // 12.05.25:
-function showPopup() {
+function showPopup(titel, text) {
+    document.querySelector("#popupOverlay .popup-content h2").innerText = titel;
+    document.querySelector("#popupOverlay .popup-content p").innerHTML = text;
     document.getElementById("popupOverlay").style.display = "flex";
-    document.body.style.overflow = "hidden"; // verhindert Scrollen
+    document.body.style.overflow = "hidden";
 }
 
 function closePopup() {
     document.getElementById("popupOverlay").style.display = "none";
     document.body.style.overflow = "auto"; // erlaubt wieder Scrollen
 }
+
+// 12.05.25
+const erklaerungen = {
+    conditionnel: {
+        1: {
+            titel: "Was ist das Conditionnel?",
+            text: "Das Conditionnel drückt Möglichkeiten, Wünsche oder höfliche Bitten aus. Beispiel: <em>Je voudrais un café.</em>"
+        },
+        2: {
+            titel: "Formation: Stamm + Endung",
+            text: "Man nimmt den Futur-Stamm + die imparfait-Endungen. Beispiel: <em>je parlerais</em>, <em>nous finirions</em>."
+        }
+    },
+    subjonctif: {
+        1: {
+            titel: "Wofür braucht man den Subjonctif?",
+            text: "Der Subjonctif wird nach bestimmten Auslösern verwendet, z. B. <em>il faut que</em>, <em>bien que</em> etc."
+        }
+    }
+};
