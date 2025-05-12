@@ -222,6 +222,8 @@ function checkAnswer() {
                 feedback.innerText += " 🎉 Du hast alle Level geschafft!";
                 // 12.05.25:
                 const aufgabe = aufgaben[aktuellesLevel - 1];
+                console.log("Aktuelles Level:", aktuellesLevel);
+                console.log("Aufgabe:", aufgabe);
                 const luecke = '<span class="dropzone"><span class="placeholder">...</span></span>';
                 const satzMitLuecke = aufgabe.satz.replace("___", luecke);
                 document.getElementById('sentence').innerHTML = satzMitLuecke;
