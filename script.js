@@ -78,7 +78,14 @@ if (thema === "subjonctif") {
         { satz: "Si j'étais riche, je ___ (acheter) une maison.", woerter: ["achèterais", "achète", "acheterai"], korrekt: "achèterais" },
         { satz: "Nous ___ (vouloir) voyager plus.", woerter: ["voudrions", "voulons", "voudrons"], korrekt: "voudrions" },
         { satz: "Je / J' ___ (aimer) aller au Japon.", woerter: ["aimais", "aimeriais", "aimerais"], korrekt: "aimerais" },
-        { satz: "Si on avait beaucoup d'argent, on ___ (faire) un grand voyage.", woerter: ["faissait", "ferait", "fairiait"], korrekt: "aimerais" }
+        { satz: "Si on avait beaucoup d'argent, on ___ (faire) un grand voyage.", woerter: ["faissait", "ferait", "fairiait"], korrekt: "ferait" }
+    ];
+} else if (thema === "partie 1") {
+    aufgaben = [
+        { satz: "Je vais à l'école ___  pied.", woerter: ["à, en, avec"], korrekt: "à" },
+        { satz: "Nous allons à l'entrainement de football ___ voiture.", woerter: ["à, en, avec"], korrekt: "en" },
+        { satz: "Il va chez ses grand-parents ___  vélo.", woerter: ["à, en, avec"], korrekt: "à" },
+        { satz: "Elle va à l'école ___ bus.", woerter: ["à, en, avec"], korrekt: "en" }
     ];
 } /* else {
     alert("Kein gültiges Thema gewählt. Du wirst zur Themenwahl zurückgeleitet.");
