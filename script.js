@@ -200,7 +200,7 @@ function checkAnswer() {
                 timestamp: new Date()
             });
 
-            if (aktuellesLevel < aufgaben.length) {
+            if (aktuellesLevel - 1 < aufgaben.length) {
                 console.log("Ich komm hier raus");
                 document.getElementById('nextLevelBtn').style.display = "inline-block";
             } else {
