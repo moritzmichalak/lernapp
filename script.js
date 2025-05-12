@@ -132,7 +132,7 @@ function ladeLevel() {
     if (aufgabe.bild) {
         console.log("Wir haben ein Bild.");
         document.getElementById('bildContainer').innerHTML = 
-        '<img src="${aufgabe.bild}" alt="Bild zur Aufgabe" class="aufgabenbild">';
+        `<img src="${aufgabe.bild}" alt="Bild zur Aufgabe" class="aufgabenbild">`;
     } else {
         console.log("Wir haben kein Bild.");
         document.getElementById('bildContainer').innerHTML = "";
