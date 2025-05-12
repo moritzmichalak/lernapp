@@ -158,7 +158,10 @@ function checkAnswer() {
             dropzone.style.border = "2px solid #4caf50";
             feedback.innerText = "✅ Richtig! Du bekommst 10 Punkte!";
             punkte += 10;
-
+            // 12.05.25
+            if (punkte === 10 && thema === "conditionnel") {
+                showPopup();
+            }
             db.collection("antworten").add({
                 schuelerId: schuelerId,
                 level: aktuellesLevel,
@@ -236,3 +239,11 @@ function zurueckThemenwahl() {
     window.location.href = "themenwahl.html";
 }
 
+// 12.05.25:
+function showPopup() {
+    document.getElementById("popupOverlay").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("popupOverlay").style.display = "none";
+}
