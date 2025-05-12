@@ -243,7 +243,7 @@ function checkAnswer() {
 
 function naechstesLevel() {
     console.log("Ich bin in Funktion next level");
-    if (aktuellesLevel < aufgaben.length) {
+    if (aktuellesLevel - 1 < aufgaben.length) {
         // aktuellesLevel++;
         ladeLevel();
         console.log("Ich habe next level geladen");
