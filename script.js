@@ -242,8 +242,10 @@ function zurueckThemenwahl() {
 // 12.05.25:
 function showPopup() {
     document.getElementById("popupOverlay").style.display = "flex";
+    document.body.style.overflow = "hidden"; // verhindert Scrollen
 }
 
 function closePopup() {
     document.getElementById("popupOverlay").style.display = "none";
+    document.body.style.overflow = "auto"; // erlaubt wieder Scrollen
 }
