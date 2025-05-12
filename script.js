@@ -143,6 +143,7 @@ function updateProgressBar() {
     const progressPercent = ((aktuellesLevel - 1) / totalLevels) * 100;
     const progressBar = document.getElementById('progressBar');
     if (progressPercent === 100) {
+        console.log("Ich gehe hier rein, also 100%. Das ist mein aktuelles Level:", aktuellesLevel);
         progressBar.style.width = "100%";
         progressBar.innerText = "100%";
         progressBar.classList.add("full");    
