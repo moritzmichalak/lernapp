@@ -41,6 +41,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 // Hole das Thema aus der URL
 const urlParams = new URLSearchParams(window.location.search);
 const thema = urlParams.get('thema');
+if (thema === "partie 1") thema = "partie_1";
 
 // Definiere die Aufgaben je nach Thema
 let aufgaben = [];
@@ -60,7 +61,7 @@ if (thema === "subjonctif") {
         { satz: "Je / J' ___ (aimer) aller au Japon.", woerter: ["aimais", "aimeriais", "aimerais"], korrekt: "aimerais" },
         { satz: "Si on avait beaucoup d'argent, on ___ (faire) un grand voyage.", woerter: ["faissait", "ferait", "fairiait"], korrekt: "ferait" }
     ];
-} else if (thema === "partie 1") {
+} else if (thema === "partie_1") {
     aufgaben = [
         { satz: "Clément Mathieu est un homme ___ .", woerter: ["passionné", "patient" , "compréhensif", "autoritaire", "sévère", "rigide"], korrekt: ["passionné", "patient", "compréhensif"], bild: "img/mathieu.jpg" },
         { satz: "Rachin est un directeur  ___ .", woerter: ["compréhensif", "strict", "timide", "autoritaire", "froid", "gentil"], korrekt: ["strict", "autoritaire", "froid"], bild: "img/rachin.jpg" },
@@ -488,6 +489,36 @@ const erklaerungen = {
         1: {
             titel: "Wofür braucht man den Subjonctif?",
             text: "Der Subjonctif wird nach bestimmten Auslösern verwendet, z. B. <em>il faut que</em>, <em>bien que</em> etc."
+        }
+    },
+    partie_1: {
+        6: {
+            titel: "Was folgt auf aimer, détester, adorer, préférer?",
+            text: "Nach <strong>aimer, détester, adorer, préférer</strong> folgt immer der bestimmte Artikel: <em>le, la, les</em>."
+        },
+        10: {
+            titel: "Noch ein paar Übungen dazu",
+            text: "Übe noch mehr Beispiele, damit du dir das mit dem bestimmten Artikel besser merkst."
+        },
+        14: {
+            titel: "Fortbewegungsmittel & Präpositionen",
+            text: "Wenn du den Kopf frei hast (z.\u202fB. beim Fahrrad), nimmst du <strong>à</strong>. Bist du im Gefährt (Auto, Bus), dann <strong>en</strong>."
+        },
+        18: {
+            titel: "Wortspiel mit aller",
+            text: "Auch wenn du 'gehst' sagst, benutzt du oft <strong>aller</strong> mit Transportmitteln: <em>Je vais en train</em>."
+        },
+        20: {
+            titel: "Instrumente vs. Sport (jouer)",
+            text: "<strong>de</strong> bei Instrumenten (jouer de la guitare), <strong>à</strong> bei Spielen/Sport (jouer au foot)."
+        },
+        21: {
+            titel: "de + le / les",
+            text: "<strong>de + le</strong> wird <strong>du</strong>, <strong>de + les</strong> wird <strong>des</strong>."
+        },
+        22: {
+            titel: "à + le / les",
+            text: "<strong>à + le</strong> wird <strong>au</strong>, <strong>à + les</strong> wird <strong>aux</strong>."
         }
     }
 };
