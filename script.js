@@ -78,7 +78,8 @@ if (thema === "subjonctif") {
             typ: "text",
             korrekt: "Pierre",
             bild: "img/pierre.jpeg"
-        }
+        },
+        { satz: "Ma sœur va au lycée ___ bus.", woerter: ["à", "en", "avec"], korrekt: "en", bild: "img/schwester.png" },
     ];
 } /* else {
     alert("Kein gültiges Thema gewählt. Du wirst zur Themenwahl zurückgeleitet.");
@@ -146,11 +147,13 @@ function ladeLevel() {
     if (aufgabe.typ === "text") {
         if (dropzone) dropzone.style.display = "none"; // 🔧 NEU
         wordsDiv.style.display = "none"; // 🔧 NEU
+        checkAnswerBtn.style.display = "none";      // ❌ ausblenden
         textContainer.style.display = "block"; // 🔧 NEU
         if (textInput) textInput.value = ""; // 🔧 NEU: Eingabe leeren
     } else {
         if (dropzone) dropzone.style.display = "inline-flex"; // 🔧 NEU
         wordsDiv.style.display = "flex"; // 🔧 NEU
+        checkAnswerBtn.style.display = "inline-block"; // ✅ einblenden
         textContainer.style.display = "none"; // 🔧 NEU
 
         aufgabe.woerter.forEach((wort, index) => {
