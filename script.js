@@ -66,13 +66,19 @@ if (thema === "subjonctif") {
         { satz: "Rachin est un directeur  ___ .", woerter: ["compréhensif", "strict", "timide", "autoritaire", "froid", "gentil"], korrekt: ["strict", "autoritaire", "froid"], bild: "img/rachin.jpg" },
         { satz: "Pierre Morhange est un chanteur  ___ .", woerter: ["talentueux", "mauvais", "talentueuse", "doué"], korrekt: ["doué", "talentueux"], bild: "img/pierre.jpeg" },
         { satz: "Pierre Morhange est un garçon  ___ .", woerter: ["rebelle", "strict", "autoritaire", "heureuse", "indépendent"], korrekt: ["indépendent", "rebelle"], bild: "img/pierre.jpeg" },
-        { satz: "Pépinot est un garçon  ___ .", woerter: ["intimidant", "triste", "autoritaire", "timide", "violant"], korrekt: ["triste", "timide"], bild: "img/pepinot.jpg" },
+        { satz: "Pépinot est un garçon  ___ .", woerter: ["intimidant", "triste", "autoritaire", "timide", "violant"], korrekt: ["triste", "timide"], bild: "img/pepinot.jpeg" },
         { satz: "Clément Mathieu adore ___ musique.", woerter: ["la", "de la", "de"], korrekt: "la", bild: "img/mathieu.jpg"},
         { satz: "Clément Mathieu aime ___ travail avec les élèves.", woerter: ["le", "du", "de"], korrekt: "le", bild: "img/mathieu.jpg"},
         { satz: "Je vais à l'école ___  pied.", woerter: ["à", "en", "avec"], korrekt: "à", bild: "img/schulweg.png" },
         { satz: "Ma mère va au travail ___ voiture.", woerter: ["à", "en", "avec"], korrekt: "en", bild: "img/mutter.jpeg" },
         { satz: "Mon père va au travail ___  vélo.", woerter: ["à", "en", "avec"], korrekt: "à", bild: "img/vater.jpg" },
-        { satz: "Ma sœur va au lycée ___ bus.", woerter: ["à", "en", "avec"], korrekt: "en", bild: "img/schwester.png" }
+        { satz: "Ma sœur va au lycée ___ bus.", woerter: ["à", "en", "avec"], korrekt: "en", bild: "img/schwester.png" },
+        {
+            satz: "Complète : Je m'appelle ___.",
+            typ: "text",
+            korrekt: ["Marie", "Paul", "Claire"],
+            bild: "img/personne.jpg"
+        }
     ];
 } /* else {
     alert("Kein gültiges Thema gewählt. Du wirst zur Themenwahl zurückgeleitet.");
@@ -118,9 +124,25 @@ function ladeLevel() {
 
     const wordsDiv = document.getElementById('words');
     wordsDiv.innerHTML = "";
+    /*
     aufgabe.woerter.forEach((wort, index) => {
         wordsDiv.innerHTML += `<div class="word" onclick="wordClick(event)" id="word${index}">${wort}</div>`;
     });
+    */
+    // 13.05.25:
+        if (aufgabe.typ === "text") {
+        // Freitext-Aufgabe
+        dropzone.style.display = "none"; // Dropzone ausblenden
+        wordsDiv.innerHTML = `
+            <input type="text" id="textInput" placeholder="Antwort eingeben..." class="textantwort">
+            <button onclick="checkTextAnswer()">Antwort prüfen</button>
+        `;
+    } else {
+        // Drag-and-Drop Aufgabe
+        aufgabe.woerter.forEach((wort, index) => {
+            wordsDiv.innerHTML += `<div class="word" onclick="wordClick(event)" id="word${index}">${wort}</div>`;
+        });
+    }
 
     if (aufgabe.bild) {
         console.log("Wir haben ein Bild.");
@@ -369,6 +391,44 @@ const erklaerungen = {
     }
 };
 
+function checkTextAnswer() {
+    const input = document.getElementById('textInput');
+    const antwort = input.value.trim().toLowerCase();
+    const aufgabe = aufgaben[aktuellesLevel - 1];
+    const richtigeAntworten = aufgabe.korrekt.map(a => a.toLowerCase());
+
+    const isCorrect = richtigeAntworten.includes(antwort);
+
+    if (isCorrect) {
+        feedback.innerText = "✅ Richtig!";
+        punkte += 10;
+        aktuellesLevel++;
+
+        db.collection("antworten").add({
+            schuelerId,
+            level: aktuellesLevel,
+            aufgabe: aufgabe.satz,
+            antwort: antwort,
+            korrekt: true,
+            punkte,
+            timestamp: new Date()
+        });
+
+        db.collection("lernstaende").doc(`${schuelerId}_${thema}`).set({
+            schuelerId,
+            thema,
+            aktuellesLevel,
+            punkte,
+            timestamp: new Date()
+        });
+
+        document.getElementById('nextLevelBtn').style.display = "inline-block";
+    } else {
+        feedback.innerText = "❌ Leider falsch. Versuch es nochmal.";
+    }
+
+    document.getElementById('punkteDisplay').innerText = punkte;
+}
 /*
 window.logout = logout;
 window.zurueckThemenwahl = zurueckThemenwahl;
