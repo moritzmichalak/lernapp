@@ -504,6 +504,10 @@ const erklaerungen = {
             titel: "Wir starten mit Adjektiven!",
             text: "Adjektive helfen, um Personen zu beschreiben. Bei den folgenden Sätze sind manchmal mehrere Antworten möglich. (Beim ersten Satz zum Beispiel 3 richtige Antworten). Wähle deine Antworten aus und klicke auf  <em>il Antwort prüfen</em>, bis der Button  <em>Weiter zu nächstem Level erscheint</em> etc."
         },
+        3: {
+            titel: "Adjektive an das grammatikalische Geschlecht anpassen",
+            text: "<em>talentueu<strong>x</strong></em> ist die männliche Form,  <em>talenteu<strong>se</strong></em> die weibliche. <br> In der Regel hängt man für die weibliche Form ein e an die männliche Grundform. Ausnahmen sind z.B. <em>eux -> euse </em> oder <em> if -> ive </em>   "
+        },
         6: {
             titel: "Was folgt auf aimer, détester, adorer, préférer?",
             text: "Nach <strong>aimer, détester, adorer, préférer</strong> folgt immer der bestimmte Artikel: <em>le, la, les</em>."
