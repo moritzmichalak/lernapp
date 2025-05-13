@@ -30,35 +30,13 @@ firebase.auth().onAuthStateChanged(function(user) {
         });
     } else {
         console.log("Erstmal kein User erkannt");
-        /*
-        console.log("Kein User eingeloggt, Weiterleitung...");
-        window.location.href = "index.html";
-        */
         if (firebase.auth().currentUser  && firebase.auth().currentUser.email) {
             console.log("User doch gefunden!");
         } else {
             window.location.href = "index.html";
         }
-        /*
-        console.log("⚠️ Kein User erkannt. Warte 300ms vor Weiterleitung...");
-        setTimeout(() => {
-            if (firebase.auth().currentUser  && firebase.auth().currentUser.email) {
-                console.log("User doch gefunden!");
-            } else {
-                window.location.href = "index.html";
-            }
-        }, 300);
-        */
     }
 });
-
-/*
-const aufgaben = [
-    { satz: "Ich ___ gerne ein Buch.", woerter: ["lese", "renne", "trinke"], korrekt: "lese" },
-    { satz: "Du ___ Fußball im Park.", woerter: ["spielst", "isst", "schläfst"], korrekt: "spielst" },
-    { satz: "Wir ___ einen Kuchen.", woerter: ["backen", "fahren", "laufen"], korrekt: "backen" }
-];
-*/
 
 // Hole das Thema aus der URL
 const urlParams = new URLSearchParams(window.location.search);
@@ -101,10 +79,6 @@ if (thema === "subjonctif") {
     window.location.href = "themenwahl.html";
 } */
 
-/*
-let aktuellesLevel = 1;
-let punkte = 0;
-*/
 // Lernstand laden
 db.collection("lernstaende").doc(`${schuelerId}_${thema}`).get().then((doc) => {
     if (doc.exists) {
@@ -123,7 +97,10 @@ db.collection("lernstaende").doc(`${schuelerId}_${thema}`).get().then((doc) => {
 });
 
 function ladeLevel() {
+    console.log("aufgaben: ", aufgaben);
+    console.log("aktuelles level: ", aktuellesLevel);
     const aufgabe = aufgaben[aktuellesLevel - 1];
+    console.log("aufgaben: ", aufgaben);
     offeneKorrekte = [...aufgabe.korrekt]; // Kopie für Tracking
     // dropzone.innerHTML = "<span class='placeholder'>...</span>";
 
