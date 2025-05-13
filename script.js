@@ -114,8 +114,15 @@ function ladeLevel() {
     const satzMitLuecke = aufgabe.satz.replace("___", luecke);
     document.getElementById('sentence').innerHTML = satzMitLuecke;
 
+    /*
     // Jetzt existiert .dropzone im DOM → erst jetzt zurücksetzen
     document.querySelector('.dropzone').innerHTML = "<span class='placeholder'>...</span>";
+    */
+
+    // 13.05.25:
+    const dropzone = document.querySelector('.dropzone');
+    dropzone.innerHTML = "<span class='placeholder'>...</span>";
+    dropzone.style.display = "inline-flex";
 
     document.getElementById('levelDisplay').innerText = aktuellesLevel;
     document.getElementById('punkteDisplay').innerText = punkte;
