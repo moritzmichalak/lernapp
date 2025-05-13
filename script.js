@@ -66,14 +66,59 @@ if (thema === "subjonctif") {
         { satz: "Rachin est un directeur  ___ .", woerter: ["compréhensif", "strict", "timide", "autoritaire", "froid", "gentil"], korrekt: ["strict", "autoritaire", "froid"], bild: "img/rachin.jpg" },
         { satz: "Pierre Morhange est un chanteur  ___ .", woerter: ["talentueux", "mauvais", "talentueuse", "doué"], korrekt: ["doué", "talentueux"], bild: "img/pierre.jpeg" },
         { satz: "Pierre Morhange est un garçon  ___ .", woerter: ["rebelle", "strict", "autoritaire", "heureuse", "indépendent"], korrekt: ["indépendent", "rebelle"], bild: "img/pierre.jpeg" },
-        { satz: "Pépinot est un garçon  ___ .", woerter: ["intimidant", "triste", "autoritaire", "timide", "violant"], korrekt: ["triste", "timide"], bild: "img/pepinot.jpeg" },
+        { satz: "Pépinot est un garçon  ___ .", woerter: ["intimidant", "attachant", "autoritaire", "timide", "violant"], korrekt: ["attachant", "timide"], bild: "img/pepinot.jpeg" },
+        // Ende Adjektive  
+        // Beginn aimer, détester, adorer, préférer
+        // POPUP: Wir schauen uns jetzt an mit welcher Art von Artikeln die vier Verben aimer, détester, adorer und préférer funktionieren. Probiere es zunächst einmal:
         { satz: "Clément Mathieu adore ___ musique.", woerter: ["la", "de la", "de"], korrekt: "la", bild: "img/mathieu.jpg"},
         { satz: "Clément Mathieu aime ___ travail avec les élèves.", woerter: ["le", "du", "de"], korrekt: "le", bild: "img/mathieu.jpg"},
-        { satz: "Je vais à l'école ___  pied.", woerter: ["à", "en", "avec"], korrekt: "à", bild: "img/schulweg.png" },
+        { satz: "Rachin préfère ___ autorité excessive à la bienveillance.", woerter: ["l'", "de l'", "d'"], korrekt: "l'", bild: "img/rachin.jpg"},
+        { satz: "Pierre Morhange déteste ___ règles.", woerter: ["les", "de", "des"], korrekt: "les", bild: "img/.jpg"},
+        // POPUP: Die Besonderheit bei aimer, détester, adorer, préférer ist, dass immer der bestimmte Artikel folgt (le, la, les). Wir machen noch ein paar Beispiele zur Übung:
+        { satz: "Elle aime ___  chocolat.", woerter: ["le", "du", "la"], korrekt: "le", bild: "img/chocolat.png" },
+        { satz: "Elle adore ___  musique.", woerter: ["le", "de", "la", "de la", "du"], korrekt: "la", bild: "img/musique.png" },
+        { satz: "Elle préfère ___  chiens aux chats.", woerter: ["les", "des", "d'", "du"], korrekt: "les", bild: "img/chiens.png" },
+        { satz: "Il déteste ___  épinards.", woerter: ["des", "les", "d'", "de la"], korrekt: "les", bild: "img/épinards.png" },
+        // POPUP: Jetzt beschäftigen wir uns mit Fortbewegunsmitteln. Welche Präsposition passt zu welchem Fortbeweungsmittel? Es gibt hier eine Regel: Immer wenn ich den Kopf an der frischen Luft habe, so benutzt man 'à' (z.B. à pied, à vélo). Wenn man in einem geschlossenen Fortbewegungsmittel ist, nimmt man 'en' (z.B. en train)
+        { satz: "Je m'appelle Léo. Je vais à l'école ___  pied.", woerter: ["à", "en", "avec"], korrekt: "à", bild: "img/schulweg.png" },
         { satz: "Ma mère va au travail ___ voiture.", woerter: ["à", "en", "avec"], korrekt: "en", bild: "img/mutter.jpeg" },
         { satz: "Mon père va au travail ___  vélo.", woerter: ["à", "en", "avec"], korrekt: "à", bild: "img/vater.jpg" },
         { satz: "Ma sœur va au lycée ___ bus.", woerter: ["à", "en", "avec"], korrekt: "en", bild: "img/schwester.png" },
-        {
+        // POPUP: Wie du siehst, benutzt man immer das Verb 'aller' - auch wenn man eigentlich gar nicht geht! Beispiele ... fett(aller)
+        {    
+            satz: "Ils vont en France  ___ moto.",
+            typ: "text",
+            korrekt: "à",
+            bild: "img/moto.jpeg"
+        },
+        // POPUP: Genau, beim Motorradfahren ist der Kopf an der frischen Luft, also à :)
+        {    
+            satz: "Elle va chez ses parents  ___ train.",
+            typ: "text",
+            korrekt: "en",
+            bild: "img/train.jpeg"
+        },
+        // POPUP: Steigt man in den Zug ist man innerhalb eines Fortbewegungsmittels, also en :) Jetzt schauen wir uns das Verb jouer an. Auch hier benutzt man entweder die Präposition 'à' oder 'de'. Hier ist die Regel: Bei Instrumenten benutzt man 'de' und bei Sport oder anderen Spielen 'à'
+        { satz: "Il joue ___ guitare.", woerter: ["de la", "à la"], korrekt: "de la", bild: "img/guitare.png" },
+        // POPUP: Vielleicht ist dir aufgefallen, dass man de + le/la/les verwendet.
+        { satz: "Il joue ___ piano.", woerter: ["de la", "du", "à la"], korrekt: "du", bild: "img/piano.png" },
+        // POPUP: de + le verschmilzt zu 'du' und de + les verschmilzt zu 'des'
+        { satz: "Ils jouent ___ volleyball (männlich).", woerter: ["au", "du", "à la", " à le"], korrekt: "au", bild: "img/volley.png" },
+        // POPUP: Volleyball ist kein Instrument, sondern ein Sport. à + le verschmilzt zu 'au' und à + les verschmilzt zu 'aux'
+        { satz: "Ils jouent ___ boules.", woerter: ["aux", "du", "à la", " à le", "des"], korrekt: "aux", bild: "img/boules.jpeg" },
+        {    
+            satz: "Clément Mathieu joue ___ piano.",
+            typ: "text",
+            korrekt: "du",
+            bild: "img/mathieu.jpg"
+        },
+                {    
+            satz: "Les élèves jouent ___ foot(ball).",
+            typ: "text",
+            korrekt: "au",
+            bild: "img/foot.jpg"
+        },
+        {    
             satz: "Complète : Je m'appelle ___.",
             typ: "text",
             korrekt: "Pierre",
@@ -143,7 +188,7 @@ function ladeLevel() {
     // 13.05.25:
     const textContainer = document.getElementById('textAntwortContainer'); // 🔧 NEU
     const textInput = document.getElementById('textInput'); // 🔧 NEU
-    
+
     const checkAnswerBtn = document.getElementById('checkAnswerBtn'); // ✅ NEU
 
 
