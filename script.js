@@ -118,7 +118,7 @@ function ladeLevel() {
     // Jetzt existiert .dropzone im DOM → erst jetzt zurücksetzen
     document.querySelector('.dropzone').innerHTML = "<span class='placeholder'>...</span>";
     */
-
+    const dropzone = document.querySelector('.dropzone');
     // 13.05.25:
     if (dropzone) {
         dropzone.innerHTML = "<span class='placeholder'>...</span>";
