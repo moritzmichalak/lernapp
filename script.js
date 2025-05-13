@@ -86,7 +86,7 @@ if (thema === "subjonctif") {
         { satz: "Ma sœur va au lycée ___ bus.", woerter: ["à", "en", "avec"], korrekt: "en", bild: "img/schwester.png" },
         // POPUP: Wie du siehst, benutzt man immer das Verb 'aller' - auch wenn man eigentlich gar nicht geht! Beispiele ... fett(aller)
         {    
-            satz: "Ils vont en France ___ moto.",
+            satz: "Ils vont en France ____ moto.",
             typ: "text",
             korrekt: "à",
             bild: "img/moto.jpeg"
@@ -112,17 +112,18 @@ if (thema === "subjonctif") {
             korrekt: "du",
             bild: "img/mathieu.jpg"
         },
-                {    
+        {    
             satz: "Les élèves jouent ___ foot(ball).",
             typ: "text",
             korrekt: "au",
             bild: "img/foot.jpg"
         },
+        
         {    
-            satz: "Complète : Je m'appelle ___.",
+            satz: "Salut, je m'appelle Emma 😊<ul>Je vais à l'école _____ pied. 🚶‍♀️</ul><ul>Je joue _____ guitare. 🎸🎶</ul><ul>Je joue _____ Badminton. 🏸💪</ul><ul>Je suis un peu _____ (Sie ist ein wenig <b>schüchtern</b>)</ul><ul>Maus le plus souvent je suis _____ (Aber meistens ist sie <b>glücklich</b>)</ul><ul>J'aime ____ chocolat.🍫❤️ </ul><ul>J'adore ____ chats. 🐈😊 </ul>",
             typ: "text",
-            korrekt: "Pierre",
-            bild: "img/pierre.jpeg"
+            korrekt: "à",
+            bild: "img/emma.png"
         },
         { satz: "Ma sœur va au lycée ___ bus.", woerter: ["à", "en", "avec"], korrekt: "en", bild: "img/schwester.png" },
     ];
