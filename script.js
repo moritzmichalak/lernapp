@@ -500,7 +500,7 @@ const erklaerungen = {
         }
     },
     partie1: {
-        1: {
+        0: {
             titel: "Wir starten mit Adjektiven?",
             text: "Adjektive helfen, um Personen zu beschreiben. Bei den folgenden Sätze sind manchmal mehrere Antworten möglich. (Beim ersten Satz zum Beispiel 3 richtige Antworten). Wähle deine Antworten aus und klicke auf  <em>il Antwort prüfen</em>, bis der Button  <em>Weiter zu nächstem Level erscheint</em> etc."
         }
