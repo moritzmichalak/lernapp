@@ -266,6 +266,11 @@ function ladeLevel() {
     console.log("Ich bin in lade level und sollte jetzt die ProgressBar abfeuern");
     updateProgressBar();
 
+    const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
+    if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
+        showPopup(erklaerung.titel, erklaerung.text);
+        localStorage.setItem(`popupShown_${thema}_${aktuellesLevel}`, "true");
+    }
 }
 
 function entferneElemente(array1, array2) {
