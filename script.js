@@ -48,6 +48,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const thema = urlParams.get('thema');
 if (thema === "partie 1") thema = "partie_1";
 
+console.log("Das Thema ist:", thema);
 
 
 if (thema === "subjonctif") {
