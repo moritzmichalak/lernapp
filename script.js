@@ -514,10 +514,10 @@ const erklaerungen = {
         },
         6: {
             titel: "Adjektive",
-            text: "Die weibliche Form zu <em>attachant</em> wäre <em>attachant<strong>e</strong></em>. <br> An Adjektive, die in ihrer Grundform bereits auf -e enden, wie <em>timide</em>, wird kein weiteres -e angehängt."
+            text: "Die weibliche Form zu <em>attachant</em> wäre <em>attachant<strong>e</strong></em>. <br> An Adjektive, die in ihrer Grundform bereits auf -e enden, wie <em>timide</em>, wird kein weiteres -e angehängt. <br> <strong>Jetzt beschäftigen wir uns mit den Verben aimer, détester, adorer, préférer!</strong>"
         },
         6: {
-            titel: "Jetzt beschäftigen wir uns mit den Verben aimer, détester, adorer, préférer?",
+            titel: "aimer, détester, adorer, préférer",
             text: "Nach <strong>aimer, détester, adorer, préférer</strong> folgt immer der bestimmte Artikel: <em>le, la, les</em>. <br> Probiere es mal aus!" 
         },
         10: {
@@ -542,7 +542,7 @@ const erklaerungen = {
         },
         24: {
             titel: "Noch mehr Beispiele zu jouer mit den Choristes 😊 ",
-            text: "<strong>à + le</strong> wird <strong>au</strong>, <strong>à + les</strong> wird <strong>aux</strong>."
+            text: "Denk dran: Instrumente mit <em>de</em> und Spiele/Sport mit <em>à</em>"
         },
         26: {
             titel: "Bravo !👏 Zum Abschluss eine kleine Wiederholung 😊 ",

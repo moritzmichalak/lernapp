@@ -4,6 +4,69 @@
     <meta charset="UTF-8">
     <title>Themenwahl</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .themen-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .themen-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+            background-color: #4caf50;
+            border-radius: 8px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .themen-button:hover {
+            background-color: #45a049;
+        }
+
+        .disabled-button {
+            background-color: #ccc !important;
+            pointer-events: none;
+            color: #666 !important;
+        }
+
+        .stichpunkte {
+            margin-left: 25px;
+            margin-top: -10px;
+            font-size: 15px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wähle dein Thema</h1>
+    <div class="themen-container">
+        <a class="themen-button" href="lernumgebung.html?thema=partie1">Partie 1 (se présenter)</a>
+        <ul class="stichpunkte">
+            <li>Adjektive für Personen</li>
+            <li>Verben: aimer, adorer, détester, préférer</li>
+            <li>Fortbewegungsmittel: aller à / en</li>
+            <li>Hobbies: jouer à / de</li>
+        </ul>
+
+        <a class="themen-button disabled-button">Subjonctif</a>
+        <a class="themen-button disabled-button">Conditionnel</a>
+    </div>
+</body>
+</html>
+
+<!--
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Themenwahl</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Wähle dein Thema</h1>
@@ -14,3 +77,4 @@
     </div>
 </body>
 </html>
+-->
