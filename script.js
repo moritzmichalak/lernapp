@@ -172,7 +172,7 @@ if (thema === "subjonctif") {
         },
         {
             typ: "reflexion",
-            satz: "📘 Was hast du aus dieser E-Learning-Einheit mitgenommen? Notiere stichpunktartig deine Gedanken:",
+            satz: "💡 Was hast du aus dieser E-Learning-Einheit mitgenommen? Notiere stichpunktartig deine Gedanken:",
             bild: "img/takeaway.jpeg"
         }
     ];
@@ -203,7 +203,11 @@ function ladeLevel() {
     console.log("aktuelles level: ", aktuellesLevel);
     const aufgabe = aufgaben[aktuellesLevel - 1];
     console.log("aufgaben: ", aufgaben);
-    offeneKorrekte = [...aufgabe.korrekt]; // Kopie für Tracking
+    if (aufgabe.korrekt) {
+        offeneKorrekte = [...(Array.isArray(aufgabe.korrekt) ? aufgabe.korrekt : [aufgabe.korrekt])];
+    } else {
+        offeneKorrekte = []; // bei Reflexionstyp etc.
+    }
     // dropzone.innerHTML = "<span class='placeholder'>...</span>";
 
     const luecke = '<span class="dropzone"><span class="placeholder">...</span></span>';
@@ -535,18 +539,18 @@ const erklaerungen = {
         },
         7: {
             titel: "aimer, détester, adorer, préférer",
-            text: "Nach <strong>aimer, détester, adorer, préférer</strong> folgt immer der bestimmte Artikel: <em>le, la, les</em>. <br> Probiere es mal aus!" 
+            text: "Nach <strong>aimer, détester, adorer, préférer</strong> folgt immer der bestimmte Artikel: <em>le, la, les</em>. <br> Probiere es weiter aus!" 
         },
         10: {
             titel: "aimer, détester, adorer, préférer",
             text: "Übe noch mehr Beispiele, damit du dir das mit dem bestimmten Artikel besser merkst."
         },
         14: {
-            titel: "Fortbewegungsmittel & Präpositionen",
+            titel: "Fortbewegungsmittel: aller + ... ?",
             text: "Wenn du den Kopf an der frischen Luft hast (z.\u202fB. beim Fahrrad), nimmst du <strong>à</strong>. Bist du vom Gefährt umschlossen (Auto, Bus), dann <strong>en</strong>. <br> Probiere es mal aus!" 
         },
         18: {
-            titel: "Forbewegungsmittel + aller",
+            titel: "Forbewegungsmittel mit aller",
             text: "Vielleicht ist dir aufgefallen: Auch wenn aller eigentlich gehen bedeutet, benutzt man <strong>aller</strong> auch für Transportmittel: <em>Je vais en train</em>."
         },
         20: {
