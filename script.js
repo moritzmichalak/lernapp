@@ -508,6 +508,10 @@ const erklaerungen = {
             titel: "Adjektive an das grammatikalische Geschlecht anpassen",
             text: "<em>talentueu<strong>x</strong></em> ist die männliche Form,  <em>talenteu<strong>se</strong></em> die weibliche. <br> In der Regel hängt man für die weibliche Form ein e an die männliche Grundform. Ausnahmen sind z.B. <em>eux -> euse </em> oder <em> if -> ive </em>   "
         },
+        5: {
+            titel: "Adjektive, die auf -e enden",
+            text: "Die weibliche Form zu <em>attachant</em> wäre <em>attachant<strong>e</strong></em>. <br> An Adjektive, die in ihrer Grundform bereits auf -e enden, wie <em>timide</em>, wird kein weiteres -e angehängt."
+        },
         6: {
             titel: "Was folgt auf aimer, détester, adorer, préférer?",
             text: "Nach <strong>aimer, détester, adorer, préférer</strong> folgt immer der bestimmte Artikel: <em>le, la, les</em>."
