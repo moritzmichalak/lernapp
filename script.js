@@ -82,7 +82,7 @@ if (thema === "subjonctif") {
         { satz: "Clément Mathieu adore ___ musique.", woerter: ["la", "de la", "de"], korrekt: "la", bild: "img/mathieu.jpg"},
         { satz: "Clément Mathieu aime ___ travail avec les élèves.", woerter: ["le", "du", "de"], korrekt: "le", bild: "img/mathieu.jpg"},
         { satz: "Rachin préfère ___ autorité excessive à la bienveillance.", woerter: ["l'", "de l'", "d'"], korrekt: "l'", bild: "img/rachin.jpg"},
-        { satz: "Pierre Morhange déteste ___ règles.", woerter: ["les", "de", "des"], korrekt: "les", bild: "img/pierre.jpg"},
+        { satz: "Pierre Morhange déteste ___ règles.", woerter: ["les", "de", "des"], korrekt: "les", bild: "img/pierre.jpeg"},
         // POPUP: Die Besonderheit bei aimer, détester, adorer, préférer ist, dass immer der bestimmte Artikel folgt (le, la, les). Wir machen noch ein paar Beispiele zur Übung:
         { satz: "Elle aime ___  chocolat.", woerter: ["le", "du", "la"], korrekt: "le", bild: "img/chocolat.png" },
         { satz: "Elle adore ___  musique.", woerter: ["le", "de", "la", "de la", "du"], korrekt: "la", bild: "img/musique.png" },
@@ -169,6 +169,11 @@ if (thema === "subjonctif") {
             typ: "text",
             korrekt: "les",
             bild: "img/Emma.png"
+        },
+        {
+            typ: "reflexion",
+            satz: "📘 Was hast du aus dieser E-Learning-Einheit mitgenommen? Notiere stichpunktartig deine Gedanken:",
+            bild: "img/takeaway.jpeg"
         }
     ];
 } /* else {
@@ -243,6 +248,18 @@ function ladeLevel() {
         checkAnswerBtn.style.display = "none";      // ❌ ausblenden
         textContainer.style.display = "block"; // 🔧 NEU
         if (textInput) textInput.value = ""; // 🔧 NEU: Eingabe leeren
+    } else if (aufgabe.typ === "reflexion") {
+        const container = document.getElementById("sentence");
+        container.innerHTML = `
+          <p>${aufgabe.satz}</p>
+          <textarea id="reflexionInput" rows="6" placeholder="z. B. Ich habe gelernt, dass ..."></textarea>
+          <br>
+          <button onclick="saveReflexion()">Speichern & Abschließen</button>
+        `;
+        document.getElementById("words").innerHTML = "";
+        document.getElementById("bildContainer").innerHTML = aufgabe.bild
+          ? `<img src="${aufgabe.bild}" class="aufgabenbild">`
+          : "";       
     } else {
         if (dropzone) dropzone.style.display = "inline-flex"; // 🔧 NEU
         wordsDiv.style.display = "flex"; // 🔧 NEU
@@ -516,7 +533,7 @@ const erklaerungen = {
             titel: "Adjektive",
             text: "Die weibliche Form zu <em>attachant</em> wäre <em>attachant<strong>e</strong></em>. <br> An Adjektive, die in ihrer Grundform bereits auf -e enden, wie <em>timide</em>, wird kein weiteres -e angehängt. <br> <strong>Jetzt beschäftigen wir uns mit den Verben aimer, détester, adorer, préférer!</strong>"
         },
-        6: {
+        7: {
             titel: "aimer, détester, adorer, préférer",
             text: "Nach <strong>aimer, détester, adorer, préférer</strong> folgt immer der bestimmte Artikel: <em>le, la, les</em>. <br> Probiere es mal aus!" 
         },
@@ -592,6 +609,24 @@ function checkTextAnswer() {
     }
 
     document.getElementById('punkteDisplay').innerText = punkte;
+}
+
+function saveReflexion() {
+  const text = document.getElementById("reflexionInput").value.trim();
+  if (!text) {
+    alert("Bitte schreibe eine kurze Reflexion.");
+    return;
+  }
+
+  db.collection("reflexionen").add({
+    schuelerId,
+    thema,
+    text,
+    timestamp: new Date()
+  });
+
+  alert("✅ Danke für deine Rückmeldung!");
+  window.location.href = "themenwahl.html"; // oder Abschlussbildschirm
 }
 /*
 window.logout = logout;
