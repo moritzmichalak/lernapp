@@ -209,15 +209,94 @@ function ladeLevel() {
         offeneKorrekte = []; // bei Reflexionstyp etc.
     }
     // dropzone.innerHTML = "<span class='placeholder'>...</span>";
+        const sentenceContainer = document.getElementById('sentence');
+    const wordsDiv = document.getElementById('words');
+    const textContainer = document.getElementById('textAntwortContainer');
+    const textInput = document.getElementById('textInput');
+    const checkAnswerBtn = document.getElementById('checkAnswerBtn');
+    const dropzone = document.querySelector('.dropzone');
+    const feedback = document.getElementById('feedback');
+    const nextLevelBtn = document.getElementById('nextLevelBtn');
+    const bildContainer = document.getElementById('bildContainer');
 
+    // 🛠️ Reset-Logik
+    feedback.innerText = "";
+    nextLevelBtn.style.display = "none";
+    sentenceContainer.innerHTML = "";
+    wordsDiv.innerHTML = "";
+    bildContainer.innerHTML = "";
+    if (dropzone) dropzone.innerHTML = "";
+    if (textInput) textInput.value = "";
+
+    // 🛠️ Spezialfall: Reflexion
+    if (aufgabe.typ === "reflexion") {
+        sentenceContainer.innerHTML = `
+            <p>${aufgabe.satz}</p>
+            <textarea id="reflexionInput" rows="6" placeholder="z. B. Ich habe gelernt, dass ..."></textarea>
+            <br>
+            <button onclick="saveReflexion()">Speichern & Abschließen</button>
+        `;
+        wordsDiv.style.display = "none";
+        textContainer.style.display = "none";
+        checkAnswerBtn.style.display = "none";
+        if (dropzone) dropzone.style.display = "none";
+
+        // Bild für Reflexion laden, falls vorhanden
+        if (aufgabe.bild) {
+            bildContainer.innerHTML = `<img src="${aufgabe.bild}" alt="Bild zur Aufgabe" class="aufgabenbild">`;
+        }
+        updateProgressBar();
+        return; // 🛠️ WICHTIG: keine weitere Verarbeitung
+    }
+
+    // 🛠️ Normalfall: Textaufgabe
+    if (aufgabe.typ === "text") {
+        const luecke = '<span class="dropzone"><span class="placeholder">...</span></span>';
+        const satzMitLuecke = aufgabe.satz.replace("___", luecke);
+        sentenceContainer.innerHTML = satzMitLuecke;
+
+        wordsDiv.style.display = "none";
+        textContainer.style.display = "block";
+        checkAnswerBtn.style.display = "none";
+        if (dropzone) dropzone.style.display = "none";
+
+    // 🛠️ Normalfall: Drag & Drop
+    } else {
+        const luecke = '<span class="dropzone"><span class="placeholder">...</span></span>';
+        const satzMitLuecke = aufgabe.satz.replace("___", luecke);
+        sentenceContainer.innerHTML = satzMitLuecke;
+
+        if (dropzone) {
+            dropzone.innerHTML = "<span class='placeholder'>...</span>";
+            dropzone.style.display = "inline-flex";
+        }
+
+        wordsDiv.style.display = "flex";
+        checkAnswerBtn.style.display = "inline-block";
+        textContainer.style.display = "none";
+
+        aufgabe.woerter.forEach((wort, index) => {
+            wordsDiv.innerHTML += `<div class="word" onclick="wordClick(event)" id="word${index}">${wort}</div>`;
+        });
+    }
+
+    // 🛠️ Bild einblenden
+    if (aufgabe.bild) {
+        bildContainer.innerHTML = `<img src="${aufgabe.bild}" alt="Bild zur Aufgabe" class="aufgabenbild">`;
+    }
+
+    // 🛠️ Fortschritt & evtl. Popup
+    document.getElementById('levelDisplay').innerText = aktuellesLevel;
+    document.getElementById('punkteDisplay').innerText = punkte;
+    updateProgressBar();
+
+    //Vor 14.05 01:58 Uhr
+    /*
     const luecke = '<span class="dropzone"><span class="placeholder">...</span></span>';
     const satzMitLuecke = aufgabe.satz.replace("___", luecke);
     document.getElementById('sentence').innerHTML = satzMitLuecke;
 
-    /*
-    // Jetzt existiert .dropzone im DOM → erst jetzt zurücksetzen
-    document.querySelector('.dropzone').innerHTML = "<span class='placeholder'>...</span>";
-    */
+
     const dropzone = document.querySelector('.dropzone');
     // 13.05.25:
     if (dropzone) {
@@ -234,11 +313,7 @@ function ladeLevel() {
 
     const wordsDiv = document.getElementById('words');
     wordsDiv.innerHTML = "";
-    /*
-    aufgabe.woerter.forEach((wort, index) => {
-        wordsDiv.innerHTML += `<div class="word" onclick="wordClick(event)" id="word${index}">${wort}</div>`;
-    });
-    */
+
     // 13.05.25:
     const textContainer = document.getElementById('textAntwortContainer'); // 🔧 NEU
     const textInput = document.getElementById('textInput'); // 🔧 NEU
@@ -285,7 +360,7 @@ function ladeLevel() {
     // document.querySelector('.dropzone').innerHTML = "<span>Hier ablegen</span>";
     console.log("Ich bin in lade level und sollte jetzt die ProgressBar abfeuern");
     updateProgressBar();
-
+    */
     const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
     if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
         showPopup(erklaerung.titel, erklaerung.text);
