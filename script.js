@@ -86,14 +86,14 @@ if (thema === "subjonctif") {
         { satz: "Ma sœur va au lycée ___ bus.", woerter: ["à", "en", "avec"], korrekt: "en", bild: "img/schwester.png" },
         // POPUP: Wie du siehst, benutzt man immer das Verb 'aller' - auch wenn man eigentlich gar nicht geht! Beispiele ... fett(aller)
         {    
-            satz: "Ils vont en France  ___ moto.",
+            satz: "Ils vont en France ___ moto.",
             typ: "text",
             korrekt: "à",
             bild: "img/moto.jpeg"
         },
         // POPUP: Genau, beim Motorradfahren ist der Kopf an der frischen Luft, also à :)
         {    
-            satz: "Elle va chez ses parents  ___ train.",
+            satz: "Elle va chez ses parents  ____ train.",
             typ: "text",
             korrekt: "en",
             bild: "img/train.jpeg"
@@ -107,7 +107,7 @@ if (thema === "subjonctif") {
         // POPUP: Volleyball ist kein Instrument, sondern ein Sport. à + le verschmilzt zu 'au' und à + les verschmilzt zu 'aux'
         { satz: "Ils jouent ___ boules.", woerter: ["aux", "du", "à la", " à le", "des"], korrekt: "aux", bild: "img/boules.jpeg" },
         {    
-            satz: "Clément Mathieu joue ___ piano.",
+            satz: "Clément Mathieu joue ____ piano.",
             typ: "text",
             korrekt: "du",
             bild: "img/mathieu.jpg"
