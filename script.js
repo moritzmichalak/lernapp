@@ -314,6 +314,7 @@ function checkAnswer() {
                     punkte: punkte,
                     timestamp: new Date()
                 });
+            }
         } else {
             feedback.innerText = "❌ Leider falsch. Versuch es nochmal.";
             dropzone.style.border = "2px solid #FF0000";
