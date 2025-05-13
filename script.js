@@ -507,44 +507,52 @@ const erklaerungen = {
     partie1: {
         1: {
             titel: "Wir starten mit Adjektiven!",
-            text: "Adjektive helfen, um Personen zu beschreiben. Bei den folgenden Sätze sind manchmal mehrere Antworten möglich. (Beim ersten Satz zum Beispiel 3 richtige Antworten). Wähle deine Antworten aus und klicke auf  <em>il Antwort prüfen</em>, bis der Button  <em>Weiter zu nächstem Level erscheint</em> etc."
+            text: "Adjektive helfen, um Personen zu beschreiben. Bei den folgenden Sätze sind manchmal mehrere Antworten möglich. (Beim ersten Satz zum Beispiel 3 richtige Antworten).<br> Wähle deine Antworten aus und klicke auf  <em>Antwort prüfen</em>, bis der Button  <em>Weiter zu nächstem Level</em> erscheint."
         },
-        3: {
+        4: {
             titel: "Adjektive an das grammatikalische Geschlecht anpassen",
             text: "<em>talentueu<strong>x</strong></em> ist die männliche Form,  <em>talenteu<strong>se</strong></em> die weibliche. <br> In der Regel hängt man für die weibliche Form ein e an die männliche Grundform. Ausnahmen sind z.B. <em>eux -> euse </em> oder <em> if -> ive </em>   "
         },
-        5: {
-            titel: "Adjektive, die auf -e enden",
+        6: {
+            titel: "Adjektive",
             text: "Die weibliche Form zu <em>attachant</em> wäre <em>attachant<strong>e</strong></em>. <br> An Adjektive, die in ihrer Grundform bereits auf -e enden, wie <em>timide</em>, wird kein weiteres -e angehängt."
         },
         6: {
-            titel: "Was folgt auf aimer, détester, adorer, préférer?",
-            text: "Nach <strong>aimer, détester, adorer, préférer</strong> folgt immer der bestimmte Artikel: <em>le, la, les</em>."
+            titel: "Jetzt beschäftigen wir uns mit den Verben aimer, détester, adorer, préférer?",
+            text: "Nach <strong>aimer, détester, adorer, préférer</strong> folgt immer der bestimmte Artikel: <em>le, la, les</em>. <br> Probiere es mal aus!" 
         },
         10: {
-            titel: "Noch ein paar Übungen dazu",
+            titel: "aimer, détester, adorer, préférer",
             text: "Übe noch mehr Beispiele, damit du dir das mit dem bestimmten Artikel besser merkst."
         },
         14: {
             titel: "Fortbewegungsmittel & Präpositionen",
-            text: "Wenn du den Kopf frei hast (z.\u202fB. beim Fahrrad), nimmst du <strong>à</strong>. Bist du im Gefährt (Auto, Bus), dann <strong>en</strong>."
+            text: "Wenn du den Kopf an der frischen Luft hast (z.\u202fB. beim Fahrrad), nimmst du <strong>à</strong>. Bist du vom Gefährt umschlossen (Auto, Bus), dann <strong>en</strong>. <br> Probiere es mal aus!" 
         },
         18: {
-            titel: "Wortspiel mit aller",
-            text: "Auch wenn du 'gehst' sagst, benutzt du oft <strong>aller</strong> mit Transportmitteln: <em>Je vais en train</em>."
+            titel: "Forbewegungsmittel + aller",
+            text: "Vielleicht ist dir aufgefallen: Auch wenn aller eigentlich gehen bedeutet, benutzt man <strong>aller</strong> auch für Transportmittel: <em>Je vais en train</em>."
         },
         20: {
             titel: "Instrumente vs. Sport (jouer)",
-            text: "<strong>de</strong> bei Instrumenten (jouer de la guitare), <strong>à</strong> bei Spielen/Sport (jouer au foot)."
+            text: "Weg von den Fortbewegungsmitteln, hin zu Hobbys! <br> Auf as Verb jouer folgt entweder <strong>de</strong> (bei Instrumenten) oder <strong>à</strong> (bei Spielen/Sport). <br> Lass uns ein paar Beispiele machen!"
         },
         21: {
-            titel: "de + le / les",
-            text: "<strong>de + le</strong> wird <strong>du</strong>, <strong>de + les</strong> wird <strong>des</strong>."
+            titel: "Attention !",
+            text: "Wir brauchen nicht nur die Präposition <em>de</em> bzw. <em>à</em>, sondern auch den <strong>bestimmten Artikel</strong>, z.B. <em>de</em><strong>la</strong> guitare. <br> Attention : <br> de + le verschmilzt zu <strong>du</strong> und <strong>de + les</strong> verschmilzt zu <strong>des</strong>! <br> à + le verschmilzt zu <strong>au</strong> und <strong>à + les</strong> verschmilzt zu <strong>aux</strong>!"
         },
         22: {
             titel: "à + le / les",
             text: "<strong>à + le</strong> wird <strong>au</strong>, <strong>à + les</strong> wird <strong>aux</strong>."
-        }
+        },
+        23: {
+            titel: "Noch mehr Beispiele zu jouer mit den Choristes 😊 ",
+            text: "<strong>à + le</strong> wird <strong>au</strong>, <strong>à + les</strong> wird <strong>aux</strong>."
+        },
+        25: {
+            titel: "Bravo !👏 Zum Abschluss eine kleine Wiederholung 😊 ",
+            text: "Vervollständige den Steckbrief von Emma!"
+        },
     }
 };
 
