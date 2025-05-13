@@ -140,20 +140,23 @@ function ladeLevel() {
     });
     */
     // 13.05.25:
-        if (aufgabe.typ === "text") {
-        // Freitext-Aufgabe
-        dropzone.style.display = "none"; // Dropzone ausblenden
-        wordsDiv.innerHTML = `
-            <input type="text" id="textInput" placeholder="Antwort eingeben..." class="textantwort">
-            <button onclick="checkTextAnswer()">Antwort prüfen</button>
-        `;
+    const textContainer = document.getElementById('textAntwortContainer'); // 🔧 NEU
+    const textInput = document.getElementById('textInput'); // 🔧 NEU
+
+    if (aufgabe.typ === "text") {
+        if (dropzone) dropzone.style.display = "none"; // 🔧 NEU
+        wordsDiv.style.display = "none"; // 🔧 NEU
+        textContainer.style.display = "block"; // 🔧 NEU
+        if (textInput) textInput.value = ""; // 🔧 NEU: Eingabe leeren
     } else {
-        // Drag-and-Drop Aufgabe
+        if (dropzone) dropzone.style.display = "inline-flex"; // 🔧 NEU
+        wordsDiv.style.display = "flex"; // 🔧 NEU
+        textContainer.style.display = "none"; // 🔧 NEU
+
         aufgabe.woerter.forEach((wort, index) => {
             wordsDiv.innerHTML += `<div class="word" onclick="wordClick(event)" id="word${index}">${wort}</div>`;
         });
     }
-
     if (aufgabe.bild) {
         console.log("Wir haben ein Bild.");
         document.getElementById('bildContainer').innerHTML = 
