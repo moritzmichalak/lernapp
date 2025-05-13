@@ -117,8 +117,17 @@ body {
 #nextLevelBtn {
     margin-top: 20px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#nextLevelBtn:hover {
+    background-color: #388e3c;
 }
 
 #progressContainer {
