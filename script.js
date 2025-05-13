@@ -66,7 +66,7 @@ const thema = urlParams.get('thema');
 
 // Definiere die Aufgaben je nach Thema
 let aufgaben = [];
-
+let richtige = [];
 if (thema === "subjonctif") {
     aufgaben = [
         { satz: "Il faut que tu ___ (faire) tes devoirs.", woerter: ["fasses", "fait", "fera"], korrekt: "fasses" },
@@ -82,11 +82,15 @@ if (thema === "subjonctif") {
     ];
 } else if (thema === "partie 1") {
     aufgaben = [
+        { satz: "Clément Mathieu est un homme ___ .", woerter: ["passionné", "patient" , "compréhensif", "autoritaire", "sévère", "rigide"], korrekt: "passionné", bild: "img/mathieu.jpg" },
+        { satz: "Clément Mathieu est un homme ___ .", woerter: ["patient" , "compréhensif", "autoritaire", "sévère", "rigide"], korrekt: "patient", bild: "img/mathieu.jpg" },
+        { satz: "Clément Mathieu est un homme ___ .", woerter: ["compréhensif", "autoritaire", "sévère", "rigide"], korrekt: "compréhensif", bild: "img/mathieu.jpg" },
+        { satz: "Clément Mathieu adore ___ musique.", woerter: ["la", "de la", "de"], korrekt: "la", bild: "img/mathieu.jpg"},
+        { satz: "Clément Mathieu aime ___ travail avec les élèves.", woerter: ["le", "du", "de"], korrekt: "le", bild: "img/mathieu.jpg"},
         { satz: "Je vais à l'école ___  pied.", woerter: ["à", "en", "avec"], korrekt: "à" },
-        { satz: "Nous allons à l'entrainement de football ___ voiture.", woerter: ["à", "en", "avec"], korrekt: "en" },
-        { satz: "Il va chez ses grand-parents ___  vélo.", woerter: ["à", "en", "avec"], korrekt: "à" },
-        { satz: "Elle va à l'école ___ bus.", woerter: ["à", "en", "avec"], korrekt: "en" },
-        { satz: "Clément Mathieu aime ___ musique.", woerter: ["la", "de la", "d"], korrekt: "la", bild: "img/mathieu.jpg" },
+        { satz: "Ma mère va au travail ___ voiture.", woerter: ["à", "en", "avec"], korrekt: "en" },
+        { satz: "Mon père va au travail ___  vélo.", woerter: ["à", "en", "avec"], korrekt: "à" },
+        { satz: "Ma sœur va au lycée ___ bus.", woerter: ["à", "en", "avec"], korrekt: "en" },
     ];
 } /* else {
     alert("Kein gültiges Thema gewählt. Du wirst zur Themenwahl zurückgeleitet.");
@@ -147,6 +151,10 @@ function ladeLevel() {
 
 }
 
+function entferneElemente(array1, array2) {
+  return array1.filter(element => !array2.includes(element));
+}
+
 function updateProgressBar() {
     const totalLevels = aufgaben.length;
     const progressPercent = ((aktuellesLevel - 1) / totalLevels) * 100;
@@ -193,7 +201,11 @@ function checkAnswer() {
             dropzone.style.border = "2px solid #4caf50";
             feedback.innerText = "✅ Richtig! Du bekommst 10 Punkte!";
             punkte += 10;
-            
+            if(aufgaben[aktuellesLevel - 1].satz.startsWith("Clément Mathieu est un homme")) {
+                richtige.push(droppedWord);
+                console.log("Satz beginnt mit CM est un homme...")
+            }
+            console.log("Richtige Antworten abgespeicher?", richtige)
             // 12.05.25
             // hier falls im vorletzten Level, dann: akutelleslevel ++
             const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
