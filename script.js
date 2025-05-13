@@ -67,6 +67,8 @@ const thema = urlParams.get('thema');
 // Definiere die Aufgaben je nach Thema
 let aufgaben = [];
 let richtige = [];
+let offeneKorrekte = []; // Für Mehrfachlösungen
+
 if (thema === "subjonctif") {
     aufgaben = [
         { satz: "Il faut que tu ___ (faire) tes devoirs.", woerter: ["fasses", "fait", "fera"], korrekt: "fasses" },
@@ -82,7 +84,7 @@ if (thema === "subjonctif") {
     ];
 } else if (thema === "partie 1") {
     aufgaben = [
-        { satz: "Clément Mathieu est un homme ___ .", woerter: ["passionné", "patient" , "compréhensif", "autoritaire", "sévère", "rigide"], korrekt: "passionné", bild: "img/mathieu.jpg" },
+        { satz: "Clément Mathieu est un homme ___ .", woerter: ["passionné", "patient" , "compréhensif", "autoritaire", "sévère", "rigide"], korrekt: ["passionné", "patient", "compréhensif"], bild: "img/mathieu.jpg" },
         { satz: "Clément Mathieu est un homme ___ .", woerter: ["patient" , "compréhensif", "autoritaire", "sévère", "rigide"], korrekt: "patient", bild: "img/mathieu.jpg" },
         { satz: "Clément Mathieu est un homme ___ .", woerter: ["compréhensif", "autoritaire", "sévère", "rigide"], korrekt: "compréhensif", bild: "img/mathieu.jpg" },
         { satz: "Clément Mathieu adore ___ musique.", woerter: ["la", "de la", "de"], korrekt: "la", bild: "img/mathieu.jpg"},
@@ -120,19 +122,27 @@ db.collection("lernstaende").doc(`${schuelerId}_${thema}`).get().then((doc) => {
 
 function ladeLevel() {
     const aufgabe = aufgaben[aktuellesLevel - 1];
+    offeneKorrekte = [...aufgabe.korrekt]; // Kopie für Tracking
+    // dropzone.innerHTML = "<span class='placeholder'>...</span>";
+
     const luecke = '<span class="dropzone"><span class="placeholder">...</span></span>';
     const satzMitLuecke = aufgabe.satz.replace("___", luecke);
     document.getElementById('sentence').innerHTML = satzMitLuecke;
+
+    // Jetzt existiert .dropzone im DOM → erst jetzt zurücksetzen
+    document.querySelector('.dropzone').innerHTML = "<span class='placeholder'>...</span>";
+
     document.getElementById('levelDisplay').innerText = aktuellesLevel;
     document.getElementById('punkteDisplay').innerText = punkte;
-    /*
-    document.getElementById('sentence').innerText = aufgabe.satz;
-    */
     document.getElementById('feedback').innerText = "";
     document.getElementById('nextLevelBtn').style.display = "none";
 
     const wordsDiv = document.getElementById('words');
     wordsDiv.innerHTML = "";
+    aufgabe.woerter.forEach((wort, index) => {
+        wordsDiv.innerHTML += `<div class="word" onclick="wordClick(event)" id="word${index}">${wort}</div>`;
+    });
+
     if (aufgabe.bild) {
         console.log("Wir haben ein Bild.");
         document.getElementById('bildContainer').innerHTML = 
@@ -140,12 +150,8 @@ function ladeLevel() {
     } else {
         console.log("Wir haben kein Bild.");
         document.getElementById('bildContainer').innerHTML = "";
-    }
-    aufgabe.woerter.forEach((wort, index) => {
-        wordsDiv.innerHTML += `<div class="word" onclick="wordClick(event)" id="word${index}">${wort}</div>`;
-    });
-
-    document.querySelector('.dropzone').innerHTML = "<span>Hier ablegen</span>";
+    };
+    // document.querySelector('.dropzone').innerHTML = "<span>Hier ablegen</span>";
     console.log("Ich bin in lade level und sollte jetzt die ProgressBar abfeuern");
     updateProgressBar();
 
@@ -194,90 +200,120 @@ function checkAnswer() {
 
     if (dropzone.children.length > 0) {
         const droppedWord = dropzone.children[0].innerText;
-        const richtigeAntwort = aufgaben[aktuellesLevel - 1].korrekt;
+        // const richtigeAntwort = aufgaben[aktuellesLevel - 1].korrekt;
+        // 13.05.25
+        const aufgabe = aufgaben[aktuellesLevel - 1];
+        const richtigeAntwort = aufgabe.korrekt;
+
         console.log("Aktuelles level (1. Check):", aktuellesLevel);
-        if (droppedWord === richtigeAntwort) {
-            console.log("Aktuelles level (2. Check):", aktuellesLevel);
+        const isCorrect = Array.isArray(richtigeAntwort)
+            ? richtigeAntwort.includes(droppedWord)
+            : droppedWord === richtigeAntwort;
+        
+        if (isCorrect) {
             dropzone.style.border = "2px solid #4caf50";
             feedback.innerText = "✅ Richtig! Du bekommst 10 Punkte!";
             punkte += 10;
-            if(aufgaben[aktuellesLevel - 1].satz.startsWith("Clément Mathieu est un homme")) {
-                richtige.push(droppedWord);
-                console.log("Satz beginnt mit CM est un homme...")
-            }
-            console.log("Richtige Antworten abgespeicher?", richtige)
-            // 12.05.25
-            // hier falls im vorletzten Level, dann: akutelleslevel ++
-            const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
-            console.log("Erklärugen für Popups:", erklaerung, erklaerungen);
-            if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
-                showPopup(erklaerung.titel, erklaerung.text);
-                //localStorage.setItem(`popupShown_${thema}_${aktuellesLevel}`, "true");
-            }
-            /*
-            db.collection("antworten").add({
-                schuelerId: schuelerId,
-                level: aktuellesLevel,
-                aufgabe: aufgaben[aktuellesLevel - 1].satz,
-                antwort: droppedWord,
-                korrekt: true,
-                punkte: punkte,
-                timestamp: new Date()
-            });
 
-            // HIER das neue Stück einfügen 👇
-            db.collection("lernstaende").doc(`${schuelerId}_${thema}`).set({
-                schuelerId: schuelerId,
-                thema: thema,
-                aktuellesLevel: aktuellesLevel,
-                punkte: punkte,
-                timestamp: new Date()
-            });
-            */
-            aktuellesLevel++;
-            if (aktuellesLevel - 1 < aufgaben.length) {
-                console.log("Ich komm hier raus");
-                document.getElementById('nextLevelBtn').style.display = "inline-block";
-            } else {
-                console.log("Ich komm da raus");
-                // muss woanders hin:
-                // aktuellesLevel++;
-                feedback.innerText += " 🎉 Du hast alle Level geschafft!";
-                // 12.05.25:
-                const aufgabe = aufgaben[aktuellesLevel - 2];
-                console.log("Aktuelles Level:", aktuellesLevel);
-                console.log("Aufgabe:", aufgabe);
-                const luecke = '<span class="dropzone"><span class="placeholder">...</span></span>';
-                const satzMitLuecke = aufgabe.satz.replace("___", luecke);
-                document.getElementById('sentence').innerHTML = satzMitLuecke;
-                document.getElementById('levelDisplay').innerText = aktuellesLevel;
-                document.getElementById('punkteDisplay').innerText = punkte;
-                updateProgressBar();
-                if (typeof confetti === "function") {
-                    confetti({
-                        particleCount: 150,
-                        spread: 70,
-                        origin: { y: 0.6 }
-                    });
+            if (Array.isArray(richtigeAntwort)) {
+                // Bei Mehrfachlösungen: korrektes Wort aus Liste entfernen
+                aufgabe.korrekt = richtigeAntwort.filter(w => w !== droppedWord);
+
+                // Entferne richtiges Wort aus Wortliste (optisch)
+                document.querySelectorAll('.word').forEach(btn => {
+                  if (btn.innerText === droppedWord) btn.remove();
+                });
+            
+                // Leere Dropzone
+                dropzone.innerHTML = "<span class='placeholder'>...</span>";
+            
+                // Speichern
+                db.collection("antworten").add({
+                  schuelerId,
+                  level: aktuellesLevel,
+                  aufgabe: aufgabe.satz,
+                  antwort: droppedWord,
+                  korrekt: true,
+                  punkte,
+                  timestamp: new Date()
+                });
+            
+                if (aufgabe.korrekt.length === 0) {
+                  // Wenn alle gefunden → Level erhöhen
+                  aktuellesLevel++;
+                
+                  db.collection("lernstaende").doc(`${schuelerId}_${thema}`).set({
+                    schuelerId,
+                    thema,
+                    aktuellesLevel,
+                    punkte,
+                    timestamp: new Date()
+                  });
+              
+                  document.getElementById('nextLevelBtn').style.display = "inline-block";
+                  feedback.innerText += " 🎉 Alle richtigen Antworten gefunden!";
                 }
-            }
-            db.collection("antworten").add({
-                schuelerId: schuelerId,
-                level: aktuellesLevel,
-                aufgabe: aufgaben[aktuellesLevel - 2].satz,
-                antwort: droppedWord,
-                korrekt: true,
-                punkte: punkte,
-                timestamp: new Date()
-            });
-            // HIER das neue Stück einfügen 👇
-            db.collection("lernstaende").doc(`${schuelerId}_${thema}`).set({
-                schuelerId: schuelerId,
-                thema: thema,
-                aktuellesLevel: aktuellesLevel,
-                punkte: punkte,
-                timestamp: new Date()
-            });
+            } else {
+                // if (droppedWord === richtigeAntwort) {
+                console.log("Aktuelles level (2. Check):", aktuellesLevel);
+                dropzone.style.border = "2px solid #4caf50";
+                feedback.innerText = "✅ Richtig! Du bekommst 10 Punkte!";
+                punkte += 10;
+                if(aufgaben[aktuellesLevel - 1].satz.startsWith("Clément Mathieu est un homme")) {
+                    richtige.push(droppedWord);
+                    console.log("Satz beginnt mit CM est un homme...")
+                }
+                console.log("Richtige Antworten abgespeichert?", richtige)
+                // 12.05.25
+                const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
+                console.log("Erklärugen für Popups:", erklaerung, erklaerungen);
+                if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
+                    showPopup(erklaerung.titel, erklaerung.text);
+                }
+                aktuellesLevel++;
+                if (aktuellesLevel - 1 < aufgaben.length) {
+                    console.log("Ich komm hier raus");
+                    document.getElementById('nextLevelBtn').style.display = "inline-block";
+                } else {
+                    console.log("Ich komm da raus");
+                    // muss woanders hin:
+                    // aktuellesLevel++;
+                    feedback.innerText += " 🎉 Du hast alle Level geschafft!";
+                    // 12.05.25:
+                    const aufgabe = aufgaben[aktuellesLevel - 2];
+                    console.log("Aktuelles Level:", aktuellesLevel);
+                    console.log("Aufgabe:", aufgabe);
+                    const luecke = '<span class="dropzone"><span class="placeholder">...</span></span>';
+                    const satzMitLuecke = aufgabe.satz.replace("___", luecke);
+                    document.getElementById('sentence').innerHTML = satzMitLuecke;
+                    document.getElementById('levelDisplay').innerText = aktuellesLevel;
+                    document.getElementById('punkteDisplay').innerText = punkte;
+                    updateProgressBar();
+                    if (typeof confetti === "function") {
+                        confetti({
+                            particleCount: 150,
+                            spread: 70,
+                            origin: { y: 0.6 }
+                        });
+                    }
+                }
+                db.collection("antworten").add({
+                    schuelerId: schuelerId,
+                    level: aktuellesLevel,
+                    aufgabe: aufgaben[aktuellesLevel - 2].satz,
+                    antwort: droppedWord,
+                    korrekt: true,
+                    punkte: punkte,
+                    timestamp: new Date()
+                });
+                // HIER das neue Stück einfügen 👇
+                db.collection("lernstaende").doc(`${schuelerId}_${thema}`).set({
+                    schuelerId: schuelerId,
+                    thema: thema,
+                    aktuellesLevel: aktuellesLevel,
+                    punkte: punkte,
+                    timestamp: new Date()
+                });
         } else {
             feedback.innerText = "❌ Leider falsch. Versuch es nochmal.";
             dropzone.style.border = "2px solid #FF0000";
