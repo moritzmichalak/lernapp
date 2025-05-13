@@ -76,8 +76,8 @@ if (thema === "subjonctif") {
         {
             satz: "Complète : Je m'appelle ___.",
             typ: "text",
-            korrekt: ["Marie", "Paul", "Claire"],
-            bild: "img/personne.jpg"
+            korrekt: "Pierre",
+            bild: "img/pierre.jpeg"
         }
     ];
 } /* else {
