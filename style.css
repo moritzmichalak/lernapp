@@ -222,3 +222,39 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
+
+#textAntwortContainer {
+    margin: 20px 0;
+}
+
+#textInput {
+    padding: 10px 15px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    width: 250px;
+    max-width: 80%;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#textInput:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+    outline: none;
+}
+
+#textAntwortContainer button {
+    margin-left: 10px;
+    padding: 10px 18px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#textAntwortContainer button:hover {
+    background-color: #388e3c;
+}
