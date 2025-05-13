@@ -61,12 +61,16 @@
     </div>
     -->
     <div class="words" id="words"></div>
+    <!-- 🟩 Eingabefeld + Button für Freitextaufgaben -->
     <div id="textAntwortContainer" style="display: none;">
         <input type="text" id="textInput" placeholder="Antwort eingeben..." class="textantwort">
         <button onclick="checkTextAnswer()">Antwort prüfen</button>
     </div>
 
-    <button onclick="checkAnswer()">Antwort prüfen</button>
+    <!-- 🟢 Button nur für Drag-and-Drop -->
+    <button id="checkAnswerBtn" onclick="checkAnswer()">Antwort prüfen</button>
+
+    <!-- Weiter-Button bleibt wie gehabt -->
     <button id="nextLevelBtn" onclick="naechstesLevel()" style="display:none;">
         ➡️ Weiter zu nächsten Level!
     </button>

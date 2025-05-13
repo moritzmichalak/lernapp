@@ -143,6 +143,9 @@ function ladeLevel() {
     // 13.05.25:
     const textContainer = document.getElementById('textAntwortContainer'); // 🔧 NEU
     const textInput = document.getElementById('textInput'); // 🔧 NEU
+    
+    const checkAnswerBtn = document.getElementById('checkAnswerBtn'); // ✅ NEU
+
 
     if (aufgabe.typ === "text") {
         if (dropzone) dropzone.style.display = "none"; // 🔧 NEU
