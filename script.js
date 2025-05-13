@@ -1,8 +1,6 @@
 const db = firebase.firestore();
 let schuelerId = "";
 
-
-
 // Auth-Check und Start der Lernumgebung
 firebase.auth().onAuthStateChanged(function(user) {
     console.log("Auth-Zustand geprüft:", user);
@@ -49,11 +47,12 @@ let offeneKorrekte = []; // Für Mehrfachlösungen
 const urlParams = new URLSearchParams(window.location.search);
 const thema = urlParams.get('thema');
 console.log("Das Thema ist:", thema);
+/*
 if (thema === "partie 1") {
     console.log("Mir haven's erkannt!");
     thema = "partie_1";
 } 
-
+*/
 console.log("Das Thema ist:", thema);
 
 
@@ -70,7 +69,7 @@ if (thema === "subjonctif") {
         { satz: "Je / J' ___ (aimer) aller au Japon.", woerter: ["aimais", "aimeriais", "aimerais"], korrekt: "aimerais" },
         { satz: "Si on avait beaucoup d'argent, on ___ (faire) un grand voyage.", woerter: ["faissait", "ferait", "fairiait"], korrekt: "ferait" }
     ];
-} else if (thema === "partie_1") {
+} else if (thema === "partie 1") {
     aufgaben = [
         { satz: "Clément Mathieu est un homme ___ .", woerter: ["passionné", "patient" , "compréhensif", "autoritaire", "sévère", "rigide"], korrekt: ["passionné", "patient", "compréhensif"], bild: "img/mathieu.jpg" },
         { satz: "Rachin est un directeur  ___ .", woerter: ["compréhensif", "strict", "timide", "autoritaire", "froid", "gentil"], korrekt: ["strict", "autoritaire", "froid"], bild: "img/rachin.jpg" },
