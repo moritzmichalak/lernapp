@@ -113,14 +113,14 @@ if (thema === "subjonctif") {
             bild: "img/mathieu.jpg"
         },
         {    
-            satz: "Les élèves jouent ___ foot(ball).",
+            satz: "Les élèves jouent ____ foot(ball).",
             typ: "text",
             korrekt: "au",
             bild: "img/foot.jpg"
         },
         
         {    
-            satz: "Salut, je m'appelle Emma 😊<ul>Je vais à l'école _____ pied. 🚶‍♀️</ul><ul>Je joue _____ guitare. 🎸🎶</ul><ul>Je joue _____ Badminton. 🏸💪</ul><ul>Je suis un peu _____ (Sie ist ein wenig <b>schüchtern</b>)</ul><ul>Maus le plus souvent je suis _____ (Aber meistens ist sie <b>glücklich</b>)</ul><ul>J'aime ____ chocolat.🍫❤️ </ul><ul>J'adore ____ chats. 🐈😊 </ul>",
+            satz: "Salut, je m'appelle Emma 😊<ul>➡️ Je vais à l'école _____ pied. 🚶‍♀️</ul><select disabled><ul>Je joue _____ guitare. 🎸🎶</ul><ul>Je joue _____ Badminton. 🏸💪</ul><ul>Je suis un peu _____ (Sie ist ein wenig <b>schüchtern</b>)</ul><ul>Maus le plus souvent je suis _____ (Aber meistens ist sie <b>glücklich</b>)</ul><ul>J'aime ____ chocolat.🍫❤️ </ul><ul>J'adore ____ chats. 🐈😊 </ul></select>",
             typ: "text",
             korrekt: "à",
             bild: "img/emma.png"
