@@ -1,6 +1,11 @@
 const db = firebase.firestore();
 let schuelerId = "";
 
+// Definiere die Aufgaben je nach Thema
+let aufgaben = [];
+let richtige = [];
+let offeneKorrekte = []; // Für Mehrfachlösungen
+
 // Auth-Check und Start der Lernumgebung
 firebase.auth().onAuthStateChanged(function(user) {
     console.log("Auth-Zustand geprüft:", user);
@@ -43,10 +48,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const thema = urlParams.get('thema');
 if (thema === "partie 1") thema = "partie_1";
 
-// Definiere die Aufgaben je nach Thema
-let aufgaben = [];
-let richtige = [];
-let offeneKorrekte = []; // Für Mehrfachlösungen
+
 
 if (thema === "subjonctif") {
     aufgaben = [
