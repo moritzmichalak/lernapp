@@ -120,7 +120,10 @@ function ladeLevel() {
     */
 
     // 13.05.25:
-    const dropzone = document.querySelector('.dropzone');
+    if (dropzone) {
+        dropzone.innerHTML = "<span class='placeholder'>...</span>";
+        dropzone.style.display = "inline-flex";
+    }
     dropzone.innerHTML = "<span class='placeholder'>...</span>";
     dropzone.style.display = "inline-flex";
 
@@ -412,6 +415,8 @@ function checkTextAnswer() {
         feedback.innerText = "✅ Richtig!";
         punkte += 10;
         aktuellesLevel++;
+
+        updateProgressBar(); // ✅ Fortschrittsbalken korrekt setzen
 
         db.collection("antworten").add({
             schuelerId,
