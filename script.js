@@ -82,7 +82,7 @@ if (thema === "subjonctif") {
         { satz: "Clément Mathieu adore ___ musique.", woerter: ["la", "de la", "de"], korrekt: "la", bild: "img/mathieu.jpg"},
         { satz: "Clément Mathieu aime ___ travail avec les élèves.", woerter: ["le", "du", "de"], korrekt: "le", bild: "img/mathieu.jpg"},
         { satz: "Rachin préfère ___ autorité excessive à la bienveillance.", woerter: ["l'", "de l'", "d'"], korrekt: "l'", bild: "img/rachin.jpg"},
-        { satz: "Pierre Morhange déteste ___ règles.", woerter: ["les", "de", "des"], korrekt: "les", bild: "img/.jpg"},
+        { satz: "Pierre Morhange déteste ___ règles.", woerter: ["les", "de", "des"], korrekt: "les", bild: "img/pierre.jpg"},
         // POPUP: Die Besonderheit bei aimer, détester, adorer, préférer ist, dass immer der bestimmte Artikel folgt (le, la, les). Wir machen noch ein paar Beispiele zur Übung:
         { satz: "Elle aime ___  chocolat.", woerter: ["le", "du", "la"], korrekt: "le", bild: "img/chocolat.png" },
         { satz: "Elle adore ___  musique.", woerter: ["le", "de", "la", "de la", "du"], korrekt: "la", bild: "img/musique.png" },
@@ -98,7 +98,7 @@ if (thema === "subjonctif") {
             satz: "Ils vont en France ____ moto.",
             typ: "text",
             korrekt: "à",
-            bild: "img/moto.jpeg"
+            bild: "img/moto.png"
         },
         // POPUP: Genau, beim Motorradfahren ist der Kopf an der frischen Luft, also à :)
         {    
@@ -169,8 +169,7 @@ if (thema === "subjonctif") {
             typ: "text",
             korrekt: "les",
             bild: "img/Emma.png"
-        },  
-        { satz: "Ma sœur va au lycée ___ bus.", woerter: ["à", "en", "avec"], korrekt: "en", bild: "img/schwester.png" },
+        }
     ];
 } /* else {
     alert("Kein gültiges Thema gewählt. Du wirst zur Themenwahl zurückgeleitet.");
@@ -535,21 +534,17 @@ const erklaerungen = {
         },
         20: {
             titel: "Instrumente vs. Sport (jouer)",
-            text: "Weg von den Fortbewegungsmitteln, hin zu Hobbys! <br> Auf as Verb jouer folgt entweder <strong>de</strong> (bei Instrumenten) oder <strong>à</strong> (bei Spielen/Sport). <br> Lass uns ein paar Beispiele machen!"
+            text: "Weg von den Fortbewegungsmitteln, hin zu Hobbys! <br> Auf das Verb jouer folgt entweder <strong>de</strong> (bei Instrumenten) oder <strong>à</strong> (bei Spielen/Sport). <br> Lass uns ein paar Beispiele machen!"
         },
         21: {
-            titel: "Attention !",
-            text: "Wir brauchen nicht nur die Präposition <em>de</em> bzw. <em>à</em>, sondern auch den <strong>bestimmten Artikel</strong>, z.B. <em>de</em><strong>la</strong> guitare. <br> Attention : <br> de + le verschmilzt zu <strong>du</strong> und <strong>de + les</strong> verschmilzt zu <strong>des</strong>! <br> à + le verschmilzt zu <strong>au</strong> und <strong>à + les</strong> verschmilzt zu <strong>aux</strong>!"
+            titel: "Gut erkannt!",
+            text: "Wir brauchen nicht nur die Präposition <em>de</em> bzw. <em>à</em>, sondern auch den <strong>bestimmten Artikel</strong>, z.B. <em>de</em> <strong>la</strong> guitare. <br> Attention : <br> <em>de + le</em> verschmilzt zu <strong>du</strong> und <em>de + les</em> verschmilzt zu <strong>des</strong>! <br> à + le verschmilzt zu <strong>au</strong> und <strong>à + les</strong> verschmilzt zu <strong>aux</strong>!"
         },
-        22: {
-            titel: "à + le / les",
-            text: "<strong>à + le</strong> wird <strong>au</strong>, <strong>à + les</strong> wird <strong>aux</strong>."
-        },
-        23: {
+        24: {
             titel: "Noch mehr Beispiele zu jouer mit den Choristes 😊 ",
             text: "<strong>à + le</strong> wird <strong>au</strong>, <strong>à + les</strong> wird <strong>aux</strong>."
         },
-        25: {
+        26: {
             titel: "Bravo !👏 Zum Abschluss eine kleine Wiederholung 😊 ",
             text: "Vervollständige den Steckbrief von Emma!"
         },
