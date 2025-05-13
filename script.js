@@ -402,7 +402,9 @@ function checkTextAnswer() {
     const input = document.getElementById('textInput');
     const antwort = input.value.trim().toLowerCase();
     const aufgabe = aufgaben[aktuellesLevel - 1];
-    const richtigeAntworten = aufgabe.korrekt.map(a => a.toLowerCase());
+    const richtigeAntworten = Array.isArray(aufgabe.korrekt)
+        ? aufgabe.korrekt.map(a => a.toLowerCase())
+        : [aufgabe.korrekt.toLowerCase()];
 
     const isCorrect = richtigeAntworten.includes(antwort);
 
