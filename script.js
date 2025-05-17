@@ -65,6 +65,17 @@ if (thema === "subjonctif") {
     ];
 } else if (thema === "conditionnel") {
     aufgaben = [
+        {    
+            satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge, ___ oder Möglichkeiten auszudrücken. Das wort <em>conditionnel</em> bedeutet <em>Bedingung</em>. Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br> <br> <ul>Je <em> voudrais </em> aller à la mer. (Ich würde gerne ans Meer fahren) </ul> <ul>À ta place, je <em> partirais </em> en vacances. (An deiner Stelle, würde ich in den Urlaub fahren. ⬅️ <strong>Ratschlag</strong>) </ul> <ul> Si je gagnais à la loterie, je<em> donnerais </ul> de l'argent à ma famille. (Gewänne ich im Lotte, würde ich Geld  meiner Familie geben. ⬅️ <strong>Ratschlag</strong>) ",
+            woerter: ["Befehle", "Vergangenheit", "Wünsche"],
+            korrekt: "Wünsche"
+        },  
+        {    
+            satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge, ___ oder Möglichkeiten auszudrücken. Das wort <em>conditionnel</em> bedeutet <em>Bedingung</em>. Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br> <br> ",
+            woerter: ["Befehle", "Vergangenheit", "Wünsche"],
+            korrekt: "Wünsche",
+            bild: "img/Emma.png"
+        },
         { satz: "Si j'étais riche, je ___ (acheter) une maison.", woerter: ["achèterais", "achète", "acheterai"], korrekt: "achèterais" },
         { satz: "Nous ___ (vouloir) voyager plus.", woerter: ["voudrions", "voulons", "voudrons"], korrekt: "voudrions" },
         { satz: "Je / J' ___ (aimer) aller au Japon.", woerter: ["aimais", "aimeriais", "aimerais"], korrekt: "aimerais" },
