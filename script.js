@@ -108,37 +108,37 @@ if (thema === "subjonctif") {
         },
         {    
             ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
-            satz: "je",
+            satz: "je ___",
             woerter: ["souhaiter<em>aient</em>","souhaiter<em>ait</em>", "souhaiter<em>ais</em>", "souhaiter<em>ais</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
             korrekt: ["souhaiter<em>ais</em>"]
         },
         {    
             ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
-            satz: "tu",
+            satz: "tu ___",
             woerter: ["souhaiter<em>aient</em>","souhaiter<em>ait</em>", "souhaiter<em>ais</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
             korrekt: ["souhaiter<em>ais</em>"]
         },
         {    
             ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
-            satz: "il/elle/on",
+            satz: "il/elle/on ___",
             woerter: ["souhaiter<em>aient</em>", "souhaiter<em>ait</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
             korrekt: ["souhaiter<em>ait</em>"]
         },
         {    
             ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
-            satz: "nous",
+            satz: "nous ___",
             woerter: ["souhaiter<em>aient</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
             korrekt: ["souhaiter<em>ions</em>"]
         },
         {    
             ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
-            satz: "vous",
+            satz: "vous ___",
             woerter: ["souhaiter<em>aient</em>", "souhaiter<em>iez</em>"],
             korrekt: ["souhaiter<em>iez</em>"]
         },
         {    
             ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
-            satz: "ils/elles",
+            satz: "ils/elles ___",
             woerter: ["souhaiter<em>aient</em>"],
             korrekt: ["souhaiter<em>aient</em>"]
         },
