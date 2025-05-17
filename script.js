@@ -364,21 +364,21 @@ if (thema === "subjonctif") {
             satz: "Clément Mathieu __________ (faire) tout pour aider les élèves. (Clément Mathieu würde alles tun, um den Schülern zu helfen.)",
             typ: "text",
             korrekt: "ferait",
-            bild: "img/mathieu.jpg."
+            bild: "img/mathieu.jpg"
         },
         {
             ueberschrift: "Unegelmäßige Formen: faire",
             satz: "Si j'étais professeur, je __________ (faire) aussi une chorale dans mon école. (Wäre ich Lehrer, würde ich auch einen Chor in meiner Schule kreieren.",
             typ: "text",
             korrekt: "ferais",
-            bild: "img/chorale.png."
+            bild: "img/chorale.png"
         },
         {
             ueberschrift: "Unegelmäßige Formen: faire",
             satz: "S'il ne pleuvait pas, nous __________ (faire) la fête !. (Regnete es nicht, würden wir Party machen!).",
             typ: "text",
             korrekt: "ferions",
-            bild: "img/party.jpg."
+            bild: "img/party.jpg"
         },
         {    
             ueberschrift: "Unegelmäßige Formen",
