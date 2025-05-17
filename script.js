@@ -107,37 +107,37 @@ if (thema === "subjonctif") {
             korrekt: "die Grundform des Verbs"
         },
         {    
-            ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
+            ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
             satz: "je ___",
             woerter: ["souhaiter<em>aient</em>","souhaiter<em>ait</em>", "souhaiter<em>ais</em>", "souhaiter<em>ais</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
             korrekt: "souhaiter<em>ais</em>"
         },
         {    
-            ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
+            ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
             satz: "tu ___",
             woerter: ["souhaiter<em>aient</em>","souhaiter<em>ait</em>", "souhaiter<em>ais</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
             korrekt: "souhaiter<em>ais</em>"
         },
         {    
-            ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
+            ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
             satz: "il/elle/on ___",
             woerter: ["souhaiter<em>aient</em>", "souhaiter<em>ait</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
             korrekt: "souhaiter<em>ait</em>"
         },
         {    
-            ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
+            ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
             satz: "nous ___",
             woerter: ["souhaiter<em>aient</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
             korrekt: "souhaiter<em>ions</em>"
         },
         {    
-            ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
+            ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
             satz: "vous ___",
             woerter: ["souhaiter<em>aient</em>", "souhaiter<em>iez</em>"],
             korrekt: "souhaiter<em>iez</em>"
         },
         {    
-            ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
+            ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
             satz: "ils/elles ___",
             woerter: ["souhaiter<em>aient</em>"],
             korrekt: "souhaiter<em>aient</em>"
@@ -352,8 +352,12 @@ function ladeLevel() {
         textContainer.style.display = "none";
 
         aufgabe.woerter.forEach((wort, index) => {
-            wordsDiv.innerHTML += `<div class="word" onclick="wordClick(event)" id="word${index}">${wort}</div>`;
-        });
+            const formattedWord = aufgabe.ueberschrift?.startsWith("Endungen")
+                ? formatWord(wort)
+                : wort;
+
+        wordsDiv.innerHTML += `<div class="word" onclick="wordClick(event)" id="word${index}">${formattedWord}</div>`;
+});
     }
     // Überschrift einblenden 
     const ueberschriftDiv = document.getElementById('ueberschrift');
@@ -851,6 +855,9 @@ async function ladeFalschBeantworteteAufgaben() {
     }
 }
 
+function formatWord(wort) {
+    return wort.replace(/(ais|ait|ions|iez|aient)/g, "<em>$1</em>");
+}
 
 /*
 window.logout = logout;
