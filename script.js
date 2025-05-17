@@ -170,7 +170,8 @@ if (thema === "subjonctif") {
             typ: "text",
             korrekt: "les",
             bild: "img/Emma.png"
-        }
+        },
+        { satz: "Si on avait beaucoup d'argent, on ___ (faire) un grand voyage.", woerter: ["faissait", "ferait", "fairiait"], korrekt: "ferait" }
     ];
 } /* else {
     alert("Kein gültiges Thema gewählt. Du wirst zur Themenwahl zurückgeleitet.");
