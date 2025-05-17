@@ -500,6 +500,7 @@ function checkAnswer() {
                         });
                     }
                     // 17.05.25:    
+                    console.log("Jetzt sollte ich die falschen Aufgaben laden");
                     setTimeout(() => {
                         ladeFalschBeantworteteAufgaben();
                     }, 1500); // optional: 1,5 Sekunden Verzögerung
