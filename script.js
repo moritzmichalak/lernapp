@@ -476,7 +476,10 @@ function checkAnswer() {
                 aktuellesLevel++;
                 if (aktuellesLevel - 1 < aufgaben.length) {
                     console.log("Ich komm hier raus");
-                    document.getElementById('nextLevelBtn').style.display = "inline-block";
+                    setTimeout(() => {
+                        ladeFalschBeantworteteAufgaben();
+                    }, 1500);
+                    // document.getElementById('nextLevelBtn').style.display = "inline-block";
                 } else {
                     console.log("Ich komm da raus");
                     // muss woanders hin:
