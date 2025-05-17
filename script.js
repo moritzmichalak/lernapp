@@ -303,17 +303,59 @@ if (thema === "subjonctif") {
         {
             ueberschrift: "Unegelmäßige Formen",
             satz: "Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils das passende Verb zum unregelmäßigen Stamm zu finden: <br>"+
-            "<ul><strong>devr</strong>(ais)</ul> - ___",
+            "<ul><strong>devr</strong>(ais) : ➡️ ___ </ul>",
             woerter: ["pouvoir", "devoir", "avoir", "être", "aller", "faire"],
             korrekt: "devoir"
         },
         {
             ueberschrift: "Unegelmäßige Formen",
             satz: "Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils das passende Verb zum unregelmäßigen Stamm zu finden: <br>"+
-            "<ul><strong>devr</strong>(ais)</ul> - devoir"+
-            "<ul><strong>fer</strong>(ais)</ul>",
+            "<ul><strong>devr</strong>(ais) : devoir </ul>"+
+            "<ul><strong>fer</strong>(ais) : ➡️ ___ </ul>",
             woerter: ["pouvoir", "avoir", "être", "aller", "faire"],
             korrekt: "faire"
+        },
+        {
+            ueberschrift: "Unegelmäßige Formen",
+            satz: "Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils das passende Verb zum unregelmäßigen Stamm zu finden: <br>"+
+            "<ul><strong>devr</strong>(ais) : devoir </ul>"+
+            "<ul><strong>fer</strong>(ais) : faire </ul>"+
+            "<ul><strong>pourr</strong>(ais) : ➡️ ___ </ul>",
+            woerter: ["pouvoir", "avoir", "être", "aller"],
+            korrekt: "pouvoir"
+        },
+        {
+            ueberschrift: "Unegelmäßige Formen",
+            satz: "Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils das passende Verb zum unregelmäßigen Stamm zu finden: <br>"+
+            "<ul><strong>devr</strong>(ais) : devoir </ul>"+
+            "<ul><strong>fer</strong>(ais) : faire </ul>"+
+            "<ul><strong>pourr</strong>(ais) : pouvoir </ul>"+
+            "<ul><strong>aur</strong>(ais) : ➡️ ___ </ul>",
+            woerter: ["avoir", "être", "aller"],
+            korrekt: "avoir"
+        },
+        {
+            ueberschrift: "Unegelmäßige Formen",
+            satz: "Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils das passende Verb zum unregelmäßigen Stamm zu finden: <br>"+
+            "<ul><strong>devr</strong>(ais) : devoir </ul>"+
+            "<ul><strong>fer</strong>(ais) : faire </ul>"+
+            "<ul><strong>pourr</strong>(ais) : pouvoir </ul>"+
+            "<ul><strong>aur</strong>(ais) : avoir</ul>"+
+            "<ul><strong>ir</strong>(ais) : ➡️ ___ </ul>",
+            woerter: ["être", "aller"],
+            korrekt: "aller"
+        },
+        {
+            ueberschrift: "Unegelmäßige Formen",
+            satz: "Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils das passende Verb zum unregelmäßigen Stamm zu finden: <br>"+
+            "<ul><strong>devr</strong>(ais) : devoir </ul>"+
+            "<ul><strong>fer</strong>(ais) : faire </ul>"+
+            "<ul><strong>pourr</strong>(ais) : pouvoir </ul>"+
+            "<ul><strong>aur</strong>(ais) : avoir</ul>"+
+            "<ul><strong>ir</strong>(ais) : avoir </ul>"+
+            "<ul><strong>ser</strong>(ais) : être</ul>",
+            woerter: ["être"],
+            korrekt: "être"
         },
         {    
             ueberschrift: "Unegelmäßige Formen",
@@ -351,6 +393,16 @@ if (thema === "subjonctif") {
             korrekt: "voudraient",
             bild: "img/boulangerie.jpg"
         },
+        {    
+            ueberschrift: "Unegelmäßige Formen",
+            satz: "Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
+            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>. <br>"+
+            "Ordne zu: <em>ils/elles ___</em>",
+            woerter: ["voudraient"],
+            korrekt: "voudraient",
+            bild: "img/boulangerie.jpg"
+        },
+
         { satz: "Si j'étais riche, je ___ (acheter) une maison.", woerter: ["achèterais", "achète", "acheterai"], korrekt: "achèterais" },
         { satz: "Nous ___ (vouloir) voyager plus.", woerter: ["voudrions", "voulons", "voudrons"], korrekt: "voudrions" },
         { satz: "Je / J' ___ (aimer) aller au Japon.", woerter: ["aimais", "aimeriais", "aimerais"], korrekt: "aimerais" },
