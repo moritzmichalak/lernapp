@@ -83,8 +83,8 @@ if (thema === "subjonctif") {
             satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge, WÜnsche oder Möglichkeiten auszudrücken. Das wort <em>condition</em> bedeutet <em>Bedingung</em>. " + 
             "Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br><br>" +
             "<strong>Ordne zu: </strong><br>"+
-            "<ul>Je <em> voudrais </em> aller à la mer. (Ich würde gerne ans Meer fahren) ⬅️ <strong>Wunsch</strong>) </ul>" +
-            "<ul>À ta place, je <em> partirais </em> en vacances. (An deiner Stelle, würde ich in den Urlaub fahren. ⬅️ <strong>___</strong>) </ul>",
+            "<ul>Je <em> voudrais </em> aller à la mer. (Ich würde gerne ans Meer fahren) ⬅️ <strong>Wunsch</strong> </ul>" +
+            "<ul>À ta place, je <em> partirais </em> en vacances. (An deiner Stelle, würde ich in den Urlaub fahren.) ⬅️ <strong>___</strong> </ul>",
             woerter: ["Ratschlag/Vorschlag", "Wunsch", "Möglichkeit"],
             korrekt: "Ratschlag/Vorschlag"
         },  
@@ -92,29 +92,55 @@ if (thema === "subjonctif") {
             satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge, Wünsche oder Möglichkeiten auszudrücken. Das wort <em>condition</em> bedeutet <em>Bedingung</em>. " + 
             "Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br><br>" +
             "<strong>Ordne zu: </strong><br>"+
-            "<ul>Je <em> voudrais </em> aller à la mer. (Ich würde gerne ans Meer fahren) ⬅️ <strong>Wunsch</strong>) </ul>" +
-            "<ul>À ta place, je <em> partirais </em> en vacances. (An deiner Stelle, würde ich in den Urlaub fahren. ⬅️ <strong>Ratschlag</strong>) </ul>" +
-            "<ul> Si je gagnais à la loterie, je<em> donnerais </ul> de l'argent à ma famille. (Gewänne ich im Lotte, würde ich Geld  meiner Familie geben. ⬅️ <strong>___</strong>) ",
+            "<ul>Je <em> voudrais </em> aller à la mer. (Ich würde gerne ans Meer fahren) ⬅️ <strong>Wunsch</strong> </ul>" +
+            "<ul>À ta place, je <em> partirais </em> en vacances. (An deiner Stelle, würde ich in den Urlaub fahren.) ⬅️ <strong>Ratschlag</strong> </ul>" +
+            "<ul> Si je gagnais à la loterie, je<em> donnerais </ul> de l'argent à ma famille. (Gewänne ich im Lotte, würde ich Geld  meiner Familie geben.) ⬅️ <strong>___</strong> ",
             woerter: ["Ratschlag/Vorschlag", "Wunsch", "Möglichkeit"],
             korrekt: "Möglichkeit"
         },  
         {    
-            satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge, Wünsche oder Möglichkeiten auszudrücken. Das wort <em>condition</em> bedeutet <em>Bedingung</em>. " + 
-            "Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br><br>" +
-            "<strong>Ordne zu: </strong><br>"+
-            "<ul>Je <em> voudrais </em> aller à la mer. (Ich würde gerne ans Meer fahren) ⬅️ <strong>Wunsch</strong>) </ul>" +
-            "<ul>À ta place, je <em> partirais </em> en vacances. (An deiner Stelle, würde ich in den Urlaub fahren. ⬅️ <strong>Ratschlag</strong>) </ul>" +
-            "<ul> Si je gagnais à la loterie, je<em> donnerais </ul> de l'argent à ma famille. (Gewänne ich im Lotte, würde ich Geld  meiner Familie geben. ⬅️ <strong>___</strong>) ",
-            woerter: ["Ratschlag/Vorschlag", "Wunsch", "Möglichkeit"],
-            korrekt: "Möglichkeit"
-        },  
-        {    
-            ueberschrift: "Regelmäßige Formeb",
+            ueberschrift: "Regelmäßige Verben",
             satz: "Um die regelmäßigen Formen zu bilden, hängt man an ___ die Endungen <em>-ais, -ait, -ions, -iez, -aient</em> an. <br>"+
-            "<ul>À ta place, je <strong>partir</strong><em>ais </em> en vacances. (An deiner Stelle, würde ich in den Urlaub fahren. ⬅️ <strong>Ratschlag</strong>) </ul>" +
-            "<ul> Si je gagnais à la loterie, je <strong>donner</strong><em>ais</em> </ul> de l'argent à ma famille. (Gewänne ich im Lotte, würde ich Geld  meiner Familie geben. ⬅️ <strong>___</strong>) ",
+            "<ul>À ta place, je <strong>partir</strong><em>ais </em> en vacances." +
+            "<ul> Si je gagnais à la loterie, je <strong>donner</strong><em>ais</em> </ul> de l'argent à ma famille. ",
             woerter: ["die Grundform des Verbs", "das Partizip"],
             korrekt: "die Grundform des Verbs"
+        },
+        {    
+            ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
+            satz: "je",
+            woerter: ["souhaiter<em>aient</em>","souhaiter<em>ait</em>", "souhaiter<em>ais</em>", "souhaiter<em>ais</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
+            korrekt: ["souhaiter<em>ais</em>"]
+        },
+        {    
+            ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
+            satz: "tu",
+            woerter: ["souhaiter<em>aient</em>","souhaiter<em>ait</em>", "souhaiter<em>ais</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
+            korrekt: ["souhaiter<em>ais</em>"]
+        },
+        {    
+            ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
+            satz: "il/elle/on",
+            woerter: ["souhaiter<em>aient</em>", "souhaiter<em>ait</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
+            korrekt: ["souhaiter<em>ait</em>"]
+        },
+        {    
+            ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
+            satz: "nous",
+            woerter: ["souhaiter<em>aient</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
+            korrekt: ["souhaiter<em>ions</em>"]
+        },
+        {    
+            ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
+            satz: "vous",
+            woerter: ["souhaiter<em>aient</em>", "souhaiter<em>iez</em>"],
+            korrekt: ["souhaiter<em>iez</em>"]
+        },
+        {    
+            ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
+            satz: "ils/elles",
+            woerter: ["souhaiter<em>aient</em>"],
+            korrekt: ["souhaiter<em>aient</em>"]
         },
         { satz: "Si j'étais riche, je ___ (acheter) une maison.", woerter: ["achèterais", "achète", "acheterai"], korrekt: "achèterais" },
         { satz: "Nous ___ (vouloir) voyager plus.", woerter: ["voudrions", "voulons", "voudrons"], korrekt: "voudrions" },
