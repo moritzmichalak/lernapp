@@ -147,16 +147,13 @@ if (thema === "subjonctif") {
             satz: "Bei den Verben auf <em>-re</em> hängt man die Endungen auch an die Grundform an, allerdings fällt am Ende das ___ weg."+
             "<ul>prendr<strong>e</strong> -> je prendr<em>ais</em></ul>"+
             "<ul>dir<strong>e</strong> -> elle dir<em>ait</em></ul> <br>"+
-            "<strong>Probiere es mal selbst:</strong><br>"+
-            "Si j'avais le temps, j' ___ (attendre). (Hätte ich die Zeit, würde ich warten)",
+            "<strong>Probiere es mal selbst:</strong><br>",
             typ: "text",
-            korrekt: "attendrais"
+            korrekt: "e"
         },
         {    
             ueberschrift: "Regelmäßige Formen: Verben auf -re",
             satz: "Bei den Verben auf <em>-re</em> hängt man die Endungen auch an die Grundform an, allerdings fällt am Ende das ___ weg."+
-            "<ul>prendr<strong>e</strong> -> je prendr<em>ais</em></ul>"+
-            "<ul>dir<strong>e</strong> -> elle dir<em>ait</em></ul> <br>"+
             "<strong>Probiere es mal selbst:</strong><br>"+
             "Si j'avais le temps, j' ___ (attendre). (Hätte ich die Zeit, würde ich warten)",
             typ: "text",
