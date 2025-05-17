@@ -109,38 +109,38 @@ if (thema === "subjonctif") {
         {    
             ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
             satz: "je ___",
-            woerter: ["souhaiter<em>aient</em>","souhaiter<em>ait</em>", "souhaiter<em>ais</em>", "souhaiter<em>ais</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
-            korrekt: "souhaiter<em>ais</em>"
+            woerter: ["souhaiteraient","souhaiterait", "souhaiterais", "souhaiterais", "souhaiterions", "souhaiteriez"],
+            korrekt: "souhaiterais"
         },
         {    
             ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
             satz: "tu ___",
-            woerter: ["souhaiter<em>aient</em>","souhaiter<em>ait</em>", "souhaiter<em>ais</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
-            korrekt: "souhaiter<em>ais</em>"
+            woerter: ["souhaiteraient","souhaiterait", "souhaiterais", "souhaiterions", "souhaiteriez"],
+            korrekt: "souhaiterais"
         },
         {    
             ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
             satz: "il/elle/on ___",
-            woerter: ["souhaiter<em>aient</em>", "souhaiter<em>ait</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
-            korrekt: "souhaiter<em>ait</em>"
+            woerter: ["souhaiteraient","souhaiterait", "souhaiterions", "souhaiteriez"],
+            korrekt: "souhaiterait"
         },
         {    
             ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
             satz: "nous ___",
-            woerter: ["souhaiter<em>aient</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
-            korrekt: "souhaiter<em>ions</em>"
+            woerter: ["souhaiteraient", "souhaiterions", "souhaiteriez"],
+            korrekt: "souhaiterions"
         },
         {    
             ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
             satz: "vous ___",
-            woerter: ["souhaiter<em>aient</em>", "souhaiter<em>iez</em>"],
-            korrekt: "souhaiter<em>iez</em>"
+            woerter: ["souhaiteraient", "souhaiteriez"],
+            korrekt: "souhaiteriez"
         },
         {    
             ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
             satz: "ils/elles ___",
-            woerter: ["souhaiter<em>aient</em>"],
-            korrekt: "souhaiter<em>aient</em>"
+            woerter: ["souhaiteraient"],
+            korrekt: "souhaiteraient"
         },
         { satz: "Si j'étais riche, je ___ (acheter) une maison.", woerter: ["achèterais", "achète", "acheterai"], korrekt: "achèterais" },
         { satz: "Nous ___ (vouloir) voyager plus.", woerter: ["voudrions", "voulons", "voudrons"], korrekt: "voudrions" },
