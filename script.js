@@ -856,7 +856,7 @@ async function ladeFalschBeantworteteAufgaben() {
 }
 
 function formatWord(wort) {
-    return wort.replace(/(ais|ait|ions|iez|aient)/g, "<em>$1</em>");
+    return wort.replace(/(ais|ait|ions|iez|aient)$/g, "<em>$1</em>");
 }
 
 /*
