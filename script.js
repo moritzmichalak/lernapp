@@ -139,8 +139,8 @@ if (thema === "subjonctif") {
         {    
             ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
             satz: "ils/elles ___",
-            woerter: ["attend"],
-            korrekt: "attendrais"
+            woerter: ["souhaiteraient"],
+            korrekt: "souhaiteraient"
         },
         {    
             ueberschrift: "Regelmäßige Formen: Verben auf -re",
@@ -254,6 +254,51 @@ if (thema === "subjonctif") {
             typ: "text",
             korrekt: "aimerais",
             bild: "img/reise.jpg"
+        },
+        {    
+            ueberschrift: "Unegelmäßige Formen",
+            satz: "Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
+            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>. <br>"+
+            "Ordne zu: <em>tu ___</em>",
+            woerter: ["voudraient","voudrait", "voudrais", "voudrions", "voudriez"],
+            korrekt: "voudrais",
+            bild: "img/boulangerie.jpg"
+        },
+        {    
+            ueberschrift: "Unegelmäßige Formen",
+            satz: "Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
+            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>. <br>"+
+            "Ordne zu: <em>il/elle/on ___</em>",
+            woerter: ["voudraient","voudrait", "voudrais", "voudrions", "voudriez"],
+            korrekt: "voudrait",
+            bild: "img/boulangerie.jpg"
+        },
+        {    
+            ueberschrift: "Unegelmäßige Formen",
+            satz: "Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
+            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>. <br>"+
+            "Ordne zu: <em>nous ___</em>",
+            woerter: ["voudraient","voudrions", "voudriez"],
+            korrekt: "voudrions",
+            bild: "img/boulangerie.jpg"
+        },
+        {    
+            ueberschrift: "Unegelmäßige Formen",
+            satz: "Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
+            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>. <br>"+
+            "Ordne zu: <em>vous ___</em>",
+            woerter: ["voudraient", "voudriez"],
+            korrekt: "voudriez",
+            bild: "img/boulangerie.jpg"
+        },
+        {    
+            ueberschrift: "Unegelmäßige Formen",
+            satz: "Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
+            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>. <br>"+
+            "Ordne zu: <em>ils/elles ___</em>",
+            woerter: ["voudraient"],
+            korrekt: "voudraient",
+            bild: "img/boulangerie.jpg"
         },
         { satz: "Si j'étais riche, je ___ (acheter) une maison.", woerter: ["achèterais", "achète", "acheterai"], korrekt: "achèterais" },
         { satz: "Nous ___ (vouloir) voyager plus.", woerter: ["voudrions", "voulons", "voudrons"], korrekt: "voudrions" },
