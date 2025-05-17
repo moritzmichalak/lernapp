@@ -299,7 +299,8 @@ if (thema === "subjonctif") {
             woerter: ["voudraient"],
             korrekt: "voudraient",
             bild: "img/boulangerie.jpg"
-        },
+        },  
+        // POPUP: Super ! Vielleicht ist die aufgefallen, dass wir <strong> genau die gleichen Endungen</strong> wie bei den regelmäßigen Verben benutzen. Nur der <strong>Stamm ist anders</strong>!
         {
             ueberschrift: "Unegelmäßige Formen",
             satz: "Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils das passende Verb zum unregelmäßigen Stamm zu finden: <br>"+
@@ -352,10 +353,32 @@ if (thema === "subjonctif") {
             "<ul><strong>fer</strong>(ais) : faire </ul>"+
             "<ul><strong>pourr</strong>(ais) : pouvoir </ul>"+
             "<ul><strong>aur</strong>(ais) : avoir</ul>"+
-            "<ul><strong>ir</strong>(ais) : avoir </ul>"+
-            "<ul><strong>ser</strong>(ais) : être</ul>",
+            "<ul><strong>ir</strong>(ais) : aller </ul>"+
+            "<ul><strong>ser</strong>(ais) : ➡️ ___ </ul>",
             woerter: ["être"],
             korrekt: "être"
+        },
+        //POPUP: Très bien ! Jetzt üben wir die unregelmäßigen Formen noch ein wenig. Wir starten mit faire. Merke dir gut, der Stamm lautet -fer!
+        {
+            ueberschrift: "Unegelmäßige Formen: faire",
+            satz: "Clément Mathieu __________ (faire) tout pour aider les élèves. (Clément Mathieu würde alles tun, um den Schülern zu helfen.)",
+            typ: "text",
+            korrekt: "ferait",
+            Bild: "img/mathieu.jpg."
+        },
+        {
+            ueberschrift: "Unegelmäßige Formen: faire",
+            satz: "Si j'étais professeur, je __________ (faire) aussi une chorale dans mon école. (Wäre ich Lehrer, würde ich auch einen Chor in meiner Schule kreieren.",
+            typ: "text",
+            korrekt: "ferais",
+            Bild: "img/chorale.jpg."
+        },
+        {
+            ueberschrift: "Unegelmäßige Formen: faire",
+            satz: "S'il ne pleuvait pas, nous __________ (faire) la fête !. (Regnete es nicht, würden wir Party machen!).",
+            typ: "text",
+            korrekt: "ferions",
+            Bild: "img/party.jpg."
         },
         {    
             ueberschrift: "Unegelmäßige Formen",
