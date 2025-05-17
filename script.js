@@ -1,5 +1,6 @@
 const db = firebase.firestore();
 let schuelerId = "";
+let istWiederholung = false;
 
 // Auth-Check und Start der Lernumgebung
 firebase.auth().onAuthStateChanged(function(user) {
@@ -169,11 +170,6 @@ if (thema === "subjonctif") {
             typ: "text",
             korrekt: "les",
             bild: "img/Emma.png"
-        },
-        {
-            typ: "reflexion",
-            satz: "💡 Was hast du aus dieser E-Learning-Einheit mitgenommen? Notiere stichpunktartig deine Gedanken:",
-            bild: "img/takeaway.jpeg"
         }
     ];
 } /* else {
@@ -470,10 +466,6 @@ function checkAnswer() {
                 dropzone.style.border = "2px solid #4caf50";
                 feedback.innerText = "✅ Richtig! Du bekommst 10 Punkte!";
                 punkte += 10;
-                if(aufgaben[aktuellesLevel - 1].satz.startsWith("Clément Mathieu est un homme")) {
-                    richtige.push(droppedWord);
-                    console.log("Satz beginnt mit CM est un homme...")
-                }
                 console.log("Richtige Antworten abgespeichert?", richtige)
                 // 12.05.25
                 const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
@@ -507,6 +499,10 @@ function checkAnswer() {
                             origin: { y: 0.6 }
                         });
                     }
+                    // 17.05.25:    
+                    setTimeout(() => {
+                        ladeFalschBeantworteteAufgaben();
+                    }, 1500); // optional: 1,5 Sekunden Verzögerung
                 }
                 db.collection("antworten").add({
                     schuelerId: schuelerId,
@@ -707,7 +703,50 @@ function saveReflexion() {
   alert("✅ Danke für deine Rückmeldung!");
   window.location.href = "themenwahl.html"; // oder Abschlussbildschirm
 }
+
+async function ladeFalschBeantworteteAufgaben() {
+    const snapshot = await db.collection("antworten")
+        .where("schuelerId", "==", schuelerId)
+        .where("thema", "==", thema)
+        .where("korrekt", "==", false)
+        .get();
+
+    const falschBeantwortete = [];
+
+    snapshot.forEach(doc => {
+        const falsch = doc.data();
+        // Finde die Original-Aufgabe basierend auf dem Satz
+        const original = aufgaben.find(a => a.satz === falsch.aufgabe);
+        if (original && !falschBeantwortete.find(a => a.satz === original.satz)) {
+            falschBeantwortete.push(original);
+        }
+    });
+
+    if (falschBeantwortete.length > 0) {
+        alert("Lass uns jetzt die Aufgaben wiederholen, mit denen du Probleme hattest :)");
+        aufgaben = falschBeantwortete;
+        aufgaben.push({
+            typ: "reflexion",
+            satz: "✍️ Was hast du durch diese Einheit gelernt? Notiere stichpunktartig zwei, drei Gedanken.",
+            bild: "img/takeaway.jpeg"
+        });  
+        aktuellesLevel = 1;
+        ladeLevel();
+    } else {
+        alert("🎉 Du hast alle Aufgaben korrekt gelöst!");
+        aufgaben = [{
+            typ: "reflexion",
+            satz: "✍️ Was hast du aus dieser Einheit mitgenommen? Notiere stichpunktartig zwei, drei Gedanken",
+            bild: "img/takeaway.jpeg"
+        }];
+        aktuellesLevel = 1;
+        ladeLevel();
+    }
+}
+
+
 /*
 window.logout = logout;
 window.zurueckThemenwahl = zurueckThemenwahl;
 */
+
