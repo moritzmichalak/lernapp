@@ -421,7 +421,7 @@ function checkAnswer() {
             dropzone.style.border = "2px solid #4caf50";
             feedback.innerText = "✅ Richtig! Du bekommst 10 Punkte!";
             punkte += 10;
-
+            // Handelt es sich um eine Aufgabe mit mehreren richtigen Antworten? Dann ist "richtigeAntwort" ein Array.
             if (Array.isArray(richtigeAntwort)) {
                 // Bei Mehrfachlösungen: korrektes Wort aus Liste entfernen
                 aufgabe.korrekt = richtigeAntwort.filter(w => w !== droppedWord);
@@ -461,15 +461,16 @@ function checkAnswer() {
                   feedback.innerText += " 🎉 Alle richtigen Antworten gefunden!";
                 }
             } else {
-                // if (droppedWord === richtigeAntwort) {
+                // Nur eine richtige Antwort
                 console.log("Aktuelles level (2. Check):", aktuellesLevel);
                 dropzone.style.border = "2px solid #4caf50";
                 feedback.innerText = "✅ Richtig! Du bekommst 10 Punkte!";
                 punkte += 10;
-                console.log("Richtige Antworten abgespeichert?", richtige)
-                // 12.05.25
+                // console.log("Richtige Antworten abgespeichert?", richtige);
+
                 const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
-                console.log("Erklärugen für Popups:", erklaerung, erklaerungen);
+                // console.log("Erklärugen für Popups:", erklaerung, erklaerungen);
+                // Popups anzeigen:
                 if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
                     showPopup(erklaerung.titel, erklaerung.text);
                 }
@@ -478,11 +479,10 @@ function checkAnswer() {
                     console.log("Ich komm hier raus");
                     document.getElementById('nextLevelBtn').style.display = "inline-block";
                 } else {
-                    console.log("Ich komm da raus");
-                    // muss woanders hin:
-                    // aktuellesLevel++;
+                    console.log("Ich komm da raus: Letzte Aufgabe erreicht.");
+
                     feedback.innerText += " 🎉 Du hast alle Level geschafft!";
-                    // 12.05.25:
+
                     const aufgabe = aufgaben[aktuellesLevel - 2];
                     console.log("Aktuelles Level:", aktuellesLevel);
                     console.log("Aufgabe:", aufgabe);
