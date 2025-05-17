@@ -166,7 +166,7 @@ if (thema === "subjonctif") {
             "toujours un programme très détaillé. Mes parents _ _ _  (aimer) visiter des musées, mais moi, "+
             "je _ _ _  (préférer) passer du temps à la plage.Si nous partions en hiver, nous _ _ _  (attendre) "+
             "la neige avec impatience. Et s'il faisait froid, nous _ _ _  (manger) des plats chauds dans des restaurants typiques."+
-            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?"
+            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?",
             typ: "text",
             korrekt: "voyagerais",
             bild: "img/reise.jpg"
@@ -178,7 +178,7 @@ if (thema === "subjonctif") {
             "toujours un programme très détaillé. Mes parents _ _ _  (aimer) visiter des musées, mais moi, "+
             "je _ _ _  (préférer) passer du temps à la plage.Si nous partions en hiver, nous _ _ _  (attendre) "+
             "la neige avec impatience. Et s'il faisait froid, nous _ _ _  (manger) des plats chauds dans des restaurants typiques."+
-            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?"
+            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?",
             typ: "text",
             korrekt: "choisirions",
             bild: "img/reise.jpg"
@@ -190,7 +190,7 @@ if (thema === "subjonctif") {
             "toujours un programme très détaillé. Mes parents _ _ _  (aimer) visiter des musées, mais moi, "+
             "je _ _ _  (préférer) passer du temps à la plage.Si nous partions en hiver, nous _ _ _  (attendre) "+
             "la neige avec impatience. Et s'il faisait froid, nous _ _ _  (manger) des plats chauds dans des restaurants typiques."+
-            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?"
+            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?",
             typ: "text",
             korrekt: "préparerait",
             bild: "img/reise.jpg"
@@ -202,7 +202,7 @@ if (thema === "subjonctif") {
             "toujours un programme très détaillé. Mes parents ➡️ ____  (aimer) visiter des musées, mais moi, "+
             "je _ _ _  (préférer) passer du temps à la plage.Si nous partions en hiver, nous _ _ _  (attendre) "+
             "la neige avec impatience. Et s'il faisait froid, nous _ _ _  (manger) des plats chauds dans des restaurants typiques."+
-            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?"
+            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?",
             typ: "text",
             korrekt: "aimeraient",
             bild: "img/reise.jpg"
@@ -214,7 +214,7 @@ if (thema === "subjonctif") {
             "toujours un programme très détaillé. Mes parents aimeraient visiter des musées, mais moi, "+
             "je ➡️ ____ (préférer) passer du temps à la plage.Si nous partions en hiver, nous _ _ _  (attendre) "+
             "la neige avec impatience. Et s'il faisait froid, nous _ _ _  (manger) des plats chauds dans des restaurants typiques."+
-            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?"
+            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?",
             typ: "text",
             korrekt: "préférerais",
             bild: "img/reise.jpg"
@@ -226,7 +226,7 @@ if (thema === "subjonctif") {
             "toujours un programme très détaillé. Mes parents aimeraient visiter des musées, mais moi, "+
             "je préférerais passer du temps à la plage.Si nous partions en hiver, nous ➡️ ____  (attendre) "+
             "la neige avec impatience. Et s'il faisait froid, nous _ _ _  (manger) des plats chauds dans des restaurants typiques."+
-            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?"
+            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?",
             typ: "text",
             korrekt: "attendrions",
             bild: "img/reise.jpg"
@@ -238,7 +238,7 @@ if (thema === "subjonctif") {
             "toujours un programme très détaillé. Mes parents aimeraient visiter des musées, mais moi, "+
             "je préférerais passer du temps à la plage.Si nous partions en hiver, nous attendrions "+
             "la neige avec impatience. Et s'il faisait froid, nous ➡️ ____ (manger) des plats chauds dans des restaurants typiques."+
-            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?"
+            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?",
             typ: "text",
             korrekt: "mangerions",
             bild: "img/reise.jpg"
@@ -250,7 +250,7 @@ if (thema === "subjonctif") {
             "toujours un programme très détaillé. Mes parents aimeraient visiter des musées, mais moi, "+
             "je préférerais passer du temps à la plage.Si nous partions en hiver, nous attendrions "+
             "la neige avec impatience. Et s'il faisait froid, nous mangerions des plats chauds dans des restaurants typiques."+
-            "Et toi, qu'est-ce que tu ➡️ ____  (aimer) faire ?"
+            "Et toi, qu'est-ce que tu ➡️ ____  (aimer) faire ?",
             typ: "text",
             korrekt: "aimerais",
             bild: "img/reise.jpg"
