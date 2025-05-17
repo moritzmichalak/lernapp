@@ -110,37 +110,37 @@ if (thema === "subjonctif") {
             ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
             satz: "je ___",
             woerter: ["souhaiter<em>aient</em>","souhaiter<em>ait</em>", "souhaiter<em>ais</em>", "souhaiter<em>ais</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
-            korrekt: ["souhaiter<em>ais</em>"]
+            korrekt: "souhaiter<em>ais</em>"
         },
         {    
             ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
             satz: "tu ___",
             woerter: ["souhaiter<em>aient</em>","souhaiter<em>ait</em>", "souhaiter<em>ais</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
-            korrekt: ["souhaiter<em>ais</em>"]
+            korrekt: "souhaiter<em>ais</em>"
         },
         {    
             ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
             satz: "il/elle/on ___",
             woerter: ["souhaiter<em>aient</em>", "souhaiter<em>ait</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
-            korrekt: ["souhaiter<em>ait</em>"]
+            korrekt: "souhaiter<em>ait</em>"
         },
         {    
             ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
             satz: "nous ___",
             woerter: ["souhaiter<em>aient</em>", "souhaiter<em>ions</em>", "souhaiter<em>iez</em>"],
-            korrekt: ["souhaiter<em>ions</em>"]
+            korrekt: "souhaiter<em>ions</em>"
         },
         {    
             ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
             satz: "vous ___",
             woerter: ["souhaiter<em>aient</em>", "souhaiter<em>iez</em>"],
-            korrekt: ["souhaiter<em>iez</em>"]
+            korrekt: "souhaiter<em>iez</em>"
         },
         {    
             ueberschrift: "Regelmäßige Verben: Beispiel <em>souhaiter</em> (wünschen). <strong>Ordne zu</strong>",
             satz: "ils/elles ___",
             woerter: ["souhaiter<em>aient</em>"],
-            korrekt: ["souhaiter<em>aient</em>"]
+            korrekt: "souhaiter<em>aient</em>"
         },
         { satz: "Si j'étais riche, je ___ (acheter) une maison.", woerter: ["achèterais", "achète", "acheterai"], korrekt: "achèterais" },
         { satz: "Nous ___ (vouloir) voyager plus.", woerter: ["voudrions", "voulons", "voudrons"], korrekt: "voudrions" },
