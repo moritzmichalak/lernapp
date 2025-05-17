@@ -139,8 +139,29 @@ if (thema === "subjonctif") {
         {    
             ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
             satz: "ils/elles ___",
-            woerter: ["souhaiteraient"],
-            korrekt: "souhaiteraient"
+            woerter: ["attend"],
+            korrekt: "attendrais"
+        },
+        {    
+            ueberschrift: "Regelmäßige Formen: Verben auf -re",
+            satz: "Bei den Verben auf <em>-re</em> hängt man die Endungen auch an die Grundform an, allerdings fällt am Ende das ___ weg."+
+            "<ul>prendr<strong>e</strong> -> je prendr<em>ais</em></ul>"+
+            "<ul>dir<strong>e</strong> -> elle dir<em>ait</em></ul> <br>"+
+            "<strong>Probiere es mal selbst:</strong><br>"+
+            "Si j'avais le temps, j' ___ (attendre). (Hätte ich die Zeit, würde ich warten)",
+            typ: "text",
+            korrekt: "attendrais"
+        },
+        {    
+            ueberschrift: "Regelmäßige Formen: Verben auf -re",
+            satz: "Bei den Verben auf <em>-re</em> hängt man die Endungen auch an die Grundform an, allerdings fällt am Ende das ___ weg."+
+            "<ul>prendr<strong>e</strong> -> je prendr<em>ais</em></ul>"+
+            "<ul>dir<strong>e</strong> -> elle dir<em>ait</em></ul> <br>"+
+            "<strong>Probiere es mal selbst:</strong><br>"+
+            "Si j'avais le temps, j' ___ (attendre). (Hätte ich die Zeit, würde ich warten)",
+            typ: "text",
+            korrekt: "attendrais",
+            bild: "img/zeit.jpg"
         },
         { satz: "Si j'étais riche, je ___ (acheter) une maison.", woerter: ["achèterais", "achète", "acheterai"], korrekt: "achèterais" },
         { satz: "Nous ___ (vouloir) voyager plus.", woerter: ["voudrions", "voulons", "voudrons"], korrekt: "voudrions" },
