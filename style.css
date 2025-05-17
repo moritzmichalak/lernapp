@@ -258,3 +258,10 @@ body {
 #textAntwortContainer button:hover {
     background-color: #388e3c;
 }
+
+#ueberschrift h3 {
+    font-size: 1.4em;
+    color: #1d3557;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}

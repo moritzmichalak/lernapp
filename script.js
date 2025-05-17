@@ -66,43 +66,55 @@ if (thema === "subjonctif") {
 } else if (thema === "conditionnel") {
     aufgaben = [
         {    
-            satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge/Vorschläge, ___ oder Möglichkeiten auszudrücken. Das wort <em>conditionnel</em> bedeutet <em>Bedingung</em>." + 
+            satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge/Vorschläge, ___ oder Möglichkeiten auszudrücken. Das wort <em>condition</em> bedeutet <em>Bedingung</em>. " + 
             "Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br>",
             woerter: ["Befehle", "Vergangenheit", "Wünsche"],
             korrekt: "Wünsche"
         },  
         {    
-            satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge, ___ oder Möglichkeiten auszudrücken. Das wort <em>conditionnel</em> bedeutet <em>Bedingung</em>." + 
-            "Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br>" +
-            "Ordne zu: <br>"+
-            "<ul>Je <em> voudrais </em> aller à la mer. (Ich würde gerne ans Meer fahren) ⬅️ <strong>___</strong>) </ul>",
-            woerter: ["Befehl", "Wunsch", "Möglichkeit"],
+            satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge, Wünsche oder Möglichkeiten auszudrücken. Das wort <em>condition</em> bedeutet <em>Bedingung</em>. " + 
+            "Mit Hilfe des Conditionnel spricht man also über Dinge, die <em>nur unter einer bestimmten Bedingung</em> eintreten können. <br><br>" +
+            "<strong>Ordne zu: </strong><br>"+
+            "<ul>Je <em> voudrais </em> aller à la mer. (Ich würde gerne ans Meer fahren ⬅️ <strong>___</strong>) </ul>",
+            woerter: ["Ratschlag/Vorschlag", "Wunsch", "Möglichkeit"],
             korrekt: "Wunsch"
         },  
         {    
-            satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge, ___ oder Möglichkeiten auszudrücken. Das wort <em>conditionnel</em> bedeutet <em>Bedingung</em>." + 
-            "Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br>" +
-            "Ordne zu: <br>"+
+            satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge, WÜnsche oder Möglichkeiten auszudrücken. Das wort <em>condition</em> bedeutet <em>Bedingung</em>. " + 
+            "Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br><br>" +
+            "<strong>Ordne zu: </strong><br>"+
             "<ul>Je <em> voudrais </em> aller à la mer. (Ich würde gerne ans Meer fahren) ⬅️ <strong>Wunsch</strong>) </ul>" +
             "<ul>À ta place, je <em> partirais </em> en vacances. (An deiner Stelle, würde ich in den Urlaub fahren. ⬅️ <strong>___</strong>) </ul>",
-            woerter: ["Befehl", "Wunsch", "Möglichkeit"],
-            korrekt: "Ratschlag"
+            woerter: ["Ratschlag/Vorschlag", "Wunsch", "Möglichkeit"],
+            korrekt: "Ratschlag/Vorschlag"
         },  
         {    
-            satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge, ___ oder Möglichkeiten auszudrücken. Das wort <em>conditionnel</em> bedeutet <em>Bedingung</em>." + 
-            "Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br>" +
-            "Ordne zu: <br>"+
+            satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge, Wünsche oder Möglichkeiten auszudrücken. Das wort <em>condition</em> bedeutet <em>Bedingung</em>. " + 
+            "Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br><br>" +
+            "<strong>Ordne zu: </strong><br>"+
             "<ul>Je <em> voudrais </em> aller à la mer. (Ich würde gerne ans Meer fahren) ⬅️ <strong>Wunsch</strong>) </ul>" +
             "<ul>À ta place, je <em> partirais </em> en vacances. (An deiner Stelle, würde ich in den Urlaub fahren. ⬅️ <strong>Ratschlag</strong>) </ul>" +
             "<ul> Si je gagnais à la loterie, je<em> donnerais </ul> de l'argent à ma famille. (Gewänne ich im Lotte, würde ich Geld  meiner Familie geben. ⬅️ <strong>___</strong>) ",
-            woerter: ["Befehl", "Wunsch", "Möglichkeit"],
+            woerter: ["Ratschlag/Vorschlag", "Wunsch", "Möglichkeit"],
             korrekt: "Möglichkeit"
         },  
         {    
-            satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge, ___ oder Möglichkeiten auszudrücken. Das wort <em>conditionnel</em> bedeutet <em>Bedingung</em>. Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br> <br> ",
-            woerter: ["Befehle", "Vergangenheit", "Wünsche"],
-            korrekt: "Wünsche",
-            bild: "img/Emma.png"
+            satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge, Wünsche oder Möglichkeiten auszudrücken. Das wort <em>condition</em> bedeutet <em>Bedingung</em>. " + 
+            "Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br><br>" +
+            "<strong>Ordne zu: </strong><br>"+
+            "<ul>Je <em> voudrais </em> aller à la mer. (Ich würde gerne ans Meer fahren) ⬅️ <strong>Wunsch</strong>) </ul>" +
+            "<ul>À ta place, je <em> partirais </em> en vacances. (An deiner Stelle, würde ich in den Urlaub fahren. ⬅️ <strong>Ratschlag</strong>) </ul>" +
+            "<ul> Si je gagnais à la loterie, je<em> donnerais </ul> de l'argent à ma famille. (Gewänne ich im Lotte, würde ich Geld  meiner Familie geben. ⬅️ <strong>___</strong>) ",
+            woerter: ["Ratschlag/Vorschlag", "Wunsch", "Möglichkeit"],
+            korrekt: "Möglichkeit"
+        },  
+        {    
+            ueberschrift: "Regelmäßige Formeb",
+            satz: "Um die regelmäßigen Formen zu bilden, hängt man an ___ die Endungen <em>-ais, -ait, -ions, -iez, -aient</em> an. <br>"+
+            "<ul>À ta place, je <strong>partir</strong><em>ais </em> en vacances. (An deiner Stelle, würde ich in den Urlaub fahren. ⬅️ <strong>Ratschlag</strong>) </ul>" +
+            "<ul> Si je gagnais à la loterie, je <strong>donner</strong><em>ais</em> </ul> de l'argent à ma famille. (Gewänne ich im Lotte, würde ich Geld  meiner Familie geben. ⬅️ <strong>___</strong>) ",
+            woerter: ["die Grundform des Verbs", "das Partizip"],
+            korrekt: "die Grundform des Verbs"
         },
         { satz: "Si j'étais riche, je ___ (acheter) une maison.", woerter: ["achèterais", "achète", "acheterai"], korrekt: "achèterais" },
         { satz: "Nous ___ (vouloir) voyager plus.", woerter: ["voudrions", "voulons", "voudrons"], korrekt: "voudrions" },
@@ -245,7 +257,7 @@ function ladeLevel() {
         offeneKorrekte = []; // bei Reflexionstyp etc.
     }
     // dropzone.innerHTML = "<span class='placeholder'>...</span>";
-        const sentenceContainer = document.getElementById('sentence');
+    const sentenceContainer = document.getElementById('sentence');
     const wordsDiv = document.getElementById('words');
     const textContainer = document.getElementById('textAntwortContainer');
     const textInput = document.getElementById('textInput');
@@ -277,6 +289,8 @@ function ladeLevel() {
         checkAnswerBtn.style.display = "none";
         if (dropzone) dropzone.style.display = "none";
 
+
+        
         // Bild für Reflexion laden, falls vorhanden
         if (aufgabe.bild) {
             bildContainer.innerHTML = `<img src="${aufgabe.bild}" alt="Bild zur Aufgabe" class="aufgabenbild">`;
@@ -315,7 +329,14 @@ function ladeLevel() {
             wordsDiv.innerHTML += `<div class="word" onclick="wordClick(event)" id="word${index}">${wort}</div>`;
         });
     }
-
+    // Überschrift einblenden 
+    const ueberschriftDiv = document.getElementById('ueberschrift');
+    if (aufgabe.ueberschrift) {
+        ueberschriftDiv.innerHTML = `<h3>${aufgabe.ueberschrift}</h3>`;
+    } else {
+        ueberschriftDiv.innerHTML = "";
+    }
+    
     // 🛠️ Bild einblenden
     if (aufgabe.bild) {
         bildContainer.innerHTML = `<img src="${aufgabe.bild}" alt="Bild zur Aufgabe" class="aufgabenbild">`;
