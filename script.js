@@ -682,9 +682,28 @@ function checkTextAnswer() {
         document.getElementById('nextLevelBtn').style.display = "inline-block";
     } else {
         feedback.innerText = "❌ Leider falsch. Versuch es nochmal.";
+        // Falsche Antworten speichern
+        db.collection("antworten").add({
+            schuelerId,
+            thema,
+            level: aktuellesLevel,
+            aufgabe: aufgabe.satz,
+            antwort: antwort,
+            korrekt: false,
+            punkte,
+            timestamp: new Date()
+        });
     }
 
     document.getElementById('punkteDisplay').innerText = punkte;
+
+    // Nach document.getElementById('punkteDisplay').innerText = punkte;
+    if (aktuellesLevel - 1 >= aufgaben.length) {
+        console.log("Letzte Aufgabe bei Texteingabe erreicht → Wiederholung");
+        setTimeout(() => {
+            ladeFalschBeantworteteAufgaben();
+        }, 1000); // kleine Verzögerung
+    }
 }
 
 function saveReflexion() {
