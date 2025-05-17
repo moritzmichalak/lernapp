@@ -380,52 +380,75 @@ if (thema === "subjonctif") {
             korrekt: "ferions",
             bild: "img/party.jpg"
         },
-        {    
-            ueberschrift: "Unegelmäßige Formen",
-            satz: "Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
-            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>. <br>"+
-            "Ordne zu: <em>il/elle/on ___</em>",
-            woerter: ["voudraient","voudrait", "voudrais", "voudrions", "voudriez"],
-            korrekt: "voudrait",
-            bild: "img/boulangerie.jpg"
+        // TO DO: andere unregelmäßige Verben
+        {
+            ueberschrift: "Ratschläge geben / Vorschläge machen",
+            satz: "Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge."+
+            "<ul>À ta place, je ___ (faire) un grand voyage ! (An deiner Stelle würde ich eine große Reise machen)</ul>",
+            typ: "text",
+            korrekt: "ferais",
+            bild: "img/voyage.jpg"
         },
-        {    
-            ueberschrift: "Unegelmäßige Formen",
-            satz: "Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
-            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>. <br>"+
-            "Ordne zu: <em>nous ___</em>",
-            woerter: ["voudraient","voudrions", "voudriez"],
-            korrekt: "voudrions",
-            bild: "img/boulangerie.jpg"
+        {
+            ueberschrift: "Ratschläge geben / Vorschläge machen",
+            satz: "Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge."+
+            "<ul>À ta place, je n' ___ (aller) plus à l'école ! (An deiner Stelle würde ich nicht mehr zur Schule gehen)</ul>",
+            typ: "text",
+            korrekt: "irais"
         },
-        {    
-            ueberschrift: "Unegelmäßige Formen",
-            satz: "Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
-            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>. <br>"+
-            "Ordne zu: <em>vous ___</em>",
-            woerter: ["voudraient", "voudriez"],
-            korrekt: "voudriez",
-            bild: "img/boulangerie.jpg"
+        {
+            ueberschrift: "Ratschläge geben / Vorschläge machen",
+            satz: "Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge."+
+            "<ul>À ta place, je ___ (continuer) d'aller à l'école, pour que tu puisses faire un travail intéressant plus tard ! (An deiner Stelle würde ich weiter zur Schule gehen, damit du etwas machen kannst, das dich interessiert)</ul>",
+            typ: "text",
+            korrekt: "continuerais"
         },
-        {    
-            ueberschrift: "Unegelmäßige Formen",
-            satz: "Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
-            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>. <br>"+
-            "Ordne zu: <em>ils/elles ___</em>",
-            woerter: ["voudraient"],
-            korrekt: "voudraient",
-            bild: "img/boulangerie.jpg"
+        {
+            ueberschrift: "Ratschläge geben / Vorschläge machen",
+            satz: "Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge."+
+            "<ul>Nous ___ (pouvoir) faire un voyage avec tous les amis ! (Wir könnten eine große Reise mit allen Freunden machen)</ul>",
+            typ: "text",
+            korrekt: "pourrions"
         },
-        {    
-            ueberschrift: "Unegelmäßige Formen",
-            satz: "Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
-            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>. <br>"+
-            "Ordne zu: <em>ils/elles ___</em>",
-            woerter: ["voudraient"],
-            korrekt: "voudraient",
-            bild: "img/boulangerie.jpg"
+        {
+            ueberschrift: "Ratschläge geben / Vorschläge machen",
+            satz: "Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge."+
+            "<ul>À ta place, je ___ (garder) l'argent pour plus tard ! (An deiner Stelle, würde ich das Geld für später behalten)</ul>",
+            typ: "text",
+            korrekt: "garder"
         },
-
+        {
+            ueberschrift: "Ratschläge geben / Vorschläge machen",
+            satz: "Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge."+
+            "<ul>À ta place, je ___ (mettre) un peu d'argent sur le côté ! (An deiner Stelle, würde ein wenig Geld zu Seite legen)</ul>",
+            typ: "text",
+            korrekt: "mettrais"
+        },
+        {
+            ueberschrift: "Ratschläge geben / Vorschläge machen",
+            satz: "Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge."+
+            "<ul>Génial ! Toi et ta famille, vous ___ (pouvoir) achéter une maison ! (Genial ! Du und deine Familie, ihre könnt euch ein Haus kaufen!)</ul>",
+            typ: "text",
+            korrekt: "pourriez"
+        },
+        {
+            ueberschrift: "Ratschläge geben / Vorschläge machen",
+            satz: "Le coloc de ton ami ronfle ! (Der Mitbewohner deines Freundes schnarcht! Was schlägst du vor?)."+
+            "Tu ___ (devoir) mettre des bouchons d'oreille ! (Du solltest Ohrstöpsel tragen)",
+            typ: "text",
+            korrekt: "devrais"
+        },
+        {
+            ueberschrift: "Ratschläge geben / Vorschläge machen",
+            satz: "Encore un problème. Un ami te raconte son problème: 'Ce soir il y a la fête d'anniversaire de mon ami Cédric."+
+            " Mais demain matin je dois me lever tôt pour un tornoi de handball. Je ne sais pas si je dois aller à la fête ou si "+
+            "je dois me coucher tôt. Qu'est-ce que tu ferais ?' <br>"+
+            "À ta place, je ...",
+            typ: "text",
+            korrekt: "devrais"
+        },
+        
+        
         { satz: "Si j'étais riche, je ___ (acheter) une maison.", woerter: ["achèterais", "achète", "acheterai"], korrekt: "achèterais" },
         { satz: "Nous ___ (vouloir) voyager plus.", woerter: ["voudrions", "voulons", "voudrons"], korrekt: "voudrions" },
         { satz: "Je / J' ___ (aimer) aller au Japon.", woerter: ["aimais", "aimeriais", "aimerais"], korrekt: "aimerais" },
