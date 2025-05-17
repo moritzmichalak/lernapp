@@ -146,19 +146,114 @@ if (thema === "subjonctif") {
             ueberschrift: "Regelmäßige Formen: Verben auf -re",
             satz: "Bei den Verben auf <em>-re</em> hängt man die Endungen auch an die Grundform an, allerdings fällt am Ende das ___ weg."+
             "<ul>prendr<strong>e</strong> -> je prendr<em>ais</em></ul>"+
-            "<ul>dir<strong>e</strong> -> elle dir<em>ait</em></ul> <br>"+
-            "<strong>Probiere es mal selbst:</strong><br>",
+            "<ul>dir<strong>e</strong> -> elle dir<em>ait</em></ul> <br>",
             typ: "text",
             korrekt: "e"
         },
         {    
             ueberschrift: "Regelmäßige Formen: Verben auf -re",
-            satz: "Bei den Verben auf <em>-re</em> hängt man die Endungen auch an die Grundform an, allerdings fällt am Ende das ___ weg."+
+            satz: "Bei den Verben auf <em>-re</em> hängt man die Endungen auch an die Grundform an, allerdings fällt am Ende das e weg."+
             "<strong>Probiere es mal selbst:</strong><br>"+
             "Si j'avais le temps, j' ___ (attendre). (Hätte ich die Zeit, würde ich warten)",
             typ: "text",
             korrekt: "attendrais",
             bild: "img/zeit.jpg"
+        },
+        {    
+            ueberschrift: "Regelmäßige Formen",
+            satz: "Si javais plus de temps, je➡️ ____ (voyager) plus souvent avec ma famille. Nous _ _ _ (choisir) "+
+            "des destinations intéressantes comme l'Italie ou le Canada. Mon frère _ _ _  (préparer) "+
+            "toujours un programme très détaillé. Mes parents _ _ _  (aimer) visiter des musées, mais moi, "+
+            "je _ _ _  (préférer) passer du temps à la plage.Si nous partions en hiver, nous _ _ _  (attendre) "+
+            "la neige avec impatience. Et s'il faisait froid, nous _ _ _  (manger) des plats chauds dans des restaurants typiques."+
+            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?"
+            typ: "text",
+            korrekt: "voyagerais",
+            bild: "img/reise.jpg"
+        },
+        {    
+            ueberschrift: "Regelmäßige Formen",
+            satz: "Si javais plus de temps, je voyagerais plus souvent avec ma famille. Nous ➡️ ____  (choisir) "+
+            "des destinations intéressantes comme l'Italie ou le Canada. Mon frère _ _ _  (préparer) "+
+            "toujours un programme très détaillé. Mes parents _ _ _  (aimer) visiter des musées, mais moi, "+
+            "je _ _ _  (préférer) passer du temps à la plage.Si nous partions en hiver, nous _ _ _  (attendre) "+
+            "la neige avec impatience. Et s'il faisait froid, nous _ _ _  (manger) des plats chauds dans des restaurants typiques."+
+            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?"
+            typ: "text",
+            korrekt: "choisirions",
+            bild: "img/reise.jpg"
+        },
+        {    
+            ueberschrift: "Regelmäßige Formen",
+            satz: "Si javais plus de temps, je voyagerais plus souvent avec ma famille. Nous choisirions "+
+            "des destinations intéressantes comme l'Italie ou le Canada. Mon frère ➡️ ____  (préparer) "+
+            "toujours un programme très détaillé. Mes parents _ _ _  (aimer) visiter des musées, mais moi, "+
+            "je _ _ _  (préférer) passer du temps à la plage.Si nous partions en hiver, nous _ _ _  (attendre) "+
+            "la neige avec impatience. Et s'il faisait froid, nous _ _ _  (manger) des plats chauds dans des restaurants typiques."+
+            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?"
+            typ: "text",
+            korrekt: "préparerait",
+            bild: "img/reise.jpg"
+        },
+        {    
+            ueberschrift: "Regelmäßige Formen",
+            satz: "Si javais plus de temps, je voyagerais plus souvent avec ma famille. Nous choisirions "+
+            "des destinations intéressantes comme l'Italie ou le Canada. Mon frère préparerait "+
+            "toujours un programme très détaillé. Mes parents ➡️ ____  (aimer) visiter des musées, mais moi, "+
+            "je _ _ _  (préférer) passer du temps à la plage.Si nous partions en hiver, nous _ _ _  (attendre) "+
+            "la neige avec impatience. Et s'il faisait froid, nous _ _ _  (manger) des plats chauds dans des restaurants typiques."+
+            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?"
+            typ: "text",
+            korrekt: "aimeraient",
+            bild: "img/reise.jpg"
+        },
+        {    
+            ueberschrift: "Regelmäßige Formen",
+            satz: "Si javais plus de temps, je voyagerais plus souvent avec ma famille. Nous choisirions "+
+            "des destinations intéressantes comme l'Italie ou le Canada. Mon frère préparerait "+
+            "toujours un programme très détaillé. Mes parents aimeraient visiter des musées, mais moi, "+
+            "je ➡️ ____ (préférer) passer du temps à la plage.Si nous partions en hiver, nous _ _ _  (attendre) "+
+            "la neige avec impatience. Et s'il faisait froid, nous _ _ _  (manger) des plats chauds dans des restaurants typiques."+
+            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?"
+            typ: "text",
+            korrekt: "préférerais",
+            bild: "img/reise.jpg"
+        },
+        {    
+            ueberschrift: "Regelmäßige Formen",
+            satz: "Si javais plus de temps, je voyagerais plus souvent avec ma famille. Nous choisirions "+
+            "des destinations intéressantes comme l'Italie ou le Canada. Mon frère préparerait "+
+            "toujours un programme très détaillé. Mes parents aimeraient visiter des musées, mais moi, "+
+            "je préférerais passer du temps à la plage.Si nous partions en hiver, nous ➡️ ____  (attendre) "+
+            "la neige avec impatience. Et s'il faisait froid, nous _ _ _  (manger) des plats chauds dans des restaurants typiques."+
+            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?"
+            typ: "text",
+            korrekt: "attendrions",
+            bild: "img/reise.jpg"
+        },
+        {    
+            ueberschrift: "Regelmäßige Formen",
+            satz: "Si javais plus de temps, je voyagerais plus souvent avec ma famille. Nous choisirions "+
+            "des destinations intéressantes comme l'Italie ou le Canada. Mon frère préparerait "+
+            "toujours un programme très détaillé. Mes parents aimeraient visiter des musées, mais moi, "+
+            "je préférerais passer du temps à la plage.Si nous partions en hiver, nous attendrions "+
+            "la neige avec impatience. Et s'il faisait froid, nous ➡️ ____ (manger) des plats chauds dans des restaurants typiques."+
+            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?"
+            typ: "text",
+            korrekt: "mangerions",
+            bild: "img/reise.jpg"
+        },
+        {    
+            ueberschrift: "Regelmäßige Formen",
+            satz: "Si javais plus de temps, je voyagerais plus souvent avec ma famille. Nous choisirions "+
+            "des destinations intéressantes comme l'Italie ou le Canada. Mon frère préparerait "+
+            "toujours un programme très détaillé. Mes parents aimeraient visiter des musées, mais moi, "+
+            "je préférerais passer du temps à la plage.Si nous partions en hiver, nous attendrions "+
+            "la neige avec impatience. Et s'il faisait froid, nous mangerions des plats chauds dans des restaurants typiques."+
+            "Et toi, qu'est-ce que tu ➡️ ____  (aimer) faire ?"
+            typ: "text",
+            korrekt: "aimerais",
+            bild: "img/reise.jpg"
         },
         { satz: "Si j'étais riche, je ___ (acheter) une maison.", woerter: ["achèterais", "achète", "acheterai"], korrekt: "achèterais" },
         { satz: "Nous ___ (vouloir) voyager plus.", woerter: ["voudrions", "voulons", "voudrons"], korrekt: "voudrions" },
