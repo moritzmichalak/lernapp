@@ -829,41 +829,12 @@ function checkAnswer() {
         // 13.05.25
         const aufgabe = aufgaben[aktuellesLevel - 1];
         const richtigeAntwort = aufgabe.korrekt;
-        /* 18.05.25 alt:
+
         console.log("Aktuelles level (1. Check):", aktuellesLevel);
         const isCorrect = Array.isArray(richtigeAntwort)
             ? richtigeAntwort.includes(droppedWord)
             : droppedWord === richtigeAntwort;
-        */
-        // 18.05.25 neu:
-        let isCorrect = false;
-        let accentFehler = false;
-        if (Array.isArray(richtigeAntwort)) {
-            console.log("Hier1");
-            for (let korrektWort of richtigeAntwort) {
-                if (droppedWord === korrektWort) {
-                    console.log("Hier1.1");
-                    isCorrect = true;
-                    break;
-                }
-                if (entferneAccents(droppedWord) === entferneAccents(korrektWort)) {
-                    console.log("Hier1.2");
-                    isCorrect = true;
-                    accentFehler = true;
-                    break;
-                }
-            }
-        } else {
-            console.log("Hier2");
-            if (droppedWord === richtigeAntwort) {
-                console.log("Hier2.1");
-                isCorrect = true;
-            } else if (entferneAccents(droppedWord) === entferneAccents(richtigeAntwort)) {
-                console.log("Hier2.2");
-                isCorrect = true;
-                accentFehler = true;
-            }
-        }
+
         if (isCorrect) {
             dropzone.style.border = "2px solid #4caf50";
             feedback.innerText = "✅ Richtig! Du bekommst 10 Punkte!";
@@ -912,9 +883,6 @@ function checkAnswer() {
                 console.log("Aktuelles level (2. Check):", aktuellesLevel);
                 dropzone.style.border = "2px solid #4caf50";
                 feedback.innerText = "✅ Richtig! Du bekommst 10 Punkte!";
-                if (accentFehler) {
-                    alert("Kleiner Accent-Fehler, kein Problem 🙂");
-                }
                 punkte += 10;
                 // console.log("Richtige Antworten abgespeichert?", richtige);
 
@@ -1098,14 +1066,48 @@ function checkTextAnswer() {
     const input = document.getElementById('textInput');
     const antwort = input.value.trim().toLowerCase();
     const aufgabe = aufgaben[aktuellesLevel - 1];
+    /*
     const richtigeAntworten = Array.isArray(aufgabe.korrekt)
         ? aufgabe.korrekt.map(a => a.toLowerCase())
         : [aufgabe.korrekt.toLowerCase()];
-
+    */
+    let isCorrect = false;
+    let accentFehler = false;
+    if (Array.isArray(richtigeAntwort)) {
+        console.log("Hier1");
+        for (let korrektWort of richtigeAntwort) {
+            if (droppedWord === korrektWort) {
+                console.log("Hier1.1");
+                isCorrect = true;
+                break;
+            }
+            if (entferneAccents(droppedWord) === entferneAccents(korrektWort)) {
+                console.log("Hier1.2");
+                isCorrect = true;
+                accentFehler = true;
+                break;
+            }
+        }
+    } else {
+        console.log("Hier2");
+        if (droppedWord === richtigeAntwort) {
+            console.log("Hier2.1");
+            isCorrect = true;
+        } else if (entferneAccents(droppedWord) === entferneAccents(richtigeAntwort)) {
+            console.log("Hier2.2");
+            isCorrect = true;
+            accentFehler = true;
+        }
+    }
     const isCorrect = richtigeAntworten.includes(antwort);
 
     if (isCorrect) {
-        feedback.innerText = "✅ Richtig!";
+        if (accentFehler) {
+            alert("Kleiner Accent-Fehler, kein Problem 🙂");
+            feedback.innerText = "✅ Richtig!";
+        } else {
+            feedback.innerText = "✅ Richtig!";
+        }
         punkte += 10;
         aktuellesLevel++;
 
