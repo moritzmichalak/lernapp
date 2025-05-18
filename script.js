@@ -70,14 +70,14 @@ if (thema === "subjonctif") {
 } else if (thema === "conditionnel") {
     aufgaben = [
         {    
-            satz: "<small>Das <em>conditionnel</em> benutzt man, um Ratschläge/Vorschläge, ___ oder Möglichkeiten auszudrücken. Das wort <em>condition</em> bedeutet <em>Bedingung</em>. " + 
-            "Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br><br><small>",
+            satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge/Vorschläge, ___ oder Möglichkeiten auszudrücken. Das wort <em>condition</em> bedeutet <em>Bedingung</em>. " + 
+            "Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br>",
             woerter: ["Befehle", "Vergangenheit", "Wünsche"],
             korrekt: "Wünsche"
         },  
         {    
-            satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge, Wünsche oder Möglichkeiten auszudrücken. Das wort <em>condition</em> bedeutet <em>Bedingung</em>. " + 
-            "Mit Hilfe des Conditionnel spricht man also über Dinge, die <em>nur unter einer bestimmten Bedingung</em> eintreten können. <br><br>" +
+            satz: "<small>Das <em>conditionnel</em> benutzt man, um Ratschläge, Wünsche oder Möglichkeiten auszudrücken. Das wort <em>condition</em> bedeutet <em>Bedingung</em>. " + 
+            "Mit Hilfe des Conditionnel spricht man also über Dinge, die <em>nur unter einer bestimmten Bedingung</em> eintreten können. <br><br></small>" +
             "<strong>Ordne zu: </strong><br>"+
             "<ul>Je <em> voudrais </em> aller à la mer. (Ich würde gerne ans Meer fahren ⬅️ <strong>___</strong>) </ul>",
             woerter: ["Ratschlag/Vorschlag", "Wunsch", "Möglichkeit"],
