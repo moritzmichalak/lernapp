@@ -420,30 +420,31 @@ if (thema === "subjonctif") {
         {
             ueberschrift: "Ratschläge geben / Vorschläge machen",
             satz: "Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge."+
-            "<ul>À ta place, je ___ (mettre) un peu d'argent sur le côté ! (An deiner Stelle, würde ein wenig Geld zu Seite legen)</ul>",
+            "<ul>À ta place, je ___ (mettre) un peu d'argent sur le côté ! <small>(An deiner Stelle, würde ein wenig Geld zu Seite legen)</small></ul>",
             typ: "text",
             korrekt: "mettrais"
         },
         {
             ueberschrift: "Ratschläge geben / Vorschläge machen",
             satz: "Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge."+
-            "<ul>Génial ! Toi et ta famille, vous ___ (pouvoir) achéter une maison ! (Genial ! Du und deine Familie, ihre könnt euch ein Haus kaufen!)</ul>",
+            "<ul>Génial ! Toi et ta famille, vous ___ (pouvoir) achéter une maison ! <small>(Genial! Du und deine Familie, ihre könnt euch ein Haus kaufen!)</small></ul>",
             typ: "text",
             korrekt: "pourriez"
         },
         {
             ueberschrift: "Ratschläge geben / Vorschläge machen",
             satz: "Le coloc de ton ami ronfle ! (Der Mitbewohner deines Freundes schnarcht! Was schlägst du vor?)."+
-            "Tu ___ (devoir) mettre des bouchons d'oreille ! (Du solltest Ohrstöpsel tragen)",
+            "Tu ___ (devoir) mettre des bouchons d'oreille ! <small>(Du solltest Ohrstöpsel tragen)</small>",
             typ: "text",
             korrekt: "devrais"
         },
         {
             ueberschrift: "Ratschläge geben / Vorschläge machen",
-            satz: "Encore un problème. Un ami te raconte son problème: 'Ce soir il y a la fête d'anniversaire de mon ami Cédric."+
+            satz: "Encore un problème 🤷... Un ami te raconte son problème: 'Ce soir il y a la fête d'anniversaire de mon ami Cédric."+
             " Mais demain matin je dois me lever tôt pour un tornoi de handball. Je ne sais pas si je dois aller à la fête ou si "+
             "je dois me coucher tôt. Qu'est-ce que tu ferais ?' <br>"+
-            "À ta place, je ...",
+            "Vorschlag 1: À ta place, j' ___ (aller) à la fête, mais je ne ___ (rentrer) pas trop tard.<br>"+
+            "Vorschlag 2: À ta place, je ...",
             typ: "text",
             korrekt: "devrais"
         },
