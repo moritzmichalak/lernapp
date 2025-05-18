@@ -843,21 +843,27 @@ function checkAnswer() {
         let isCorrect = false;
         let accentFehler = false;
         if (Array.isArray(richtigeAntwort)) {
+            console.log("Hier1");
             for (let korrektWort of richtigeAntwort) {
                 if (droppedWord === korrektWort) {
+                    console.log("Hier1.1");
                     isCorrect = true;
                     break;
                 }
                 if (entferneAccents(droppedWord) === entferneAccents(korrektWort)) {
+                    console.log("Hier1.2");
                     isCorrect = true;
                     accentFehler = true;
                     break;
                 }
             }
         } else {
+            console.log("Hier2");
             if (droppedWord === richtigeAntwort) {
+                console.log("Hier2.1");
                 isCorrect = true;
             } else if (entferneAccents(droppedWord) === entferneAccents(richtigeAntwort)) {
+                console.log("Hier2.2");
                 isCorrect = true;
                 accentFehler = true;
             }
