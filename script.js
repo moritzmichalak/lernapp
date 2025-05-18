@@ -6,6 +6,10 @@ function entferneAccents(str) {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
+if (accentFehler) {
+    alert("Kleiner Accent-Fehler, kein Problem 🙂");
+}
+
 // Auth-Check und Start der Lernumgebung
 firebase.auth().onAuthStateChanged(function(user) {
     console.log("Auth-Zustand geprüft:", user);
