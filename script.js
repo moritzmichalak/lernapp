@@ -94,7 +94,7 @@ if (thema === "subjonctif") {
             "<strong>Ordne zu: </strong><br>"+
             "<ul>Je <em> voudrais </em> aller à la mer. (Ich würde gerne ans Meer fahren) ⬅️ <strong>Wunsch</strong> </ul>" +
             "<ul>À ta place, je <em> partirais </em> en vacances. (An deiner Stelle, würde ich in den Urlaub fahren.) ⬅️ <strong>Ratschlag</strong> </ul>" +
-            "<ul> Si je gagnais à la loterie, je<em> donnerais </ul> de l'argent à ma famille. (Gewänne ich im Lotte, würde ich Geld  meiner Familie geben.) ⬅️ <strong>___</strong> ",
+            "<ul> Si je gagnais à la loterie, je <em>donnerais</em> </ul> de l'argent à ma famille. (Gewänne ich im Lotte, würde ich Geld  meiner Familie geben.) ⬅️ <strong>___</strong> ",
             woerter: ["Ratschlag/Vorschlag", "Wunsch", "Möglichkeit"],
             korrekt: "Möglichkeit"
         },  
@@ -269,7 +269,7 @@ if (thema === "subjonctif") {
             satz: "Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
             "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>. <br>"+
             "Ordne zu: <em>il/elle/on ___</em>",
-            woerter: ["voudraient","voudrait", "voudrais", "voudrions", "voudriez"],
+            woerter: ["voudraient","voudrait", "voudrions", "voudriez"],
             korrekt: "voudrait",
             bild: "img/boulangerie.jpg"
         },
@@ -348,7 +348,7 @@ if (thema === "subjonctif") {
         },
         {
             ueberschrift: "Unegelmäßige Formen",
-            satz: "Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils das passende Verb zum unregelmäßigen Stamm zu finden: <br>"+
+            satz: "Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils die passende Grundform zum unregelmäßigen Stamm zu finden: <br>"+
             "<ul><strong>devr</strong>(ais) : devoir </ul>"+
             "<ul><strong>fer</strong>(ais) : faire </ul>"+
             "<ul><strong>pourr</strong>(ais) : pouvoir </ul>"+
@@ -415,7 +415,7 @@ if (thema === "subjonctif") {
             satz: "Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge."+
             "<ul>À ta place, je ___ (garder) l'argent pour plus tard ! (An deiner Stelle, würde ich das Geld für später behalten)</ul>",
             typ: "text",
-            korrekt: "garder"
+            korrekt: "garderais"
         },
         {
             ueberschrift: "Ratschläge geben / Vorschläge machen",
