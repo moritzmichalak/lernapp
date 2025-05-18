@@ -1066,22 +1066,25 @@ function checkTextAnswer() {
     const input = document.getElementById('textInput');
     const antwort = input.value.trim().toLowerCase();
     const aufgabe = aufgaben[aktuellesLevel - 1];
+
     /*
     const richtigeAntworten = Array.isArray(aufgabe.korrekt)
         ? aufgabe.korrekt.map(a => a.toLowerCase())
         : [aufgabe.korrekt.toLowerCase()];
     */
+    const richtigeAntwort = aufgabe.korrekt;
     let isCorrect = false;
     let accentFehler = false;
+
     if (Array.isArray(richtigeAntwort)) {
         console.log("Hier1");
         for (let korrektWort of richtigeAntwort) {
-            if (droppedWord === korrektWort) {
+            if (antwort === korrektWort.toLowerCase()) {
                 console.log("Hier1.1");
                 isCorrect = true;
                 break;
             }
-            if (entferneAccents(droppedWord) === entferneAccents(korrektWort)) {
+            if (entferneAccents(antwort) === entferneAccents(korrektWort.toLowerCase())) {
                 console.log("Hier1.2");
                 isCorrect = true;
                 accentFehler = true;
@@ -1090,10 +1093,10 @@ function checkTextAnswer() {
         }
     } else {
         console.log("Hier2");
-        if (droppedWord === richtigeAntwort) {
+        if (antwort === richtigeAntwort.toLowerCase()) {
             console.log("Hier2.1");
             isCorrect = true;
-        } else if (entferneAccents(droppedWord) === entferneAccents(richtigeAntwort)) {
+        } else if (entferneAccents(antwort) === entferneAccents(richtigeAntwort.toLowerCase())) {
             console.log("Hier2.2");
             isCorrect = true;
             accentFehler = true;
