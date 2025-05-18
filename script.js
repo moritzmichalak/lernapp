@@ -70,8 +70,8 @@ if (thema === "subjonctif") {
 } else if (thema === "conditionnel") {
     aufgaben = [
         {    
-            satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge/Vorschläge, ___ oder Möglichkeiten auszudrücken. Das wort <em>condition</em> bedeutet <em>Bedingung</em>. " + 
-            "Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br>",
+            satz: "<small>Das <em>conditionnel</em> benutzt man, um Ratschläge/Vorschläge, ___ oder Möglichkeiten auszudrücken. Das wort <em>condition</em> bedeutet <em>Bedingung</em>. " + 
+            "Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br><br><small>",
             woerter: ["Befehle", "Vergangenheit", "Wünsche"],
             korrekt: "Wünsche"
         },  
@@ -417,7 +417,7 @@ if (thema === "subjonctif") {
             "<small>(Wäre Pierre nicht wütend, hätte er eine bessere Beziehung zu seinem Vater. </small>",
             typ: "text",
             korrekt: "aurait",
-            bild: "img/pierre.jpg"
+            bild: "img/pierre.jpeg"
         },
         {
             ueberschrift: "Unegelmäßige Formen: avoir",
@@ -457,7 +457,7 @@ if (thema === "subjonctif") {
             "<small>(Gäbe es keinen Chor, würde Pierre nicht zur Schule gehen.)<small>",
             typ: "text",
             korrekt: "irait",
-            bild: "img/pierre.png"
+            bild: "img/pierre.jpeg"
         },
 
         // TO DO: andere unregelmäßige Verben
