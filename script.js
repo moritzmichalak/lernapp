@@ -365,25 +365,101 @@ if (thema === "subjonctif") {
         //POPUP: Très bien ! Jetzt üben wir die unregelmäßigen Formen noch ein wenig. Wir starten mit faire. Merke dir gut, der Stamm lautet -fer!
         {
             ueberschrift: "Unegelmäßige Formen: faire",
-            satz: "Clément Mathieu __________ (faire) tout pour aider les élèves. (Clément Mathieu würde alles tun, um den Schülern zu helfen.)",
+            satz: "Clément Mathieu ___ (faire) tout pour aider les élèves.<br>"+
+            "<small>(Clément Mathieu würde alles tun, um den Schülern zu helfen.)</small>",
             typ: "text",
             korrekt: "ferait",
             bild: "img/mathieu.jpg"
         },
         {
             ueberschrift: "Unegelmäßige Formen: faire",
-            satz: "Si j'étais professeur, je __________ (faire) aussi une chorale dans mon école. (Wäre ich Lehrer, würde ich auch einen Chor in meiner Schule kreieren.",
+            satz: "Si j'étais professeur, je ___ (faire) aussi une chorale dans mon école.<br>"+
+            "<small>(Wäre ich Lehrer, würde ich auch einen Chor in meiner Schule kreieren.</small>",
             typ: "text",
             korrekt: "ferais",
             bild: "img/chorale.png"
         },
         {
             ueberschrift: "Unegelmäßige Formen: faire",
-            satz: "S'il ne pleuvait pas, nous __________ (faire) la fête !. (Regnete es nicht, würden wir Party machen!).",
+            satz: "S'il ne pleuvait pas, nous ___ (faire) la fête !."+
+            "<small>(Regnete es nicht, würden wir Party machen!).</small>",
             typ: "text",
             korrekt: "ferions",
             bild: "img/party.jpg"
         },
+        {
+            ueberschrift: "Unegelmäßige Formen: pouvoir",
+            satz: "Si Violette Morhange était moins distancée, elle ___ (pouvoir) avoir une meilleure relation avec son fils. <br>"+
+            "<small>(Wäre Violette Morhange weniger distanziert, könnte sie eine bessere Beziehung zu ihrem Sohn haben. </small>",
+            typ: "text",
+            korrekt: "pourrait",
+            bild: "img/violette.jpg"
+        },
+        {
+            ueberschrift: "Unegelmäßige Formen: pouvoir",
+            satz: "Avec plus de liberté, les élèves ___ (pouvoir) s'exprimer plus facilement.<br>"+
+            "<small>Mit mehr Freiheiten, könnten sich die Schülerinnen und Schüler leichter ausdrücken.</small>",
+            typ: "text",
+            korrekt: "pourraient",
+            bild: "img/chorale.png"
+        },
+        {
+            ueberschrift: "Unegelmäßige Formen: pouvoir",
+            satz: "Rachin ___ (pouvoir) être plus gentil pour avoir une meilleure relation avec les élèves."+
+            "<small>Rachin könnte netter sein, um eine bessere Beziehung zu den Schülern zu haben.</small>",
+            typ: "text",
+            korrekt: "pourrais",
+            bild: "img/rachin.jpg"
+        },
+        {
+            ueberschrift: "Unegelmäßige Formen: avoir",
+            satz: "Si Pierre n'était pas en colère, il ___ (avoir) une meilleure relation avec son père. <br>"+
+            "<small>(Wäre Pierre nicht wütend, hätte er eine bessere Beziehung zu seinem Vater. </small>",
+            typ: "text",
+            korrekt: "aurait",
+            bild: "img/pierre.jpg"
+        },
+        {
+            ueberschrift: "Unegelmäßige Formen: avoir",
+            satz: "Avec plus de soutien, les enfants ___ (avoir) confiance en eux.<br>"+
+            "<small>(Mit mehr Unterstützung hätten sich die Schülerinnen und Schüler mehr Vertrauen in sich selbst.</small>",
+            typ: "text",
+            korrekt: "auraient",
+            bild: "img/chorale.png"
+        },
+        {
+            ueberschrift: "Unegelmäßige Formen: être",
+            satz: "Sans la chorale, les journées ____ (être) très monotones pour les garçons. <br>"+
+            "<small>(Ohne den Chor wären die Tage zu monoton für die Jungs.)</small> ",
+            typ: "text",
+            korrekt: "seraient",
+            bild: "img/chorale.png"
+        },
+        {
+            ueberschrift: "Unegelmäßige Formen: être",
+            satz: "Si Rachin était plus humain, il ___ (être) apprécié par les élèves.<br>"+
+            "<small>(Wäre Rachin menschlicher, würde er von den Schülern mehr geschätzt werden.)</small>",
+            typ: "text",
+            korrekt: "serait",
+            bild: "img/rachin.png"
+        },
+        {
+            ueberschrift: "Unegelmäßige Formen: aller",
+            satz: "À ta place, j' ____ (aller) voir Les Choristes, c'est un très bon film. <br>"+
+            "<small>(An deiner Stelle würde ich Les Choristes gucken gehen, das ist ein sehr guter Film.)</small> ",
+            typ: "text",
+            korrekt: "irais",
+            bild: "img/chorale.png"
+        },
+        {
+            ueberschrift: "Unegelmäßige Formen: aller",
+            satz: "S'il n'avait pas de chorale, Pierre n' ___ (aller) pas à l'école.<br>"+
+            "<small>(Gäbe es keinen Chor, würde Pierre nicht zur Schule gehen.)<small>",
+            typ: "text",
+            korrekt: "irait",
+            bild: "img/pierre.png"
+        },
+
         // TO DO: andere unregelmäßige Verben
         {
             ueberschrift: "Ratschläge geben / Vorschläge machen",
