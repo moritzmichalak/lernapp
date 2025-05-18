@@ -441,7 +441,7 @@ if (thema === "subjonctif") {
             "<small>(Wäre Rachin menschlicher, würde er von den Schülern mehr geschätzt werden.)</small>",
             typ: "text",
             korrekt: "serait",
-            bild: "img/rachin.png"
+            bild: "img/rachin.jpg"
         },
         {
             ueberschrift: "Unegelmäßige Formen: aller",
