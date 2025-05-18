@@ -98,7 +98,7 @@ if (thema === "subjonctif") {
             "<strong>Ordne zu: </strong><br>"+
             "<ul>Je <em> voudrais </em> aller à la mer. (Ich würde gerne ans Meer fahren) ⬅️ <strong>Wunsch</strong> </ul>" +
             "<ul>À ta place, je <em> partirais </em> en vacances. (An deiner Stelle, würde ich in den Urlaub fahren.) ⬅️ <strong>Ratschlag</strong> </ul>" +
-            "<ul> Si je gagnais à la loterie, je <em>donnerais</em> </ul> de l'argent à ma famille. (Gewänne ich im Lotte, würde ich Geld  meiner Familie geben.) ⬅️ <strong>___</strong> ",
+            "<ul> Si je gagnais à la loterie, je <em>donnerais</em> de l'argent à ma famille. (Gewänne ich im Lotto, würde ich Geld  meiner Familie geben.) ⬅️ <strong>___</strong> </ul>",
             woerter: ["Ratschlag/Vorschlag", "Wunsch", "Möglichkeit"],
             korrekt: "Möglichkeit"
         },  
@@ -165,91 +165,72 @@ if (thema === "subjonctif") {
         },
         {    
             ueberschrift: "Regelmäßige Formen",
-            satz: "Si javais plus de temps, je➡️ ____ (voyager) plus souvent avec ma famille. Nous _ _ _ (choisir) "+
-            "des destinations intéressantes comme l'Italie ou le Canada. Mon frère _ _ _  (préparer) "+
-            "toujours un programme très détaillé. Mes parents _ _ _  (aimer) visiter des musées, mais moi, "+
-            "je _ _ _  (préférer) passer du temps à la plage.Si nous partions en hiver, nous _ _ _  (attendre) "+
-            "la neige avec impatience. Et s'il faisait froid, nous _ _ _  (manger) des plats chauds dans des restaurants typiques."+
-            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?",
+            satz: "Si j'avais plus de temps, je➡️ ____ (voyager) plus souvent avec ma famille.",
             typ: "text",
             korrekt: "voyagerais",
             bild: "img/reise.jpg"
         },
         {    
             ueberschrift: "Regelmäßige Formen",
-            satz: "Si javais plus de temps, je voyagerais plus souvent avec ma famille. Nous ➡️ ____  (choisir) "+
-            "des destinations intéressantes comme l'Italie ou le Canada. Mon frère _ _ _  (préparer) "+
-            "toujours un programme très détaillé. Mes parents _ _ _  (aimer) visiter des musées, mais moi, "+
-            "je _ _ _  (préférer) passer du temps à la plage.Si nous partions en hiver, nous _ _ _  (attendre) "+
-            "la neige avec impatience. Et s'il faisait froid, nous _ _ _  (manger) des plats chauds dans des restaurants typiques."+
-            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?",
+            satz: "Si j'avais plus de temps, je voyagerais plus souvent avec ma famille. Nous ➡️ ____  (choisir)",
             typ: "text",
             korrekt: "choisirions",
             bild: "img/reise.jpg"
         },
         {    
             ueberschrift: "Regelmäßige Formen",
-            satz: "Si javais plus de temps, je voyagerais plus souvent avec ma famille. Nous choisirions "+
+            satz: "Si j'avais plus de temps, je voyagerais plus souvent avec ma famille. Nous choisirions "+
             "des destinations intéressantes comme l'Italie ou le Canada. Mon frère ➡️ ____  (préparer) "+
-            "toujours un programme très détaillé. Mes parents _ _ _  (aimer) visiter des musées, mais moi, "+
-            "je _ _ _  (préférer) passer du temps à la plage.Si nous partions en hiver, nous _ _ _  (attendre) "+
-            "la neige avec impatience. Et s'il faisait froid, nous _ _ _  (manger) des plats chauds dans des restaurants typiques."+
-            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?",
+            "toujours un programme très détaillé.",
             typ: "text",
             korrekt: "préparerait",
             bild: "img/reise.jpg"
         },
         {    
             ueberschrift: "Regelmäßige Formen",
-            satz: "Si javais plus de temps, je voyagerais plus souvent avec ma famille. Nous choisirions "+
+            satz: "Si j'avais plus de temps, je voyagerais plus souvent avec ma famille. Nous choisirions "+
             "des destinations intéressantes comme l'Italie ou le Canada. Mon frère préparerait "+
             "toujours un programme très détaillé. Mes parents ➡️ ____  (aimer) visiter des musées, mais moi, "+
-            "je _ _ _  (préférer) passer du temps à la plage.Si nous partions en hiver, nous _ _ _  (attendre) "+
-            "la neige avec impatience. Et s'il faisait froid, nous _ _ _  (manger) des plats chauds dans des restaurants typiques."+
-            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?",
+            "je _ _ _  (préférer) passer du temps à la plage.",
             typ: "text",
             korrekt: "aimeraient",
             bild: "img/reise.jpg"
         },
         {    
             ueberschrift: "Regelmäßige Formen",
-            satz: "Si javais plus de temps, je voyagerais plus souvent avec ma famille. Nous choisirions "+
+            satz: "Si j'avais plus de temps, je voyagerais plus souvent avec ma famille. Nous choisirions "+
             "des destinations intéressantes comme l'Italie ou le Canada. Mon frère préparerait "+
             "toujours un programme très détaillé. Mes parents aimeraient visiter des musées, mais moi, "+
-            "je ➡️ ____ (préférer) passer du temps à la plage.Si nous partions en hiver, nous _ _ _  (attendre) "+
-            "la neige avec impatience. Et s'il faisait froid, nous _ _ _  (manger) des plats chauds dans des restaurants typiques."+
-            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?",
+            "je ➡️ ____ (préférer) passer du temps à la plage.",
             typ: "text",
             korrekt: "préférerais",
             bild: "img/reise.jpg"
         },
         {    
             ueberschrift: "Regelmäßige Formen",
-            satz: "Si javais plus de temps, je voyagerais plus souvent avec ma famille. Nous choisirions "+
+            satz: "Si j'avais plus de temps, je voyagerais plus souvent avec ma famille. Nous choisirions "+
             "des destinations intéressantes comme l'Italie ou le Canada. Mon frère préparerait "+
             "toujours un programme très détaillé. Mes parents aimeraient visiter des musées, mais moi, "+
-            "je préférerais passer du temps à la plage.Si nous partions en hiver, nous ➡️ ____  (attendre) "+
-            "la neige avec impatience. Et s'il faisait froid, nous _ _ _  (manger) des plats chauds dans des restaurants typiques."+
-            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?",
+            "je préférerais passer du temps à la plage. Si nous partions en hiver, nous ➡️ ____  (attendre) "+
+            "la neige avec impatience.",
             typ: "text",
             korrekt: "attendrions",
             bild: "img/reise.jpg"
         },
         {    
             ueberschrift: "Regelmäßige Formen",
-            satz: "Si javais plus de temps, je voyagerais plus souvent avec ma famille. Nous choisirions "+
+            satz: "Si j'avais plus de temps, je voyagerais plus souvent avec ma famille. Nous choisirions "+
             "des destinations intéressantes comme l'Italie ou le Canada. Mon frère préparerait "+
             "toujours un programme très détaillé. Mes parents aimeraient visiter des musées, mais moi, "+
             "je préférerais passer du temps à la plage.Si nous partions en hiver, nous attendrions "+
-            "la neige avec impatience. Et s'il faisait froid, nous ➡️ ____ (manger) des plats chauds dans des restaurants typiques."+
-            "Et toi, qu'est-ce que tu _ _ _  (aimer) faire ?",
+            "la neige avec impatience. Et s'il faisait froid, nous ➡️ ____ (manger) des plats chauds dans des restaurants typiques.",
             typ: "text",
             korrekt: "mangerions",
             bild: "img/reise.jpg"
         },
         {    
             ueberschrift: "Regelmäßige Formen",
-            satz: "Si javais plus de temps, je voyagerais plus souvent avec ma famille. Nous choisirions "+
+            satz: "Si j'avais plus de temps, je voyagerais plus souvent avec ma famille. Nous choisirions "+
             "des destinations intéressantes comme l'Italie ou le Canada. Mon frère préparerait "+
             "toujours un programme très détaillé. Mes parents aimeraient visiter des musées, mais moi, "+
             "je préférerais passer du temps à la plage.Si nous partions en hiver, nous attendrions "+
@@ -503,14 +484,14 @@ if (thema === "subjonctif") {
         {
             ueberschrift: "Ratschläge geben / Vorschläge machen",
             satz: "<small>Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge.</small><br>"+
-            "À ta place, je ___ (mettre) un peu d'argent sur le côté ! <br><small>(An deiner Stelle, würde ein wenig Geld zu Seite legen)</small>",
+            "À ta place, je ___ (mettre) un peu d'argent de côté ! <br><small>(An deiner Stelle, würde ein wenig Geld zu Seite legen)</small>",
             typ: "text",
             korrekt: "mettrais"
         },
         {
             ueberschrift: "Ratschläge geben / Vorschläge machen",
             satz: "<small>Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge.</small><br>"+
-            "<ul>Génial ! Toi et ta famille, vous ___ (pouvoir) achéter une maison ! <small>(Genial! Du und deine Familie, ihre könnt euch ein Haus kaufen!)</small></ul>",
+            "<ul>Génial ! Toi et ta famille, vous ___ (pouvoir) acheter une maison ! <small>(Genial! Du und deine Familie, ihre könnt euch ein Haus kaufen!)</small></ul>",
             typ: "text",
             korrekt: "pourriez"
         },
@@ -1086,23 +1067,23 @@ const erklaerungen = {
             text: "Vielleicht ist dir aufgefallen, dass wir <strong>genau die gleichen Endungen</strong> wie bei den regelmäßigen Verben benutzen. Nur der <strong>Stamm ist anders</strong>!"
         },
         33: {
-            titel: "Très bien!",
+            titel: "Très bien !",
             text: "Jetzt üben wir die unregelmäßigen Formen noch ein wenig. Wir starten mit <strong>faire</strong>. Merke dir gut: der Stamm lautet <strong>fer-</strong>!"
         },
         36: {
-            titel: "Très bien!",
+            titel: "Très bien !",
             text: "Weiter geht's mit <strong>pouvoir</strong>. Merke dir gut: der Stamm lautet <strong>pourr-</strong>!"
         },
         39: {
-            titel: "Très bien!",
+            titel: "Très bien !",
             text: "Weiter geht's mit <strong>avoir</strong>. Merke dir gut: der Stamm lautet <strong>aur-</strong>!"
         },
         41: {
-            titel: "Très bien!",
+            titel: "Très bien !",
             text: "Weiter geht's mit <strong>être</strong>. Merke dir gut: der Stamm lautet <strong>ser-</strong>!"
         },
         43: {
-            titel: "Très bien!",
+            titel: "Très bien !",
             text: "Weiter geht's mit <strong>aller</strong>. Merke dir gut: der Stamm lautet <strong>ir-</strong>!"
         },
         45: {
