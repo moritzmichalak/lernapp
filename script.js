@@ -2,6 +2,10 @@ const db = firebase.firestore();
 let schuelerId = "";
 let istWiederholung = false;
 
+function entferneAccents(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
 // Auth-Check und Start der Lernumgebung
 firebase.auth().onAuthStateChanged(function(user) {
     console.log("Auth-Zustand geprüft:", user);
@@ -443,13 +447,28 @@ if (thema === "subjonctif") {
             satz: "Encore un problème 🤷... Un ami te raconte son problème: 'Ce soir il y a la fête d'anniversaire de mon ami Cédric."+
             " Mais demain matin je dois me lever tôt pour un tornoi de handball. Je ne sais pas si je dois aller à la fête ou si "+
             "je dois me coucher tôt. Qu'est-ce que tu ferais ?' <br>"+
-            "Vorschlag 1: À ta place, j' ___ (aller) à la fête, mais je ne ___ (rentrer) pas trop tard.<br>"+
-            "Vorschlag 2: À ta place, je ...",
+            "Vorschlag 1: À ta place, j' ___ (aller) à la fête, mais je ne ___ (rentrer) pas trop tard.<br>",
             typ: "text",
-            korrekt: "devrais"
+            korrekt: "irais"
         },
-        
-        
+        {
+            ueberschrift: "Ratschläge geben / Vorschläge machen",
+            satz: "Encore un problème 🤷... Un ami te raconte son problème: 'Ce soir il y a la fête d'anniversaire de mon ami Cédric."+
+            " Mais demain matin je dois me lever tôt pour un tornoi de handball. Je ne sais pas si je dois aller à la fête ou si "+
+            "je dois me coucher tôt. Qu'est-ce que tu ferais ?' <br>"+
+            "Vorschlag 1: À ta place, j'irais à la fête, mais je ne ___ (rentrer) pas trop tard.<br>",
+            typ: "text",
+            korrekt: "rentrerais"
+        },
+        {
+            ueberschrift: "Ratschläge geben / Vorschläge machen",
+            satz: "Encore un problème 🤷... Un ami te raconte son problème: 'Ce soir il y a la fête d'anniversaire de mon ami Cédric."+
+            " Mais demain matin je dois me lever tôt pour un tornoi de handball. Je ne sais pas si je dois aller à la fête ou si "+
+            "je dois me coucher tôt. Qu'est-ce que tu ferais ?' <br>"+
+            "Vorschlag 2: À ta place, je me ___ (coucher) tôt.<br>",
+            typ: "text",
+            korrekt: "coucherais"
+        },
         { satz: "Si j'étais riche, je ___ (acheter) une maison.", woerter: ["achèterais", "achète", "acheterai"], korrekt: "achèterais" },
         { satz: "Nous ___ (vouloir) voyager plus.", woerter: ["voudrions", "voulons", "voudrons"], korrekt: "voudrions" },
         { satz: "Je / J' ___ (aimer) aller au Japon.", woerter: ["aimais", "aimeriais", "aimerais"], korrekt: "aimerais" },
@@ -810,12 +829,35 @@ function checkAnswer() {
         // 13.05.25
         const aufgabe = aufgaben[aktuellesLevel - 1];
         const richtigeAntwort = aufgabe.korrekt;
-
+        /* 18.05.25 alt:
         console.log("Aktuelles level (1. Check):", aktuellesLevel);
         const isCorrect = Array.isArray(richtigeAntwort)
             ? richtigeAntwort.includes(droppedWord)
             : droppedWord === richtigeAntwort;
-        
+        */
+        // 18.05.25 neu:
+        let isCorrect = false;
+        let accentFehler = false;
+        if (Array.isArray(richtigeAntwort)) {
+            for (let korrektWort of richtigeAntwort) {
+                if (droppedWord === korrektWort) {
+                    isCorrect = true;
+                    break;
+                }
+                if (entferneAccents(droppedWord) === entferneAccents(korrektWort)) {
+                    isCorrect = true;
+                    accentFehler = true;
+                    break;
+                }
+            }
+        } else {
+            if (droppedWord === richtigeAntwort) {
+                isCorrect = true;
+            } else if (entferneAccents(droppedWord) === entferneAccents(richtigeAntwort)) {
+                isCorrect = true;
+                accentFehler = true;
+            }
+        }
         if (isCorrect) {
             dropzone.style.border = "2px solid #4caf50";
             feedback.innerText = "✅ Richtig! Du bekommst 10 Punkte!";
@@ -864,6 +906,9 @@ function checkAnswer() {
                 console.log("Aktuelles level (2. Check):", aktuellesLevel);
                 dropzone.style.border = "2px solid #4caf50";
                 feedback.innerText = "✅ Richtig! Du bekommst 10 Punkte!";
+                if (accentFehler) {
+                    alert("Kleiner Accent-Fehler, kein Problem 🙂");
+                }
                 punkte += 10;
                 // console.log("Richtige Antworten abgespeichert?", richtige);
 
