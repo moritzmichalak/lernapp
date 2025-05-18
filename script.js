@@ -1099,7 +1099,7 @@ function checkTextAnswer() {
             accentFehler = true;
         }
     }
-    const isCorrect = richtigeAntworten.includes(antwort);
+    // const isCorrect = richtigeAntworten.includes(antwort);
 
     if (isCorrect) {
         if (accentFehler) {
