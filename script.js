@@ -79,13 +79,13 @@ if (thema === "subjonctif") {
             satz: "<small>Das <em>conditionnel</em> benutzt man, um Ratschläge, Wünsche oder Möglichkeiten auszudrücken. Das wort <em>condition</em> bedeutet <em>Bedingung</em>. " + 
             "Mit Hilfe des Conditionnel spricht man also über Dinge, die <em>nur unter einer bestimmten Bedingung</em> eintreten können. <br><br></small>" +
             "<strong>Ordne zu: </strong><br>"+
-            "<ul>Je <em> voudrais </em> aller à la mer. (Ich würde gerne ans Meer fahren ⬅️ <strong>___</strong>) </ul>",
+            "<ul>Je <em> voudrais </em> aller à la mer. (Ich würde gerne ans Meer fahren) ⬅️ <strong>___</strong> </ul>",
             woerter: ["Ratschlag/Vorschlag", "Wunsch", "Möglichkeit"],
             korrekt: "Wunsch"
         },  
         {    
-            satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge, WÜnsche oder Möglichkeiten auszudrücken. Das wort <em>condition</em> bedeutet <em>Bedingung</em>. " + 
-            "Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br><br>" +
+            satz: "<small>Das <em>conditionnel</em> benutzt man, um Ratschläge, WÜnsche oder Möglichkeiten auszudrücken. Das wort <em>condition</em> bedeutet <em>Bedingung</em>. " + 
+            "Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br><br></small>" +
             "<strong>Ordne zu: </strong><br>"+
             "<ul>Je <em> voudrais </em> aller à la mer. (Ich würde gerne ans Meer fahren) ⬅️ <strong>Wunsch</strong> </ul>" +
             "<ul>À ta place, je <em> partirais </em> en vacances. (An deiner Stelle, würde ich in den Urlaub fahren.) ⬅️ <strong>___</strong> </ul>",
@@ -93,8 +93,8 @@ if (thema === "subjonctif") {
             korrekt: "Ratschlag/Vorschlag"
         },  
         {    
-            satz: "Das <em>conditionnel</em> benutzt man, um Ratschläge, Wünsche oder Möglichkeiten auszudrücken. Das wort <em>condition</em> bedeutet <em>Bedingung</em>. " + 
-            "Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br><br>" +
+            satz: "<small>Das <em>conditionnel</em> benutzt man, um Ratschläge, Wünsche oder Möglichkeiten auszudrücken. Das wort <em>condition</em> bedeutet <em>Bedingung</em>. " + 
+            "Mit Hilfe des Conditionnel spricht man also über Dinge, die nur unter einer bestimmten Bedingung eintreten können. <br><br></small>" +
             "<strong>Ordne zu: </strong><br>"+
             "<ul>Je <em> voudrais </em> aller à la mer. (Ich würde gerne ans Meer fahren) ⬅️ <strong>Wunsch</strong> </ul>" +
             "<ul>À ta place, je <em> partirais </em> en vacances. (An deiner Stelle, würde ich in den Urlaub fahren.) ⬅️ <strong>Ratschlag</strong> </ul>" +
@@ -104,44 +104,44 @@ if (thema === "subjonctif") {
         },  
         {    
             ueberschrift: "Regelmäßige Verben",
-            satz: "Um die regelmäßigen Formen zu bilden, hängt man an ___ die Endungen <em>-ais, -ait, -ions, -iez, -aient</em> an. <br>"+
+            satz: "Um die regelmäßigen Formen zu bilden, hängt man an ___ die Endungen <em>-ais, -ait, -ions, -iez, -aient</em> an. <br><br>"+
             "<ul>À ta place, je <strong>partir</strong><em>ais </em> en vacances." +
             "<ul> Si je gagnais à la loterie, je <strong>donner</strong><em>ais</em> </ul> de l'argent à ma famille. ",
             woerter: ["die Grundform des Verbs", "das Partizip"],
             korrekt: "die Grundform des Verbs"
         },
         {    
-            ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
+            ueberschrift: "<small>Endungen (Beispiel <em>souhaiter</em> = wünschen).</small> <br> <strong>Ordne zu</strong>",
             satz: "je ___",
             woerter: ["souhaiteraient","souhaiterait", "souhaiterais", "souhaiterais", "souhaiterions", "souhaiteriez"],
             korrekt: "souhaiterais"
         },
         {    
-            ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
+            ueberschrift: "<small>Endungen (Beispiel <em>souhaiter</em> = wünschen).</small> <br> <strong>Ordne zu</strong>",
             satz: "tu ___",
             woerter: ["souhaiteraient","souhaiterait", "souhaiterais", "souhaiterions", "souhaiteriez"],
             korrekt: "souhaiterais"
         },
         {    
-            ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
+            ueberschrift: "<small>Endungen (Beispiel <em>souhaiter</em> = wünschen).</small> <br> <strong>Ordne zu</strong>",
             satz: "il/elle/on ___",
             woerter: ["souhaiteraient","souhaiterait", "souhaiterions", "souhaiteriez"],
             korrekt: "souhaiterait"
         },
         {    
-            ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
+            ueberschrift: "<small>Endungen (Beispiel <em>souhaiter</em> = wünschen).</small> <br> <strong>Ordne zu</strong>",
             satz: "nous ___",
             woerter: ["souhaiteraient", "souhaiterions", "souhaiteriez"],
             korrekt: "souhaiterions"
         },
         {    
-            ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
+            ueberschrift: "<small>Endungen (Beispiel <em>souhaiter</em> = wünschen).</small> <br> <strong>Ordne zu</strong>",
             satz: "vous ___",
             woerter: ["souhaiteraient", "souhaiteriez"],
             korrekt: "souhaiteriez"
         },
         {    
-            ueberschrift: "Endungen (Beispiel <em>souhaiter</em> = wünschen). <strong>Ordne zu</strong>",
+            ueberschrift: "<small>Endungen (Beispiel <em>souhaiter</em> = wünschen).</small> <br> <strong>Ordne zu</strong>",
             satz: "ils/elles ___",
             woerter: ["souhaiteraient"],
             korrekt: "souhaiteraient"
@@ -151,12 +151,12 @@ if (thema === "subjonctif") {
             satz: "Bei den Verben auf <em>-re</em> hängt man die Endungen auch an die Grundform an, allerdings fällt am Ende das ___ weg."+
             "<ul>prendr<strong>e</strong> -> je prendr<em>ais</em></ul>"+
             "<ul>dir<strong>e</strong> -> elle dir<em>ait</em></ul> <br>",
-            typ: "text",
+            woerter: ["re", "e", "dre", "être", "aller", "faire"],
             korrekt: "e"
         },
         {    
             ueberschrift: "Regelmäßige Formen: Verben auf -re",
-            satz: "Bei den Verben auf <em>-re</em> hängt man die Endungen auch an die Grundform an, allerdings fällt am Ende das e weg."+
+            satz: "<small>Bei den Verben auf <em>-re</em> hängt man die Endungen auch an die Grundform an, allerdings fällt am Ende das e weg.<small><br><br>"+
             "<strong>Probiere es mal selbst:</strong><br>"+
             "Si j'avais le temps, j' ___ (attendre). (Hätte ich die Zeit, würde ich warten)",
             typ: "text",
@@ -261,8 +261,8 @@ if (thema === "subjonctif") {
         },
         {    
             ueberschrift: "Unegelmäßige Formen",
-            satz: "Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
-            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>. <br>"+
+            satz: "<small>Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
+            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>.</small> <br><br>"+
             "Ordne zu: <em>tu ___</em>",
             woerter: ["voudraient","voudrait", "voudrais", "voudrions", "voudriez"],
             korrekt: "voudrais",
@@ -270,8 +270,8 @@ if (thema === "subjonctif") {
         },
         {    
             ueberschrift: "Unegelmäßige Formen",
-            satz: "Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
-            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>. <br>"+
+            satz: "<small>Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
+            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>.</small> <br><br>"+
             "Ordne zu: <em>il/elle/on ___</em>",
             woerter: ["voudraient","voudrait", "voudrions", "voudriez"],
             korrekt: "voudrait",
@@ -279,8 +279,8 @@ if (thema === "subjonctif") {
         },
         {    
             ueberschrift: "Unegelmäßige Formen",
-            satz: "Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
-            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>. <br>"+
+            satz: "<small>Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
+            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>.</small> <br><br>"+
             "Ordne zu: <em>nous ___</em>",
             woerter: ["voudraient","voudrions", "voudriez"],
             korrekt: "voudrions",
@@ -288,8 +288,8 @@ if (thema === "subjonctif") {
         },
         {    
             ueberschrift: "Unegelmäßige Formen",
-            satz: "Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
-            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>. <br>"+
+            satz: "<small>Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
+            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>.</small> <br><br>"+
             "Ordne zu: <em>vous ___</em>",
             woerter: ["voudraient", "voudriez"],
             korrekt: "voudriez",
@@ -297,24 +297,24 @@ if (thema === "subjonctif") {
         },
         {    
             ueberschrift: "Unegelmäßige Formen",
-            satz: "Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
-            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>. <br>"+
+            satz: "<small>Es gibt Verben, bei denen hängt man die Endungen nicht an die Grundform an, sondern an eine spezielle Form. "+
+            "Ein Beispiel ist vouloir (=wollen): <em>Je <strong>voudr</strong>ais un croissant, s'il vous plait.</em>.</small> <br><br>"+
             "Ordne zu: <em>ils/elles ___</em>",
             woerter: ["voudraient"],
             korrekt: "voudraient",
             bild: "img/boulangerie.jpg"
         },  
-        // POPUP: Super ! Vielleicht ist die aufgefallen, dass wir <strong> genau die gleichen Endungen</strong> wie bei den regelmäßigen Verben benutzen. Nur der <strong>Stamm ist anders</strong>!
+        // POPUP: Super ! Vielleicht ist dir aufgefallen, dass wir <strong> genau die gleichen Endungen</strong> wie bei den regelmäßigen Verben benutzen. Nur der <strong>Stamm ist anders</strong>!
         {
             ueberschrift: "Unegelmäßige Formen",
-            satz: "Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils das passende Verb zum unregelmäßigen Stamm zu finden: <br>"+
+            satz: "<small>Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils das passende Verb zum unregelmäßigen Stamm zu finden: <br><br><small>"+
             "<ul><strong>devr</strong>(ais) : ➡️ ___ </ul>",
             woerter: ["pouvoir", "devoir", "avoir", "être", "aller", "faire"],
             korrekt: "devoir"
         },
         {
             ueberschrift: "Unegelmäßige Formen",
-            satz: "Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils das passende Verb zum unregelmäßigen Stamm zu finden: <br>"+
+            satz: "<small>Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils das passende Verb zum unregelmäßigen Stamm zu finden: <br><br><small>"+
             "<ul><strong>devr</strong>(ais) : devoir </ul>"+
             "<ul><strong>fer</strong>(ais) : ➡️ ___ </ul>",
             woerter: ["pouvoir", "avoir", "être", "aller", "faire"],
@@ -322,7 +322,7 @@ if (thema === "subjonctif") {
         },
         {
             ueberschrift: "Unegelmäßige Formen",
-            satz: "Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils das passende Verb zum unregelmäßigen Stamm zu finden: <br>"+
+            satz: "<small>Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils das passende Verb zum unregelmäßigen Stamm zu finden: <br><br><small>"+
             "<ul><strong>devr</strong>(ais) : devoir </ul>"+
             "<ul><strong>fer</strong>(ais) : faire </ul>"+
             "<ul><strong>pourr</strong>(ais) : ➡️ ___ </ul>",
@@ -331,7 +331,7 @@ if (thema === "subjonctif") {
         },
         {
             ueberschrift: "Unegelmäßige Formen",
-            satz: "Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils das passende Verb zum unregelmäßigen Stamm zu finden: <br>"+
+            satz: "<small>Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils das passende Verb zum unregelmäßigen Stamm zu finden: <br><br><small>"+
             "<ul><strong>devr</strong>(ais) : devoir </ul>"+
             "<ul><strong>fer</strong>(ais) : faire </ul>"+
             "<ul><strong>pourr</strong>(ais) : pouvoir </ul>"+
@@ -341,7 +341,7 @@ if (thema === "subjonctif") {
         },
         {
             ueberschrift: "Unegelmäßige Formen",
-            satz: "Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils das passende Verb zum unregelmäßigen Stamm zu finden: <br>"+
+            satz: "<small>Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils das passende Verb zum unregelmäßigen Stamm zu finden: <br><br><small>"+
             "<ul><strong>devr</strong>(ais) : devoir </ul>"+
             "<ul><strong>fer</strong>(ais) : faire </ul>"+
             "<ul><strong>pourr</strong>(ais) : pouvoir </ul>"+
@@ -352,7 +352,7 @@ if (thema === "subjonctif") {
         },
         {
             ueberschrift: "Unegelmäßige Formen",
-            satz: "Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils die passende Grundform zum unregelmäßigen Stamm zu finden: <br>"+
+            satz: "<small>Zu den unregelmäßigen Formen gehören auch die Verben. z.B. <em>pouvoir, devoir, avoir, être, aller, faire</em>. Versuche jeweils das passende Verb zum unregelmäßigen Stamm zu finden: <br><br><small>"+
             "<ul><strong>devr</strong>(ais) : devoir </ul>"+
             "<ul><strong>fer</strong>(ais) : faire </ul>"+
             "<ul><strong>pourr</strong>(ais) : pouvoir </ul>"+
@@ -362,7 +362,7 @@ if (thema === "subjonctif") {
             woerter: ["être"],
             korrekt: "être"
         },
-        //POPUP: Très bien ! Jetzt üben wir die unregelmäßigen Formen noch ein wenig. Wir starten mit faire. Merke dir gut, der Stamm lautet -fer!
+        //POPUP: Très bien ! Jetzt üben wir die unregelmäßigen Formen noch ein wenig. Wir starten mit faire. Merke dir gut, der Stamm lautet fer-!
         {
             ueberschrift: "Unegelmäßige Formen: faire",
             satz: "Clément Mathieu ___ (faire) tout pour aider les élèves.<br>"+
@@ -387,6 +387,7 @@ if (thema === "subjonctif") {
             korrekt: "ferions",
             bild: "img/party.jpg"
         },
+        //POPUP: Très bien ! Weiter geht's mit pouvoir. Merke dir gut, der Stamm lautet pourr-!
         {
             ueberschrift: "Unegelmäßige Formen: pouvoir",
             satz: "Si Violette Morhange était moins distancée, elle ___ (pouvoir) avoir une meilleure relation avec son fils. <br>"+
@@ -411,6 +412,7 @@ if (thema === "subjonctif") {
             korrekt: "pourrais",
             bild: "img/rachin.jpg"
         },
+        //POPUP: Très bien ! Weiter geht's mit avoir. Merke dir gut, der Stamm lautet aur-!
         {
             ueberschrift: "Unegelmäßige Formen: avoir",
             satz: "Si Pierre n'était pas en colère, il ___ (avoir) une meilleure relation avec son père. <br>"+
@@ -427,6 +429,7 @@ if (thema === "subjonctif") {
             korrekt: "auraient",
             bild: "img/chorale.png"
         },
+        //POPUP: Très bien ! Weiter geht's mit être. Merke dir gut, der Stamm lautet ser-!
         {
             ueberschrift: "Unegelmäßige Formen: être",
             satz: "Sans la chorale, les journées ____ (être) très monotones pour les garçons. <br>"+
@@ -443,6 +446,7 @@ if (thema === "subjonctif") {
             korrekt: "serait",
             bild: "img/rachin.jpg"
         },
+        //POPUP: Très bien ! Weiter geht's mit aller. Merke dir gut, der Stamm lautet ir-!
         {
             ueberschrift: "Unegelmäßige Formen: aller",
             satz: "À ta place, j' ____ (aller) voir Les Choristes, c'est un très bon film. <br>"+
@@ -459,8 +463,7 @@ if (thema === "subjonctif") {
             korrekt: "irait",
             bild: "img/pierre.jpeg"
         },
-
-        // TO DO: andere unregelmäßige Verben
+        // POPUP: Jetzt verwenden wir den Conditionnel, um Vorschläge zu machen :)
         {
             ueberschrift: "Ratschläge geben / Vorschläge machen",
             satz: "Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge."+
@@ -544,11 +547,7 @@ if (thema === "subjonctif") {
             "Vorschlag 2: À ta place, je me ___ (coucher) tôt.<br>",
             typ: "text",
             korrekt: "coucherais"
-        },
-        { satz: "Si j'étais riche, je ___ (acheter) une maison.", woerter: ["achèterais", "achète", "acheterai"], korrekt: "achèterais" },
-        { satz: "Nous ___ (vouloir) voyager plus.", woerter: ["voudrions", "voulons", "voudrons"], korrekt: "voudrions" },
-        { satz: "Je / J' ___ (aimer) aller au Japon.", woerter: ["aimais", "aimeriais", "aimerais"], korrekt: "aimerais" },
-        { satz: "Si on avait beaucoup d'argent, on ___ (faire) un grand voyage.", woerter: ["faissait", "ferait", "fairiait"], korrekt: "ferait" }
+        }
     ];
 } else if (thema === "partie1") {
     aufgaben = [
@@ -1077,11 +1076,35 @@ const erklaerungen = {
     conditionnel: {
         1: {
             titel: "Was ist das Conditionnel?",
-            text: "Das Conditionnel drückt Möglichkeiten, Wünsche oder höfliche Bitten aus. Beispiel: <em>Je voudrais un café.</em>"
+            text: "Das Conditionnel benutzt man, um Ratschläge, Wünsche oder Möglichkeiten auszudrücken. Das Wort <em>condition</em> bedeutet <em>Bedingung</em>. Wir sprechen also über Dinge, die nur unter bestimmten Bedingungen eintreten würden."
         },
-        2: {
-            titel: "Formation: Stamm + Endung",
-            text: "Man nimmt den Futur-Stamm + die imparfait-Endungen. Beispiel: <em>je parlerais</em>, <em>nous finirions</em>."
+        27: {
+            titel: "Super!",
+            text: "Vielleicht ist dir aufgefallen, dass wir <strong>genau die gleichen Endungen</strong> wie bei den regelmäßigen Verben benutzen. Nur der <strong>Stamm ist anders</strong>!"
+        },
+        34: {
+            titel: "Très bien!",
+            text: "Jetzt üben wir die unregelmäßigen Formen noch ein wenig. Wir starten mit <strong>faire</strong>. Merke dir gut: der Stamm lautet <strong>fer-</strong>!"
+        },
+        37: {
+            titel: "Très bien!",
+            text: "Weiter geht's mit <strong>pouvoir</strong>. Merke dir gut: der Stamm lautet <strong>pourr-</strong>!"
+        },
+        40: {
+            titel: "Très bien!",
+            text: "Weiter geht's mit <strong>avoir</strong>. Merke dir gut: der Stamm lautet <strong>aur-</strong>!"
+        },
+        42: {
+            titel: "Très bien!",
+            text: "Weiter geht's mit <strong>être</strong>. Merke dir gut: der Stamm lautet <strong>ser-</strong>!"
+        },
+        44: {
+            titel: "Très bien!",
+            text: "Weiter geht's mit <strong>aller</strong>. Merke dir gut: der Stamm lautet <strong>ir-</strong>!"
+        },
+        46: {
+            titel: "Vorschläge mit dem Conditionnel",
+            text: "Jetzt verwenden wir den Conditionnel, um Vorschläge zu machen. 💡 Achte darauf, ob das Verb unregelmäßig ist ;)"
         }
     },
     subjonctif: {
