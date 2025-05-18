@@ -151,7 +151,7 @@ if (thema === "subjonctif") {
             satz: "Bei den Verben auf <em>-re</em> hängt man die Endungen auch an die Grundform an, allerdings fällt am Ende das ___ weg."+
             "<ul>prendr<strong>e</strong> -> je prendr<em>ais</em></ul>"+
             "<ul>dir<strong>e</strong> -> elle dir<em>ait</em></ul> <br>",
-            woerter: ["re", "e", "dre", "être", "aller", "faire"],
+            woerter: ["re", "e", "dre"],
             korrekt: "e"
         },
         {    
@@ -391,32 +391,32 @@ if (thema === "subjonctif") {
         {
             ueberschrift: "Unegelmäßige Formen: pouvoir",
             satz: "Si Violette Morhange était moins distancée, elle ___ (pouvoir) avoir une meilleure relation avec son fils. <br>"+
-            "<small>(Wäre Violette Morhange weniger distanziert, könnte sie eine bessere Beziehung zu ihrem Sohn haben. </small>",
+            "<small>(Wäre Violette Morhange weniger distanziert, könnte sie eine bessere Beziehung zu ihrem Sohn haben.) </small>",
             typ: "text",
             korrekt: "pourrait",
-            bild: "img/violette.jpg"
+            bild: "img/violette.png"
         },
         {
             ueberschrift: "Unegelmäßige Formen: pouvoir",
             satz: "Avec plus de liberté, les élèves ___ (pouvoir) s'exprimer plus facilement.<br>"+
-            "<small>Mit mehr Freiheiten, könnten sich die Schülerinnen und Schüler leichter ausdrücken.</small>",
+            "<small>(Mit mehr Freiheiten, könnten sich die Schülerinnen und Schüler leichter ausdrücken.)</small>",
             typ: "text",
             korrekt: "pourraient",
             bild: "img/chorale.png"
         },
         {
             ueberschrift: "Unegelmäßige Formen: pouvoir",
-            satz: "Rachin ___ (pouvoir) être plus gentil pour avoir une meilleure relation avec les élèves."+
-            "<small>Rachin könnte netter sein, um eine bessere Beziehung zu den Schülern zu haben.</small>",
+            satz: "Rachin ___ (pouvoir) être plus gentil pour avoir une meilleure relation avec les élèves.<br>"+
+            "<small>(Rachin könnte netter sein, um eine bessere Beziehung zu den Schülern zu haben.)</small>",
             typ: "text",
-            korrekt: "pourrais",
+            korrekt: "pourrait",
             bild: "img/rachin.jpg"
         },
         //POPUP: Très bien ! Weiter geht's mit avoir. Merke dir gut, der Stamm lautet aur-!
         {
             ueberschrift: "Unegelmäßige Formen: avoir",
             satz: "Si Pierre n'était pas en colère, il ___ (avoir) une meilleure relation avec son père. <br>"+
-            "<small>(Wäre Pierre nicht wütend, hätte er eine bessere Beziehung zu seinem Vater. </small>",
+            "<small>(Wäre Pierre nicht wütend, hätte er eine bessere Beziehung zu seinem Vater.) </small>",
             typ: "text",
             korrekt: "aurait",
             bild: "img/pierre.jpeg"
@@ -424,7 +424,7 @@ if (thema === "subjonctif") {
         {
             ueberschrift: "Unegelmäßige Formen: avoir",
             satz: "Avec plus de soutien, les enfants ___ (avoir) confiance en eux.<br>"+
-            "<small>(Mit mehr Unterstützung hätten sich die Schülerinnen und Schüler mehr Vertrauen in sich selbst.</small>",
+            "<small>(Mit mehr Unterstützung hätten sich die Schülerinnen und Schüler mehr Vertrauen in sich selbst.)</small>",
             typ: "text",
             korrekt: "auraient",
             bild: "img/chorale.png"
@@ -466,57 +466,57 @@ if (thema === "subjonctif") {
         // POPUP: Jetzt verwenden wir den Conditionnel, um Vorschläge zu machen :)
         {
             ueberschrift: "Ratschläge geben / Vorschläge machen",
-            satz: "Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge."+
-            "<ul>À ta place, je ___ (faire) un grand voyage ! (An deiner Stelle würde ich eine große Reise machen)</ul>",
+            satz: "<small>Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge.</small><br>"+
+            "À ta place, je ___ (faire) un grand voyage !<br> <small> (An deiner Stelle würde ich eine große Reise machen)</small>",
             typ: "text",
             korrekt: "ferais",
             bild: "img/voyage.jpg"
         },
         {
             ueberschrift: "Ratschläge geben / Vorschläge machen",
-            satz: "Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge."+
-            "<ul>À ta place, je n' ___ (aller) plus à l'école ! (An deiner Stelle würde ich nicht mehr zur Schule gehen)</ul>",
+            satz: "<small>Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge.</small><br>"+
+            "À ta place, je n' ___ (aller) plus à l'école !<br><small> (An deiner Stelle würde ich nicht mehr zur Schule gehen)</small></>",
             typ: "text",
             korrekt: "irais"
         },
         {
             ueberschrift: "Ratschläge geben / Vorschläge machen",
-            satz: "Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge."+
-            "<ul>À ta place, je ___ (continuer) d'aller à l'école, pour que tu puisses faire un travail intéressant plus tard ! (An deiner Stelle würde ich weiter zur Schule gehen, damit du etwas machen kannst, das dich interessiert)</ul>",
+            satz: "<small>Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge.</small><br>"+
+            "À ta place, je ___ (continuer) d'aller à l'école, pour que tu puisses faire un travail intéressant plus tard !<br><small> (An deiner Stelle würde ich weiter zur Schule gehen, damit du etwas machen kannst, das dich interessiert)</small>",
             typ: "text",
             korrekt: "continuerais"
         },
         {
             ueberschrift: "Ratschläge geben / Vorschläge machen",
-            satz: "Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge."+
-            "<ul>Nous ___ (pouvoir) faire un voyage avec tous les amis ! (Wir könnten eine große Reise mit allen Freunden machen)</ul>",
+            satz: "<small>Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge.</small><br>"+
+            "Nous ___ (pouvoir) faire un voyage avec tous les amis ! <br><small>(Wir könnten eine große Reise mit allen Freunden machen)</small>",
             typ: "text",
             korrekt: "pourrions"
         },
         {
             ueberschrift: "Ratschläge geben / Vorschläge machen",
-            satz: "Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge."+
-            "<ul>À ta place, je ___ (garder) l'argent pour plus tard ! (An deiner Stelle, würde ich das Geld für später behalten)</ul>",
+            satz: "<small>Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge.</small><br>"+
+            "À ta place, je ___ (garder) l'argent pour plus tard ! <br><small>(An deiner Stelle, würde ich das Geld für später behalten)</small>",
             typ: "text",
             korrekt: "garderais"
         },
         {
             ueberschrift: "Ratschläge geben / Vorschläge machen",
-            satz: "Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge."+
-            "<ul>À ta place, je ___ (mettre) un peu d'argent sur le côté ! <small>(An deiner Stelle, würde ein wenig Geld zu Seite legen)</small></ul>",
+            satz: "<small>Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge.</small><br>"+
+            "À ta place, je ___ (mettre) un peu d'argent sur le côté ! <br><small>(An deiner Stelle, würde ein wenig Geld zu Seite legen)</small>",
             typ: "text",
             korrekt: "mettrais"
         },
         {
             ueberschrift: "Ratschläge geben / Vorschläge machen",
-            satz: "Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge."+
+            satz: "<small>Ton amie a gagné à la loterie ! Sie weiß nicht, was sie mit dem Geld machen soll. Vervollständige die Ratschläge.</small><br>"+
             "<ul>Génial ! Toi et ta famille, vous ___ (pouvoir) achéter une maison ! <small>(Genial! Du und deine Familie, ihre könnt euch ein Haus kaufen!)</small></ul>",
             typ: "text",
             korrekt: "pourriez"
         },
         {
             ueberschrift: "Ratschläge geben / Vorschläge machen",
-            satz: "Le coloc de ton ami ronfle ! (Der Mitbewohner deines Freundes schnarcht! Was schlägst du vor?)."+
+            satz: "<small>Le coloc de ton ami ronfle ! (Der Mitbewohner deines Freundes schnarcht!) Was schlägst du vor?.</small>"+
             "Tu ___ (devoir) mettre des bouchons d'oreille ! <small>(Du solltest Ohrstöpsel tragen)</small>",
             typ: "text",
             korrekt: "devrais"
@@ -526,7 +526,8 @@ if (thema === "subjonctif") {
             satz: "Encore un problème 🤷... Un ami te raconte son problème: 'Ce soir il y a la fête d'anniversaire de mon ami Cédric."+
             " Mais demain matin je dois me lever tôt pour un tornoi de handball. Je ne sais pas si je dois aller à la fête ou si "+
             "je dois me coucher tôt. Qu'est-ce que tu ferais ?' <br>"+
-            "Vorschlag 1: À ta place, j' ___ (aller) à la fête, mais je ne ___ (rentrer) pas trop tard.<br>",
+            "Vorschlag 1: À ta place, j' ___ (aller) à la fête, mais je ne ___ (rentrer) pas trop tard.<br>"+
+            "<small>(An deiner Stelle, würde ich zur PArty gehen, aber ...)</small>",
             typ: "text",
             korrekt: "irais"
         },
@@ -535,7 +536,8 @@ if (thema === "subjonctif") {
             satz: "Encore un problème 🤷... Un ami te raconte son problème: 'Ce soir il y a la fête d'anniversaire de mon ami Cédric."+
             " Mais demain matin je dois me lever tôt pour un tornoi de handball. Je ne sais pas si je dois aller à la fête ou si "+
             "je dois me coucher tôt. Qu'est-ce que tu ferais ?' <br>"+
-            "Vorschlag 1: À ta place, j'irais à la fête, mais je ne ___ (rentrer) pas trop tard.<br>",
+            "Vorschlag 1: À ta place, j'irais à la fête, mais je ne ___ (rentrer) pas trop tard.<br>"+
+            "<small>(An deiner Stelle, würde ich zur PArty gehen, aber ich würde nicht zu spät nach Hause gehen.)</small>",
             typ: "text",
             korrekt: "rentrerais"
         },
@@ -544,7 +546,8 @@ if (thema === "subjonctif") {
             satz: "Encore un problème 🤷... Un ami te raconte son problème: 'Ce soir il y a la fête d'anniversaire de mon ami Cédric."+
             " Mais demain matin je dois me lever tôt pour un tornoi de handball. Je ne sais pas si je dois aller à la fête ou si "+
             "je dois me coucher tôt. Qu'est-ce que tu ferais ?' <br>"+
-            "Vorschlag 2: À ta place, je me ___ (coucher) tôt.<br>",
+            "Vorschlag 2: À ta place, je me ___ (coucher) tôt.<br>"+
+            "<small>(An deiner Stelle, würde ich früh ins Bett gehen.)</small>",
             typ: "text",
             korrekt: "coucherais"
         }
@@ -1082,35 +1085,35 @@ const erklaerungen = {
             titel: "Super!",
             text: "Vielleicht ist dir aufgefallen, dass wir <strong>genau die gleichen Endungen</strong> wie bei den regelmäßigen Verben benutzen. Nur der <strong>Stamm ist anders</strong>!"
         },
-        34: {
+        33: {
             titel: "Très bien!",
             text: "Jetzt üben wir die unregelmäßigen Formen noch ein wenig. Wir starten mit <strong>faire</strong>. Merke dir gut: der Stamm lautet <strong>fer-</strong>!"
         },
-        37: {
+        36: {
             titel: "Très bien!",
             text: "Weiter geht's mit <strong>pouvoir</strong>. Merke dir gut: der Stamm lautet <strong>pourr-</strong>!"
         },
-        40: {
+        39: {
             titel: "Très bien!",
             text: "Weiter geht's mit <strong>avoir</strong>. Merke dir gut: der Stamm lautet <strong>aur-</strong>!"
         },
-        42: {
+        41: {
             titel: "Très bien!",
             text: "Weiter geht's mit <strong>être</strong>. Merke dir gut: der Stamm lautet <strong>ser-</strong>!"
         },
-        44: {
+        43: {
             titel: "Très bien!",
             text: "Weiter geht's mit <strong>aller</strong>. Merke dir gut: der Stamm lautet <strong>ir-</strong>!"
         },
-        46: {
-            titel: "Vorschläge mit dem Conditionnel",
+        45: {
+            titel: "Vorschläge machen mit dem Conditionnel",
             text: "Jetzt verwenden wir den Conditionnel, um Vorschläge zu machen. 💡 Achte darauf, ob das Verb unregelmäßig ist ;)"
         }
     },
     subjonctif: {
         1: {
             titel: "Wofür braucht man den Subjonctif?",
-            text: "Der Subjonctif wird nach bestimmten Auslösern verwendet, z. B. <em>il faut que</em>, <em>bien que</em> etc."
+            text: "Der Subjonctif wird nach bestimmten Auslösern verwendet, z.B. <em>il faut que</em>, <em>bien que</em> etc."
         }
     },
     partie1: {
