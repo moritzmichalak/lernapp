@@ -106,7 +106,7 @@ if (thema === "subjonctif") {
             ueberschrift: "Regelmäßige Verben",
             satz: "Um die regelmäßigen Formen zu bilden, hängt man an ___ die Endungen <em>-ais, -ait, -ions, -iez, -aient</em> an. <br><br>"+
             "<ul>À ta place, je <strong>partir</strong><em>ais </em> en vacances." +
-            "<ul> Si je gagnais à la loterie, je <strong>donner</strong><em>ais</em> </ul> de l'argent à ma famille. ",
+            "<ul> Si je gagnais à la loterie, je <strong>donner</strong><em>ais</em>  de l'argent à ma famille. </ul>",
             woerter: ["die Grundform des Verbs", "das Partizip"],
             korrekt: "die Grundform des Verbs"
         },
