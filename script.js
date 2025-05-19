@@ -1259,10 +1259,10 @@ function saveReflexion() {
   });
 
   alert("✅ Danke für deine Rückmeldung!");
-  if (thema === "conditionnel") {
-    alert("Benutze jetzt den Conditionnel und versuche in einer Unterhaltung einen Kompromiss zu finden: https://deref-gmx.net/mail/client/j_Sy5-8nLhE/dereferrer/?redirectUrl=https%3A%2F%2Fapp.fobizz.com%2Fai%2Fchats%2Fpublic_assistants%2Fcd9fea41-3e42-4bf2-849f-843ada1a260d%3Ftoken%3D79041b74193a5eaccd115f9d130553a4")
-  }
-  window.location.href = "themenwahl.html"; // oder Abschlussbildschirm
+    if (thema === "conditionnel") {
+        showLinkPopup(); // Zeigt das Popup mit Link
+    } 
+    window.location.href = "themenwahl.html";
 }
 
 async function ladeFalschBeantworteteAufgaben() {
@@ -1307,6 +1307,15 @@ async function ladeFalschBeantworteteAufgaben() {
 
 function formatWord(wort) {
     return wort.replace(/(ais|ait|ions|iez|aient)$/g, "<em>$1</em>");
+}
+
+function showLinkPopup() {
+    document.getElementById('linkPopup').style.display = 'flex';
+}
+
+function closeLinkPopup() {
+    document.getElementById('linkPopup').style.display = 'none';
+    window.location.href = "themenwahl.html";
 }
 
 /*
