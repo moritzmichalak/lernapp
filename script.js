@@ -1260,9 +1260,11 @@ function saveReflexion() {
 
   alert("✅ Danke für deine Rückmeldung!");
     if (thema === "conditionnel") {
+        console.log("sollte zeigen");
         showLinkPopup(); // Zeigt das Popup mit Link
-    } 
-    window.location.href = "themenwahl.html";
+    } else {
+        window.location.href = "themenwahl.html";
+    }
 }
 
 async function ladeFalschBeantworteteAufgaben() {
