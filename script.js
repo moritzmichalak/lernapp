@@ -1059,8 +1059,8 @@ function closePopup() {
 const erklaerungen = {
     conditionnel: {
         1: {
-            titel: "Was ist das Conditionnel?",
-            text: "Das Conditionnel benutzt man, um Ratschläge, Wünsche oder Möglichkeiten auszudrücken. Das Wort <em>condition</em> bedeutet <em>Bedingung</em>. Wir sprechen also über Dinge, die nur unter bestimmten Bedingungen eintreten würden."
+            titel: "Wann verwendet man das Conditionnel?",
+            text: "Zunächst wollen wir uns anschauen, in welchen Situationen man das Conditionnel benutzt."
         },
         27: {
             titel: "Super!",
@@ -1259,6 +1259,9 @@ function saveReflexion() {
   });
 
   alert("✅ Danke für deine Rückmeldung!");
+  if (thema === "conditionnel") {
+    alert("Benutze jetzt den Conditionnel und versuche in einer Unterhaltung einen Kompromiss zu finden: https://deref-gmx.net/mail/client/j_Sy5-8nLhE/dereferrer/?redirectUrl=https%3A%2F%2Fapp.fobizz.com%2Fai%2Fchats%2Fpublic_assistants%2Fcd9fea41-3e42-4bf2-849f-843ada1a260d%3Ftoken%3D79041b74193a5eaccd115f9d130553a4")
+  }
   window.location.href = "themenwahl.html"; // oder Abschlussbildschirm
 }
 
