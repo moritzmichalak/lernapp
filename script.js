@@ -66,9 +66,11 @@ if (thema === "subjonctif") {
         { satz:
             "Wollen wir unsere Meinung oder Einschätzung zu etwas mitteilen, so benutzen wir den normalen <strong>Indikativ</strong>, falls wir "+
             "etwas als wahrscheinlich oder  ___ einschätzen.<br><br>"+
-            "<ul><em>Je crois que</em> c'<strong>est</strong> une bonne idée ! <br> <small>(Ich denke, dass )</small> </ul>"+
-            "<ul><em>Je pense que</em> les énergies renouvelables <strong> sont </strong> importants. <br> <small>(Ich denke, dass )</small> </ul>"+
-            "<ul><em>Je suis convaincu(e) que</em> nos villes <strong> sont </strong> trop polluées. <br> <small>(Ich würde gerne ans Meer fahren)</small> </ul>", 
+            "<ul><em>Je crois que</em> c'<strong>est</strong> une bonne idée ! <br> <small>(Ich glaube, dass das eine gute Idee ist!)</small> </ul>"+
+            "<ul><em>Je pense que</em> les énergies renouvelables <strong> sont </strong> importantes pour le futur de la planète. <br>"+
+            "<small>(Ich denke, dass die erneuerbaren Energien wichtig sind für die Zukunft des Planeten)</small> </ul>"+
+            "<ul><em>Je suis convaincu(e) que</em> nos villes <strong> sont </strong> trop polluées. <br>"+
+            "<small>(Ich bin überzeugt, dass unsere Städte zu verschmutzt sind.)</small> </ul>", 
             woerter: ["sicher", "unsicher"], korrekt: "sicher" },
         { satz: "Bien que nous ___ (être) fatigués, nous continuons.", woerter: ["soyons", "sommes", "sera"], korrekt: "soyons" },
         { satz: "Je ne pense pas que ce / c' ___ (être) une bonne idée !", woerter: ["soit", "est", "sera"], korrekt: "soit" }
