@@ -89,7 +89,7 @@ if (thema === "subjonctif") {
             "Ordne zu: <br><br>"+
             "<ul>Ich finde, dass ... - Je trouve que ... </ul>"+
             "<ul>Ich glaube, dass ... - ___ </ul>",
-            woerter: ["Je pense que ...", "Je suis convaincu(e) que ...", "Je suis d'avis que ..."], 
+            woerter: ["Je pense que ...", "Je suis convaincu(e) que ...", "Je crois que ...", "Je suis d'avis que ..."], 
             korrekt: "Je crois que ..."
         },   
         { 
