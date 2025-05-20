@@ -554,8 +554,7 @@ if (thema === "subjonctif") {
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
-            satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
-            "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
+            satz: "<small>Und für <strong>avoir</strong>: <br><br></small>"+
             "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
             "<ul>je ➡️ ___</ul>",
             woerter: ["ait", "aies", "ayez", "aie", "ayons", "aient"],
@@ -571,8 +570,7 @@ if (thema === "subjonctif") {
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
-            satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
-            "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
+            satz: "<small>Und für <strong>avoir</strong>: <br><br></small>"+
             "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
             "<ul>je aie</ul>"+
             "<ul>tu aies</ul>"+
@@ -582,8 +580,7 @@ if (thema === "subjonctif") {
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
-            satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
-            "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
+            satz: "<small>Und für <strong>avoir</strong>: <br><br></small>"+
             "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
             "<ul>je aie</ul>"+
             "<ul>tu aies</ul>"+
@@ -594,8 +591,7 @@ if (thema === "subjonctif") {
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
-            satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
-            "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
+            satz: "<small>Und für <strong>avoir</strong>: <br><br></small>"+
             "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
             "<ul>je aie</ul>"+
             "<ul>tu aies</ul>"+
@@ -607,8 +603,7 @@ if (thema === "subjonctif") {
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
-            satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
-            "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
+            satz: "<small>Und für <strong>avoir</strong>: <br><br></small>"+
             "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
             "<ul>je aie</ul>"+
             "<ul>tu aies</ul>"+
