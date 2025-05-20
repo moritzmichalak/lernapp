@@ -115,7 +115,7 @@ if (thema === "subjonctif") {
         }, 
         { 
             ueberschrift: "Meinung äußern (Indikativ)",
-            satz: "<small>Ein paar Ausdrücke zum Formulieren der eigenen Meinung mit Indikativ</small)>"+
+            satz: "<small>Ein paar Ausdrücke zum Formulieren der eigenen Meinung mit Indikativ</small><br>"+
             "Ordne zu: <br><br>"+
             "<ul>Ich finde, dass... - Je trouve que ... </ul>"+
             "<ul>Ich glaube, dass... - Je crois que ... </ul>"+
