@@ -206,12 +206,13 @@ if (thema === "subjonctif") {
         { 
             ueberschrift: "Meinung äußern (Subjonctif)",
             satz: "Die Ausdrücke nach denen man den Indikativ benutzt, drücken eine Sicherheit oder hohe Wahrscheinlichkei aus."+
-            "➡️  ___ man diese, so drückt man Zweifel bzw. Unsicherheit aus und benutzt den Subjonctif: <br><br>"+
-            "<ul><em>Je <strong>ne</strong> crois <strong>pas</strong>  que</em> ce<strong>soit</strong> une bonne idée ! <br> <small>(Ich glaube, dass das eine gute Idee ist!)</small> </ul>"+
+            "➡️  ___ man diese, so drückt man Zweifel bzw. Unsicherheit aus und benutzt den <strong>Subjonctif</strong>: <br><br>"+
+            "<ul><em>Je <strong>ne</strong> crois <strong>pas</strong>  que</em> ce<strong>soit</strong> une bonne idée ! <br> <small>"+
+            "(Ich glaube nicht, dass das eine gute Idee ist!)</small> </ul>"+
             "<ul><em>Je <strong>ne</strong> pense <strong>pas</strong> que</em> les énergies renouvelables <strong> soient </strong> importantes pour l'avenir' de la planète. <br>"+
-            "<small>(Ich denke, dass die erneuerbaren Energien wichtig sind für die Zukunft des Planeten)</small> </ul>"+
+            "<small>(Ich denke nicht, dass die erneuerbaren Energien wichtig sind für die Zukunft des Planeten)</small> </ul>"+
             "<ul><em>Je <strong>ne</strong> suis <strong>pas</strong> convaincu(e) que</em> nos villes <strong> soient </strong> trop polluées. <br>"+
-            "<small>(Ich bin überzeugt, dass unsere Städte zu verschmutzt sind.)</small> </ul>",  
+            "<small>(Ich bin nicht überzeugt, dass unsere Städte zu verschmutzt sind.)</small> </ul>",  
             woerter: ["Verneint", "Bejaht"],
             korrekt: "Verneint"
         },
