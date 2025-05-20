@@ -207,7 +207,7 @@ if (thema === "subjonctif") {
             ueberschrift: "Meinung äußern (Subjonctif)",
             satz: "Die Ausdrücke nach denen man den Indikativ benutzt, drücken eine Sicherheit oder hohe Wahrscheinlichkei aus."+
             "➡️  ___ man diese, so drückt man Zweifel bzw. Unsicherheit aus und benutzt den <strong>Subjonctif</strong>: <br><br>"+
-            "<ul><em>Je <strong>ne</strong> crois <strong>pas</strong>  que</em> ce <strong>soit</strong> une bonne idée ! <br> <small>"+
+            "<ul><em>Je <strong>ne</strong> crois <strong>pas</strong>  que</em> ce <strong>soit</strong> une bonne idée ! <br>"+
             "(Ich glaube nicht, dass das eine gute Idee ist!)</small> </ul>"+
             "<ul><em>Je <strong>ne</strong> pense <strong>pas</strong> que</em> les énergies renouvelables <strong> soient </strong> importantes pour l'avenir' de la planète. <br>"+
             "<small>(Ich denke nicht, dass die erneuerbaren Energien wichtig sind für die Zukunft des Planeten)</small> </ul>"+
@@ -1525,19 +1525,29 @@ function checkAnswer() {
                 });
             
                 if (aufgabe.korrekt.length === 0) {
-                  // Wenn alle gefunden → Level erhöhen
-                  aktuellesLevel++;
+                    // Wenn alle gefunden → Level erhöhen
+                    aktuellesLevel++;
+                    const istHalbzeit = aktuellesLevel === Math.ceil(aufgaben.length / 2);
+                    if (istHalbzeit) {
+                        if (typeof confetti === "function") {
+                            confetti({
+                                particleCount: 150,
+                                spread: 70,
+                                origin: { y: 0.6 }
+                            });
+                        }
+                        alert("🎉 Bravo ! Du hast die Hälfte geschafft !");
+                    }
+                    db.collection("lernstaende").doc(`${schuelerId}_${thema}`).set({
+                      schuelerId,
+                      thema,
+                      aktuellesLevel,
+                      punkte,
+                      timestamp: new Date()
+                    });
                 
-                  db.collection("lernstaende").doc(`${schuelerId}_${thema}`).set({
-                    schuelerId,
-                    thema,
-                    aktuellesLevel,
-                    punkte,
-                    timestamp: new Date()
-                  });
-              
-                  document.getElementById('nextLevelBtn').style.display = "inline-block";
-                  feedback.innerText += " 🎉 Alle richtigen Antworten gefunden!";
+                    document.getElementById('nextLevelBtn').style.display = "inline-block";
+                    feedback.innerText += " 🎉 Alle richtigen Antworten gefunden!";
                 }
             } else {
                 // Nur eine richtige Antwort
@@ -1554,6 +1564,17 @@ function checkAnswer() {
                     showPopup(erklaerung.titel, erklaerung.text);
                 }
                 aktuellesLevel++;
+                const istHalbzeit = aktuellesLevel === Math.ceil(aufgaben.length / 2);
+                if (istHalbzeit) {
+                    if (typeof confetti === "function") {
+                        confetti({
+                            particleCount: 150,
+                            spread: 70,
+                            origin: { y: 0.6 }
+                        });
+                    }
+                    alert("🎉 Bravo ! Du hast die Hälfte geschafft !");
+                }
                 if (aktuellesLevel - 1 < aufgaben.length) {
                     console.log("Ich komm hier raus");
                     document.getElementById('nextLevelBtn').style.display = "inline-block";
@@ -1644,12 +1665,20 @@ function zurueckThemenwahl() {
     window.location.href = "themenwahl.html";
 }
 
-// 12.05.25:
+/* 12.05.25:
 function showPopup(titel, text) {
     document.querySelector("#popupOverlay .popup-content h2").innerText = titel;
     document.querySelector("#popupOverlay .popup-content p").innerHTML = text;
     document.getElementById("popupOverlay").style.display = "flex";
     document.body.style.overflow = "hidden";
+}
+*/
+function showPopup(titel, text) {
+    if (!titel || !text) return; // ➕ Nur anzeigen, wenn beide vorhanden
+    const overlay = document.getElementById('popupOverlay');
+    overlay.style.display = 'block';
+    overlay.querySelector('h2').innerHTML = titel;
+    overlay.querySelector('p').innerHTML = text;
 }
 
 function closePopup() {
@@ -1694,17 +1723,56 @@ const erklaerungen = {
         }
     },
     subjonctif: {
-        1: {
-            titel: "Wofür braucht man den Subjonctif?",
-            text: "Der Subjonctif wird nach bestimmten Auslösern verwendet, z.B. <em>il faut que</em>, <em>bien que</em> etc."
-        },
         2: {
-            titel: " 🤔 Was ist eigentlich der <em>Indikativ</em>?",
+            titel: " 🤔 Was ist eigentlich der Indikativ?",
             text: "Der <em>Indikativ</em> ist die <em>Normalform</em>. Möchtest du etwas im Präsens ausrücken, benutzt du also einfach das Präsens. "
         },
-        8: {
-            titel: " Meinung äußern mit <em>Indikativ</em>?",
+        10: {
+            titel: "Meinung äußern mit Indikativ?",
             text: "Très bien ! Jetzt üben wir ein bisschen wie man seine Meinung im Indikativ äußern kann."
+        },
+        14: {
+            titel: "Meinung äußern mit Subjonctif",
+            text: "Jetzt gehen wir von Indikativ zum <em>Subjonctif</em>."
+        },   
+        20: {
+            titel: "Meinung äußern mit Subjonctif",
+            text: "Super ! Jetzt weißt du, dass man den Subjonctif verwendet wenn:"+
+            "<ul>man eine Unsicherheit oder einen Zweifel ausdrückt</ul>"+
+            "<ul>nach bestimmten Ausdrücken wie z.B. <em>Il est important que ... ,</em> oder Il <em>faut que ...  </em></ul>."
+        },  
+        25: {
+            titel: "Meinung äußern mit Subjonctif",
+            text: "Sehr gut, jetzt weißt du wie man den Subjonctif bei regelmäßigen Verben bildet 👍 <br>"+
+            "Schauen wir uns noch ein paar unregelmäßige Verben an 🙌"
+        },  
+        26: {
+            titel: "Subjonctif: Unregelmäßige Verben ",
+            text: "Genau im Präsens ist prendre unregelmäßig für ils/elles, nächmlich <em>prennent</em>!"
+        }, 
+        32: {
+            titel: "Subjonctif: Unregelmäßige Verben ",
+            text: "Dass nous und vous die einzigen Ausnahmen von der Regel bilden, ist <strong>nicht nur bei prendre so</strong>. Bei den Verben <em>venir, prendre, boire, voir</em> ist es analog.!"
+        }, 
+        50: {
+            titel: "Geschafft!",
+            text: "Zum Schluss wiederholen wir nochmal alles mit ein paar Übungssätzen 🔁 🏋️"
+        }, 
+        51: {
+            titel: "Exactement !",
+            text: "Nach dem Ausdruck <em>Il est important que</em> benutzt man den Subjonctif 👍 "
+        }, 
+        52: {
+            titel: "Exactement !",
+            text: "Nach dem Ausdruck <em>Il faut que</em> benutzt man den Subjonctif 👍 "
+        }, 
+        53: {
+            titel: "Schon wieder Subjonctif !",
+            text: "<em>Je ne crois pas que</em> drückt einen Zweifel aus -> Also Subjonctif 👍 "
+        }, 
+        53: {
+            titel: "Indikativ!",
+            text: "Auf <em>Je trouve que</em> folgt der Indikativ ⚠️ "
         }
     },
     partie1: {
@@ -1806,6 +1874,17 @@ function checkTextAnswer() {
         }
         punkte += 10;
         aktuellesLevel++;
+        const istHalbzeit = aktuellesLevel === Math.ceil(aufgaben.length / 2);
+        if (istHalbzeit) {
+            if (typeof confetti === "function") {
+                confetti({
+                    particleCount: 150,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                });
+            }
+            alert("🎉 Bravo ! Du hast die Hälfte geschafft !");
+        }
 
         updateProgressBar(); // ✅ Fortschrittsbalken korrekt setzen
 
