@@ -68,7 +68,7 @@ if (thema === "subjonctif") {
             satz: "Wollen wir unsere Meinung oder Einschätzung zu etwas mitteilen, so benutzen wir den normalen <strong>Indikativ</strong>, falls wir "+
             "etwas als sehr wahrscheinlich oder ___ einschätzen.<br><br>"+
             "<ul><em>Je crois que</em> c'<strong>est</strong> une bonne idée ! <br> <small>(Ich glaube, dass das eine gute Idee ist!)</small> </ul>"+
-            "<ul><em>Je pense que</em> les énergies renouvelables <strong> sont </strong> importantes pour l'avenir' de la planète. <br>"+
+            "<ul><em>Je pense que</em> les énergies renouvelables <strong> sont </strong> importantes pour l'avenir de la planète. <br>"+
             "<small>(Ich denke, dass die erneuerbaren Energien wichtig sind für die Zukunft des Planeten)</small> </ul>"+
             "<ul><em>Je suis convaincu(e) que</em> nos villes <strong> sont </strong> trop polluées. <br>"+
             "<small>(Ich bin überzeugt, dass unsere Städte zu verschmutzt sind.)</small> </ul>", 
@@ -442,7 +442,7 @@ if (thema === "subjonctif") {
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
-            satz: "<small>Es gibt außerdem unregeömäßige Verben, für die es in allen Fällen einen anderen Stamm gibt. Hier sind die wichtigsten: <em>être, avoir, aller, savoir, faire</em></small><br>"+
+            satz: "<small>Es gibt außerdem unregeömäßige Verben, für die es in allen Fällen einen anderen Stamm gibt. Hier sind ein paar wichtige: <em> aller, savoir, faire</em><br>"+
             "Versuche zu jedem Verb den richtigen Stamm zu finden:<br><br></small>"+
             "<ul>aller: aill-/all-</ul>"+
             "<ul>savoir: ➡️ ___ </ul>",
@@ -451,7 +451,7 @@ if (thema === "subjonctif") {
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
-            satz: "<small>Bei <em>savoir</em> hängen wir unsere ➡️ ___ Endungen an den Stamm <em>sach-</em>: <br><br></small>"+
+            satz: "<small>Bei <em>savoir</em> hängen wir unsere ➡️ ___ Subjonctif-Endungen an den Stamm <em>sach-</em>: <br><br></small>"+
             "<ul>je <em>sach</em><strong>e</strong></ul>"+
             "<ul>tu <em>sach</em><strong>es</strong></ul>"+
             "<ul>il/elle/on <em>sach</em><strong>e</strong></ul>"+
@@ -463,7 +463,7 @@ if (thema === "subjonctif") {
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
-            satz: "<small>Es gibt außerdem unregeömäßige Verben, für die es in allen Fällen einen anderen Stamm gibt. Hier sind die wichtigsten: <em>être, avoir, aller, savoir, faire</em></small><br>"+
+            satz: "<small>Es gibt außerdem unregeömäßige Verben, für die es in allen Fällen einen anderen Stamm gibt. Hier sind ein paar wichtige: <em> aller, savoir, faire</em><br>"+
             "Versuche zu jedem Verb den richtigen Stamm zu finden:<br><br></small>"+
             "<ul>aller: aill-/all-</ul>"+
             "<ul>savoir: sach-</ul>"+
@@ -473,7 +473,7 @@ if (thema === "subjonctif") {
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
-            satz: "<small>Bei <em>faire</em> hängen wir unsere ➡️ ___ Endungen an den Stamm <em>fass-</em>: <br><br></small>"+
+            satz: "<small>Bei <em>faire</em> hängen wir unsere ➡️ ___ Subjonctif-Endungen an den Stamm <em>fass-</em>: <br><br></small>"+
             "<ul>je <em>fass</em><strong>e</strong></ul>"+
             "<ul>tu <em>fass</em><strong>es</strong></ul>"+
             "<ul>il/elle/on <em>fass</em><strong>e</strong></ul>"+
