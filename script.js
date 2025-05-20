@@ -1156,6 +1156,10 @@ const erklaerungen = {
         1: {
             titel: "Wofür braucht man den Subjonctif?",
             text: "Der Subjonctif wird nach bestimmten Auslösern verwendet, z.B. <em>il faut que</em>, <em>bien que</em> etc."
+        },
+        2: {
+            titel: " 🤔 Was ist eigentlich der <em>Indikativ</em>?",
+            text: "Der <em>Indikativ</em> ist die <em>Normalform</em>. Möchtest du etwas im Präsens ausrücken, benutzt du also einfach das Präsens. "
         }
     },
     partie1: {
