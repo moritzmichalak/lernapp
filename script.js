@@ -218,34 +218,209 @@ if (thema === "subjonctif") {
         },
         { 
             ueberschrift: "Meinung äußern (Subjonctif)",
-            satz: "Außerdem benutzt man den Subjonctif bei bestimmten Ausdrücken, wie z.B.: <em> Il est important que ... , Il faut que ..., Il est nécessaire que ... , Il est dommage que ...</em><br>"+
-            "Versuche für jeden der vier Ausrücke die richtige Übersetzung zu finden: <br><br>"+
+            satz: "Außerdem benutzt man den Subjonctif bei bestimmten Ausdrücken, wie z.B.: <em> Il est important que ... , Il faut que ..., Il est nécessaire que ... , Il est dommage que ..., Je doute que ...</em><br>"+
+            "Versuche für jeden der fünf Ausrücke die richtige Übersetzung zu finden: <br><br>"+
             "<ul><em>Il est important que ... </em> = ➡️ ___ </ul>",
-            woerter: ["Es ist wichtig, dass...", "Es ist notwendig, dass ...", "Man muss ...", "Es ist schade, dass ..."],
+            woerter: ["Es ist wichtig, dass...", "Es ist notwendig, dass ...", "Man muss ...", "Es ist schade, dass ...", "Ich bezweifele, dass ..."],
             korrekt: "Es ist wichtig, dass..."
         },
         { 
             ueberschrift: "Meinung äußern (Subjonctif)",
-            satz: "Außerdem benutzt man den Subjonctif bei bestimmten Ausdrücken, wie z.B.: <em> Il est important que ... , Il faut que ..., Il est nécessaire que ... , Il est dommage que ...</em><br>"+
-            "Versuche für jeden der vier Ausrücke die richtige Übersetzung zu finden: <br><br>"+
+            satz: "Außerdem benutzt man den Subjonctif bei bestimmten Ausdrücken, wie z.B.: <em> Il est important que ... , Il faut que ..., Il est nécessaire que ... , Il est dommage que ..., Je doute que ...</em><br>"+
+            "Versuche für jeden der fünf Ausrücke die richtige Übersetzung zu finden: <br><br>"+
             "<ul><em>Il est important que ... </em> = Es ist wichtig, dass...</ul>"+
             "<ul><em>Il est nécessaire que ... </em> = ➡️ ___ </ul>",
-            woerter: ["Es ist notwendig, dass ...", "Man muss ...", "Es ist schade, dass ..."],
+            woerter: ["Es ist notwendig, dass ...", "Man muss ...", "Es ist schade, dass ...", "Ich bezweifele, dass ..."],
             korrekt: "Es ist notwendig, dass ..."
         },
         { 
             ueberschrift: "Meinung äußern (Subjonctif)",
-            satz: "Außerdem benutzt man den Subjonctif bei bestimmten Ausdrücken, wie z.B.: <em> Il est important que ... , Il faut que ..., Il est nécessaire que ... , Il est dommage que ...</em><br>"+
-            "Versuche für jeden der vier Ausrücke die richtige Übersetzung zu finden: <br><br>"+
+            satz: "Außerdem benutzt man den Subjonctif bei bestimmten Ausdrücken, wie z.B.: <em> Il est important que ... , Il faut que ..., Il est nécessaire que ... , Il est dommage que ..., Je doute que ...</em><br>"+
+            "Versuche für jeden der fünf Ausrücke die richtige Übersetzung zu finden: <br><br>"+
             "<ul><em>Il est important que ... </em> = Es ist wichtig, dass...</ul>"+
             "<ul><em>Il est nécessaire que ... </em> = Es ist notwendig, dass ...</ul>"+
             "<ul><em>Il est dommage que ... </em> = ➡️ ___ </ul>",
-            woerter: ["Man muss ...", "Es ist schade, dass ..."],
+            woerter: ["Man muss ...", "Es ist schade, dass ...", "Ich bezweifele, dass ..."],
             korrekt: "Es ist schade, dass ..."
         },
         { 
             ueberschrift: "Meinung äußern (Subjonctif)",
-            satz: "Außerdem benutzt man den Subjonctif bei bestimmten Ausdrücken, wie z.B.: <em> Il est important que ... , Il faut que ..., Il est nécessaire que ... , Il est dommage que ...</em><br>"+
+            satz: "Außerdem benutzt man den Subjonctif bei bestimmten Ausdrücken, wie z.B.: <em> Il est important que ... , Il faut que ..., Il est nécessaire que ... , Il est dommage que ..., Je doute que ...</em><br>"+
+            "Versuche für jeden der fünf Ausrücke die richtige Übersetzung zu finden: <br><br>"+
+            "<ul><em>Il est important que ... </em> = Es ist wichtig, dass...</ul>"+
+            "<ul><em>Il est nécessaire que ... </em> = Es ist notwendig, dass ...</ul>"+
+            "<ul><em>Il est dommage que ... </em> = Es ist schade, dass ... </ul>"+
+            "<ul><em>Il faut que ... </em> = ➡️ ___ </ul>",
+            woerter: ["Man muss ...", "Ich bezweifele, dass ..."],
+            korrekt: "Man muss ..."
+        },
+        { 
+            ueberschrift: "Meinung äußern (Subjonctif)",
+            satz: "Außerdem benutzt man den Subjonctif bei bestimmten Ausdrücken, wie z.B.: <em> Il est important que ... , Il faut que ..., Il est nécessaire que ... , Il est dommage que ..., Je doute que ...</em><br>"+
+            "Versuche für jeden der fünf Ausrücke die richtige Übersetzung zu finden: <br><br>"+
+            "<ul><em>Il est important que ... </em> = Es ist wichtig, dass...</ul>"+
+            "<ul><em>Il est nécessaire que ... </em> = Es ist notwendig, dass ...</ul>"+
+            "<ul><em>Il est dommage que ... </em> = Es ist schade, dass ... </ul>"+
+            "<ul><em>Il faut que ... </em> = Man muss ...</ul>"+
+            "<ul><em>Je doute que ... </em> = ➡️ ___ </ul>",
+            woerter: ["Ich bezweifele, dass ..."],
+            korrekt: "Ich bezweifele, dass ..."
+        },
+        //POPUP: Super ! Jetzt weißt du, dass man den Subjonctif verwendet wenn: 
+        // -man eine Unsicherheit oder einen Zweifel ausdrückt
+        // -nach bestimmten Ausdrücken (z.B. Il est important que ... , Il faut que ...  )
+        { 
+            ueberschrift: "Subjonctif bilden:",
+            satz: "<small>Lass uns noch anschauen wie man den Subjonctif bildet?🤔 <br>"+
+            "Um den Subjonctif zu bilden, nimmt man einfach die 3. Person Plural der normalen Präsensform, "+
+            " streicht das <em>-ent</em> und hängt die folgenden Endungen an: <em>-e, -es, -e, -ions, -iez, -ent</em>. <br>"+
+            "Par exemple : ils vend<em>ent</em> (vendre) -> Stamm vend<br> -> je vend<strong>e</strong> <br><br></small>"+
+            "Ordne zu:"+
+            "<ul>tu ➡️ ___ </ul>",
+            woerter: ["vendes", "vendent", "vendions", "vende", "vendiez"],
+            korrekt: "vendes"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden:",
+            satz: "<small>Lass uns noch anschauen wie man den Subjonctif bildet?🤔 <br>"+
+            "Um den Subjonctif zu bilden, nimmt man einfach die 3. Person Plural der normalen Präsensform, "+
+            " streicht das <em>-ent</em> und hängt die folgenden Endungen an: <em>-e, -es, -e, -ions, -iez, -ent</em>. <br>"+
+            "Par exemple : ils vend<em>ent</em> (vendre) -> Stamm vend<br> -> je vend<strong>e</strong> <br><br></small>"+
+            "Ordne zu:"+
+            "<ul>tu vendes</ul>"+
+            "<ul>il/elle/on ➡️ ___ </ul>",
+            woerter: ["vendent", "vendions", "vende", "vendiez"],
+            korrekt: "vende"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden:",
+            satz: "<small>Lass uns noch anschauen wie man den Subjonctif bildet?🤔 <br>"+
+            "Um den Subjonctif zu bilden, nimmt man einfach die 3. Person Plural der normalen Präsensform, "+
+            " streicht das <em>-ent</em> und hängt die folgenden Endungen an: <em>-e, -es, -e, -ions, -iez, -ent</em>. <br>"+
+            "Par exemple : ils vend<em>ent</em> (vendre) -> Stamm vend<br> -> je vend<strong>e</strong> <br><br></small>"+
+            "Ordne zu:"+
+            "<ul>tu vendes</ul>"+
+            "<ul>il/elle/on vende </ul>"+
+            "<ul>nous ➡️ ___ </ul>",
+            woerter: ["vendent", "vendions", "vendiez"],
+            korrekt: "vendions"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden:",
+            satz: "<small>Lass uns noch anschauen wie man den Subjonctif bildet?🤔 <br>"+
+            "Um den Subjonctif zu bilden, nimmt man einfach die 3. Person Plural der normalen Präsensform, "+
+            " streicht das <em>-ent</em> und hängt die folgenden Endungen an: <em>-e, -es, -e, -ions, -iez, -ent</em>. <br>"+
+            "Par exemple : ils vend<em>ent</em> (vendre) -> Stamm vend<br> -> je vend<strong>e</strong> <br><br></small>"+
+            "Ordne zu:"+
+            "<ul>tu vendes</ul>"+
+            "<ul>il/elle/on vende </ul>"+
+            "<ul>nous vendions </ul>"+
+            "<ul>vous ➡️ ___  </ul>",
+            woerter: ["vendent", "vendiez"],
+            korrekt: "vendiez"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden:",
+            satz: "<small>Lass uns noch anschauen wie man den Subjonctif bildet?🤔 <br>"+
+            "Um den Subjonctif zu bilden, nimmt man einfach die 3. Person Plural der normalen Präsensform, "+
+            " streicht das <em>-ent</em> und hängt die folgenden Endungen an: <em>-e, -es, -e, -ions, -iez, -ent</em>. <br>"+
+            "Par exemple : ils vend<em>ent</em> (vendre) -> Stamm vend<br> -> je vend<strong>e</strong> <br><br></small>"+
+            "Ordne zu:"+
+            "<ul>tu vendes</ul>"+
+            "<ul>il/elle/on vende </ul>"+
+            "<ul>nous vendions </ul>"+
+            "<ul>vous vendiez </ul>"+
+            "<ul>ils/elles ➡️ ___  </ul>",
+            woerter: ["vendent"],
+            korrekt: "vendent"
+        },
+        //POPUP: Sehr gut, jetzt weißt du wie man den Subjonctif bei regelmäßigen Verben bildet :) 
+        // Schauen wir uns noch ein paar unregelmäßige Verben an.
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Schauen wir uns einmal das Verb <em>prendre</em> an. Wir wollen den Subjonctif bilden.<br>"+
+            "1. Also überlegen wir zu allererst wie lautet die Form der 3. Person Plural im Präsens? 🤔 </small>"+
+            "ils /elles ➡️ ___ :",
+            woerter: ["prendent", "prennent"],
+            korrekt: "prennent"
+        },
+            //POPUP: Exaxtement ! prendre ist im Präsens für die 3. Person Plural unregelmäßig, nämlich. elles prennent
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Schauen wir uns einmal das Verb <em>prendre</em> an. Wir wollen den Subjonctif bilden.<br>"+
+            "1. Also überlegen wir zu allererst wie lautet die Form der 3. Person Plural im Präsens? 🤔 </small><br>"+
+            "   ils /elles prennent :"+
+            "2. Jetzt entfernen wir <em>-ent</em> und bekommen den Stamm für den Subjonctif: ➡️ ___  </small>",
+            woerter: ["prend", "prenn"],
+            korrekt: "prenn"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Schauen wir uns einmal das Verb <em>prendre</em> an. Wir wollen den Subjonctif bilden.<br>"+
+            "1. Also überlegen wir zu allererst wie lautet die Form der 3. Person Plural im Präsens? 🤔 </small>"+
+            "   ils /elles prennent: <br>"+
+            "2. Wir entfernen <em>-ent</em> und bekommen den Stamm für den Subjonctif: prenn  </small><br>"+
+            "3. Jetzt hängen unsere Endungen an:  </small><br>"+
+            "<ul>➡️je prenn___</ul>",
+            woerter: ["es", "ent", "e", "e", "ions", "iez"],
+            korrekt: "e"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Schauen wir uns einmal das Verb <em>prendre</em> an. Wir wollen den Subjonctif bilden.<br>"+
+            "1. Also überlegen wir zu allererst wie lautet die Form der 3. Person Plural im Präsens? 🤔 </small><br>"+
+            "   ils /elles prennent:"+
+            "2. Wir entfernen <em>-ent</em> und bekommen den Stamm für den Subjonctif: prenn  </small><br>"+
+            "3. Jetzt hängen unsere Endungen an:  </small><br>"+
+            "<ul>je prenn<strong>e</strong></ul>"+
+            "<ul>➡️tu prenn___</ul>",
+            woerter: ["es", "ent", "e", "ions", "iez"],
+            korrekt: "es"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Schauen wir uns einmal das Verb <em>prendre</em> an. Wir wollen den Subjonctif bilden.<br>"+
+            "1. Also überlegen wir zu allererst wie lautet die Form der 3. Person Plural im Präsens? 🤔 </small><br>"+
+            "   ils /elles prennent:"+
+            "2. Wir entfernen <em>-ent</em> und bekommen den Stamm für den Subjonctif: prenn  </small><br>"+
+            "3. Jetzt hängen unsere Endungen an:  </small><br>"+
+            "<ul>je prenn<strong>e</strong></ul>"+
+            "<ul>tu prenn<strong>es</strong></ul>"+
+            "<ul>➡️il/elle/on prenn___</ul>",
+            woerter: [ "ent", "e", "ions", "iez"],
+            korrekt: "e"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Schauen wir uns einmal das Verb <em>prendre</em> an. Wir wollen den Subjonctif bilden.<br>"+
+            "1. Also überlegen wir zu allererst wie lautet die Form der 3. Person Plural im Präsens? 🤔 </small><br>"+
+            "   ils /elles prennent:"+
+            "2. Wir entfernen <em>-ent</em> und bekommen den Stamm für den Subjonctif: prenn  </small><br>"+
+            "3. Jetzt hängen unsere Endungen an:  </small><br>"+
+            "<ul>je prenn<strong>e</strong></ul>"+
+            "<ul>tu prenn<strong>es</strong></ul>"+
+            "<ul>il/elle/on prenn<strong>e</strong></ul>"+
+            "<ul>nous ❓</ul>"+
+            "<ul>vous ❓</ul>"+
+            "<ul>➡️ il/elle/on prenn___</ul>",
+            woerter: [ "ent", "ions", "iez"],
+            korrekt: "ent"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Bis hierhin also alles wie gehabt! Es gibt aber Ausnahmen für ___ und vous. </small><br>"+
+            "<ul>je prenn<strong>e</strong></ul>"+
+            "<ul>tu prenn<strong>es</strong></ul>"+
+            "<ul>il/elle/on prenn<strong>e</strong></ul>"+
+            "<ul>nous ❓</ul>"+
+            "<ul>vous ❓</ul>"+
+            "<ul>➡️ il/elle/on prenn___</ul>",
+            woerter: [ "elle", "nous", "je"],
+            korrekt: "nous"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden:",
+            satz: "Außerdem benutzt man den Subjonctif bei bestimmten Ausdrücken, wie z.B.: <em> Il est important que ... , Il faut que ..., Il est nécessaire que ... , Il est dommage que ..., Je doute que ...</em><br>"+
             "Versuche für jeden der vier Ausrücke die richtige Übersetzung zu finden: <br><br>"+
             "<ul><em>Il est important que ... </em> = Es ist wichtig, dass...</ul>"+
             "<ul><em>Il est nécessaire que ... </em> = Es ist notwendig, dass ...</ul>"+
