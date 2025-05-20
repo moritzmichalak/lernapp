@@ -192,7 +192,7 @@ if (thema === "subjonctif") {
             ueberschrift: "Meinung äußern (Indikativ)",
             satz: "<small>Setze die richtige Verbform im Indikativ/Grundform ein: </small><br><br>"+
             "<ul><em>Je trouve que</em> faire du sport, ca ___ (faire) du bien. <br>"+
-            "<small>(Ich finde Sport machen tut gut.)</small>"
+            "<small>(Ich finde Sport machen tut gut.)</small>",
             typ: "text",
             korrekt: "fait"
         },
