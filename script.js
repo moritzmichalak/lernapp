@@ -339,8 +339,8 @@ if (thema === "subjonctif") {
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Schauen wir uns einmal das Verb <em>prendre</em> an. Wir wollen den Subjonctif bilden.<br>"+
-            "1. Also überlegen wir zu allererst wie lautet die Form der 3. Person Plural im Präsens? 🤔 </small>"+
-            "ils /elles ➡️ ___ :",
+            "1. Also überlegen wir zu allererst wie lautet die Form der 3. Person Plural im Präsens? 🤔 "+
+            "ils /elles ➡️ ___ :</small>",
             woerter: ["prendent", "prennent"],
             korrekt: "prennent"
         },
@@ -348,8 +348,8 @@ if (thema === "subjonctif") {
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Schauen wir uns einmal das Verb <em>prendre</em> an. Wir wollen den Subjonctif bilden.<br>"+
-            "1. Also überlegen wir zu allererst wie lautet die Form der 3. Person Plural im Präsens? 🤔 </small><br>"+
-            "   ils /elles prennent :"+
+            "1. Also überlegen wir zu allererst wie lautet die Form der 3. Person Plural im Präsens? 🤔 "+
+            "   ils /elles prennent <br>"+
             "2. Jetzt entfernen wir <em>-ent</em> und bekommen den Stamm für den Subjonctif: ➡️ ___  </small>",
             woerter: ["prend", "prenn"],
             korrekt: "prenn"
@@ -357,7 +357,7 @@ if (thema === "subjonctif") {
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Schauen wir uns einmal das Verb <em>prendre</em> an. Wir wollen den Subjonctif bilden.<br>"+
-            "1. Also überlegen wir zu allererst wie lautet die Form der 3. Person Plural im Präsens? 🤔 </small>"+
+            "1. Also überlegen wir zu allererst wie lautet die Form der 3. Person Plural im Präsens? 🤔 "+
             "   ils /elles prennent: <br>"+
             "2. Wir entfernen <em>-ent</em> und bekommen den Stamm für den Subjonctif: prenn  </small><br>"+
             "3. Jetzt hängen unsere Endungen an:  </small><br>"+
@@ -368,9 +368,9 @@ if (thema === "subjonctif") {
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Schauen wir uns einmal das Verb <em>prendre</em> an. Wir wollen den Subjonctif bilden.<br>"+
-            "1. Also überlegen wir zu allererst wie lautet die Form der 3. Person Plural im Präsens? 🤔 </small><br>"+
+            "1. Also überlegen wir zu allererst wie lautet die Form der 3. Person Plural im Präsens? 🤔 <br>"+
             "   ils /elles prennent:"+
-            "2. Wir entfernen <em>-ent</em> und bekommen den Stamm für den Subjonctif: prenn  </small><br>"+
+            "2. Wir entfernen <em>-ent</em> und bekommen den Stamm für den Subjonctif: prenn <br>"+
             "3. Jetzt hängen unsere Endungen an:  </small><br>"+
             "<ul>je prenn<strong>e</strong></ul>"+
             "<ul>➡️tu prenn___</ul>",
@@ -380,9 +380,9 @@ if (thema === "subjonctif") {
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Schauen wir uns einmal das Verb <em>prendre</em> an. Wir wollen den Subjonctif bilden.<br>"+
-            "1. Also überlegen wir zu allererst wie lautet die Form der 3. Person Plural im Präsens? 🤔 </small><br>"+
+            "1. Also überlegen wir zu allererst wie lautet die Form der 3. Person Plural im Präsens? 🤔 <br>"+
             "   ils /elles prennent:"+
-            "2. Wir entfernen <em>-ent</em> und bekommen den Stamm für den Subjonctif: prenn  </small><br>"+
+            "2. Wir entfernen <em>-ent</em> und bekommen den Stamm für den Subjonctif: prenn <br>"+
             "3. Jetzt hängen unsere Endungen an:  </small><br>"+
             "<ul>je prenn<strong>e</strong></ul>"+
             "<ul>tu prenn<strong>es</strong></ul>"+
@@ -393,9 +393,9 @@ if (thema === "subjonctif") {
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Schauen wir uns einmal das Verb <em>prendre</em> an. Wir wollen den Subjonctif bilden.<br>"+
-            "1. Also überlegen wir zu allererst wie lautet die Form der 3. Person Plural im Präsens? 🤔 </small><br>"+
+            "1. Also überlegen wir zu allererst wie lautet die Form der 3. Person Plural im Präsens? 🤔 <br>"+
             "   ils /elles prennent:"+
-            "2. Wir entfernen <em>-ent</em> und bekommen den Stamm für den Subjonctif: prenn  </small><br>"+
+            "2. Wir entfernen <em>-ent</em> und bekommen den Stamm für den Subjonctif: prenn <br>"+
             "3. Jetzt hängen unsere Endungen an:  </small><br>"+
             "<ul>je prenn<strong>e</strong></ul>"+
             "<ul>tu prenn<strong>es</strong></ul>"+
