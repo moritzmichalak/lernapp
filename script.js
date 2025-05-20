@@ -134,7 +134,7 @@ if (thema === "subjonctif") {
             "<ul>Ich bin überzeugt, dass... - Je suis convaincu(e) que </ul>"+
             "<ul>Ich denke, dass... - Je pense que ...</ul>"+
             "<ul>Ich bin der Meinung, dass... - Je suis d'avis que ... </ul>"+
-            "<ul>Es ist sicher, dass... - ___ ... </ul>",
+            "<ul>Es ist sicher, dass... - ___ </ul>",
             woerter: ["Il est probable que ...", "Il est clair que ...", "Il est sûr que ..."], 
             korrekt: "Il est sûr que ..."
         }, 
@@ -147,8 +147,8 @@ if (thema === "subjonctif") {
             "<ul>Ich bin überzeugt, dass... - Je suis convaincu(e) que </ul>"+
             "<ul>Ich denke, dass... - Je pense que ...</ul>"+
             "<ul>Ich bin der Meinung, dass... - Je suis d'avis que ... </ul>"+
-            "<ul>Es ist sicher, dass... - ___ ... </ul>"+
-            "<ul>Es ist klar, dass... - ___ ... </ul>",
+            "<ul>Es ist sicher, dass... - Il est sûr que ... </ul>"+
+            "<ul>Es ist klar, dass... - ___  </ul>",
             woerter: ["Il est probable que ...", "Il est clair que ..."], 
             korrekt: "Il est clair que ..."
         }, 
@@ -161,8 +161,8 @@ if (thema === "subjonctif") {
             "<ul>Ich bin überzeugt, dass... - Je suis convaincu(e) que </ul>"+
             "<ul>Ich denke, dass... - Je pense que ...</ul>"+
             "<ul>Ich bin der Meinung, dass... - Je suis d'avis que ... </ul>"+
-            "<ul>Es ist sicher, dass... - ___ ... </ul>"+
-            "<ul>Es ist klar, dass... - ___ ... </ul>"+
+            "<ul>Es ist sicher, dass... - Il est sûr que ...  </ul>"+
+            "<ul>Es ist klar, dass... - Il est clair que ... </ul>"+
             "<ul>Es ist wahrscheinlich, dass... - ___ ... </ul>",
             woerter: ["Il est probable que ..."], 
             korrekt: "Il est probable que ..."
@@ -198,22 +198,22 @@ if (thema === "subjonctif") {
         },
         { 
             ueberschrift: "Meinung äußern (Subjonctif)",
-            satz: "Wollen wir unsere Meinung oder Einschätzung zu etwas mitteilen, so benutzen wir den <strong>Subjonctif</strong>, falls wir "+
+            satz: "Wir benutzen den <strong>Subjonctif</strong>, falls wir "+
             "etwas anzweifeln oder etwas als unwahrscheinlich oder ➡️ ___ einschätzen.<br><br>", 
             woerter: ["sicher", "unsicher"],
             korrekt: "unsicher"
         },
         { 
             ueberschrift: "Meinung äußern (Subjonctif)",
-            satz: "Die Ausdrücke nach denen man den Indikativ benutzt drücken ja eine Sicherheit oder hohe Wahrscheinlichkei aus."+
+            satz: "Die Ausdrücke nach denen man den Indikativ benutzt, drücken eine Sicherheit oder hohe Wahrscheinlichkei aus."+
             "➡️  ___ man diese, so drückt man Zweifel bzw. Unsicherheit aus und benutzt den Subjonctif: <br><br>"+
-            "<ul><em>Je <strong>ne</strong> crois <strong>pas</strong>  que</em> c'<strong>est</strong> une bonne idée ! <br> <small>(Ich glaube, dass das eine gute Idee ist!)</small> </ul>"+
-            "<ul><em>Je <strong>ne</strong> pense <strong>pas</strong> que</em> les énergies renouvelables <strong> sont </strong> importantes pour l'avenir' de la planète. <br>"+
+            "<ul><em>Je <strong>ne</strong> crois <strong>pas</strong>  que</em> ce<strong>soit</strong> une bonne idée ! <br> <small>(Ich glaube, dass das eine gute Idee ist!)</small> </ul>"+
+            "<ul><em>Je <strong>ne</strong> pense <strong>pas</strong> que</em> les énergies renouvelables <strong> soient </strong> importantes pour l'avenir' de la planète. <br>"+
             "<small>(Ich denke, dass die erneuerbaren Energien wichtig sind für die Zukunft des Planeten)</small> </ul>"+
-            "<ul><em>Je <strong>ne</strong> suis <strong>pas</strong> convaincu(e) que</em> nos villes <strong> sont </strong> trop polluées. <br>"+
+            "<ul><em>Je <strong>ne</strong> suis <strong>pas</strong> convaincu(e) que</em> nos villes <strong> soient </strong> trop polluées. <br>"+
             "<small>(Ich bin überzeugt, dass unsere Städte zu verschmutzt sind.)</small> </ul>",  
             woerter: ["Verneint", "Bejaht"],
-            korrekt: "unsicher"
+            korrekt: "Verneint"
         },
         { satz: "Bien que nous ___ (être) fatigués, nous continuons.", woerter: ["soyons", "sommes", "sera"], korrekt: "soyons" },
         { satz: "Je ne pense pas que ce / c' ___ (être) une bonne idée !", woerter: ["soit", "est", "sera"], korrekt: "soit" }
