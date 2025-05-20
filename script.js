@@ -191,7 +191,7 @@ if (thema === "subjonctif") {
         { 
             ueberschrift: "Meinung äußern (Indikativ)",
             satz: "<small>Setze die richtige Verbform im Indikativ/Grundform ein: </small><br><br>"+
-            "<ul><em>Je trouve que</em> faire du sport, ca ___ (faire) du bien. <br>"+
+            "<ul><em>Je trouve que</em> faire du sport, ça ___ (faire) du bien. <br>"+
             "<small>(Ich finde Sport machen tut gut.)</small>",
             typ: "text",
             korrekt: "fait"
@@ -274,7 +274,7 @@ if (thema === "subjonctif") {
             satz: "<small>Lass uns noch anschauen wie man den Subjonctif bildet?🤔 <br>"+
             "Um den Subjonctif zu bilden, nimmt man einfach die 3. Person Plural der normalen Präsensform, "+
             " streicht das <em>-ent</em> und hängt die folgenden Endungen an: <em>-e, -es, -e, -ions, -iez, -ent</em>. <br>"+
-            "Par exemple : ils vend<em>ent</em> (vendre) -> Stamm vend<br> -> je vend<strong>e</strong> <br><br></small>"+
+            "Par exemple : ils vend<em>ent</em> (vendre) -> Stamm vend<br> -> que je vend<strong>e</strong> <br><br></small>"+
             "Ordne zu:"+
             "<ul>tu ➡️ ___ </ul>",
             woerter: ["vendes", "vendent", "vendions", "vende", "vendiez"],
@@ -285,10 +285,10 @@ if (thema === "subjonctif") {
             satz: "<small>Lass uns noch anschauen wie man den Subjonctif bildet?🤔 <br>"+
             "Um den Subjonctif zu bilden, nimmt man einfach die 3. Person Plural der normalen Präsensform, "+
             " streicht das <em>-ent</em> und hängt die folgenden Endungen an: <em>-e, -es, -e, -ions, -iez, -ent</em>. <br>"+
-            "Par exemple : ils vend<em>ent</em> (vendre) -> Stamm vend<br> -> je vend<strong>e</strong> <br><br></small>"+
+            "Par exemple : ils vend<em>ent</em> (vendre) -> Stamm vend<br> -> que je vend<strong>e</strong> <br><br></small>"+
             "Ordne zu:"+
-            "<ul>tu vendes</ul>"+
-            "<ul>il/elle/on ➡️ ___ </ul>",
+            "<ul>que tu vendes</ul>"+
+            "<ul>qu'il/elle/on ➡️ ___ </ul>",
             woerter: ["vendent", "vendions", "vende", "vendiez"],
             korrekt: "vende"
         },
@@ -297,11 +297,11 @@ if (thema === "subjonctif") {
             satz: "<small>Lass uns noch anschauen wie man den Subjonctif bildet?🤔 <br>"+
             "Um den Subjonctif zu bilden, nimmt man einfach die 3. Person Plural der normalen Präsensform, "+
             " streicht das <em>-ent</em> und hängt die folgenden Endungen an: <em>-e, -es, -e, -ions, -iez, -ent</em>. <br>"+
-            "Par exemple : ils vend<em>ent</em> (vendre) -> Stamm vend<br> -> je vend<strong>e</strong> <br><br></small>"+
+            "Par exemple : ils vend<em>ent</em> (vendre) -> Stamm vend<br> -> que je vend<strong>e</strong> <br><br></small>"+
             "Ordne zu:"+
-            "<ul>tu vendes</ul>"+
-            "<ul>il/elle/on vende </ul>"+
-            "<ul>nous ➡️ ___ </ul>",
+            "<ul>que tu vendes</ul>"+
+            "<ul>qu'il/elle/on vende </ul>"+
+            "<ul>que nous ➡️ ___ </ul>",
             woerter: ["vendent", "vendions", "vendiez"],
             korrekt: "vendions"
         },
@@ -310,12 +310,12 @@ if (thema === "subjonctif") {
             satz: "<small>Lass uns noch anschauen wie man den Subjonctif bildet?🤔 <br>"+
             "Um den Subjonctif zu bilden, nimmt man einfach die 3. Person Plural der normalen Präsensform, "+
             " streicht das <em>-ent</em> und hängt die folgenden Endungen an: <em>-e, -es, -e, -ions, -iez, -ent</em>. <br>"+
-            "Par exemple : ils vend<em>ent</em> (vendre) -> Stamm vend<br> -> je vend<strong>e</strong> <br><br></small>"+
+            "Par exemple : ils vend<em>ent</em> (vendre) -> Stamm vend<br> -> que je vend<strong>e</strong> <br><br></small>"+
             "Ordne zu:"+
-            "<ul>tu vendes</ul>"+
-            "<ul>il/elle/on vende </ul>"+
-            "<ul>nous vendions </ul>"+
-            "<ul>vous ➡️ ___  </ul>",
+            "<ul>que tu vendes</ul>"+
+            "<ul>qu'il/elle/on vende </ul>"+
+            "<ul>que nous vendions </ul>"+
+            "<ul>que vous ➡️ ___  </ul>",
             woerter: ["vendent", "vendiez"],
             korrekt: "vendiez"
         },
@@ -324,13 +324,13 @@ if (thema === "subjonctif") {
             satz: "<small>Lass uns noch anschauen wie man den Subjonctif bildet?🤔 <br>"+
             "Um den Subjonctif zu bilden, nimmt man einfach die 3. Person Plural der normalen Präsensform, "+
             " streicht das <em>-ent</em> und hängt die folgenden Endungen an: <em>-e, -es, -e, -ions, -iez, -ent</em>. <br>"+
-            "Par exemple : ils vend<em>ent</em> (vendre) -> Stamm vend<br> -> je vend<strong>e</strong> <br><br></small>"+
+            "Par exemple : ils vend<em>ent</em> (vendre) -> Stamm vend<br> -> que je vend<strong>e</strong> <br><br></small>"+
             "Ordne zu:"+
-            "<ul>tu vendes</ul>"+
-            "<ul>il/elle/on vende </ul>"+
-            "<ul>nous vendions </ul>"+
-            "<ul>vous vendiez </ul>"+
-            "<ul>ils/elles ➡️ ___  </ul>",
+            "<ul>que tu vendes</ul>"+
+            "<ul>qu'il/elle/on vende </ul>"+
+            "<ul>que nous vendions </ul>"+
+            "<ul>que vous vendiez </ul>"+
+            "<ul>qu'ils/elles ➡️ ___  </ul>",
             woerter: ["vendent"],
             korrekt: "vendent"
         },
@@ -361,7 +361,7 @@ if (thema === "subjonctif") {
             "   ils /elles prennent: <br>"+
             "2. Wir entfernen <em>-ent</em> und bekommen den Stamm für den Subjonctif: prenn  </small><br>"+
             "3. Jetzt hängen unsere Endungen an:  </small><br>"+
-            "<ul>➡️je prenn___</ul>",
+            "<ul>➡️que je prenn___</ul>",
             woerter: ["es", "ent", "e", "e", "ions", "iez"],
             korrekt: "e"
         },
@@ -372,8 +372,8 @@ if (thema === "subjonctif") {
             "   ils /elles prennent:"+
             "2. Wir entfernen <em>-ent</em> und bekommen den Stamm für den Subjonctif: prenn <br>"+
             "3. Jetzt hängen unsere Endungen an:  </small><br>"+
-            "<ul>je prenn<strong>e</strong></ul>"+
-            "<ul>➡️tu prenn___</ul>",
+            "<ul>que je prenn<strong>e</strong></ul>"+
+            "<ul>➡️que tu prenn___</ul>",
             woerter: ["es", "ent", "e", "ions", "iez"],
             korrekt: "es"
         },
@@ -384,9 +384,9 @@ if (thema === "subjonctif") {
             "   ils /elles prennent:"+
             "2. Wir entfernen <em>-ent</em> und bekommen den Stamm für den Subjonctif: prenn <br>"+
             "3. Jetzt hängen unsere Endungen an:  </small><br>"+
-            "<ul>je prenn<strong>e</strong></ul>"+
-            "<ul>tu prenn<strong>es</strong></ul>"+
-            "<ul>➡️il/elle/on prenn___</ul>",
+            "<ul>que je prenn<strong>e</strong></ul>"+
+            "<ul>que tu prenn<strong>es</strong></ul>"+
+            "<ul>➡️qu'il/elle/on prenn___</ul>",
             woerter: [ "ent", "e", "ions", "iez"],
             korrekt: "e"
         },
@@ -397,24 +397,24 @@ if (thema === "subjonctif") {
             "   ils /elles prennent:"+
             "2. Wir entfernen <em>-ent</em> und bekommen den Stamm für den Subjonctif: prenn <br>"+
             "3. Jetzt hängen unsere Endungen an:  </small><br>"+
-            "<ul>je prenn<strong>e</strong></ul>"+
-            "<ul>tu prenn<strong>es</strong></ul>"+
-            "<ul>il/elle/on prenn<strong>e</strong></ul>"+
-            "<ul>nous ❓</ul>"+
-            "<ul>vous ❓</ul>"+
-            "<ul>➡️ il/elle/on prenn___</ul>",
+            "<ul>que je prenn<strong>e</strong></ul>"+
+            "<ul>que tu prenn<strong>es</strong></ul>"+
+            "<ul>qu'il/elle/on prenn<strong>e</strong></ul>"+
+            "<ul>que nous ❓</ul>"+
+            "<ul>que vous ❓</ul>"+
+            "<ul>➡️ qu'il/elle/on prenn___</ul>",
             woerter: [ "ent", "ions", "iez"],
             korrekt: "ent"
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Bis hierhin also alles wie gehabt! Es gibt aber <strong>Ausnahmen</strong> für ➡️ ___ und vous. <br>"+
-            "<ul>je prenn<strong>e</strong></ul>"+
-            "<ul>tu prenn<strong>es</strong></ul>"+
-            "<ul>il/elle/on prenn<strong>e</strong></ul></small>"+
-            "<ul>nous <strong>prenions</strong></ul>"+
-            "<ul>vous <strong>preniez</strong></ul>"+
-            "<ul><small> il/elle/on prenn<strong>ent</strong></small></ul>",
+            "<ul>que je prenn<strong>e</strong></ul>"+
+            "<ul>que tu prenn<strong>es</strong></ul>"+
+            "<ul>qu'il/elle/on prenn<strong>e</strong></ul></small>"+
+            "<ul>que nous <strong>prenions</strong></ul>"+
+            "<ul>que vous <strong>preniez</strong></ul>"+
+            "<ul><small> qu'ils/elles prenn<strong>ent</strong></small></ul>",
             woerter: [ "elle", "nous", "je"],
             korrekt: "nous"
         },
@@ -431,12 +431,12 @@ if (thema === "subjonctif") {
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Bei <em>aller</em> ist der Stamm <em>aill</em>, nur für ➡️___ und <strong>vous</strong> ist der Stamm <em>all</em> </small><br><br>"+
-            "<ul>je <em>aill</em><strong>e</strong></ul>"+
-            "<ul>tu <em>aill</em><strong>es</strong></ul>"+
-            "<ul>il/elle/on <em>aill</em><strong>e</strong></ul>"+
-            "<ul>nous <em>all</em><strong>ions</strong></ul>"+
-            "<ul>vous <em>all</em><strong>iez</strong></ul>"+
-            "<ul>ils/elles <em>aill</em><strong>ent</strong></ul>", 
+            "<ul>que j'<em>aill</em><strong>e</strong></ul>"+
+            "<ul>que tu <em>aill</em><strong>es</strong></ul>"+
+            "<ul>qu'il/elle/on <em>aill</em><strong>e</strong></ul>"+
+            "<ul>que nous <em>all</em><strong>ions</strong></ul>"+
+            "<ul>que vous <em>all</em><strong>iez</strong></ul>"+
+            "<ul>qu'ils/elles <em>aill</em><strong>ent</strong></ul>", 
             woerter: ["nous", "je", "elles"],
             korrekt: "nous"
         },
@@ -452,12 +452,12 @@ if (thema === "subjonctif") {
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Bei <em>savoir</em> hängen wir unsere ➡️ ___ Subjonctif-Endungen an den Stamm <em>sach-</em>: <br><br></small>"+
-            "<ul>je <em>sach</em><strong>e</strong></ul>"+
-            "<ul>tu <em>sach</em><strong>es</strong></ul>"+
-            "<ul>il/elle/on <em>sach</em><strong>e</strong></ul>"+
-            "<ul>nous <em>sach</em><strong>ions</strong></ul>"+
-            "<ul>vous <em>sach</em><strong>iez</strong></ul>"+
-            "<ul>ils/elles <em>sach</em><strong>ent</strong></ul>", 
+            "<ul>que je <em>sach</em><strong>e</strong></ul>"+
+            "<ul>que tu <em>sach</em><strong>es</strong></ul>"+
+            "<ul>qu'il/elle/on <em>sach</em><strong>e</strong></ul>"+
+            "<ul>que nous <em>sach</em><strong>ions</strong></ul>"+
+            "<ul>que vous <em>sach</em><strong>iez</strong></ul>"+
+            "<ul>qu'ils/elles <em>sach</em><strong>ent</strong></ul>", 
             woerter: ["normalen", "speziellen"],
             korrekt: "normalen"
         },
@@ -474,12 +474,12 @@ if (thema === "subjonctif") {
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Bei <em>faire</em> hängen wir unsere ➡️ ___ Subjonctif-Endungen an den Stamm <em>fass-</em>: <br><br></small>"+
-            "<ul>je <em>fass</em><strong>e</strong></ul>"+
-            "<ul>tu <em>fass</em><strong>es</strong></ul>"+
-            "<ul>il/elle/on <em>fass</em><strong>e</strong></ul>"+
-            "<ul>nous <em>fass</em><strong>ions</strong></ul>"+
-            "<ul>vous <em>fass</em><strong>iez</strong></ul>"+
-            "<ul>ils/elles <em>fass</em><strong>ent</strong></ul>", 
+            "<ul>que je <em>fass</em><strong>e</strong></ul>"+
+            "<ul>que tu <em>fass</em><strong>es</strong></ul>"+
+            "<ul>qu'il/elle/on <em>fass</em><strong>e</strong></ul>"+
+            "<ul>que nous <em>fass</em><strong>ions</strong></ul>"+
+            "<ul>que vous <em>fass</em><strong>iez</strong></ul>"+
+            "<ul>qu'ils/elles <em>fass</em><strong>ent</strong></ul>", 
             woerter: ["normalen", "speziellen"],
             korrekt: "normalen"
         },
@@ -488,7 +488,7 @@ if (thema === "subjonctif") {
             satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
             "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
             "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
-            "<ul>je ➡️ ___</ul>",
+            "<ul>que je ➡️ ___</ul>",
             woerter: ["sois", "sois", "soyez", "soit", "soyons", "soient"],
             korrekt: "sois"
         },
@@ -497,8 +497,8 @@ if (thema === "subjonctif") {
             satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
             "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
             "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
-            "<ul>je sois</ul>"+
-            "<ul>tu ➡️ ___</ul>",
+            "<ul>que je sois</ul>"+
+            "<ul>que tu ➡️ ___</ul>",
             woerter: ["sois", "soyez", "soit", "soyons", "soient"],
             korrekt: "sois"
         },
@@ -507,9 +507,9 @@ if (thema === "subjonctif") {
             satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
             "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
             "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
-            "<ul>je sois</ul>"+
-            "<ul>tu sois</ul>"+
-            "<ul>il/elle/on ➡️ ___</ul>",
+            "<ul>que je sois</ul>"+
+            "<ul>que tu sois</ul>"+
+            "<ul>qu'il/elle/on ➡️ ___</ul>",
             woerter: ["soyez", "soit", "soyons", "soient"],
             korrekt: "soit"
         },
@@ -518,10 +518,10 @@ if (thema === "subjonctif") {
             satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
             "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
             "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
-            "<ul>je sois</ul>"+
-            "<ul>tu sois</ul>"+
-            "<ul>tu soit</ul>"+
-            "<ul>nous ➡️ ___</ul>",
+            "<ul>que je sois</ul>"+
+            "<ul>que tu sois</ul>"+
+            "<ul>qu'il/elle/on soit</ul>"+
+            "<ul>que nous ➡️ ___</ul>",
             woerter: ["soyez", "soyons", "soient"],
             korrekt: "soyons"
         },
@@ -530,11 +530,11 @@ if (thema === "subjonctif") {
             satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
             "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
             "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
-            "<ul>je sois</ul>"+
-            "<ul>tu sois</ul>"+
-            "<ul>tu soit</ul>"+
-            "<ul>nous soyons</ul>"+
-            "<ul>vous ➡️ ___</ul>",
+            "<ul>que je sois</ul>"+
+            "<ul>que tu sois</ul>"+
+            "<ul>qu'il/elle/on soit</ul>"+
+            "<ul>que nous soyons</ul>"+
+            "<ul>que vous ➡️ ___</ul>",
             woerter: ["soyez", "soient"],
             korrekt: "soyez"
         },
@@ -543,74 +543,69 @@ if (thema === "subjonctif") {
             satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
             "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
             "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
-            "<ul>je sois</ul>"+
-            "<ul>tu sois</ul>"+
-            "<ul>tu soit</ul>"+
-            "<ul>nous soyons</ul>"+
-            "<ul>vous soyez</ul>"+
-            "<ul>ils/elles ➡️ ___</ul>",
+            "<ul>que je sois</ul>"+
+            "<ul>que tu sois</ul>"+
+            "<ul>qu'il/elle/on soit</ul>"+
+            "<ul>que nous soyons</ul>"+
+            "<ul>que vous soyez</ul>"+
+            "<ul>qu'ils/elles ➡️ ___</ul>",
             woerter: ["soient"],
             korrekt: "soient"
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Und für <strong>avoir</strong>: <br><br></small>"+
-            "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
-            "<ul>je ➡️ ___</ul>",
+            "<ul>que j' ➡️ ___</ul>",
             woerter: ["ait", "aies", "ayez", "aie", "ayons", "aient"],
             korrekt: "aie"
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Und für <strong>avoir</strong>: <br><br></small>"+
-            "<ul>je aie</ul>"+
-            "<ul>tu ➡️ ___</ul>",
+            "<ul>que j'aie</ul>"+
+            "<ul>que tu ➡️ ___</ul>",
             woerter: ["ait", "aies", "ayez",  "ayons", "aient"],
             korrekt: "aies"
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Und für <strong>avoir</strong>: <br><br></small>"+
-            "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
-            "<ul>je aie</ul>"+
-            "<ul>tu aies</ul>"+
-            "<ul>il/elle/on ➡️ ___</ul>",
+            "<ul>que j'aie</ul>"+
+            "<ul>que tu aies</ul>"+
+            "<ul>qu'il/elle/on ➡️ ___</ul>",
             woerter: ["ait", "ayez",  "ayons", "aient"],
             korrekt: "ait"
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Und für <strong>avoir</strong>: <br><br></small>"+
-            "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
-            "<ul>je aie</ul>"+
-            "<ul>tu aies</ul>"+
-            "<ul>tu ait</ul>"+
-            "<ul>nous ➡️ ___</ul>",
+            "<ul>que j'aie</ul>"+
+            "<ul>que tu aies</ul>"+
+            "<ul>qu'il/elle/on ait</ul>"+
+            "<ul>que nous ➡️ ___</ul>",
             woerter: ["ayez",  "ayons", "aient"],
             korrekt: "ayons"
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Und für <strong>avoir</strong>: <br><br></small>"+
-            "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
-            "<ul>je aie</ul>"+
-            "<ul>tu aies</ul>"+
-            "<ul>tu ait</ul>"+
-            "<ul>nous ayons</ul>"+
-            "<ul>vous ➡️ ___</ul>",
+            "<ul>que j'aie</ul>"+
+            "<ul>que tu aies</ul>"+
+            "<ul>qu'il/elle/on ait</ul>"+
+            "<ul>que nous ayons</ul>"+
+            "<ul>que vous ➡️ ___</ul>",
             woerter: ["ayez", "aient"],
             korrekt: "ayez"
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Und für <strong>avoir</strong>: <br><br></small>"+
-            "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
-            "<ul>je aie</ul>"+
-            "<ul>tu aies</ul>"+
-            "<ul>tu ait</ul>"+
-            "<ul>nous ayons</ul>"+
-            "<ul>vous ayez</ul>"+
-            "<ul>ils/elles ➡️ ___</ul>",
+            "<ul>que j'aie</ul>"+
+            "<ul>que tu aies</ul>"+
+            "<ul>qu'il/elle/on ait</ul>"+
+            "<ul>que nous ayons</ul>"+
+            "<ul>que vous ayez</ul>"+
+            "<ul>qu'ils/elles ➡️ ___</ul>",
             woerter: ["aient"],
             korrekt: "aient"
         },
@@ -663,11 +658,7 @@ if (thema === "subjonctif") {
             "<small>(Bei mir ist es das Gegentei. Ich finde nicht, dass die Atomenergie Angst macht.)</small>",
             woerter: ["fait", "fasse"],
             korrekt: "fasse"
-        },
-        //  Genau, hier Indikativ und nicht Subjonctif 👍  l’énergie f. nucléaire/
-        //POPUP: Okay, jetzt üben wir die unregelmäßigen Formen noch ein wenig 🔁🔎   
-        { satz: "Bien que nous ___ (être) fatigués, nous continuons.", woerter: ["soyons", "sommes", "sera"], korrekt: "soyons" },
-        { satz: "Je ne pense pas que ce / c' ___ (être) une bonne idée !", woerter: ["soit", "est", "sera"], korrekt: "soit" }
+        }
     ];
 } else if (thema === "conditionnel") {
     aufgaben = [
@@ -1733,44 +1724,44 @@ const erklaerungen = {
         },
         14: {
             titel: "Meinung äußern mit Subjonctif",
-            text: "Jetzt gehen wir von Indikativ zum <em>Subjonctif</em>."
+            text: "Jetzt gehen wir vom Indikativ zum <em>Subjonctif</em>."
         },   
-        20: {
+        21: {
             titel: "Meinung äußern mit Subjonctif",
             text: "Super ! Jetzt weißt du, dass man den Subjonctif verwendet wenn:"+
             "<ul>man eine Unsicherheit oder einen Zweifel ausdrückt</ul>"+
             "<ul>nach bestimmten Ausdrücken wie z.B. <em>Il est important que ... ,</em> oder Il <em>faut que ...  </em></ul>."
         },  
-        25: {
+        26: {
             titel: "Meinung äußern mit Subjonctif",
             text: "Sehr gut, jetzt weißt du wie man den Subjonctif bei regelmäßigen Verben bildet 👍 <br>"+
             "Schauen wir uns noch ein paar unregelmäßige Verben an 🙌"
         },  
-        26: {
+        27: {
             titel: "Subjonctif: Unregelmäßige Verben ",
             text: "Genau im Präsens ist prendre unregelmäßig für ils/elles, nächmlich <em>prennent</em>!"
         }, 
-        32: {
+        33: {
             titel: "Subjonctif: Unregelmäßige Verben ",
             text: "Dass nous und vous die einzigen Ausnahmen von der Regel bilden, ist <strong>nicht nur bei prendre so</strong>. Bei den Verben <em>venir, prendre, boire, voir</em> ist es analog.!"
         }, 
-        50: {
+        51: {
             titel: "Geschafft!",
             text: "Zum Schluss wiederholen wir nochmal alles mit ein paar Übungssätzen 🔁 🏋️"
         }, 
-        51: {
+        52: {
             titel: "Exactement !",
             text: "Nach dem Ausdruck <em>Il est important que</em> benutzt man den Subjonctif 👍 "
         }, 
-        52: {
+        53: {
             titel: "Exactement !",
             text: "Nach dem Ausdruck <em>Il faut que</em> benutzt man den Subjonctif 👍 "
         }, 
-        53: {
+        54: {
             titel: "Schon wieder Subjonctif !",
             text: "<em>Je ne crois pas que</em> drückt einen Zweifel aus -> Also Subjonctif 👍 "
         }, 
-        53: {
+        55: {
             titel: "Indikativ!",
             text: "Auf <em>Je trouve que</em> folgt der Indikativ ⚠️ "
         }
