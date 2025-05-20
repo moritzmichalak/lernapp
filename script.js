@@ -430,14 +430,13 @@ if (thema === "subjonctif") {
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
-            satz: "<small>Bei <em>aller</em> ist der Stamm <em>aill</em>, nur für ➡️___ und <strong>vous</strong> ist der Stamm em>all</em> </small><br>"+
-            "Versuche zu jedem Verb den richtigen Stamm zu finden:<br><br></small>"+
-            "<ul>je <em>aill</em><strong>e</strong>"+
-            "<ul>tu <em>aill</em><strong>es</strong>"+
-            "<ul>il/elle/on <em>aill</em><strong>e</strong>"+
-            "<ul>nous <em>all</em><strong>ions</strong>"+
-            "<ul>vous <em>all</em><strong>iez</strong>"+
-            "<ul>ils/elles <em>aill</em><strong>ent</strong>", 
+            satz: "<small>Bei <em>aller</em> ist der Stamm <em>aill</em>, nur für ➡️___ und <strong>vous</strong> ist der Stamm em>all</em> </small><br><br>"+
+            "<ul>je <em>aill</em><strong>e</strong></ul>"+
+            "<ul>tu <em>aill</em><strong>es</strong></ul>"+
+            "<ul>il/elle/on <em>aill</em><strong>e</strong></ul>"+
+            "<ul>nous <em>all</em><strong>ions</strong></ul>"+
+            "<ul>vous <em>all</em><strong>iez</strong></ul>"+
+            "<ul>ils/elles <em>aill</em><strong>ent</strong></ul>", 
             woerter: ["nous", "je", "elles"],
             korrekt: "nous"
         },
@@ -453,12 +452,12 @@ if (thema === "subjonctif") {
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Bei <em>savoir</em> hängen wir unsere ➡️ ___ Endungen an den Stamm <em>sach-</em>: <br><br></small>"+
-            "<ul>je <em>sach</em><strong>e</strong>"+
-            "<ul>tu <em>sach</em><strong>es</strong>"+
-            "<ul>il/elle/on <em>sach</em><strong>e</strong>"+
-            "<ul>nous <em>sach</em><strong>ions</strong>"+
-            "<ul>vous <em>sach</em><strong>iez</strong>"+
-            "<ul>ils/elles <em>sach</em><strong>ent</strong>", 
+            "<ul>je <em>sach</em><strong>e</strong></ul>"+
+            "<ul>tu <em>sach</em><strong>es</strong></ul>"+
+            "<ul>il/elle/on <em>sach</em><strong>e</strong></ul>"+
+            "<ul>nous <em>sach</em><strong>ions</strong></ul>"+
+            "<ul>vous <em>sach</em><strong>iez</strong></ul>"+
+            "<ul>ils/elles <em>sach</em><strong>ent</strong></ul>", 
             woerter: ["normalen", "speziellen"],
             korrekt: "normalen"
         },
@@ -475,12 +474,12 @@ if (thema === "subjonctif") {
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Bei <em>faire</em> hängen wir unsere ➡️ ___ Endungen an den Stamm <em>fass-</em>: <br><br></small>"+
-            "<ul>je <em>fass</em><strong>e</strong>"+
-            "<ul>tu <em>fass</em><strong>es</strong>"+
-            "<ul>il/elle/on <em>fass</em><strong>e</strong>"+
-            "<ul>nous <em>fass</em><strong>ions</strong>"+
-            "<ul>vous <em>fass</em><strong>iez</strong>"+
-            "<ul>ils/elles <em>fass</em><strong>ent</strong>", 
+            "<ul>je <em>fass</em><strong>e</strong></ul>"+
+            "<ul>tu <em>fass</em><strong>es</strong></ul>"+
+            "<ul>il/elle/on <em>fass</em><strong>e</strong></ul>"+
+            "<ul>nous <em>fass</em><strong>ions</strong></ul>"+
+            "<ul>vous <em>fass</em><strong>iez</strong></ul>"+
+            "<ul>ils/elles <em>fass</em><strong>ent</strong></ul>", 
             woerter: ["normalen", "speziellen"],
             korrekt: "normalen"
         },
