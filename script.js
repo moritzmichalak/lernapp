@@ -63,7 +63,13 @@ console.log("Das Thema ist:", thema);
 
 if (thema === "subjonctif") {
     aufgaben = [
-        { satz: "Il faut que tu ___ (faire) tes devoirs.", woerter: ["fasses", "fait", "fera"], korrekt: "fasses" },
+        { satz:
+            "Wollen wir unsere Meinung oder Einschätzung zu etwas mitteilen, so benutzen wir den normalen <strong>Indikativ</strong>, falls wir "+
+            "etwas als wahrscheinlich oder  ___ einschätzen.<br><br>"+
+            "<ul><em>Je crois que</em> c'<strong>est</strong> une bonne idée ! <br> <small>(Ich denke, dass )</small> </ul>"+
+            "<ul><em>Je pense que</em> les énergies renouvelables <strong> sont </strong> importants. <br> <small>(Ich denke, dass )</small> </ul>"+
+            "<ul><em>Je suis convaincu(e) que</em> nos villes <strong> sont </strong> trop polluées. <br> <small>(Ich würde gerne ans Meer fahren)</small> </ul>", 
+            woerter: ["sicher", "unsicher"], korrekt: "sicher" },
         { satz: "Bien que nous ___ (être) fatigués, nous continuons.", woerter: ["soyons", "sommes", "sera"], korrekt: "soyons" },
         { satz: "Je ne pense pas que ce / c' ___ (être) une bonne idée !", woerter: ["soit", "est", "sera"], korrekt: "soit" }
     ];
