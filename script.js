@@ -207,7 +207,7 @@ if (thema === "subjonctif") {
             ueberschrift: "Meinung äußern (Subjonctif)",
             satz: "Die Ausdrücke nach denen man den Indikativ benutzt, drücken eine Sicherheit oder hohe Wahrscheinlichkei aus."+
             "➡️  ___ man diese, so drückt man Zweifel bzw. Unsicherheit aus und benutzt den <strong>Subjonctif</strong>: <br><br>"+
-            "<ul><em>Je <strong>ne</strong> crois <strong>pas</strong>  que</em> ce<strong>soit</strong> une bonne idée ! <br> <small>"+
+            "<ul><em>Je <strong>ne</strong> crois <strong>pas</strong>  que</em> ce <strong>soit</strong> une bonne idée ! <br> <small>"+
             "(Ich glaube nicht, dass das eine gute Idee ist!)</small> </ul>"+
             "<ul><em>Je <strong>ne</strong> pense <strong>pas</strong> que</em> les énergies renouvelables <strong> soient </strong> importantes pour l'avenir' de la planète. <br>"+
             "<small>(Ich denke nicht, dass die erneuerbaren Energien wichtig sind für die Zukunft des Planeten)</small> </ul>"+
