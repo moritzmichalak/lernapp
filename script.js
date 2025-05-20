@@ -463,7 +463,7 @@ if (thema === "subjonctif") {
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
-            satz: "<small>Es gibt außerdem unregeömäßige Verben, für die es in allen Fällen einen anderen Stamm gibt. Hier sind ein paar wichtige: <em> aller, savoir, faire</em><br>"+
+            satz: "<small>Es gibt außerdem unregelmäßige Verben, für die es in allen Fällen einen anderen Stamm gibt. Hier sind ein paar wichtige: <em> aller, savoir, faire</em><br>"+
             "Versuche zu jedem Verb den richtigen Stamm zu finden:<br><br></small>"+
             "<ul>aller: aill-/all-</ul>"+
             "<ul>savoir: sach-</ul>"+
@@ -640,7 +640,7 @@ if (thema === "subjonctif") {
         },
         { 
             ueberschrift: "Exprimer son opinion",
-            satz: "Il es important que nous➡️ ___  (lutter) contre le gaspillage d'énergie .<br>"+
+            satz: "Il est important que nous➡️ ___  (lutter) contre le gaspillage d'énergie .<br>"+
             "<small>(Es ist wichtig, dass wir die Energieverschwendung bekämpfen.)</small>",
             woerter: ["luttions", "luttons"],
             korrekt: "luttions"
