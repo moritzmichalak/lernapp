@@ -408,13 +408,13 @@ if (thema === "subjonctif") {
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
-            satz: "<small>Bis hierhin also alles wie gehabt! Es gibt aber Ausnahmen für ___ und vous. </small><br>"+
+            satz: "<small>Bis hierhin also alles wie gehabt! Es gibt aber <strong>Ausnahmen</strong> für ➡️ ___ und vous. <br>"+
             "<ul>je prenn<strong>e</strong></ul>"+
             "<ul>tu prenn<strong>es</strong></ul>"+
-            "<ul>il/elle/on prenn<strong>e</strong></ul>"+
-            "<ul>nous ❓</ul>"+
-            "<ul>vous ❓</ul>"+
-            "<ul>➡️ il/elle/on prenn___</ul>",
+            "<ul>il/elle/on prenn<strong>e</strong></ul></small>"+
+            "<ul>nous <strong>prenions</strong></ul>"+
+            "<ul>vous <strong>preniez</strong></ul>"+
+            "<ul><small> il/elle/on prenn<strong>ent</strong></small></ul>",
             woerter: [ "elle", "nous", "je"],
             korrekt: "nous"
         },
