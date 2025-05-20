@@ -430,7 +430,7 @@ if (thema === "subjonctif") {
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
-            satz: "<small>Bei <em>aller</em> ist der Stamm <em>aill</em>, nur für ➡️___ und <strong>vous</strong> ist der Stamm em>all</em> </small><br><br>"+
+            satz: "<small>Bei <em>aller</em> ist der Stamm <em>aill</em>, nur für ➡️___ und <strong>vous</strong> ist der Stamm <em>all</em> </small><br><br>"+
             "<ul>je <em>aill</em><strong>e</strong></ul>"+
             "<ul>tu <em>aill</em><strong>es</strong></ul>"+
             "<ul>il/elle/on <em>aill</em><strong>e</strong></ul>"+
