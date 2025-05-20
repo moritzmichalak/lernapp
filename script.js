@@ -444,8 +444,8 @@ if (thema === "subjonctif") {
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Es gibt außerdem unregeömäßige Verben, für die es in allen Fällen einen anderen Stamm gibt. Hier sind die wichtigsten: <em>être, avoir, aller, savoir, faire</em></small><br>"+
             "Versuche zu jedem Verb den richtigen Stamm zu finden:<br><br></small>"+
-            "<ul>aller - aill-/all-</ul>"+
-            "<ul>savoir - ➡️ ___ </ul>",
+            "<ul>aller: aill-/all-</ul>"+
+            "<ul>savoir: ➡️ ___ </ul>",
             woerter: [ "sach-", "fass-"],
             korrekt: "sach-"
         },
@@ -465,9 +465,9 @@ if (thema === "subjonctif") {
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Es gibt außerdem unregeömäßige Verben, für die es in allen Fällen einen anderen Stamm gibt. Hier sind die wichtigsten: <em>être, avoir, aller, savoir, faire</em></small><br>"+
             "Versuche zu jedem Verb den richtigen Stamm zu finden:<br><br></small>"+
-            "<ul>aller - aill-/all-</ul>"+
-            "<ul>savoir - sach-</ul>"+
-            "<ul>faire - ➡️ ___ </ul>",
+            "<ul>aller: aill-/all-</ul>"+
+            "<ul>savoir: sach-</ul>"+
+            "<ul>faire: ➡️ ___ </ul>",
             woerter: ["fass-"],
             korrekt: "fass-"
         },
@@ -563,9 +563,7 @@ if (thema === "subjonctif") {
         },
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
-            satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
-            "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
-            "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
+            satz: "<small>Und für <strong>avoir</strong>: <br><br></small>"+
             "<ul>je aie</ul>"+
             "<ul>tu ➡️ ___</ul>",
             woerter: ["ait", "aies", "ayez",  "ayons", "aient"],
@@ -652,12 +650,26 @@ if (thema === "subjonctif") {
         },
         { 
             ueberschrift: "Exprimer son opinion",
-            satz: "Il es imortant que nous➡️ ___  (lutter) contre le gaspillage d'énergie .<br>"+
+            satz: "Il es important que nous➡️ ___  (lutter) contre le gaspillage d'énergie .<br>"+
             "<small>(Es ist wichtig, dass wir die Energieverschwendung bekämpfen.)</small>",
             woerter: ["luttions", "luttons"],
             korrekt: "luttions"
         },
-        //  Genau, hier Indikativ und nicht Subjonctif 👍
+        { 
+            ueberschrift: "Exprimer son opinion",
+            satz: "Je trouve que l'énergie nucléaire➡️ ___  (faire) peur .<br>"+
+            "<small>(Ich finde, dass die Atomenergie Angst macht.)</small>",
+            woerter: ["fait", "fasse"],
+            korrekt: "fait"
+        },
+        { 
+            ueberschrift: "Exprimer son opinion",
+            satz: "Pour moi c'est le contraire. Je ne trouve pas que l'énergie nucléaire➡️ ___  (faire) peur .<br>"+
+            "<small>(Bei mir ist es das Gegentei. Ich finde nicht, dass die Atomenergie Angst macht.)</small>",
+            woerter: ["fait", "fasse"],
+            korrekt: "fasse"
+        },
+        //  Genau, hier Indikativ und nicht Subjonctif 👍  l’énergie f. nucléaire/
         //POPUP: Okay, jetzt üben wir die unregelmäßigen Formen noch ein wenig 🔁🔎   
         { satz: "Bien que nous ___ (être) fatigués, nous continuons.", woerter: ["soyons", "sommes", "sera"], korrekt: "soyons" },
         { satz: "Je ne pense pas que ce / c' ___ (être) une bonne idée !", woerter: ["soit", "est", "sera"], korrekt: "soit" }
