@@ -418,17 +418,248 @@ if (thema === "subjonctif") {
             woerter: [ "elle", "nous", "je"],
             korrekt: "nous"
         },
+        // POPUP: Dass nous und vous die einzigen Ausnahmen von der Regel bilden, ist nicht nur bei prendre so. Bei den Verben <em>venir, prendre, boire, voir</em> ist es analog.
         { 
-            ueberschrift: "Subjonctif bilden:",
-            satz: "Außerdem benutzt man den Subjonctif bei bestimmten Ausdrücken, wie z.B.: <em> Il est important que ... , Il faut que ..., Il est nécessaire que ... , Il est dommage que ..., Je doute que ...</em><br>"+
-            "Versuche für jeden der vier Ausrücke die richtige Übersetzung zu finden: <br><br>"+
-            "<ul><em>Il est important que ... </em> = Es ist wichtig, dass...</ul>"+
-            "<ul><em>Il est nécessaire que ... </em> = Es ist notwendig, dass ...</ul>"+
-            "<ul><em>Il est dommage que ... </em> = Es ist schade, dass ... </ul>"+
-            "<ul><em>Il faut que ... </em> = ➡️ ___ </ul>",
-            woerter: ["Man muss ..."],
-            korrekt: "Man muss ..."
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Es gibt außerdem unregelmäßige Verben, für die es in allen Fällen einen anderen Stamm gibt."+
+            " Hier sind ein paar wichtige: <em>aller, savoir, faire</em></small><br>"+
+            "Versuche zu jedem Verb den richtigen Stamm zu finden:<br><br></small>"+
+            "<ul>aller - ➡️___</ul>", 
+            woerter: [ "sach-", "fass-", "aill-/all-"],
+            korrekt: "aill-/all-"
         },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Bei <em>aller</em> ist der Stamm <em>aill</em>, nur für ➡️___ und <strong>vous</strong> ist der Stamm em>all</em> </small><br>"+
+            "Versuche zu jedem Verb den richtigen Stamm zu finden:<br><br></small>"+
+            "<ul>je <em>aill</em><strong>e</strong>"+
+            "<ul>tu <em>aill</em><strong>es</strong>"+
+            "<ul>il/elle/on <em>aill</em><strong>e</strong>"+
+            "<ul>nous <em>all</em><strong>ions</strong>"+
+            "<ul>vous <em>all</em><strong>iez</strong>"+
+            "<ul>ils/elles <em>aill</em><strong>ent</strong>", 
+            woerter: ["nous", "je", "elles"],
+            korrekt: "nous"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Es gibt außerdem unregeömäßige Verben, für die es in allen Fällen einen anderen Stamm gibt. Hier sind die wichtigsten: <em>être, avoir, aller, savoir, faire</em></small><br>"+
+            "Versuche zu jedem Verb den richtigen Stamm zu finden:<br><br></small>"+
+            "<ul>aller - aill-/all-</ul>"+
+            "<ul>savoir - ➡️ ___ </ul>",
+            woerter: [ "sach-", "fass-"],
+            korrekt: "sach-"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Bei <em>savoir</em> hängen wir unsere ➡️ ___ Endungen an den Stamm <em>sach-</em>: <br><br></small>"+
+            "<ul>je <em>sach</em><strong>e</strong>"+
+            "<ul>tu <em>sach</em><strong>es</strong>"+
+            "<ul>il/elle/on <em>sach</em><strong>e</strong>"+
+            "<ul>nous <em>sach</em><strong>ions</strong>"+
+            "<ul>vous <em>sach</em><strong>iez</strong>"+
+            "<ul>ils/elles <em>sach</em><strong>ent</strong>", 
+            woerter: ["normalen", "speziellen"],
+            korrekt: "normalen"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Es gibt außerdem unregeömäßige Verben, für die es in allen Fällen einen anderen Stamm gibt. Hier sind die wichtigsten: <em>être, avoir, aller, savoir, faire</em></small><br>"+
+            "Versuche zu jedem Verb den richtigen Stamm zu finden:<br><br></small>"+
+            "<ul>aller - aill-/all-</ul>"+
+            "<ul>savoir - sach-</ul>"+
+            "<ul>faire - ➡️ ___ </ul>",
+            woerter: ["fass-"],
+            korrekt: "fass-"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Bei <em>faire</em> hängen wir unsere ➡️ ___ Endungen an den Stamm <em>fass-</em>: <br><br></small>"+
+            "<ul>je <em>fass</em><strong>e</strong>"+
+            "<ul>tu <em>fass</em><strong>es</strong>"+
+            "<ul>il/elle/on <em>fass</em><strong>e</strong>"+
+            "<ul>nous <em>fass</em><strong>ions</strong>"+
+            "<ul>vous <em>fass</em><strong>iez</strong>"+
+            "<ul>ils/elles <em>fass</em><strong>ent</strong>", 
+            woerter: ["normalen", "speziellen"],
+            korrekt: "normalen"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
+            "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
+            "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
+            "<ul>je ➡️ ___</ul>",
+            woerter: ["sois", "sois", "soyez", "soit", "soyons", "soient"],
+            korrekt: "sois"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
+            "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
+            "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
+            "<ul>je sois</ul>"+
+            "<ul>tu ➡️ ___</ul>",
+            woerter: ["sois", "soyez", "soit", "soyons", "soient"],
+            korrekt: "sois"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
+            "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
+            "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
+            "<ul>je sois</ul>"+
+            "<ul>tu sois</ul>"+
+            "<ul>il/elle/on ➡️ ___</ul>",
+            woerter: ["soyez", "soit", "soyons", "soient"],
+            korrekt: "soit"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
+            "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
+            "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
+            "<ul>je sois</ul>"+
+            "<ul>tu sois</ul>"+
+            "<ul>tu soit</ul>"+
+            "<ul>nous ➡️ ___</ul>",
+            woerter: ["soyez", "soyons", "soient"],
+            korrekt: "soyons"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
+            "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
+            "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
+            "<ul>je sois</ul>"+
+            "<ul>tu sois</ul>"+
+            "<ul>tu soit</ul>"+
+            "<ul>nous soyons</ul>"+
+            "<ul>vous ➡️ ___</ul>",
+            woerter: ["soyez", "soient"],
+            korrekt: "soyez"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
+            "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
+            "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
+            "<ul>je sois</ul>"+
+            "<ul>tu sois</ul>"+
+            "<ul>tu soit</ul>"+
+            "<ul>nous soyons</ul>"+
+            "<ul>vous soyez</ul>"+
+            "<ul>ils/elles ➡️ ___</ul>",
+            woerter: ["soient"],
+            korrekt: "soient"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
+            "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
+            "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
+            "<ul>je ➡️ ___</ul>",
+            woerter: ["ait", "aies", "ayez", "aie", "ayons", "aient"],
+            korrekt: "aie"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
+            "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
+            "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
+            "<ul>je aie</ul>"+
+            "<ul>tu ➡️ ___</ul>",
+            woerter: ["ait", "aies", "ayez",  "ayons", "aient"],
+            korrekt: "aies"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
+            "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
+            "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
+            "<ul>je aie</ul>"+
+            "<ul>tu aies</ul>"+
+            "<ul>il/elle/on ➡️ ___</ul>",
+            woerter: ["ait", "ayez",  "ayons", "aient"],
+            korrekt: "ait"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
+            "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
+            "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
+            "<ul>je aie</ul>"+
+            "<ul>tu aies</ul>"+
+            "<ul>tu ait</ul>"+
+            "<ul>nous ➡️ ___</ul>",
+            woerter: ["ayez",  "ayons", "aient"],
+            korrekt: "ayons"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
+            "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
+            "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
+            "<ul>je aie</ul>"+
+            "<ul>tu aies</ul>"+
+            "<ul>tu ait</ul>"+
+            "<ul>nous ayons</ul>"+
+            "<ul>vous ➡️ ___</ul>",
+            woerter: ["ayez", "aient"],
+            korrekt: "ayez"
+        },
+        { 
+            ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
+            satz: "<small>Zu guter letzt haben wir noch die Verben <em>être</em> und <em>avoir</em>. Hier ist alles anders: "+
+            "Der Stamm und die Endungen. 😵‍💫 Aber das hast du sicher schnell raus 😌"+
+            "Versuche mal zuzuordnen für <strong>être</strong>: <br><br></small>"+
+            "<ul>je aie</ul>"+
+            "<ul>tu aies</ul>"+
+            "<ul>tu ait</ul>"+
+            "<ul>nous ayons</ul>"+
+            "<ul>vous ayez</ul>"+
+            "<ul>ils/elles ➡️ ___</ul>",
+            woerter: ["aient"],
+            korrekt: "aient"
+        },
+        //POPUP: Gut, jetzt haben wir auch wirklich alles wiederholt. Jetzt üben wir die unregelmäßigen Formen noch ein wenig 🔁🔎 
+        { 
+            ueberschrift: "Exprimer son opinion",
+            satz: "Il est important qu'on➡️ ___  (être) actif/-ive dans la société.<br>"+
+            "<small>(Es ist wichtig aktiv in der Gesellschaft zu sein)</small>",
+            woerter: ["soit", "est"],
+            korrekt: "soit"
+        },
+        { 
+            ueberschrift: "Exprimer son opinion",
+            satz: "Il faut que nous➡️ ___  (protéger) l’écosystème.<br>"+
+            "<small>(Wir müssen das Ökosystem schützen.)</small>",
+            woerter: ["protégions", "protégeons"],
+            korrekt: "protégions"
+        },
+        { 
+            ueberschrift: "Exprimer son opinion",
+            satz: "Je ne crois pas que le gaspillage d'énergie ➡️ ___  (être) une bonne idée.<br>"+
+            "<small>(Ich glaube nicht, dass Energieverschwendung eine gute Idee ist...)</small>",
+            woerter: ["soit", "est"],
+            korrekt: "soit"
+        },
+        { 
+            ueberschrift: "Exprimer son opinion",
+            satz: "Je trouve super que vous ➡️ ___  (utiliser) souvent les transports en commun .<br>"+
+            "<small>(Ich finde es super, dass ihr häufig die öffentlichen Verkehrsmittel benutzt)</small>",
+            woerter: ["utilisez", "utilisiez"],
+            korrekt: "utilisez"
+        },
+        { 
+            ueberschrift: "Exprimer son opinion",
+            satz: "Il es imortant que nous➡️ ___  (lutter) contre le gaspillage d'énergie .<br>"+
+            "<small>(Es ist wichtig, dass wir die Energieverschwendung bekämpfen.)</small>",
+            woerter: ["luttions", "luttons"],
+            korrekt: "luttions"
+        },
+        //  Genau, hier Indikativ und nicht Subjonctif 👍
+        //POPUP: Okay, jetzt üben wir die unregelmäßigen Formen noch ein wenig 🔁🔎   
         { satz: "Bien que nous ___ (être) fatigués, nous continuons.", woerter: ["soyons", "sommes", "sera"], korrekt: "soyons" },
         { satz: "Je ne pense pas que ce / c' ___ (être) une bonne idée !", woerter: ["soit", "est", "sera"], korrekt: "soit" }
     ];
