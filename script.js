@@ -215,6 +215,44 @@ if (thema === "subjonctif") {
             woerter: ["Verneint", "Bejaht"],
             korrekt: "Verneint"
         },
+        { 
+            ueberschrift: "Meinung äußern (Subjonctif)",
+            satz: "Außerdem benutzt man den Subjonctif bei bestimmten Ausdrücken, wie z.B.: <em> Il est important que ... , Il faut que ..., Il est nécessaire que ... , Il est dommage que ...</em><br>"+
+            "Versuche für jeden der vier Ausrücke die richtige Übersetzung zu finden: <br><br>"+
+            "<ul><em>Il est important que ... </em> = ➡️ ___ </ul>.",
+            woerter: ["Es ist wichtig, dass...", "Es ist notwendig, dass ...", "Man muss ...", "Es ist schade, dass ..."],
+            korrekt: "Es ist wichtig, dass..."
+        },
+        { 
+            ueberschrift: "Meinung äußern (Subjonctif)",
+            satz: "Außerdem benutzt man den Subjonctif bei bestimmten Ausdrücken, wie z.B.: <em> Il est important que ... , Il faut que ..., Il est nécessaire que ... , Il est dommage que ...</em><br>"+
+            "Versuche für jeden der vier Ausrücke die richtige Übersetzung zu finden: <br><br>"+
+            "<ul><em>Il est important que ... </em> = Es ist wichtig, dass...</ul>."+
+            "<ul><em>Il est nécessaire que ... </em> = ➡️ ___ </ul>.",
+            woerter: ["Es ist notwendig, dass ...", "Man muss ...", "Es ist schade, dass ..."],
+            korrekt: "Es ist notwendig, dass ..."
+        },
+        { 
+            ueberschrift: "Meinung äußern (Subjonctif)",
+            satz: "Außerdem benutzt man den Subjonctif bei bestimmten Ausdrücken, wie z.B.: <em> Il est important que ... , Il faut que ..., Il est nécessaire que ... , Il est dommage que ...</em><br>"+
+            "Versuche für jeden der vier Ausrücke die richtige Übersetzung zu finden: <br><br>"+
+            "<ul><em>Il est important que ... </em> = Es ist wichtig, dass...</ul>."+
+            "<ul><em>Il est nécessaire que ... </em> = Es ist notwendig, dass ...</ul>."+
+            "<ul><em>Il est dommage que ... </em> = ➡️ ___ </ul>.",
+            woerter: ["Man muss ...", "Es ist schade, dass ..."],
+            korrekt: "Es ist schade, dass ..."
+        },
+        { 
+            ueberschrift: "Meinung äußern (Subjonctif)",
+            satz: "Außerdem benutzt man den Subjonctif bei bestimmten Ausdrücken, wie z.B.: <em> Il est important que ... , Il faut que ..., Il est nécessaire que ... , Il est dommage que ...</em><br>"+
+            "Versuche für jeden der vier Ausrücke die richtige Übersetzung zu finden: <br><br>"+
+            "<ul><em>Il est important que ... </em> = Es ist wichtig, dass...</ul>."+
+            "<ul><em>Il est nécessaire que ... </em> = Es ist notwendig, dass ...</ul>."+
+            "<ul><em>Il est dommage que ... </em> = Es ist schade, dass ... </ul>."+
+            "<ul><em>Il faut que ... </em> = ➡️ ___ </ul>.",
+            woerter: ["Man muss ..."],
+            korrekt: "Man muss ..."
+        },
         { satz: "Bien que nous ___ (être) fatigués, nous continuons.", woerter: ["soyons", "sommes", "sera"], korrekt: "soyons" },
         { satz: "Je ne pense pas que ce / c' ___ (être) une bonne idée !", woerter: ["soit", "est", "sera"], korrekt: "soit" }
     ];
