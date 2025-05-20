@@ -63,15 +63,68 @@ console.log("Das Thema ist:", thema);
 
 if (thema === "subjonctif") {
     aufgaben = [
-        { satz:
-            "Wollen wir unsere Meinung oder Einschätzung zu etwas mitteilen, so benutzen wir den normalen <strong>Indikativ</strong>, falls wir "+
-            "etwas als wahrscheinlich oder  ___ einschätzen.<br><br>"+
+        { 
+            ueberschrift: "Meinung äußern (Indikativ)",
+            satz: "Wollen wir unsere Meinung oder Einschätzung zu etwas mitteilen, so benutzen wir den normalen <strong>Indikativ</strong>, falls wir "+
+            "etwas als wahrscheinlich oder ___ einschätzen.<br><br>"+
             "<ul><em>Je crois que</em> c'<strong>est</strong> une bonne idée ! <br> <small>(Ich glaube, dass das eine gute Idee ist!)</small> </ul>"+
-            "<ul><em>Je pense que</em> les énergies renouvelables <strong> sont </strong> importantes pour le futur de la planète. <br>"+
+            "<ul><em>Je pense que</em> les énergies renouvelables <strong> sont </strong> importantes pour l'avenir' de la planète. <br>"+
             "<small>(Ich denke, dass die erneuerbaren Energien wichtig sind für die Zukunft des Planeten)</small> </ul>"+
             "<ul><em>Je suis convaincu(e) que</em> nos villes <strong> sont </strong> trop polluées. <br>"+
             "<small>(Ich bin überzeugt, dass unsere Städte zu verschmutzt sind.)</small> </ul>", 
-            woerter: ["sicher", "unsicher"], korrekt: "sicher" },
+            woerter: ["sicher", "unsicher"],
+            korrekt: "sicher"
+        },
+        { 
+            ueberschrift: "Meinung äußern (Indikativ)",
+            satz: "<small>Ein paar Ausdrücke zum Formulieren der eigenen Meinung mit Indikativ</small)>"+
+            "Ordne zu: <br><br>"+
+            "<ul>Ich finde, dass ... - ___ </ul>",
+            woerter: ["Je pense que ...", "Je suis convaincu(e) que ...", "Je trouve que ...", "Je crois que ...", "Je suis d'avis que ..."], 
+            korrekt: "Je trouve que ..."
+        },     
+        { 
+            ueberschrift: "Meinung äußern (Indikativ)",
+            satz: "<small>Ein paar Ausdrücke zum Formulieren der eigenen Meinung mit Indikativ</small)>"+
+            "Ordne zu: <br><br>"+
+            "<ul>Ich finde, dass ... - Je trouve que ... </ul>"+
+            "<ul>Ich glaube, dass ... - ___ </ul>",
+            woerter: ["Je pense que ...", "Je suis convaincu(e) que ...", "Je suis d'avis que ..."], 
+            korrekt: "Je crois que ..."
+        },   
+        { 
+            ueberschrift: "Meinung äußern (Indikativ)",
+            satz: "<small>Ein paar Ausdrücke zum Formulieren der eigenen Meinung mit Indikativ</small)>"+
+            "Ordne zu: <br><br>"+
+            "<ul>Ich finde, dass ... - Je trouve que ... </ul>"+
+            "<ul>Ich glaube, dass ... - Je crois que ... </ul>"+
+            "<ul>Ich bin überzeugt, dass... - ___ </ul>",
+            woerter: ["Je pense que ...", "Je suis convaincu(e) que ...", "Je suis d'avis que ..."], 
+            korrekt: "Je suis convaincu(e) que ..."
+        },   
+        { 
+            ueberschrift: "Meinung äußern (Indikativ)",
+            satz: "<small>Ein paar Ausdrücke zum Formulieren der eigenen Meinung mit Indikativ</small)>"+
+            "Ordne zu: <br><br>"+
+            "<ul>Ich finde, dass... - Je trouve que ... </ul>"+
+            "<ul>Ich glaube, dass... - Je crois que ... </ul>"+
+            "<ul>Ich bin überzeugt, dass... - Je suis convaincu(e) que </ul>"+
+            "<ul>Ich denke, dass... - ___ </ul>",
+            woerter: ["Je pense que ...", "Je suis d'avis que ..."], 
+            korrekt: "Je pense que ..."
+        }, 
+        { 
+            ueberschrift: "Meinung äußern (Indikativ)",
+            satz: "<small>Ein paar Ausdrücke zum Formulieren der eigenen Meinung mit Indikativ</small)>"+
+            "Ordne zu: <br><br>"+
+            "<ul>Ich finde, dass... - Je trouve que ... </ul>"+
+            "<ul>Ich glaube, dass... - Je crois que ... </ul>"+
+            "<ul>Ich bin überzeugt, dass... - Je suis convaincu(e) que </ul>"+
+            "<ul>Ich denke, dass... - Je pense que ...</ul>"+
+            "<ul>Ich bin der Meinung, dass... - ___ </ul>",
+            woerter: ["Je suis d'avis que ..."], 
+            korrekt: "Je suis d'avis que ..."
+        }, 
         { satz: "Bien que nous ___ (être) fatigués, nous continuons.", woerter: ["soyons", "sommes", "sera"], korrekt: "soyons" },
         { satz: "Je ne pense pas que ce / c' ___ (être) une bonne idée !", woerter: ["soit", "est", "sera"], korrekt: "soit" }
     ];
