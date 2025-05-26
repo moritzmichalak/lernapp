@@ -1322,7 +1322,7 @@ if (thema === "subjonctif") {
             "<ul>7. Meike: Oui, c'est vrai, et souvent, on <strong> mange </strong> trop... et trop vite ! </ul>"+
             "<ul>8. Rose: Tiens, les gens là-bas ➡️ ____ déjà leurs entrées.... hmm ! On commande aussi ? ... </ul>",
             typ: "text",
-            korrekt: "mangez",
+            korrekt: "mangent",
             bild: "img/manger_boire.png"
         },
         {    
