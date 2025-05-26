@@ -1929,17 +1929,19 @@ const erklaerungen = {
     }, 
     bilan: {
         2: {
-            titel: "Très bien !👏 ",
+            titel: "Très bien !👏",
             text: "Sicher ist dir schon aufgefallen, dass <em>boire</em> ist ein unregelmäßiges Verb."
         },
         4: {
-            titel: "Bravo !👏 ",
+            titel: "Bravo !👏",
             text: "Hier war <em>bu</em> richtig (das Partizip Passé von <em>boire</em>) da wir in der Vergangenheitsform <em>Passé Composé</em> sind."
         },
         8: {
-            titel: "fast regelmäßig...",
-            text: "Wie du siehst, verhält sich <em>manger</em> sich fast regelmäßig. Nur bei <em>nous</em>, gibt es eine kleine Unregelmäßigkeit..."
+            titel: "Fast regelmäßig...",
+            text: "Wie du siehst, verhält sich <em>manger</em> bisher regelmäßig. Nur bei <em>nous</em>, gibt es eine kleine Unregelmäßigkeit..."
         }
+
+
     }
 
 };
