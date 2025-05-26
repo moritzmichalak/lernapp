@@ -1938,10 +1938,8 @@ const erklaerungen = {
         },
         8: {
             titel: "fast regelmäßig...",
-            text: "Wie du siehst verhält sich <em>manger</em> sich fast regelmäßig. Nur bei <em>nous</em>, gibt es eine kleine Unregelmäßigkeit..."
-        },
-
-
+            text: "Wie du siehst, verhält sich <em>manger</em> sich fast regelmäßig. Nur bei <em>nous</em>, gibt es eine kleine Unregelmäßigkeit..."
+        }
     }
 
 };
