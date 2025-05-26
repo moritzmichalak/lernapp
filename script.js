@@ -1229,7 +1229,7 @@ if (thema === "subjonctif") {
         },
         // { satz: "Si on avait beaucoup d'argent, on ___ (faire) un grand voyage.", woerter: ["faissait", "ferait", "fairiait"], korrekt: "ferait" }
     ];
-} else if (thema === "Bilan") {
+} else if (thema === "bilan") {
     aufgaben = [
         {    
             ueberschrift: "Meike et Rose vont au Restaurant. Complétez avec les formes de <strong>manger</strong> et <strong>boire</strong>.",
