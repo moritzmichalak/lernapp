@@ -1337,7 +1337,7 @@ if (thema === "subjonctif") {
             "<ul>8. Rose: Tiens, les gens là-bas <strong> mangez </strong> déjà leurs entrées.... hmm ! On commande aussi ? ... </ul>"+
             "<ul>9. (plus tard) <br> Rose: Ah, voilà nos salades. ➡️ ____, j'ai faim !</ul>",
             typ: "text",
-            korrekt: "mangez",
+            korrekt: "mangeons",
             bild: "img/manger_boire.png"
         }
     ]
@@ -1929,11 +1929,17 @@ const erklaerungen = {
     }, 
     bilan: {
         2: {
-            titel: "Très bien !👏 Sicher ist dir schon aufgefallen, dass <em>boire</em> ist ein unregelmäßiges Verb."
+            titel: "Très bien !👏 ",
+            text: "Sicher ist dir schon aufgefallen, dass <em>boire</em> ist ein unregelmäßiges Verb."
         },
         4: {
-            titel: "Bravo !👏 Hier war <em>bu</em> richtig (das Partizip Passé von <em>boire</em>) da wir in der Vergangenheitsform <em>Passé Composé</em> sind."
-        }
+            titel: "Bravo !👏 ",
+            text: "Hier war <em>bu</em> richtig (das Partizip Passé von <em>boire</em>) da wir in der Vergangenheitsform <em>Passé Composé</em> sind."
+        },
+        8: {
+            titel: "fast regelmäßig...",
+            text: "Wie du siehst verhält sich <em>manger</em> sich fast regelmäßig. Nur bei <em>nous</em>, gibt es eine kleine Unregelmäßigkeit..."
+        },
 
 
     }
