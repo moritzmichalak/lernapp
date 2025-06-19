@@ -1,6 +1,7 @@
 const db = firebase.firestore();
 let schuelerId = "";
 let istWiederholung = false;
+let userAntworten = {};
 
 function entferneAccents(str) {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -1341,8 +1342,22 @@ if (thema === "subjonctif") {
             bild: "img/manger_boire.png"
         }
     ]
+} else if (thema === "recette") {
+  aufgaben = [
+    {
+      ueberschrift: "🍎 Ingrédients",
+      typ: "text",
+      korrekt: "", // keine Bewertung nötig
+      speichereAls: "ingredients"
+    },
+    {
+      ueberschrift: "🍳 Préparation",
+      typ: "text",
+      korrekt: "", // keine Bewertung nötig
+      referenziert: "ingredients" // auf vorherige Antwort verweisen
+    }
+  ];
 }
-
 
 /* else {
     alert("Kein gültiges Thema gewählt. Du wirst zur Themenwahl zurückgeleitet.");
@@ -1430,6 +1445,16 @@ function ladeLevel() {
         checkAnswerBtn.style.display = "none";
         if (dropzone) dropzone.style.display = "none";
 
+        // ✨ 19.06.25: Falls Referenz vorhanden, vorherige Antwort anzeigen
+        const promptLabel = document.getElementById('textPrompt');
+        if (aufgabe.referenziert && userAntworten[aufgabe.referenziert]) {
+            promptLabel.innerHTML =
+                `<p><strong>${aufgabe.ueberschrift || ""}</strong></p>` +
+                `<p><u>Ingrédients:</u><br>${userAntworten[aufgabe.referenziert].replace(/\n/g, "<br>")}</p>`;
+        } else {
+            promptLabel.innerHTML = `<strong>${aufgabe.ueberschrift || ""}</strong>`;
+        }
+
     // 🛠️ Normalfall: Drag & Drop
     } else {
         const luecke = '<span class="dropzone"><span class="placeholder">...</span></span>';
@@ -1451,7 +1476,7 @@ function ladeLevel() {
                 : wort;
 
         wordsDiv.innerHTML += `<div class="word" onclick="wordClick(event)" id="word${index}">${formattedWord}</div>`;
-});
+        });
     }
     // Überschrift einblenden 
     const ueberschriftDiv = document.getElementById('ueberschrift');
@@ -1471,77 +1496,6 @@ function ladeLevel() {
     document.getElementById('punkteDisplay').innerText = punkte;
     updateProgressBar();
 
-    //Vor 14.05 01:58 Uhr
-    /*
-    const luecke = '<span class="dropzone"><span class="placeholder">...</span></span>';
-    const satzMitLuecke = aufgabe.satz.replace("___", luecke);
-    document.getElementById('sentence').innerHTML = satzMitLuecke;
-
-
-    const dropzone = document.querySelector('.dropzone');
-    // 13.05.25:
-    if (dropzone) {
-        dropzone.innerHTML = "<span class='placeholder'>...</span>";
-        dropzone.style.display = "inline-flex";
-    }
-    dropzone.innerHTML = "<span class='placeholder'>...</span>";
-    dropzone.style.display = "inline-flex";
-
-    document.getElementById('levelDisplay').innerText = aktuellesLevel;
-    document.getElementById('punkteDisplay').innerText = punkte;
-    document.getElementById('feedback').innerText = "";
-    document.getElementById('nextLevelBtn').style.display = "none";
-
-    const wordsDiv = document.getElementById('words');
-    wordsDiv.innerHTML = "";
-
-    // 13.05.25:
-    const textContainer = document.getElementById('textAntwortContainer'); // 🔧 NEU
-    const textInput = document.getElementById('textInput'); // 🔧 NEU
-
-    const checkAnswerBtn = document.getElementById('checkAnswerBtn'); // ✅ NEU
-
-
-    if (aufgabe.typ === "text") {
-        if (dropzone) dropzone.style.display = "none"; // 🔧 NEU
-        wordsDiv.style.display = "none"; // 🔧 NEU
-        checkAnswerBtn.style.display = "none";      // ❌ ausblenden
-        textContainer.style.display = "block"; // 🔧 NEU
-        if (textInput) textInput.value = ""; // 🔧 NEU: Eingabe leeren
-    } else if (aufgabe.typ === "reflexion") {
-        const container = document.getElementById("sentence");
-        container.innerHTML = `
-          <p>${aufgabe.satz}</p>
-          <textarea id="reflexionInput" rows="6" placeholder="z. B. Ich habe gelernt, dass ..."></textarea>
-          <br>
-          <button onclick="saveReflexion()">Speichern & Abschließen</button>
-        `;
-        document.getElementById("words").innerHTML = "";
-        document.getElementById("bildContainer").innerHTML = aufgabe.bild
-          ? `<img src="${aufgabe.bild}" class="aufgabenbild">`
-          : "";       
-    } else {
-        if (dropzone) dropzone.style.display = "inline-flex"; // 🔧 NEU
-        wordsDiv.style.display = "flex"; // 🔧 NEU
-        checkAnswerBtn.style.display = "inline-block"; // ✅ einblenden
-        textContainer.style.display = "none"; // 🔧 NEU
-
-        aufgabe.woerter.forEach((wort, index) => {
-            wordsDiv.innerHTML += `<div class="word" onclick="wordClick(event)" id="word${index}">${wort}</div>`;
-        });
-    }
-    if (aufgabe.bild) {
-        console.log("Wir haben ein Bild.");
-        document.getElementById('bildContainer').innerHTML = 
-        `<img src="${aufgabe.bild}" alt="Bild zur Aufgabe" class="aufgabenbild">`;
-    } else {
-        console.log("Wir haben kein Bild.");
-        document.getElementById('bildContainer').innerHTML = "";
-    };
-    // document.querySelector('.dropzone').innerHTML = "<span>Hier ablegen</span>";
-    console.log("Ich bin in lade level und sollte jetzt die ProgressBar abfeuern");
-    updateProgressBar();
-    */
     const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
     if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
         showPopup(erklaerung.titel, erklaerung.text);
@@ -1987,6 +1941,11 @@ function checkTextAnswer() {
         }
     }
     // const isCorrect = richtigeAntworten.includes(antwort);
+
+    // 19.06.25: Antwort für spätere Verwendung speichern
+    if (aufgabe.speichereAls) {
+        userAntworten[aufgabe.speichereAls] = input.value.trim(); // Originaltext
+    }
 
     if (isCorrect) {
         if (accentFehler) {
