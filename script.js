@@ -1543,6 +1543,13 @@ function checkAnswer() {
     const dropzone = document.querySelector('.dropzone');
     const feedback = document.getElementById('feedback');
 
+    // 19.06.25
+    if (!dropzone) {
+        feedback.innerText = "⚠️ Diese Aufgabe verwendet kein Drag & Drop.";
+        return;
+    }
+
+
     if (!schuelerId) {
         feedback.innerText = "⚠️ Keine Schüler-ID gefunden.";
         return;
