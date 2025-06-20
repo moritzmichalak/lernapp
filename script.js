@@ -2122,17 +2122,19 @@ function closeLinkPopup() {
 }
 
 function saveTextarea() {
-    const textarea = document.getElementById("textareaInput");
-    const text = textarea.value.trim();
+    const input = document.getElementById('textareaInput');
+    const text = input?.value.trim();
+
     if (!text) {
-        alert("Bitte gib etwas ein.");
+        alert("Bitte schreibe eine Antwort.");
         return;
     }
 
     const aufgabe = aufgaben[aktuellesLevel - 1];
+    const satz = aufgabe.satz || "(textarea-Eingabe ohne Satz)";
 
-    // Zusatz: Text für Folgeaufgabe speichern (z. B. Zutaten für spätere Anzeige)
-    if (!sessionStorage.getItem("ingrédients")) {
+    // Optional: Speichere Ingrédients für spätere Anzeige
+    if (satz.toLowerCase().includes("ingrédients")) {
         sessionStorage.setItem("ingrédients", text);
     }
 
@@ -2140,15 +2142,15 @@ function saveTextarea() {
         schuelerId,
         thema,
         level: aktuellesLevel,
-        aufgabe: aufgabe.satz,
+        aufgabe: satz,  // ✔️ Immer ein gültiger Wert
         antwort: text,
-        korrekt: null,
-        punkte: punkte,
+        korrekt: true,
+        punkte,
         timestamp: new Date()
     });
 
     aktuellesLevel++;
-    document.getElementById("punkteDisplay").innerText = punkte;
+    updateProgressBar();
     ladeLevel();
 }
 /*
