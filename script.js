@@ -1346,13 +1346,13 @@ if (thema === "subjonctif") {
   aufgaben = [
     {
       ueberschrift: "🍎 Ingrédients",
-      typ: "text",
+      typ: "textarea",
       korrekt: "", // keine Bewertung nötig
       speichereAls: "ingredients"
     },
     {
       ueberschrift: "🍳 Préparation",
-      typ: "text",
+      typ: "textarea",
       korrekt: "", // keine Bewertung nötig
       referenziert: "ingredients" // auf vorherige Antwort verweisen
     }
@@ -1458,6 +1458,25 @@ function ladeLevel() {
         } else {
             promptLabel.innerHTML = `<strong>${aufgabe.ueberschrift || ""}</strong>`;
         }
+    } if (aufgabe.typ === "textarea") {
+    sentenceContainer.innerHTML = `
+        <p>${aufgabe.satz}</p>
+        <textarea id="textareaInput" rows="6" placeholder="z. B. 2 œufs, 200g de farine, ..."></textarea>
+        <br>
+        <button onclick="saveTextarea()">Speichern & Weiter</button>
+    `;
+    wordsDiv.style.display = "none";
+    textContainer.style.display = "none";
+    checkAnswerBtn.style.display = "none";
+    if (dropzone) dropzone.style.display = "none";
+
+    // Bild zeigen, falls vorhanden
+    if (aufgabe.bild) {
+        bildContainer.innerHTML = `<img src="${aufgabe.bild}" alt="Bild zur Aufgabe" class="aufgabenbild">`;
+    }
+
+    updateProgressBar();
+    return;
 
     // 🛠️ Normalfall: Drag & Drop
     } else {
@@ -2102,6 +2121,36 @@ function closeLinkPopup() {
     window.location.href = "themenwahl.html";
 }
 
+function saveTextarea() {
+    const textarea = document.getElementById("textareaInput");
+    const text = textarea.value.trim();
+    if (!text) {
+        alert("Bitte gib etwas ein.");
+        return;
+    }
+
+    const aufgabe = aufgaben[aktuellesLevel - 1];
+
+    // Zusatz: Text für Folgeaufgabe speichern (z. B. Zutaten für spätere Anzeige)
+    if (!sessionStorage.getItem("ingrédients")) {
+        sessionStorage.setItem("ingrédients", text);
+    }
+
+    db.collection("antworten").add({
+        schuelerId,
+        thema,
+        level: aktuellesLevel,
+        aufgabe: aufgabe.satz,
+        antwort: text,
+        korrekt: null,
+        punkte: punkte,
+        timestamp: new Date()
+    });
+
+    aktuellesLevel++;
+    document.getElementById("punkteDisplay").innerText = punkte;
+    ladeLevel();
+}
 /*
 window.logout = logout;
 window.zurueckThemenwahl = zurueckThemenwahl;
