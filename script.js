@@ -1462,17 +1462,17 @@ function ladeLevel() {
     }if (aufgabe.typ === "textarea") {
         const ueberschriftDiv = document.getElementById('ueberschrift');
         const previousIngredients = sessionStorage.getItem("ingredients") || "<em>Keine Angaben</em>";
-        
+
         // 🧾 Überschrift anzeigen
         ueberschriftDiv.innerHTML = aufgabe.ueberschrift
             ? `<h3>${aufgabe.ueberschrift}</h3>`
             : "<h3>Frage</h3>";
-        
+
         // 📝 Satz anzeigen inkl. ggf. Platzhalter-Ersetzung
         const satzText = aufgabe.satz?.includes("___")
             ? aufgabe.satz.replace("___", previousIngredients)
             : aufgabe.satz || "";
-        
+
         // 📥 Textfeld und Button rendern
         sentenceContainer.innerHTML = `
             ${satzText ? `<p>${satzText}</p>` : ""}
@@ -1481,18 +1481,18 @@ function ladeLevel() {
             <br>
             <button onclick="saveTextarea()">Speichern und weiter</button>
         `;
-        
+
         // UI bereinigen
         wordsDiv.style.display = "none";
         textContainer.style.display = "none";
         checkAnswerBtn.style.display = "none";
         if (dropzone) dropzone.style.display = "none";
-        
+
         // Bild laden
         bildContainer.innerHTML = aufgabe.bild
             ? `<img src="${aufgabe.bild}" alt="Bild zur Aufgabe" class="aufgabenbild">`
             : "";
-        
+
         updateProgressBar();
         return; // Wichtig, um weiteren Code zu verhindern
     
@@ -2142,27 +2142,26 @@ function closeLinkPopup() {
 
 function saveTextarea() {
     const input = document.getElementById('textareaInput');
-    const text = input?.value.trim();
+    const antwort = input.value.trim();
+    const aufgabe = aufgaben[aktuellesLevel - 1];
 
-    if (!text) {
-        alert("Bitte schreibe eine Antwort.");
+    if (!antwort) {
+        alert("Bitte gib eine Antwort ein.");
         return;
     }
 
-    const aufgabe = aufgaben[aktuellesLevel - 1];
-    const satz = aufgabe.satz || "(textarea-Eingabe ohne Satz)";
-
-    // Optional: Speichere Ingrédients für spätere Anzeige
-    if (satz.toLowerCase().includes("ingrédients")) {
-        sessionStorage.setItem("ingrédients", text);
+    // 🔑 Wenn aktuelle Aufgabe die Ingrédients ist, speichern in sessionStorage
+    if (aufgabe.ueberschrift?.toLowerCase().includes("ingrédient")) {
+        sessionStorage.setItem("ingredients", antwort);
     }
 
+    // Speichern in Firestore
     db.collection("antworten").add({
         schuelerId,
         thema,
         level: aktuellesLevel,
-        aufgabe: satz,  // ✔️ Immer ein gültiger Wert
-        antwort: text,
+        aufgabe: aufgabe.satz || aufgabe.ueberschrift || "textarea",
+        antwort: antwort,
         korrekt: true,
         punkte,
         timestamp: new Date()
