@@ -1459,24 +1459,35 @@ function ladeLevel() {
             promptLabel.innerHTML = `<strong>${aufgabe.ueberschrift || ""}</strong>`;
         }
     } if (aufgabe.typ === "textarea") {
-    sentenceContainer.innerHTML = `
-        <p>${aufgabe.satz}</p>
-        <textarea id="textareaInput" rows="6" placeholder="z. B. 2 œufs, 200g de farine, ..."></textarea>
-        <br>
-        <button onclick="saveTextarea()">Speichern & Weiter</button>
-    `;
-    wordsDiv.style.display = "none";
-    textContainer.style.display = "none";
-    checkAnswerBtn.style.display = "none";
-    if (dropzone) dropzone.style.display = "none";
-
-    // Bild zeigen, falls vorhanden
-    if (aufgabe.bild) {
-        bildContainer.innerHTML = `<img src="${aufgabe.bild}" alt="Bild zur Aufgabe" class="aufgabenbild">`;
+        const ueberschriftDiv = document.getElementById('ueberschrift');
+        const previousIngredients = sessionStorage.getItem("ingredients") || "<em>Keine Angaben</em>";
+        
+        // Titel anzeigen (z.B. "Ingrédients" oder "Préparation")
+        ueberschriftDiv.innerHTML = aufgabe.ueberschrift
+            ? `<h3>${aufgabe.ueberschrift}</h3>`
+            : "<h3>Frage</h3>";
+        
+        // Eingabe-Textfeld anzeigen
+        sentenceContainer.innerHTML = `
+            ${aufgabe.ueberschrift === "Préparation" ? `<p><strong>Deine Ingrédients:</strong><br>${previousIngredients}</p>` : ""}
+            <textarea id="textareaInput" rows="6" placeholder="Antwort eingeben..."></textarea>
+            <br>
+            <button onclick="saveTextareaAnswer()">Speichern und weiter</button>
+        `;
+        
+        // Sonstiges ausblenden
+        wordsDiv.style.display = "none";
+        textContainer.style.display = "none";
+        checkAnswerBtn.style.display = "none";
+        if (dropzone) dropzone.style.display = "none";
+        
+        bildContainer.innerHTML = aufgabe.bild
+            ? `<img src="${aufgabe.bild}" alt="Bild zur Aufgabe" class="aufgabenbild">`
+            : "";
+        
+        updateProgressBar();
+        return; // Wichtig!
     }
-
-    updateProgressBar();
-    return;
 
     // 🛠️ Normalfall: Drag & Drop
     } else {
