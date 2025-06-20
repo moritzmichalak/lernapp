@@ -1461,12 +1461,12 @@ function ladeLevel() {
     } if (aufgabe.typ === "textarea") {
         const ueberschriftDiv = document.getElementById('ueberschrift');
         const previousIngredients = sessionStorage.getItem("ingredients") || "<em>Keine Angaben</em>";
-        
+
         // Titel anzeigen (z.B. "Ingrédients" oder "Préparation")
         ueberschriftDiv.innerHTML = aufgabe.ueberschrift
             ? `<h3>${aufgabe.ueberschrift}</h3>`
             : "<h3>Frage</h3>";
-        
+
         // Eingabe-Textfeld anzeigen
         sentenceContainer.innerHTML = `
             ${aufgabe.ueberschrift === "Préparation" ? `<p><strong>Deine Ingrédients:</strong><br>${previousIngredients}</p>` : ""}
@@ -1474,20 +1474,19 @@ function ladeLevel() {
             <br>
             <button onclick="saveTextareaAnswer()">Speichern und weiter</button>
         `;
-        
+
         // Sonstiges ausblenden
         wordsDiv.style.display = "none";
         textContainer.style.display = "none";
         checkAnswerBtn.style.display = "none";
         if (dropzone) dropzone.style.display = "none";
-        
+
         bildContainer.innerHTML = aufgabe.bild
             ? `<img src="${aufgabe.bild}" alt="Bild zur Aufgabe" class="aufgabenbild">`
             : "";
-        
+
         updateProgressBar();
         return; // Wichtig!
-    }
 
     // 🛠️ Normalfall: Drag & Drop
     } else {
