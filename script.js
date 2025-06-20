@@ -1472,7 +1472,7 @@ function ladeLevel() {
             ${aufgabe.ueberschrift === "Préparation" ? `<p><strong>Deine Ingrédients:</strong><br>${previousIngredients}</p>` : ""}
             <textarea id="textareaInput" rows="6" placeholder="Antwort eingeben..."></textarea>
             <br>
-            <button onclick="saveTextareaAnswer()">Speichern und weiter</button>
+            <button onclick="saveTextarea()">Speichern und weiter</button>
         `;
 
         // Sonstiges ausblenden
