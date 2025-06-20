@@ -1353,6 +1353,7 @@ if (thema === "subjonctif") {
     {
       ueberschrift: "🍳 Préparation",
       typ: "textarea",
+      satz: "Merci pour ta liste d’ingrédients : <strong>___</strong><br>Décris maintenant les étapes de la préparation :",
       korrekt: "", // keine Bewertung nötig
       referenziert: "ingredients" // auf vorherige Antwort verweisen
     }
