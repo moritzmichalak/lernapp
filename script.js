@@ -1459,35 +1459,43 @@ function ladeLevel() {
         } else {
             promptLabel.innerHTML = `<strong>${aufgabe.ueberschrift || ""}</strong>`;
         }
-    } if (aufgabe.typ === "textarea") {
+    }if (aufgabe.typ === "textarea") {
         const ueberschriftDiv = document.getElementById('ueberschrift');
         const previousIngredients = sessionStorage.getItem("ingredients") || "<em>Keine Angaben</em>";
-
-        // Titel anzeigen (z.B. "Ingrédients" oder "Préparation")
+        
+        // 🧾 Überschrift anzeigen
         ueberschriftDiv.innerHTML = aufgabe.ueberschrift
             ? `<h3>${aufgabe.ueberschrift}</h3>`
             : "<h3>Frage</h3>";
-
-        // Eingabe-Textfeld anzeigen
+        
+        // 📝 Satz anzeigen inkl. ggf. Platzhalter-Ersetzung
+        const satzText = aufgabe.satz?.includes("___")
+            ? aufgabe.satz.replace("___", previousIngredients)
+            : aufgabe.satz || "";
+        
+        // 📥 Textfeld und Button rendern
         sentenceContainer.innerHTML = `
-            ${aufgabe.ueberschrift === "Préparation" ? `<p><strong>Deine Ingrédients:</strong><br>${previousIngredients}</p>` : ""}
+            ${satzText ? `<p>${satzText}</p>` : ""}
+            ${aufgabe.ueberschrift === "Préparation" && !satzText ? `<p><strong>Deine Ingrédients:</strong><br>${previousIngredients}</p>` : ""}
             <textarea id="textareaInput" rows="6" placeholder="Antwort eingeben..."></textarea>
             <br>
             <button onclick="saveTextarea()">Speichern und weiter</button>
         `;
-
-        // Sonstiges ausblenden
+        
+        // UI bereinigen
         wordsDiv.style.display = "none";
         textContainer.style.display = "none";
         checkAnswerBtn.style.display = "none";
         if (dropzone) dropzone.style.display = "none";
-
+        
+        // Bild laden
         bildContainer.innerHTML = aufgabe.bild
             ? `<img src="${aufgabe.bild}" alt="Bild zur Aufgabe" class="aufgabenbild">`
             : "";
-
+        
         updateProgressBar();
-        return; // Wichtig!
+        return; // Wichtig, um weiteren Code zu verhindern
+    
 
     // 🛠️ Normalfall: Drag & Drop
     } else {
