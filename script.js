@@ -1696,10 +1696,14 @@ function ladeLevel() {
         checkAnswerBtn.style.display = "inline-block";
         textContainer.style.display = "none";
 
-        aufgabe.woerter.forEach((wort, index) => {
-            const formattedWord = aufgabe.ueberschrift?.startsWith("Endungen")
-                ? formatWord(wort)
-                : wort;
+        if (Array.isArray(aufgabe.woerter)) {
+            aufgabe.woerter.forEach((wort, index) => {
+                const formattedWord = aufgabe.ueberschrift?.startsWith("Endungen")
+                    ? formatWord(wort)
+                    : wort;
+            // weitere Verarbeitung hier...
+            });
+}
 
         wordsDiv.innerHTML += `<div class="word" onclick="wordClick(event)" id="word${index}">${formattedWord}</div>`;
         });
