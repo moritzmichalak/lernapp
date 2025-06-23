@@ -1633,7 +1633,7 @@ function ladeLevel() {
         textContainer.style.display = "block";
         checkAnswerBtn.style.display = "none";
         if (dropzone) dropzone.style.display = "none";
-
+        /*
         // ✨ 19.06.25: Falls Referenz vorhanden, vorherige Antwort anzeigen
         const promptLabel = document.getElementById('textPrompt');
         if (aufgabe.referenziert && userAntworten[aufgabe.referenziert]) {
@@ -1643,6 +1643,7 @@ function ladeLevel() {
         } else {
             promptLabel.innerHTML = `<strong>${aufgabe.ueberschrift || ""}</strong>`;
         }
+        */
     }if (aufgabe.typ === "textarea") {
         const ueberschriftDiv = document.getElementById('ueberschrift');
         const previousIngredients = sessionStorage.getItem("ingredients") || "<em>Keine Angaben</em>";
