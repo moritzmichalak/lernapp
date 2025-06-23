@@ -1451,7 +1451,7 @@ if (thema === "subjonctif") {
         satz:
         "<ul><em> Un pot </em> <strong>de</strong> yaourt.</ul>"+
         "<ul><em> Une bouteille </em><strong>d'</strong> eau.</ul>"+
-        "<ul>Une ➡️ ___ </em><strong>d'</strong> œufs.<br>",
+        "<ul>Une ➡️ ___ </em><strong>d'</strong> huile.<br>",
         woerter: ["boîte", "cuillère"],
         korrekt: "cuillère",
         bild: "img/huile.jpg"
@@ -1486,7 +1486,7 @@ if (thema === "subjonctif") {
         ueberschrift: "Was sind bestimmte Mengen? 🤔 <br>"+
         "Auch Wörter wie beaucoup (= viel) bestimmten die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:",
         satz: 
-        "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong>Wasser.)</small></ul>"+
+        "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong> Wasser.)</small></ul>"+
         "<ul>Il y a ➡️ ___ eau.</ul>",
         woerter: [ "beaucoup de/d'", "trop de/d'", "pas de/d'"],
         korrekt: "beaucoup de/d'",
@@ -1496,8 +1496,8 @@ if (thema === "subjonctif") {
         ueberschrift: "Was sind bestimmte Mengen? 🤔 <br>"+
         "Auch Wörter wie beaucoup (= viel) bestimmten die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:",
         satz: 
-        "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong>Wasser.)</small></ul>"+
-        "<ul>Il y a <strong>beaucoup d'</strong>eau. <small>(Es gibt <strong>viel</strong>Wasser.)</small></ul>"+
+        "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong> Wasser.)</small></ul>"+
+        "<ul>Il y a <strong>beaucoup d'</strong>eau. <small>(Es gibt <strong>viel</strong> Wasser.)</small></ul>"+
         "<ul>Il y a ➡️ ___ eau.</ul>",
         woerter: ["trop de/d'", "pas de/d'"],
         korrekt: "trop de/d'",
@@ -1507,10 +1507,11 @@ if (thema === "subjonctif") {
         ueberschrift: "Was sind bestimmte Mengen? 🤔 <br>"+
         "Auch Wörter wie beaucoup (= viel) bestimmten die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:",
         satz: 
-        "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong>Wasser.)</small></ul>"+
-        "<ul>Il y a <strong>beaucoup d'</strong>eau. <small>(Es gibt <strong>viel</strong>Wasser.)</small></ul>"+
-        "<ul>Il y a <strong>trop d'</strong>eau. <small>(Es gibt <strong>zu viel</strong>Wasser.)</small></ul>"+
+        "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong> Wasser.)</small></ul>"+
+        "<ul>Il y a <strong>beaucoup d'</strong>eau. <small>(Es gibt <strong>viel</strong> Wasser.)</small></ul>"+
+        "<ul>Il y a <strong>trop d'</strong>eau. <small>(Es gibt <strong>zu viel</strong> Wasser.)</small></ul>"+
         "<ul>Il <strong>n'</strong>y a ➡️ ___ eau.</ul>",
+        woerter: ["pas de/d'"],
         korrekt: "pas de/d'",
         bild: "img/pas.png"
     }, 
