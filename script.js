@@ -1552,7 +1552,7 @@ if (thema === "subjonctif") {
             "<ul><small>Mathieu</small>: Alors, pour les ingrédients… Il faut 300 ➡️ ___ (Gramm Mehl), "+
             "3 ____ (Esslöffel Zucker), 2 ____ (Esslöffel Öl), 50 ____ (Gramm Butter), ____ (ein wenig Salz), 3 oeufs et 0,1 ____ (Liter Milch).</ul>",
         woerter: ["grammes de farine", "litres de lait", "bouteilles de farine", "grammes de sucre"],
-        korrekt: "grammes de",
+        korrekt: "grammes de farine",
         bild: "img/manonmathieu.png"
     }, 
     {    
