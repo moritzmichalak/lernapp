@@ -1414,8 +1414,7 @@ if (thema === "subjonctif") {
         typ: "text",
         korrekt: "de"
     },
-    // POPUP: Bravo ! 👏 Also eigentlich ganz einfach: Bei bestimmten Mengen benutzt man <em>de</em> bzw.<em>d'</em>.
-    // Aber was genau verstehen wir eigentlich unter einer bestimmten Menge? 🤔
+
     {    
         ueberschrift: "Was sind estimmte Mengen? 🤔 <br>"+
         "Mengen werden häufig in Maßeinheiten angegeben. Wie im Deutschen benutzt man im Französischen"+
@@ -1428,7 +1427,7 @@ if (thema === "subjonctif") {
         korrekt: "pot",
         bild: "img/yaourt.jpg"
     },
-    // Genau, <em>(un) pot</em> bedeutet ein <em>Becher</em>.
+
     {    
         ueberschrift: "Was sind estimmte Mengen? 🤔 <br>"+
         "Mengen werden häufig in Maßeinheiten angegeben. Wie im Deutschen benutzt man im Französischen"+
@@ -1972,13 +1971,13 @@ function wordClick(event) {
 function checkAnswer() {
     const dropzone = document.querySelector('.dropzone');
     const feedback = document.getElementById('feedback');
-
+    /*
     // 19.06.25
     if (!dropzone) {
         feedback.innerText = "⚠️ Diese Aufgabe verwendet kein Drag & Drop.";
         return;
     }
-
+    */
 
     if (!schuelerId) {
         feedback.innerText = "⚠️ Keine Schüler-ID gefunden.";
@@ -2341,6 +2340,26 @@ const erklaerungen = {
         }
 
 
+    }, recette: {
+        7: {
+            titel: "POPUP: Bravo ! 👏 Wir halten also fest:",
+            text: "Bei bestimmten Mengen benutzt man <em>de</em> bzw.<em>d'</em> <br>"+
+            "Aber was genau verstehen wir eigentlich unter einer bestimmten Menge? 🤔"
+        },
+        8: {
+             titel: "Genau, <em>(un) pot</em> bedeutet ein <em>Becher</em>. :)"
+        },
+        9: {
+            titel: "Bien joué !",
+            text:  "<em> (une) cuillère</em> bedeutet ein <em>Löffel</em>. Man unterscheidet  zwischen: <em>cuillère à thé (=Teelöffel)</em> und <em>cuillère à soupe (=Esslöffel)</em>."
+        },
+        10:{
+        text: "Auch Wörter wie <strong><em>beaucoup</em></strong> (= viel) bestimmten die Menge. Das ist auf den ersten Blick vielleicht etwas unintuitiv. Schließlich ist es keine exakte Bestimmung wie beispielsweise eine genaue Grammangabe. Trotzdem handelt es sich um eine bestimmte Menge."
+        },
+        14:{
+            titel: "Ein besonderer Fall...",
+            text:" der bestimmten Menge ist <em>pas de</em>, wenn wir gar nichts von etwas haben. Man sagt auch leere Menge dazu. zum Beispiel : <em>Il ne mange <strong>pas de</strong> viande.<em> (Er ist kein Fleisch) 
+        }
     }
 
 };
