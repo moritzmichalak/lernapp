@@ -1648,7 +1648,7 @@ function ladeLevel() {
             promptLabel.innerHTML = `<strong>${aufgabe.ueberschrift || ""}</strong>`;
         }
         */
-    }if (aufgabe.typ === "textarea") {
+    }else if (aufgabe.typ === "textarea") {
         const ueberschriftDiv = document.getElementById('ueberschrift');
         const previousIngredients = sessionStorage.getItem("ingredients") || "<em>Keine Angaben</em>";
 
