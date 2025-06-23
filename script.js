@@ -2358,7 +2358,7 @@ const erklaerungen = {
         },
         14:{
             titel: "Ein besonderer Fall...",
-            text:" der bestimmten Menge ist <em>pas de</em>, wenn wir gar nichts von etwas haben. Man sagt auch leere Menge dazu. zum Beispiel : <em>Il ne mange <strong>pas de</strong> viande.<em> (Er ist kein Fleisch) 
+            text:" der bestimmten Menge ist <em>pas de</em>, wenn wir gar nichts von etwas haben. Man sagt auch leere Menge dazu. zum Beispiel : <em>Il ne mange <strong>pas de</strong> viande.<em> (Er ist kein Fleisch)"
         }
     }
 
