@@ -1622,9 +1622,13 @@ function ladeLevel() {
     // 🛠️ Normalfall: Textaufgabe
     if (aufgabe.typ === "text") {
         const luecke = '<span class="dropzone"><span class="placeholder">...</span></span>';
+        const satzMitLuecke = aufgabe.satz.replace("___", luecke);
+        /*
         const satzMitLuecke = aufgabe.satz?.includes("___")
+        
           ? aufgabe.satz.replace("___", luecke)
           : aufgabe.satz || "";
+        */
         // sentenceContainer.innerHTML = satzMitLuecke;
         // const satzMitLuecke = aufgabe.satz.replace("___", luecke);
         sentenceContainer.innerHTML = satzMitLuecke;
