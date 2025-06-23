@@ -1702,8 +1702,7 @@ function ladeLevel() {
                     ? formatWord(wort)
                     : wort;
             // weitere Verarbeitung hier...
-            });
-}
+
 
         wordsDiv.innerHTML += `<div class="word" onclick="wordClick(event)" id="word${index}">${formattedWord}</div>`;
         });
