@@ -217,7 +217,7 @@ body {
 /* 18.05.25: */
 .aufgabenbild {
     max-width: 50vw; /* 50% der Viewport-Breite */
-    height: auto;    /* Höhe proportional skalieren */
+    max-height: 50vw;    /* Höhe proportional skalieren */
     display: block;
     margin: 10px auto;
     border-radius: 8px;

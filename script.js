@@ -1617,10 +1617,7 @@ function ladeLevel() {
         }
         updateProgressBar();
         return; // 🛠️ WICHTIG: keine weitere Verarbeitung
-    }
-
-    // 🛠️ Normalfall: Textaufgabe
-    if (aufgabe.typ === "text") {
+    } else if (aufgabe.typ === "text") {
         const luecke = '<span class="dropzone"><span class="placeholder">...</span></span>';
         const satzMitLuecke = aufgabe.satz.replace("___", luecke);
         /*
