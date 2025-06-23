@@ -1460,26 +1460,26 @@ if (thema === "subjonctif") {
     },
     // Auch Wörter wie <strong><em>beaucoup</em></strong> (= viel) bestimmten die Menge. Das ist auf den ersten Blick vielleicht etwas unintuitiv. Schließlich ist es keine exakte Bestimmung wie beispielsweise eine genaue Grammangabe. Trotzdem handelt es sich um eine bestimmte Menge.
     {    
-        ueberschrift: "Was sind estimmte Mengen? 🤔 <br>"+
+        ueberschrift: "Was sind bestimmte Mengen? 🤔 <br>"+
         "Auch Wörter wie beaucoup (= viel) bestimmten die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:",
         satz: 
         "<ul>Il y a ➡️ ___ eau.</ul>",
         woerter: [ "beaucoup de/d'", "un peu de/d'", "trop de/d'", "pas de/d'"],
         korrekt: "un peu de/d'",
-        bild: "img/peu.jpeg"
+        bild: "img/peu.jpg"
     },   
     {    
-        ueberschrift: "Was sind estimmte Mengen? 🤔 <br>"+
+        ueberschrift: "Was sind bestimmte Mengen? 🤔 <br>"+
         "Auch Wörter wie beaucoup (= viel) bestimmten die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:",
         satz: 
         "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong>Wasser.)</small></ul>"+
         "<ul>Il y a ➡️ ___ eau.</ul>",
         woerter: [ "beaucoup de/d'", "trop de/d'", "pas de/d'"],
         korrekt: "beaucoup de/d'",
-        bild: "img/beaucoup.jpeg"
+        bild: "img/beaucoup.jpg"
     },  
     {    
-        ueberschrift: "Was sind estimmte Mengen? 🤔 <br>"+
+        ueberschrift: "Was sind bestimmte Mengen? 🤔 <br>"+
         "Auch Wörter wie beaucoup (= viel) bestimmten die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:",
         satz: 
         "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong>Wasser.)</small></ul>"+
@@ -1487,10 +1487,10 @@ if (thema === "subjonctif") {
         "<ul>Il y a ➡️ ___ eau.</ul>",
         woerter: ["trop de/d'", "pas de/d'"],
         korrekt: "trop de/d'",
-        bild: "img/trop.jpeg"
+        bild: "img/trop.jpg"
     }, 
     {    
-        ueberschrift: "Was sind estimmte Mengen? 🤔 <br>"+
+        ueberschrift: "Was sind bestimmte Mengen? 🤔 <br>"+
         "Auch Wörter wie beaucoup (= viel) bestimmten die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:",
         satz: 
         "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong>Wasser.)</small></ul>"+
@@ -1504,7 +1504,7 @@ if (thema === "subjonctif") {
     // Ein besonderer Fall der bestimmten Menge ist, wenn wir gar nichts von etwas haben. Man sagt auch leere Menge dazu.
     //Il ne mange pas ____ viande. (Er ist kein Fleisch)
     {    
-        ueberschrift: "Was sind estimmte Mengen? 🤔 <br>"+
+        ueberschrift: "Was sind bestimmte Mengen? 🤔 <br>"+
         "Auch Wörter wie beaucoup (= viel) bestimmten die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:",
         satz: 
         "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong>Wasser.)</small></ul>"+
