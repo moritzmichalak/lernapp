@@ -1497,7 +1497,6 @@ if (thema === "subjonctif") {
         "<ul>Il y a <strong>beaucoup d'</strong>eau. <small>(Es gibt <strong>viel</strong>Wasser.)</small></ul>"+
         "<ul>Il y a <strong>trop d'</strong>eau. <small>(Es gibt <strong>zu viel</strong>Wasser.)</small></ul>"+
         "<ul>Il <strong>n'</strong>y a ➡️ ___ eau.</ul>",
-        v
         korrekt: "pas de/d'",
         bild: "img/pas.png"
     }, 
