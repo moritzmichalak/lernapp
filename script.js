@@ -1423,7 +1423,7 @@ if (thema === "subjonctif") {
         "Auch Wörter wie <em>bouteille</em>, <em>cuillère (= Löffel)</em> oder <em>boîte (= Box / Packung)</em> geben bestimmte Mengen an."+
         "Lass uns diese Wörter ein wenig üben:",
         satz:
-        "<ul>Un ➡️ ___ <strong>de</strong> yaourt. (la farine)<br>",
+        "<ul>Un ➡️ ___ <strong>de</strong> yaourt.<br>",
         woerter: ["pot", "boîte", "bouteille", "cuillère"],
         korrekt: "pot",
         bild: "img/yaourt.jpg"
@@ -1442,6 +1442,20 @@ if (thema === "subjonctif") {
         korrekt: "bouteille",
         bild: "img/eau.jpg"
     },
+    {    
+        ueberschrift: "Was sind estimmte Mengen? 🤔 <br>"+
+        "Mengen werden häufig in Maßeinheiten angegeben. Wie im Deutschen benutzt man im Französischen"+
+        " das metrische System, also: <em>(kilo)grammes, (centi)litres, (kilo)mètres, ...</em>  <br>"+
+        "Auch Wörter wie <em>bouteille</em>, <em>cuillère (= Löffel)</em> oder <em>boîte (= Box / Packung)</em> geben bestimmte Mengen an."+
+        "Lass uns diese Wörter ein wenig üben:",
+        satz:
+        "<ul><em> Un pot </em> <strong>de</strong> yaourt.</ul>"+
+        "<ul><em> Une bouteille </em><strong>d'</strong> eau.</ul>"+
+        "<ul>Une ➡️ ___ </em><strong>d'</strong> œufs.<br>",
+        woerter: ["boîte", "cuillère"],
+        korrekt: "cuillère",
+        bild: "img/huile.jpg"
+    },
      // Bien joué !  <em> (une) cuillère</em> bedeutet ein <em>Löffel</em>. Man unterscheidet  zwischen: <em>cuillère à thé (=Teelöffel)</em> und <em>cuillère à soupe (=Esslöffel)</em>
     {    
         ueberschrift: "Was sind estimmte Mengen? 🤔 <br>"+
@@ -1456,7 +1470,7 @@ if (thema === "subjonctif") {
         "<ul>Une ➡️ ___ </em><strong>d'</strong> œufs.<br>",
         woerter: ["boîte"],
         korrekt: "boîte",
-        bild: "img/eier.jpg"
+        bild: "img/eier.png"
     },
     // Auch Wörter wie <strong><em>beaucoup</em></strong> (= viel) bestimmten die Menge. Das ist auf den ersten Blick vielleicht etwas unintuitiv. Schließlich ist es keine exakte Bestimmung wie beispielsweise eine genaue Grammangabe. Trotzdem handelt es sich um eine bestimmte Menge.
     {    
