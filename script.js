@@ -1502,16 +1502,7 @@ if (thema === "subjonctif") {
         bild: "img/pas.png"
     }, 
     // Ein besonderer Fall der bestimmten Menge ist, wenn wir gar nichts von etwas haben. Man sagt auch leere Menge dazu.
-    //Il ne mange pas ____ viande. (Er ist kein Fleisch)
-    {    
-        ueberschrift: "Was sind bestimmte Mengen? 🤔 <br>"+
-        "Auch Wörter wie beaucoup (= viel) bestimmten die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:",
-        satz: 
-        "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong>Wasser.)</small></ul>"+
-        "<ul>Il y a ➡️ ___ eau.</ul>",
-        korrekt: "un peu de/d'",
-        bild: "img/beaucoup.jpeg"
-    },  
+    //Il ne mange pas ____ viande. (Er ist kein Fleisch) 
     {
       ueberschrift: "🍎 Ingrédients",
       typ: "textarea",
