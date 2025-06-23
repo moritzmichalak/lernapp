@@ -1749,7 +1749,7 @@ if (thema === "subjonctif") {
     {
       ueberschrift: "🍳 Préparation",
       typ: "textarea",
-      satz: "Merci pour ta liste d’ingrédients : <strong>___</strong><br>Décris maintenant les étapes de la préparation :",
+      satz: "Merci pour ta liste d'ingrédients : <strong>___</strong><br>Décris maintenant les étapes de la préparation :",
       korrekt: "", // keine Bewertung nötig
       referenziert: "ingredients" // auf vorherige Antwort verweisen
     }
@@ -2087,6 +2087,10 @@ function checkAnswer() {
                 if (aktuellesLevel - 1 < aufgaben.length) {
                     console.log("Ich komm hier raus");
                     document.getElementById('nextLevelBtn').style.display = "inline-block";
+                // 23.06.2025
+                } else if (thema === "recette") {
+                    zeigeRezeptPinnwand(); // statt ladeFalschBeantworteteAufgaben()
+                    return;
                 } else {
                     console.log("Ich komm da raus: Letzte Aufgabe erreicht.");
 
@@ -2570,6 +2574,46 @@ function saveTextarea() {
     aktuellesLevel++;
     updateProgressBar();
     ladeLevel();
+}
+
+function zeigeRezeptPinnwand() {
+    const container = document.getElementById("sentence");
+
+    // Automatisch IDs von schueler-30 bis schueler-40 erzeugen
+    const userIds = [];
+    for (let i = 30; i <= 42; i++) {
+        userIds.push(`schueler-${i}@schule.de`);
+    }
+
+    container.innerHTML = "<h3>📌 Rezepte deiner Mitschüler:innen</h3>";
+    document.getElementById("words").style.display = "none";
+    document.getElementById("textAntwortContainer").style.display = "none";
+    document.getElementById("checkAnswerBtn").style.display = "none";
+    document.getElementById("bildContainer").innerHTML = "";
+    document.getElementById("ueberschrift").innerHTML = "";
+    document.getElementById("nextLevelBtn").style.display = "none";
+
+    userIds.forEach(id => {
+        db.collection("antworten")
+            .where("schuelerId", "==", id)
+            .where("thema", "==", "recette")
+            .get()
+            .then(snapshot => {
+                const daten = snapshot.docs.map(doc => doc.data());
+                const zutaten = daten.find(e => e.level === 1)?.antwort || "–";
+                const zubereitung = daten.find(e => e.level === 2)?.antwort || "–";
+
+                const block = document.createElement("div");
+                block.classList.add("rezept-block");
+                block.innerHTML = `
+                    <h4>👤 ${id}</h4>
+                    <p><strong>🧂 Ingrédients:</strong><br>${zutaten}</p>
+                    <p><strong>👨‍🍳 Préparation:</strong><br>${zubereitung}</p>
+                    <hr>
+                `;
+                container.appendChild(block);
+            });
+    });
 }
 /*
 window.logout = logout;
