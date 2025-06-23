@@ -1731,20 +1731,12 @@ if (thema === "subjonctif") {
         korrekt: "couper",
         bild: "img/couper.png"
     },
-  
 
     {
       ueberschrift: "🍎 Ingrédients",
       typ: "textarea",
       korrekt: "", // keine Bewertung nötig
       speichereAls: "ingredients"
-    },
-    {
-      ueberschrift: "🍳 Préparation",
-      typ: "textarea",
-      satz: "Merci pour ta liste d'ingrédients : <strong>___</strong><br>Décris maintenant les étapes de la préparation :",
-      korrekt: "", // keine Bewertung nötig
-      referenziert: "ingredients" // auf vorherige Antwort verweisen
     },
     {
       ueberschrift: "🍳 Préparation",
@@ -2581,7 +2573,7 @@ function zeigeRezeptPinnwand() {
 
     // Automatisch IDs von schueler-30 bis schueler-40 erzeugen
     const userIds = [];
-    for (let i = 30; i <= 42; i++) {
+    for (let i = 30; i <= 43; i++) {
         userIds.push(`schueler-${i}@schule.de`);
     }
 
