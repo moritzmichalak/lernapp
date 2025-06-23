@@ -1416,7 +1416,7 @@ if (thema === "subjonctif") {
     },
 
     {    
-        ueberschrift: "Was sind estimmte Mengen? 🤔 <br>"+
+        ueberschrift: "Was sind bestimmte Mengen? 🤔 <br>"+
         "Mengen werden häufig in Maßeinheiten angegeben. Wie im Deutschen benutzt man im Französischen"+
         " das metrische System, also: <em>(kilo)grammes, (centi)litres, (kilo)mètres, ...</em>  <br>"+
         "Auch Wörter wie <em>bouteille</em>, <em>cuillère (= Löffel)</em> oder <em>boîte (= Box / Packung)</em> geben bestimmte Mengen an."+
@@ -1429,7 +1429,7 @@ if (thema === "subjonctif") {
     },
 
     {    
-        ueberschrift: "Was sind estimmte Mengen? 🤔 <br>"+
+        ueberschrift: "Was sind bestimmte Mengen? 🤔 <br>"+
         "Mengen werden häufig in Maßeinheiten angegeben. Wie im Deutschen benutzt man im Französischen"+
         " das metrische System, also: <em>(kilo)grammes, (centi)litres, (kilo)mètres, ...</em>  <br>"+
         "Auch Wörter wie <em>bouteille</em>, <em>cuillère (= Löffel)</em> oder <em>boîte (= Box / Packung)</em> geben bestimmte Mengen an."+
@@ -1442,7 +1442,7 @@ if (thema === "subjonctif") {
         bild: "img/eau.jpg"
     },
     {    
-        ueberschrift: "Was sind estimmte Mengen? 🤔 <br>"+
+        ueberschrift: "Was sind bestimmte Mengen? 🤔 <br>"+
         "Mengen werden häufig in Maßeinheiten angegeben. Wie im Deutschen benutzt man im Französischen"+
         " das metrische System, also: <em>(kilo)grammes, (centi)litres, (kilo)mètres, ...</em>  <br>"+
         "Auch Wörter wie <em>bouteille</em>, <em>cuillère (= Löffel)</em> oder <em>boîte (= Box / Packung)</em> geben bestimmte Mengen an."+
@@ -1457,7 +1457,7 @@ if (thema === "subjonctif") {
     },
      // Bien joué !  <em> (une) cuillère</em> bedeutet ein <em>Löffel</em>. Man unterscheidet  zwischen: <em>cuillère à thé (=Teelöffel)</em> und <em>cuillère à soupe (=Esslöffel)</em>
     {    
-        ueberschrift: "Was sind estimmte Mengen? 🤔 <br>"+
+        ueberschrift: "Was sind bestimmte Mengen? 🤔 <br>"+
         "Mengen werden häufig in Maßeinheiten angegeben. Wie im Deutschen benutzt man im Französischen"+
         " das metrische System, also: <em>(kilo)grammes, (centi)litres, (kilo)mètres, ...</em>  <br>"+
         "Auch Wörter wie <em>bouteille</em>, <em>cuillère (= Löffel)</em> oder <em>boîte (= Box / Packung)</em> geben bestimmte Mengen an."+
@@ -1474,7 +1474,7 @@ if (thema === "subjonctif") {
     // Auch Wörter wie <strong><em>beaucoup</em></strong> (= viel) bestimmten die Menge. Das ist auf den ersten Blick vielleicht etwas unintuitiv. Schließlich ist es keine exakte Bestimmung wie beispielsweise eine genaue Grammangabe. Trotzdem handelt es sich um eine bestimmte Menge.
     {    
         ueberschrift: "Was sind bestimmte Mengen? 🤔 <br>"+
-        "Auch Wörter wie beaucoup (= viel) bestimmten die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:",
+        "Auch Wörter wie beaucoup (= viel) bestimmen die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:",
         satz: 
         "<ul>Il y a ➡️ ___ eau.</ul>",
         woerter: [ "beaucoup de/d'", "un peu de/d'", "trop de/d'", "pas de/d'"],
@@ -1483,7 +1483,7 @@ if (thema === "subjonctif") {
     },   
     {    
         ueberschrift: "Was sind bestimmte Mengen? 🤔 <br>"+
-        "Auch Wörter wie beaucoup (= viel) bestimmten die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:",
+        "Auch Wörter wie beaucoup (= viel) bestimmen die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:",
         satz: 
         "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong> Wasser.)</small></ul>"+
         "<ul>Il y a ➡️ ___ eau.</ul>",
@@ -1493,7 +1493,7 @@ if (thema === "subjonctif") {
     },  
     {    
         ueberschrift: "Was sind bestimmte Mengen? 🤔 <br>"+
-        "Auch Wörter wie beaucoup (= viel) bestimmten die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:",
+        "Auch Wörter wie beaucoup (= viel) bestimmen die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:",
         satz: 
         "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong> Wasser.)</small></ul>"+
         "<ul>Il y a <strong>beaucoup d'</strong>eau. <small>(Es gibt <strong>viel</strong> Wasser.)</small></ul>"+
@@ -1504,7 +1504,7 @@ if (thema === "subjonctif") {
     }, 
     {    
         ueberschrift: "Was sind bestimmte Mengen? 🤔 <br>"+
-        "Auch Wörter wie beaucoup (= viel) bestimmten die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:",
+        "Auch Wörter wie beaucoup (= viel) bestimmen die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:",
         satz: 
         "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong> Wasser.)</small></ul>"+
         "<ul>Il y a <strong>beaucoup d'</strong>eau. <small>(Es gibt <strong>viel</strong> Wasser.)</small></ul>"+
@@ -1565,7 +1565,7 @@ if (thema === "subjonctif") {
             "<ul><small>Manon</small>: Oui, s'il te plaît !</ul>"+
             "<ul><small>Mathieu</small>: Alors, pour les ingrédients… Il faut 300 <strong>grammes de farine</strong> (Gramm Mehl), "+
             "3 ➡️ ____ (Esslöffel Zucker), 2 ____ (Esslöffel Öl), 50 ____ (Gramm Butter), ____ (ein wenig Salz), 3 oeufs et 0,1 ____ (Liter Milch).</ul>",
-        woerter: ["cuillères à thé de sucre", "cuillères à soupe de sucre", "cuillères à soupe de farine"],
+        woerter: ["cuillères à café de sucre", "cuillères à soupe de sucre", "cuillères à soupe de farine"],
         korrekt: "cuillères à soupe de sucre",
         bild: "img/manonmathieu.png"
     }, 
@@ -1718,7 +1718,7 @@ if (thema === "subjonctif") {
     }, 
     {    
         ueberschrift: "Quelques nouveaux mots ...",
-        satz: "<small>Mathieu</small>: À la fin tu peux mettre de la banane, aussi. Il faut ➡️ ____ (schälen) et après il faut la ___ (schneiden).",
+        satz: "<small>Mathieu</small>: À la fin tu peux mettre de la banane, aussi. Il faut l' ➡️ ____ (schälen) et après il faut la ___ (schneiden).",
         woerter: ["éplucher", "couper"],
         korrekt: "éplucher",
         bild: "img/eplucher.png"
@@ -2342,7 +2342,7 @@ const erklaerungen = {
 
     }, recette: {
         8: {
-            titel: "POPUP: Bravo ! 👏 Wir halten also fest:",
+            titel: "Bravo ! 👏 Wir halten also fest:",
             text: "Bei bestimmten Mengen benutzt man <em>de</em> bzw.<em>d'</em> <br>"+
             "Aber was genau verstehen wir eigentlich unter einer bestimmten Menge? 🤔"
         },
@@ -2351,10 +2351,10 @@ const erklaerungen = {
         },
         11: {
             titel: "Bien joué !",
-            text:  "<em> (une) cuillère</em> bedeutet ein <em>Löffel</em>. Man unterscheidet  zwischen: <em>cuillère à thé (=Teelöffel)</em> und <em>cuillère à soupe (=Esslöffel)</em>."
+            text:  "<em> (une) cuillère</em> bedeutet ein <em>Löffel</em>. Man unterscheidet  zwischen: <em>cuillère à café (=Teelöffel)</em> und <em>cuillère à soupe (=Esslöffel)</em>."
         },
         12:{
-        text: "Auch Wörter wie <strong><em>beaucoup</em></strong> (= viel) bestimmten die Menge. Das ist auf den ersten Blick vielleicht etwas unintuitiv. Schließlich ist es keine exakte Bestimmung wie beispielsweise eine genaue Grammangabe. Trotzdem handelt es sich um eine bestimmte Menge."
+        text: "Auch Wörter wie <strong><em>beaucoup</em></strong> (= viel) bestimmen die Menge. Das ist auf den ersten Blick vielleicht etwas unintuitiv. Schließlich ist es keine exakte Bestimmung wie beispielsweise eine genaue Grammangabe. Trotzdem handelt es sich um eine bestimmte Menge."
         },
         16:{
             titel: "Ein besonderer Fall...",
