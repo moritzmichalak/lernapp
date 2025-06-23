@@ -1533,7 +1533,7 @@ if (thema === "subjonctif") {
  	        "<ul><small>Manon</small>: Est-ce que tu as une recette préférée ?</ul>"+
             "<ul><small>Mathieu</small>: Non, je n'ai pas <strong>de</strong> recette préférée. Et toi ? </ul>"+
             "<ul><small>Manon</small>: Oui, j'adore les crêpes !</ul>"+
-            "<ul><small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a trop ➡️ ___ recettes.</ul>"+
+            "<ul><small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a beaucoup ➡️ ___ recettes.</ul>"+
             "Mais la recette de ma grand-mère est la meilleure. Tu veux l'avoir ?",
         typ: "text",
         korrekt: "de",
@@ -2341,22 +2341,22 @@ const erklaerungen = {
 
 
     }, recette: {
-        7: {
+        8: {
             titel: "POPUP: Bravo ! 👏 Wir halten also fest:",
             text: "Bei bestimmten Mengen benutzt man <em>de</em> bzw.<em>d'</em> <br>"+
             "Aber was genau verstehen wir eigentlich unter einer bestimmten Menge? 🤔"
         },
-        8: {
+        9: {
              titel: "Genau, <em>(un) pot</em> bedeutet ein <em>Becher</em>. :)"
         },
-        9: {
+        11: {
             titel: "Bien joué !",
             text:  "<em> (une) cuillère</em> bedeutet ein <em>Löffel</em>. Man unterscheidet  zwischen: <em>cuillère à thé (=Teelöffel)</em> und <em>cuillère à soupe (=Esslöffel)</em>."
         },
-        10:{
+        12:{
         text: "Auch Wörter wie <strong><em>beaucoup</em></strong> (= viel) bestimmten die Menge. Das ist auf den ersten Blick vielleicht etwas unintuitiv. Schließlich ist es keine exakte Bestimmung wie beispielsweise eine genaue Grammangabe. Trotzdem handelt es sich um eine bestimmte Menge."
         },
-        14:{
+        16:{
             titel: "Ein besonderer Fall...",
             text:" der bestimmten Menge ist <em>pas de</em>, wenn wir gar nichts von etwas haben. Man sagt auch leere Menge dazu. zum Beispiel : <em>Il ne mange <strong>pas de</strong> viande.<em> (Er ist kein Fleisch)"
         }
