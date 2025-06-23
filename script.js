@@ -1344,11 +1344,195 @@ if (thema === "subjonctif") {
     ]
 } else if (thema === "recette") {
   aufgaben = [
+    {    
+        ueberschrift: "Bestimmte Mengen",
+        satz: "Für bestimmte Mengen verwendest du <strong><em>de</em></strong> (oder <strong><em>d'</em></strong> vor Vokal oder stummem <em>h</em>)."+
+        "<ul>Un litre ➡️___ lait.</ul>",
+        woerter: ["de", "d'"],
+        korrekt: "de"
+    },
+    {    
+        ueberschrift: "Bestimmte Mengen",
+        satz: "Für bestimmte Mengen verwendest du <strong><em>de</em></strong> (oder <strong><em>d'</em></strong> vor Vokal oder stummem <em>h</em>)."+
+        "<ul>Un litre <strong>de</strong> lait.</ul>"+
+        "<ul>Une bouteille ➡️___ eau.</ul>",
+        woerter: ["de", "d'"],
+        korrekt: "d'"
+    },
+    {    
+        ueberschrift: "Bestimmte Mengen",
+        satz: "Für bestimmte Mengen verwendest du <strong><em>de</em></strong> (oder <strong><em>d'</em></strong> vor Vokal oder stummem <em>h</em>)."+
+        "<ul>Un litre <strong>de</strong> lait.</ul>"+
+        "<ul>Une bouteille <strong>d'</strong> eau.</ul>"+
+        "<ul>200 grammes ➡️___ sucre.</ul>",
+        woerter: ["de", "d'"],
+        korrekt: "de"
+    },
+    {    
+        ueberschrift: "Bestimmte Mengen",
+        satz: "Für bestimmte Mengen verwendest du <strong><em>de</em></strong> (oder <strong><em>d'</em></strong> vor Vokal oder stummem <em>h</em>)."+
+        "<ul>Un litre <strong>de</strong> lait.</ul>"+
+        "<ul>Une bouteille <strong>d'</strong> eau.</ul>"+
+        "<ul>200 grammes <strong>de</strong> sucre.</ul>"+
+        "<ul>Une cuillère ➡️___ huile.</ul>",
+        woerter: ["de", "d'"],
+        korrekt: "d'"
+    },
+    {    
+        ueberschrift: "Bestimmte Mengen",
+        satz: "Dabei spielt es keine Rolle, ob das Wort weiblich, männlich ist oder im Plural steht:"+
+        "<ul>Un kilo ➡️___ farine. (la farine)<br>"+
+        "<small>(Ein Kilo Mehl)</small></ul>"+
+        "<ul>Un litre ___ lait. (le lait)<br>"+
+        "<small>(Ein Liter Milch)</small></ul>"+
+        "<ul>200 grammes ___ spaghettis. (les spaghettis)<br>"+
+        "<small>(200 Gramm Spaghetti)</small></ul>",
+        typ: "text",
+        korrekt: "de"
+    },
+    {    
+        ueberschrift: "Bestimmte Mengen",
+        satz: "Dabei spielt es keine Rolle, ob das Wort weiblich, männlich ist oder im Plural steht:"+
+        "<ul>Un kilo <strong>de</strong> farine. (la farine)<br>"+
+        "<small>(Ein Kilo Mehl)</small></ul>"+
+        "<ul>Un litre ➡️ ___ lait. (le lait)<br>"+
+        "<small>(Ein Liter Milch)</small></ul>"+
+        "<ul>200 grammes ___ spaghettis. (les spaghettis)<br>"+
+        "<small>(200 Gramm Spaghetti)</small></ul>",
+        typ: "text",
+        korrekt: "de"
+    },
+    {    
+        ueberschrift: "Bestimmte Mengen",
+        satz: "Dabei spielt es keine Rolle, ob das Wort weiblich, männlich ist oder im Plural steht:"+
+        "<ul>Un kilo <strong>de</strong> farine. (la farine)<br>"+
+        "<small>(Ein Kilo Mehl)</small></ul>"+
+        "<ul>Un litre <strong>de</strong> lait. (le lait)<br>"+
+        "<small>(Ein Liter Milch)</small></ul>"+
+        "<ul>200 grammes ➡️ ___ spaghettis. (les spaghettis)<br>"+
+        "<small>(200 Gramm Spaghetti)</small></ul>",
+        typ: "text",
+        korrekt: "de"
+    },
+    // POPUP: Bravo ! 👏 Also eigentlich ganz einfach: Bei bestimmten Mengen benutzt man <em>de</em> bzw.<em>d'</em>.
+    // Aber was genau verstehen wir eigentlich unter einer bestimmten Menge? 🤔
+    {    
+        ueberschrift: "Was sind estimmte Mengen? 🤔",
+        satz: "Mengen werden häufig in Maßeinheiten angegeben. Wie im Deutschen benutzt man im Französischen"+
+        " das metrische System, also: <em>(kilo)grammes, (centi)litres, (kilo)mètres, ...</em>  <br>"+
+        "Auch Wörter wie <em>bouteille</em>, <em>cuillère (= Löffel)</em> oder <em>boîte (= Box / Packung)</em> geben bestimmte Mengen an."+
+        "Lass uns diese Wörter ein wenig üben:"+
+        "<ul>Un ➡️ ___ <strong>de</strong> yaourt. (la farine)<br>",
+        woerter: ["pot", "boîte", "bouteille", "cuillère"],
+        korrekt: "pot",
+        bild: "img/yaourt.jpg"
+    },
+    // Genau, <em>(un) pot</em> bedeutet ein <em>Becher</em>.
+    {    
+        ueberschrift: "Was sind estimmte Mengen? 🤔",
+        satz: "Mengen werden häufig in Maßeinheiten angegeben. Wie im Deutschen benutzt man im Französischen"+
+        " das metrische System, also: <em>(kilo)grammes, (centi)litres, (kilo)mètres, ...</em>  <br>"+
+        "Auch Wörter wie <em>bouteille</em>, <em>cuillère (= Löffel)</em> oder <em>boîte (= Box / Packung)</em> geben bestimmte Mengen an."+
+        "Lass uns diese Wörter ein wenig üben:"+
+        "<ul><em> Un pot </em> <strong>de</strong> yaourt.</ul>"+
+        "<ul>Une ➡️ ___ <strong>d'</strong> eau.</ul>"+
+        "<ul>200 grammes ➡️ ___ spaghettis. (les spaghettis)<br>"+
+        "<small>(200 Gramm Spaghetti)</small></ul>",
+        woerter: ["boîte", "bouteille", "cuillère"],
+        korrekt: "bouteille",
+        bild: "img/eau.jpg"
+    },
+    {    
+        ueberschrift: "Was sind estimmte Mengen? 🤔",
+        satz: "Mengen werden häufig in Maßeinheiten angegeben. Wie im Deutschen benutzt man im Französischen"+
+        " das metrische System, also: <em>(kilo)grammes, (centi)litres, (kilo)mètres, ...</em>  <br>"+
+        "Auch Wörter wie <em>bouteille</em>, <em>cuillère (= Löffel)</em> oder <em>boîte (= Box / Packung)</em> geben bestimmte Mengen an."+
+        "Lass uns diese Wörter ein wenig üben:"+
+        "<ul><em> Un pot </em> <strong>de</strong> yaourt.</ul>"+
+        "<ul><em> Une bouteille </em><strong>d'</strong> eau.</ul>"+
+        "<ul><em> Une cuillère </em><strong>d'</strong> huile.</ul>",
+        woerter: ["boîte", "cuillère"],
+        korrekt: "cuillère",
+        bild: "img/huile.jpg"
+    },
+     // Bien joué !  <em> (une) cuillère</em> bedeutet ein <em>Löffel</em>. Man unterscheidet  zwischen: <em>cuillère à thé (=Teelöffel)</em> und <em>cuillère à soupe (=Esslöffel)</em>
+    {    
+        ueberschrift: "Was sind estimmte Mengen? 🤔",
+        satz: "Mengen werden häufig in Maßeinheiten angegeben. Wie im Deutschen benutzt man im Französischen"+
+        " das metrische System, also: <em>(kilo)grammes, (centi)litres, (kilo)mètres, ...</em>  <br>"+
+        "Auch Wörter wie <em>bouteille</em>, <em>cuillère (= Löffel)</em> oder <em>boîte (= Box / Packung)</em> geben bestimmte Mengen an."+
+        "Lass uns diese Wörter ein wenig üben:"+
+        "<ul><em> Un pot </em> <strong>de</strong> yaourt.</ul>"+
+        "<ul><em> Une bouteille </em><strong>d'</strong> eau.</ul>"+
+        "<ul><em> Une cuillère </em><strong>d'</strong> huile.</ul>"+
+        "<ul>Une ➡️ ___ </em><strong>d'</strong> œufs.<br>",
+        woerter: ["boîte"],
+        korrekt: "boîte",
+        bild: "img/eier.jpg"
+    },
+    // Auch Wörter wie <strong><em>beaucoup</em></strong> (= viel) bestimmten die Menge. Das ist auf den ersten Blick vielleicht etwas unintuitiv. Schließlich ist es keine exakte Bestimmung wie beispielsweise eine genaue Grammangabe. Trotzdem handelt es sich um eine bestimmte Menge.
+    {    
+        ueberschrift: "Was sind estimmte Mengen? 🤔",
+        satz: "Auch Wörter wie beaucoup (= viel) bestimmten die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:"+
+        "<ul>Il y a ➡️ ___ eau.</ul>"+
+        "<ul><em> Une cuillère </em><strong>d'</strong> huile.</ul>"+
+        "<ul>Une ➡️ ___ </em><strong>d'</strong> œufs.<br>",
+        woerter: [ "beaucoup de/d'", "un peu de/d'", "trop de/d'", "pas de/d'"],
+        korrekt: "un peu de/d'",
+        bild: "img/peu.jpeg"
+    },   
+    {    
+        ueberschrift: "Was sind estimmte Mengen? 🤔",
+        satz: "Auch Wörter wie beaucoup (= viel) bestimmten die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:"+
+        "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong>Wasser.)</small></ul>"+
+        "<ul>Il y a ➡️ ___ eau.</ul>",
+        woerter: [ "beaucoup de/d'", "trop de/d'", "pas de/d'"],
+        korrekt: "beaucoup de/d'",
+        bild: "img/beaucoup.jpeg"
+    },  
+    {    
+        ueberschrift: "Was sind estimmte Mengen? 🤔",
+        satz: "Auch Wörter wie beaucoup (= viel) bestimmten die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:"+
+        "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong>Wasser.)</small></ul>"+
+        "<ul>Il y a <strong>beaucoup d'</strong>eau. <small>(Es gibt <strong>viel</strong>Wasser.)</small></ul>"+
+        "<ul>Il y a ➡️ ___ eau.</ul>",
+        woerter: ["trop de/d'", "pas de/d'"],
+        korrekt: "trop de/d'",
+        bild: "img/trop.jpeg"
+    }, 
+    {    
+        ueberschrift: "Was sind estimmte Mengen? 🤔",
+        satz: "Auch Wörter wie beaucoup (= viel) bestimmten die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:"+
+        "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong>Wasser.)</small></ul>"+
+        "<ul>Il y a <strong>beaucoup d'</strong>eau. <small>(Es gibt <strong>viel</strong>Wasser.)</small></ul>"+
+        "<ul>Il y a <strong>trop d'</strong>eau. <small>(Es gibt <strong>zu viel</strong>Wasser.)</small></ul>"+
+        "<ul>Il <strong>n'</strong>y a ➡️ ___ eau.</ul>",
+        woerter: ["pas de/d'"],
+        korrekt: "pas de/d'",
+        bild: "img/pas.png"
+    }, 
+    // Ein besonderer Fall der bestimmten Menge ist, wenn wir gar nichts von etwas haben. Man sagt auch leere Menge dazu.
+    // Il ne mange pas ____ viande. (Er ist kein Fleisch)
+    {    
+        ueberschrift: "Was sind estimmte Mengen? 🤔",
+        satz: "Auch Wörter wie beaucoup (= viel) bestimmten die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:"+
+        "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong>Wasser.)</small></ul>"+
+        "<ul>Il y a ➡️ ___ eau.</ul>",
+        korrekt: "un peu de/d'",
+        bild: "img/beaucoup.jpeg"
+    },  
     {
       ueberschrift: "🍎 Ingrédients",
       typ: "textarea",
       korrekt: "", // keine Bewertung nötig
       speichereAls: "ingredients"
+    },
+    {
+      ueberschrift: "🍳 Préparation",
+      typ: "textarea",
+      satz: "Merci pour ta liste d’ingrédients : <strong>___</strong><br>Décris maintenant les étapes de la préparation :",
+      korrekt: "", // keine Bewertung nötig
+      referenziert: "ingredients" // auf vorherige Antwort verweisen
     },
     {
       ueberschrift: "🍳 Préparation",
