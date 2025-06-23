@@ -1597,7 +1597,7 @@ if (thema === "subjonctif") {
             "<ul><small>Mathieu</small>: Alors, pour les ingrédients… Il faut 300 <strong>grammes de farine</strong> (Gramm Mehl), "+
             "3 <strong>cuillères à soupe de sucre</strong> (Esslöffel Zucker), 2 <strong> cuillères à soupe d'huile</strong>(Esslöffel Öl), 50 ➡️ ____ (Gramm Butter), ____ (ein wenig Salz), 3 oeufs et 0,1 ____ (Liter Milch).</ul>",
         typ: "text",
-        korrekt: "grammes du beurre",
+        korrekt: "grammes de beurre",
         bild: "img/manonmathieu.png"
     }, 
     {    
@@ -1628,7 +1628,7 @@ if (thema === "subjonctif") {
             "3 <strong>cuillères à soupe de sucre</strong> (Esslöffel Zucker), 2 <strong> cuillères à soupe d'huile</strong>(Esslöffel Öl), "+
             "50 <strong>grammes du beurre</strong> (Gramm Butter), <strong>un peu de</strong>(ein wenig) sel, 3 oeufs et 0,1 ➡️ ____ (Liter Milch).</ul>",
         typ: "text",
-        korrekt: "litres de",
+        korrekt: "litres de lait",
         bild: "img/manonmathieu.png"
     }, 
     {    
@@ -1665,7 +1665,74 @@ if (thema === "subjonctif") {
         typ: "text",
         korrekt: "un peu de sel",
         bild: "img/manonmathieu.png"
-    },    
+    }, 
+    {    
+        ueberschrift: "Quelques nouveaux mots ...",
+        satz: 
+ 	        "<ul><small>Manon</small>: Et la préparation ?</ul>"+
+            "<ul><small>Mathieu</small>: Je t'explique étape par étape :</ul>"+
+            "<ul>Étape 1: Mettre la farine dans un grand bol. <small>(Das Mehl in eine große Schüssel geben.)</small></ul>"+
+            "<ul>Étape 2: <strong>Ajouter</strong> le sel, le sucre et les œufs. <small>(Salz, Zucker und Eier <strong> ➡️ ____</strong>.)</small></ul>",
+        woerter: ["erhitzen", "hinzufügen", "vermengen", "kochen"],
+        korrekt: "hinzufügen",
+        bild: "img/ajouter.png"
+    },   
+    {    
+        ueberschrift: "Quelques nouveaux mots ...",
+        satz: 
+ 	        "<ul><small>Manon</small>: Et la préparation ?</ul>"+
+            "<ul><small>Mathieu</small>: Je t'explique étape par étape :</ul>"+
+            "<ul>Étape 1: Mettre la farine dans un grand bol. <small>(Das Mehl in eine große Schüssel geben.)</small></ul>"+
+            "<ul>Étape 2: <strong>Ajouter</strong> le lait, le sucre et les œufs. <small>(Salz, Zucker und Eier <strong>hinzugeben</strong>.)</small></ul>"+
+            "<ul>Étape 3: <strong>Mélanger</strong> avec un fouet. <small>(Mit einem Schneebesen <strong>➡️ ____</strong>)</small></ul>",
+        woerter: ["erhitzen", "vermengen", "kochen"],
+        korrekt: "vermengen",
+        bild: "img/melanger.png"
+    }, 
+    {    
+        ueberschrift: "Quelques nouveaux mots ...",
+        satz: 
+ 	        "<ul><small>Manon</small>: Et la préparation ?</ul>"+
+            "<ul><small>Mathieu</small>: Je t'explique étape par étape :</ul>"+
+            "<ul>Étape 1: Mettre la farine dans un grand bol. <small>(Das Mehl in eine große Schüssel geben.)</small></ul>"+
+            "<ul>Étape 2: <strong>Ajouter</strong> le sel, le sucre et les œufs. <small>(Salz, Zucker und Eier <strong>hinzugeben</strong>.)</small></ul>"+
+            "<ul>Étape 3: <strong>Mélanger</strong> avec un fouet. <small>(Mit einem Schneebesen <strong>vermengen</strong>)</small></ul>"+
+            "<ul>Étape 4: <strong>Chauffer</strong> une poêle avec un peu d'huile. <small>(Eine Pfanne mit etwas Öl <strong>➡️ ____</strong>.)</small></ul>",
+        woerter: ["erhitzen", "kochen"],
+        korrekt: "erhitzen",
+        bild: "img/chauffer.png"
+    }, 
+    {    
+        ueberschrift: "Quelques nouveaux mots ...",
+        satz: 
+ 	        "<ul><small>Manon</small>: Et la préparation ?</ul>"+
+            "<ul><small>Mathieu</small>: Je t'explique étape par étape :</ul>"+
+            "<ul>Étape 1: Mettre la farine dans un grand bol. <small>(Das Mehl in eine große Schüssel geben.)</small></ul>"+
+            "<ul>Étape 2: <strong>Ajouter</strong> le sel, le sucre et les œufs. <small>(Salz, Zucker und Eier <strong>hinzugeben</strong>.)</small></ul>"+
+            "<ul>Étape 3: <strong>Mélanger</strong> avec un fouet. <small>(Mit einem Schneebesen <strong>vermengen</strong>)</small></ul>"+
+            "<ul>Étape 4: <strong>Chauffer</strong> une poêle avec un peu d'huile. <small>(Eine Pfanne mit etwas Öl <strong>erhitzen</strong>.)</small></ul>"+
+            "<ul>Étape 5: <strong>Mettre</strong> une un peu de pâte dans la poêle. <small>(Ein wenig Teig in die Pfanne geben.)</small></ul>"+
+            "<ul>Étape 6: <strong>Cuire</strong> pendant 2 à 3 minutes.</ul> <small>(Während zwei bis drei Minuten <strong>➡️ ____</strong>.)</small>",
+        woerter: ["kochen"],
+        korrekt: "kochen",
+        bild: "img/cuire.png"
+    }, 
+    {    
+        ueberschrift: "Quelques nouveaux mots ...",
+        satz: "<small>Mathieu</small>: À la fin tu peux mettre de la banane, aussi. Il faut ➡️ ____ (schälen) et après il faut la ___ (schneiden).",
+        woerter: ["éplucher", "couper"],
+        korrekt: "éplucher",
+        bild: "img/eplucher.png"
+    },
+    {    
+        ueberschrift: "Quelques nouveaux mots ...",
+        satz: "<small>Mathieu</small>: À la fin tu peux mettre de la banane, aussi. Il faut <strong>éplucher</strong> et après il faut la ___ (schneiden).",
+        woerter: ["éplucher", "couper"],
+        korrekt: "couper",
+        bild: "img/couper.png"
+    },
+  
+
     {
       ueberschrift: "🍎 Ingrédients",
       typ: "textarea",
@@ -1675,7 +1742,7 @@ if (thema === "subjonctif") {
     {
       ueberschrift: "🍳 Préparation",
       typ: "textarea",
-      satz: "Merci pour ta liste d’ingrédients : <strong>___</strong><br>Décris maintenant les étapes de la préparation :",
+      satz: "Merci pour ta liste d'ingrédients : <strong>___</strong><br>Décris maintenant les étapes de la préparation :",
       korrekt: "", // keine Bewertung nötig
       referenziert: "ingredients" // auf vorherige Antwort verweisen
     },
