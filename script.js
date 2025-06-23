@@ -1497,12 +1497,161 @@ if (thema === "subjonctif") {
         "<ul>Il y a <strong>beaucoup d'</strong>eau. <small>(Es gibt <strong>viel</strong>Wasser.)</small></ul>"+
         "<ul>Il y a <strong>trop d'</strong>eau. <small>(Es gibt <strong>zu viel</strong>Wasser.)</small></ul>"+
         "<ul>Il <strong>n'</strong>y a ➡️ ___ eau.</ul>",
-        woerter: ["pas de/d'"],
+        v
         korrekt: "pas de/d'",
         bild: "img/pas.png"
     }, 
     // Ein besonderer Fall der bestimmten Menge ist, wenn wir gar nichts von etwas haben. Man sagt auch leere Menge dazu.
     //Il ne mange pas ____ viande. (Er ist kein Fleisch) 
+
+    // Übersicht
+    {    
+        ueberschrift: "Manon et Mathieu parlent de leurs plats préférés ... <br>",
+        satz: 
+ 	        "<small>Manon</small>: Est-ce que tu as une recette préférée ?"+
+            "<small>Mathieu</small>: Non, je n'ai pas ➡️ ____ recette préférée. Et toi ? ?",
+        typ: "text",
+        korrekt: "de",
+        bild: "img/manonmathieu.png"
+    }, 
+    {    
+        ueberschrift: "Manon et Mathieu parlent de leurs plats préférés ... <br>",
+        satz: 
+ 	        "<small>Manon</small>: Est-ce que tu as une recette préférée ?"+
+            "<small>Mathieu</small>: Non, je n'ai pas <strong>de</strong> recette préférée. Et toi ? ?"+
+            "<small>Manon</small>: Oui, j'adore les crêpes !"+
+            "<small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a trop ➡️ ___ recettes."+
+            "Mais la recette de ma grand-mère est la meilleure. Tu veux l'avoir ?",
+        typ: "text",
+        korrekt: "de",
+        bild: "img/manonmathieu.png"
+    }, 
+    {    
+        ueberschrift: "Manon et Mathieu parlent de leurs plats préférés ... <br>",
+        satz: 
+ 	        "<small>Manon</small>: Est-ce que tu as une recette préférée ?"+
+            "<small>Mathieu</small>: Non, je n'ai pas <strong>de</strong> recette préférée. Et toi ? ?"+
+            "<small>Manon</small>: Oui, j'adore les crêpes !"+
+            "<small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a trop <strong>de</strong> recettes."+
+            "Mais la recette de ma grand-mère est la meilleure. Tu veux l'avoir ?"+
+            "<small>Manon</small>: Oui, s'il te plaît !"+
+            "<small>Mathieu</small>: Alors, pour les ingrédients… Il faut 300 ➡️ ___ (Gramm Mehl), "+
+            "3 ____ (Esslöffel Zucker), 2 ____ (Esslöffel Öl), 50 ____ (Gramm Butter), ____ (ein wenig Salz), 3 oeufs et 0,1 ____ (Liter Milch).",
+        woerter: ["grammes de farine", "litres de lait", "bouteilles de farine", "grammes de sucre"],
+        korrekt: "grammes de",
+        bild: "img/manonmathieu.png"
+    }, 
+    {    
+        ueberschrift: "Manon et Mathieu parlent de leurs plats préférés ... <br>",
+        satz: 
+ 	        "<small>Manon</small>: Est-ce que tu as une recette préférée ?"+
+            "<small>Mathieu</small>: Non, je n'ai pas <strong>de</strong> recette préférée. Et toi ? ?"+
+            "<small>Manon</small>: Oui, j'adore les crêpes !"+
+            "<small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a trop <strong>de</strong> recettes."+
+            "Mais la recette de ma grand-mère est la meilleure. Tu veux l'avoir ?"+
+            "<small>Manon</small>: Oui, s'il te plaît !"+
+            "<small>Mathieu</small>: Alors, pour les ingrédients… Il faut 300 <strong>grammes de farine</strong> (Gramm Mehl), "+
+            "3 ➡️ ____ (Esslöffel Zucker), 2 ____ (Esslöffel Öl), 50 ____ (Gramm Butter), ____ (ein wenig Salz), 3 oeufs et 0,1 ____ (Liter Milch).",
+        woerter: ["cuillères à thé de sucre", "cuillères à soupe de sucre", "cuillères à soupe de farine"],
+        korrekt: "cuillères à soupe de sucre",
+        bild: "img/manonmathieu.png"
+    }, 
+    {    
+        ueberschrift: "Manon et Mathieu parlent de leurs plats préférés ... <br>",
+        satz: 
+ 	        "<small>Manon</small>: Est-ce que tu as une recette préférée ?"+
+            "<small>Mathieu</small>: Non, je n'ai pas <strong>de</strong> recette préférée. Et toi ? ?"+
+            "<small>Manon</small>: Oui, j'adore les crêpes !"+
+            "<small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a trop <strong>de</strong> recettes."+
+            "Mais la recette de ma grand-mère est la meilleure. Tu veux l'avoir ?"+
+            "<small>Manon</small>: Oui, s'il te plaît !"+
+            "<small>Mathieu</small>: Alors, pour les ingrédients… Il faut 300 <strong>grammes de farine</strong> (Gramm Mehl), "+
+            "3 <strong>cuillères à soupe de sucre</strong> (Esslöffel Zucker), 2 ➡️ ____ (Esslöffel Öl), 50 ____ (Gramm Butter), ____ (ein wenig Salz), 3 oeufs et 0,1 ____ (Liter Milch).",
+        typ: "text",
+        korrekt: "cuillères à soupe d'huile",
+        bild: "img/manonmathieu.png"
+    }, 
+    {    
+        ueberschrift: "Manon et Mathieu parlent de leurs plats préférés ... <br>",
+        satz: 
+ 	        "<small>Manon</small>: Est-ce que tu as une recette préférée ?"+
+            "<small>Mathieu</small>: Non, je n'ai pas <strong>de</strong> recette préférée. Et toi ? ?"+
+            "<small>Manon</small>: Oui, j'adore les crêpes !"+
+            "<small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a trop <strong>de</strong> recettes."+
+            "Mais la recette de ma grand-mère est la meilleure. Tu veux l'avoir ?"+
+            "<small>Manon</small>: Oui, s'il te plaît !"+
+            "<small>Mathieu</small>: Alors, pour les ingrédients… Il faut 300 <strong>grammes de farine</strong> (Gramm Mehl), "+
+            "3 <strong>cuillères à soupe de sucre</strong> (Esslöffel Zucker), 2 <strong> cuillères à soupe d'huile</strong>(Esslöffel Öl), 50 ➡️ ____ (Gramm Butter), ____ (ein wenig Salz), 3 oeufs et 0,1 ____ (Liter Milch).",
+        typ: "text",
+        korrekt: "grammes du beurre",
+        bild: "img/manonmathieu.png"
+    }, 
+    {    
+        ueberschrift: "Manon et Mathieu parlent de leurs plats préférés ... <br>",
+        satz: 
+ 	        "<small>Manon</small>: Est-ce que tu as une recette préférée ?"+
+            "<small>Mathieu</small>: Non, je n'ai pas <strong>de</strong> recette préférée. Et toi ? ?"+
+            "<small>Manon</small>: Oui, j'adore les crêpes !"+
+            "<small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a trop <strong>de</strong> recettes."+
+            "Mais la recette de ma grand-mère est la meilleure. Tu veux l'avoir ?"+
+            "<small>Manon</small>: Oui, s'il te plaît !"+
+            "<small>Mathieu</small>: Alors, pour les ingrédients… Il faut 300 <strong>grammes de farine</strong> (Gramm Mehl), "+
+            "3 <strong>cuillères à soupe de sucre</strong> (Esslöffel Zucker), 2 <strong> cuillères à soupe d'huile</strong>(Esslöffel Öl), 50 <strong>grammes du beurre</strong> (Gramm Butter), ➡️ ____ (ein wenig) sel, 3 oeufs et 0,1 ____ (Liter Milch).",
+        typ: "text",
+        korrekt: "un peu de",
+        bild: "img/manonmathieu.png"
+    }, 
+    {    
+        ueberschrift: "Manon et Mathieu parlent de leurs plats préférés ... <br>",
+        satz: 
+ 	        "<small>Manon</small>: Est-ce que tu as une recette préférée ?"+
+            "<small>Mathieu</small>: Non, je n'ai pas <strong>de</strong> recette préférée. Et toi ? ?"+
+            "<small>Manon</small>: Oui, j'adore les crêpes !"+
+            "<small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a trop <strong>de</strong> recettes."+
+            "Mais la recette de ma grand-mère est la meilleure. Tu veux l'avoir ?"+
+            "<small>Manon</small>: Oui, s'il te plaît !"+
+            "<small>Mathieu</small>: Alors, pour les ingrédients… Il faut 300 <strong>grammes de farine</strong> (Gramm Mehl), "+
+            "3 <strong>cuillères à soupe de sucre</strong> (Esslöffel Zucker), 2 <strong> cuillères à soupe d'huile</strong>(Esslöffel Öl), "+
+            "50 <strong>grammes du beurre</strong> (Gramm Butter), <strong>un peu de</strong>(ein wenig) sel, 3 oeufs et 0,1 ➡️ ____ (Liter Milch).",
+        typ: "text",
+        korrekt: "litres de",
+        bild: "img/manonmathieu.png"
+    }, 
+    {    
+        ueberschrift: "Manon et Mathieu parlent de leurs plats préférés ... <br>",
+        satz: 
+ 	        "<small>Manon</small>: Est-ce que tu as une recette préférée ?"+
+            "<small>Mathieu</small>: Non, je n'ai pas <strong>de</strong> recette préférée. Et toi ? ?"+
+            "<small>Manon</small>: Oui, j'adore les crêpes !"+
+            "<small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a trop <strong>de</strong> recettes."+
+            "Mais la recette de ma grand-mère est la meilleure. Tu veux l'avoir ?"+
+            "<small>Manon</small>: Oui, s'il te plaît !"+
+            "<small>Mathieu</small>: Alors, pour les ingrédients… Il faut 300 <strong>grammes de farine</strong> (Gramm Mehl), "+
+            "3 <strong>cuillères à soupe de sucre</strong> (Esslöffel Zucker), 2 <strong> cuillères à soupe d'huile</strong>(Esslöffel Öl), "+
+            "50 <strong>grammes du beurre</strong> (Gramm Butter), <strong>un peu de</strong>(ein wenig) sel, 3 oeufs et 0,1 <strong>litres de lait</strong> (Liter Milch)."+
+            "<small>Manon</small>: Ah génial ! Merci ! Mais il ne faut pas ➡️ ____ sel ?",
+        typ: "text",
+        korrekt: "de",
+        bild: "img/manonmathieu.png"
+    }, 
+    {    
+        ueberschrift: "Manon et Mathieu parlent de leurs plats préférés ... <br>",
+        satz: 
+ 	        "<small>Manon</small>: Est-ce que tu as une recette préférée ?"+
+            "<small>Mathieu</small>: Non, je n'ai pas <strong>de</strong> recette préférée. Et toi ? ?"+
+            "<small>Manon</small>: Oui, j'adore les crêpes !"+
+            "<small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a trop <strong>de</strong> recettes."+
+            "Mais la recette de ma grand-mère est la meilleure. Tu veux l'avoir ?"+
+            "<small>Manon</small>: Oui, s'il te plaît !"+
+            "<small>Mathieu</small>: Alors, pour les ingrédients… Il faut 300 <strong>grammes de farine</strong> (Gramm Mehl), "+
+            "3 <strong>cuillères à soupe de sucre</strong> (Esslöffel Zucker), 2 <strong> cuillères à soupe d'huile</strong>(Esslöffel Öl), "+
+            "50 <strong>grammes du beurre</strong> (Gramm Butter), <strong>un peu de</strong>(ein wenig) sel, 3 oeufs et 0,1 <strong>litres de lait</strong> (Liter Milch)."+
+            "<small>Manon</small>: Ah génial ! Merci ! Mais il ne faut pas <strong>de</strong> sel ?"+
+            "<small>Mathieu</small>: Si tu veux, tu peux mettre ____ (ein wenig Salz). Mais pas trop !",
+        typ: "text",
+        korrekt: "un peu de sel",
+        bild: "img/manonmathieu.png"
+    },    
     {
       ueberschrift: "🍎 Ingrédients",
       typ: "textarea",
