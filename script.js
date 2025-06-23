@@ -1512,7 +1512,7 @@ if (thema === "subjonctif") {
         bild: "img/pas.png"
     }, 
     // Ein besonderer Fall der bestimmten Menge ist, wenn wir gar nichts von etwas haben. Man sagt auch leere Menge dazu.
-    // Il ne mange pas ____ viande. (Er ist kein Fleisch)
+    //Il ne mange pas ____ viande. (Er ist kein Fleisch)
     {    
         ueberschrift: "Was sind estimmte Mengen? 🤔",
         satz: "Auch Wörter wie beaucoup (= viel) bestimmten die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:"+
@@ -1701,11 +1701,10 @@ function ladeLevel() {
                 const formattedWord = aufgabe.ueberschrift?.startsWith("Endungen")
                     ? formatWord(wort)
                     : wort;
-            // weitere Verarbeitung hier...
-
-
-        wordsDiv.innerHTML += `<div class="word" onclick="wordClick(event)" id="word${index}">${formattedWord}</div>`;
-        });
+            
+                wordsDiv.innerHTML += `<div class="word" onclick="wordClick(event)" id="word${index}">${formattedWord}</div>`;
+            });
+        }
     }
     // Überschrift einblenden 
     const ueberschriftDiv = document.getElementById('ueberschrift');
