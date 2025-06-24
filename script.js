@@ -1354,7 +1354,7 @@ if (thema === "subjonctif") {
     {    
         ueberschrift: "Testaufgabe 2",
         satz: "Bitte schreibe das Wort <em>rot</em>: ➡️ ___",
-        Typ: "Text",
+        Typ: "text",
         korrekt: "rot"
     },
     {    
