@@ -1349,7 +1349,8 @@ if (thema === "subjonctif") {
         satz: "Bitte wähle das Wort <em>blau</em> aus: ➡️ ___"+
         "<ul>Un litre ➡️___ lait.</ul>",
         woerter: ["blau", "rot"],
-        korrekt: "blau"
+        korrekt: "blau",
+        bild: "img/blau.jpg"
     },
     {    
         ueberschrift: "Testaufgabe 2",
