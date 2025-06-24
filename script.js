@@ -1346,16 +1346,14 @@ if (thema === "subjonctif") {
     aufgaben = [
     {    
         ueberschrift: "Testaufgabe 1",
-        satz: "Bitte wähle das Wort <em>blau</em> aus: ➡️ ___"+
-        "<ul>Un litre ➡️___ lait.</ul>",
+        satz: "Bitte wähle das Wort <em>blau</em> aus: ➡️ ___",
         woerter: ["blau", "rot"],
         korrekt: "blau",
         bild: "img/blau.jpg"
     },
     {    
         ueberschrift: "Testaufgabe 2",
-        satz: "Bitte schreibe das Wort <em>rot</em>: ➡️ ___"+
-        "<ul>Un litre ➡️___ lait.</ul>",
+        satz: "Bitte schreibe das Wort <em>rot</em>: ➡️ ___",
         Typ: "Text",
         korrekt: "rot"
     },
