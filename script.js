@@ -2648,6 +2648,8 @@ function saveTextarea() {
     aktuellesLevel++;
     updateProgressBar();
     // ladeLevel();
+    zeigeRezeptPinnwand()
+
 }
 
 function zeigeRezeptPinnwand() {
