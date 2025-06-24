@@ -1374,7 +1374,7 @@ if (thema === "subjonctif") {
         "<ul>Un litre <strong>de</strong> lait.</ul>"+
         "<ul>Une bouteille <strong>d'</strong> eau.</ul>"+
         "<ul>200 grammes <strong>de</strong> sucre.</ul>"+
-        "<ul>Une cuillère ➡️___ huile.</ul>",
+        "<ul>Une cuillère ➡️___ huile. <small>(Ein Löffel Öl.)</small></ul>",
         woerter: ["de", "d'"],
         korrekt: "d'"
     },
