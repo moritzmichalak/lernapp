@@ -1342,6 +1342,29 @@ if (thema === "subjonctif") {
             bild: "img/manger_boire.png"
         }
     ]
+} else if (thema === "test") {
+    aufgaben = [
+    {    
+        ueberschrift: "Testaufgabe 1",
+        satz: "Bitte wähle das Wort <em>blau</em> aus: ➡️ ___"+
+        "<ul>Un litre ➡️___ lait.</ul>",
+        woerter: ["blau", "rot"],
+        korrekt: "blau"
+    },
+    {    
+        ueberschrift: "Testaufgabe 2",
+        satz: "Bitte schreibe das Wort <em>rot</em>: ➡️ ___"+
+        "<ul>Un litre ➡️___ lait.</ul>",
+        Typ: "Text",
+        korrekt: "rot"
+    },
+    {    
+        ueberschrift: "Testaufgabe 3",
+        satz: "Schreibe irgendeine Farbe in das Feld:",
+        Typ: "Textarea",
+        korrekt: "rot"
+    }
+    ]
 } else if (thema === "recette") {
   aufgaben = [
     {    
