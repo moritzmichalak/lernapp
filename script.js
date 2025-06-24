@@ -1354,13 +1354,13 @@ if (thema === "subjonctif") {
     {    
         ueberschrift: "Testaufgabe 2",
         satz: "Bitte schreibe das Wort <em>rot</em>: ➡️ ___",
-        Typ: "text",
+        typ: "text",
         korrekt: "rot"
     },
     {    
         ueberschrift: "Testaufgabe 3",
         satz: "Schreibe irgendeine Farbe in das Feld:",
-        Typ: "Textarea",
+        typ: "Textarea",
         korrekt: "rot"
     }
     ]
