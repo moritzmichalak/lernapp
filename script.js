@@ -2676,7 +2676,9 @@ function zeigeRezeptPinnwand() {
             .get()
             .then(snapshot => {
                 const daten = snapshot.docs.map(doc => doc.data());
+                console.log("daten: ",daten);
                 const zutaten = daten.find(e => e.level === 1)?.antwort || "–";
+                console.log("zutaten: ", zutaten);
                 const zubereitung = daten.find(e => e.level === 2)?.antwort || "–";
 
                 const block = document.createElement("div");
