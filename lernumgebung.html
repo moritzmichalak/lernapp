@@ -64,17 +64,16 @@
     <div class="words" id="words"></div>
     <!-- 🟩 Eingabefeld + Button für Freitextaufgaben-->
     <div id="textAntwortContainer" style="display: none;">
-        <input type="text" id="textInput" placeholder="Antwort eingeben..." class="textantwort">
+        <input type="text" id="textInput" placeholder="Entrer ta réponse..." class="textantwort">
         <button onclick="checkTextAnswer()">Antwort prüfen</button>
     </div>
     
-    <!-- 19.06.25 
+    <!-- 19.06.25  -->
     <div id="textAntwortContainer" style="display: none;">
-        <label id="textPrompt" for="textInput" style="font-weight: bold;"></label>
-        <textarea id="textInput" class="textantwort" rows="6" placeholder="Schreib hier deine Antwort..."></textarea>
-        <button id="checkAnswerBtn" onclick="checkTextAnswer()">Antwort prüfen</button>
+        <input type="textarea" id="textInput" placeholder="Entrer ton texte..." class="textantwort">
+        <button id="checkAnswerBtn" onclick="checkTextarea()">Antwort speichern</button>
     </div>
-    -->
+   
     
     <!-- 🟢 Button nur für Drag-and-Drop -->
     <button id="checkAnswerBtn" onclick="checkAnswer()">Antwort prüfen</button>

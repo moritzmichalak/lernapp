@@ -2387,6 +2387,46 @@ const erklaerungen = {
 
 };
 
+function checkTextarea() {
+    const input = document.getElementById('textareaInput');
+    const antwort = input.value.trim();
+    const aufgabe = aufgaben[aktuellesLevel - 1];
+
+    if (!antwort) {
+        alert("Bitte gib eine Antwort ein.");
+        return;
+    }
+
+    // 🔑 Wenn aktuelle Aufgabe die Ingrédients ist, speichern in sessionStorage
+    if (aufgabe.ueberschrift?.toLowerCase().includes("ingrédient")) {
+        sessionStorage.setItem("ingredients", antwort);
+    }
+
+    // Speichern in Firestore
+    db.collection("antworten").add({
+        schuelerId,
+        thema,
+        level: aktuellesLevel,
+        aufgabe: aufgabe.satz || aufgabe.ueberschrift || "textarea",
+        antwort: antwort,
+        korrekt: true,
+        punkte,
+        timestamp: new Date()
+    });
+    aktuellesLevel++;
+    updateProgressBar();
+    if (aktuellesLevel - 1 < aufgaben.length) {
+        console.log("Ich komm hier raus");
+        document.getElementById('nextLevelBtn').style.display = "inline-block";
+
+    // 23.06.2025
+    } else {
+        console.log("Jetzt sollte Pinnwand geladen werden");
+        zeigeRezeptPinnwand(); // statt ladeFalschBeantworteteAufgaben()
+        return;
+    }
+}
+
 function checkTextAnswer() {
     const input = document.getElementById('textInput');
     const antwort = input.value.trim().toLowerCase();
