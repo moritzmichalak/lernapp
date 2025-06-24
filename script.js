@@ -2101,7 +2101,8 @@ function checkAnswer() {
                     console.log("Ich komm hier raus");
                     document.getElementById('nextLevelBtn').style.display = "inline-block";
                 // 23.06.2025
-                } else if (thema === "recette") {
+                } else if (thema === "recette" || thema === "test") {
+                    console.log("Jetzt sollte Pinnwand geladen werden");
                     zeigeRezeptPinnwand(); // statt ladeFalschBeantworteteAufgaben()
                     return;
                 } else {
@@ -2648,8 +2649,3 @@ function zeigeRezeptPinnwand() {
             });
     });
 }
-/*
-window.logout = logout;
-window.zurueckThemenwahl = zurueckThemenwahl;
-*/
-
