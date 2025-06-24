@@ -1360,7 +1360,7 @@ if (thema === "subjonctif") {
     {    
         ueberschrift: "Testaufgabe 3",
         satz: "Schreibe irgendeine Farbe in das Feld:",
-        typ: "Textarea",
+        typ: "textarea",
         korrekt: "rot"
     }
     ]
