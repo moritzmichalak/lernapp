@@ -1342,7 +1342,7 @@ if (thema === "subjonctif") {
             bild: "img/manger_boire.png"
         }
     ]
-} else if (thema === "test") {
+} else if (thema === "recette") {
     aufgaben = [
     {    
         ueberschrift: "Testaufgabe 1",
