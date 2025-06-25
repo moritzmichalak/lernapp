@@ -2670,6 +2670,9 @@ function zeigeRezeptPinnwand() {
     document.getElementById("nextLevelBtn").style.display = "none";
 
     userIds.forEach(id => {
+        if (thema === "recette") {
+
+        
         db.collection("antworten")
             .where("schuelerId", "==", id)
             .where("thema", "==", "recette")
@@ -2694,5 +2697,29 @@ function zeigeRezeptPinnwand() {
                 `;
                 container.appendChild(block);
             });
+        } else if (thema === "test") {
+        db.collection("antworten")
+            .where("schuelerId", "==", id)
+            .where("thema", "==", "test")
+            .get()
+            .then(snapshot => {
+                console.log("schuelerId =? ",id);
+                const daten = snapshot.docs.map(doc => doc.data());
+                console.log("daten: ",daten);
+                const farben = daten
+                    .filter(e => e.aufgabe?.includes("3"))
+                    .at(-1)?.antwort || "–";
+                console.log("Farben: ", farben);
+                const zubereitung = daten.find(e => e.level === 2)?.antwort || "–";
+
+                const block = document.createElement("div");
+                block.classList.add("rezept-block");
+                block.innerHTML = `
+                    <h4>👤 ${id}</h4>
+                    <p><strong>🎨 Farbe:</strong><br>${zutaten}</p>
+                    <hr>
+                `;
+                container.appendChild(block);
+        }
     });
 }
