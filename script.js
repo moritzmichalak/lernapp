@@ -1226,7 +1226,7 @@ if (thema === "subjonctif") {
             woerter: ["manges", "bois", "mange"],
             korrekt: "manges",
             bild: "img/manger_boire.png"
-        },
+        }/*,
         {    
             ueberschrift: "Meike et Rose vont au Restaurant. Complétez avec les formes de <strong>manger</strong> et <strong>boire</strong>.",
             satz: "<ul>1. Meike: Qu'est-ce que tu <strong> bois </strong> ? Du vin ?</ul>"+
@@ -1320,7 +1320,8 @@ if (thema === "subjonctif") {
             typ: "text",
             korrekt: "mangeons",
             bild: "img/manger_boire.png"
-        }
+        } 
+        */
     ]
 } else if (thema === "recette") {
     aufgaben = [
