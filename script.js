@@ -1709,14 +1709,14 @@ if (thema === "subjonctif") {
         woerter: ["éplucher", "couper"],
         korrekt: "éplucher",
         bild: "img/eplucher.png"
-    }/*,
+    },
     {    
         ueberschrift: "Quelques nouveaux mots ...",
         satz: "<small>Mathieu</small>: À la fin tu peux mettre de la banane, aussi. Il faut <strong>éplucher</strong> et après il faut la ___ (schneiden).",
         woerter: ["éplucher", "couper"],
         korrekt: "couper",
         bild: "img/couper.png"
-    },
+    }/*,
 
     {
       ueberschrift: "🍎 Ingrédients",
@@ -2537,10 +2537,12 @@ async function ladeFalschBeantworteteAufgaben() {
 
     snapshot.forEach(doc => {
         const falsch = doc.data();
+        console.log("Zeig mir alle falschen an:", falsch);
+        
         // Finde die Original-Aufgabe basierend auf dem Satz
         const original = aufgaben.find(a =>
-            (a.satz === falsch.aufgabe || a.ueberschrift === falsch.aufgabe || a.typ === "textarea") &&
-            (!falsch.level || a.typ === "textarea" || aufgaben.indexOf(a) === falsch.level - 1)
+            (a.satz === falsch.aufgabe || a.ueberschrift === falsch.aufgabe /*|| a.typ === "textarea"*/) &&
+            (!falsch.level /*|| a.typ === "textarea" */ || aufgaben.indexOf(a) === falsch.level - 1)
         );
         if (original && !falschBeantwortete.find(a => a.satz === original.satz)) {
             falschBeantwortete.push(original);
@@ -2611,9 +2613,11 @@ function saveTextarea() {
 
     aktuellesLevel++;
     updateProgressBar();
-    // ladeLevel();
-    zeigeRezeptPinnwand()
-
+    if (aktuellesLevel - 1 < aufgaben.length) {
+        ladeLevel();
+    } else {
+        zeigeRezeptPinnwand();
+    }
 }
 
 function zeigeRezeptPinnwand() {
