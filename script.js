@@ -2541,11 +2541,13 @@ async function ladeFalschBeantworteteAufgaben() {
         
         
         // Finde die Original-Aufgabe basierend auf dem Satz
+        const original = aufgaben[falsch.level - 1];
+        /*
         const original = aufgaben.find(a =>
             (a.satz?.includes(falsch.aufgabe) || falsch.aufgabe?.includes(a.satz)) &&
             (!falsch.level || aufgaben.indexOf(a) === falsch.level - 1)
         );
-        /*
+        
         const original = aufgaben.find(a =>
             (a.satz === falsch.aufgabe || a.ueberschrift === falsch.aufgabe || a.typ === "textarea") &&
             (!falsch.level || a.typ === "textarea"  || aufgaben.indexOf(a) === falsch.level - 1)
