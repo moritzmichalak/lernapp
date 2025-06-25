@@ -2653,7 +2653,7 @@ function zeigeRezeptPinnwand() {
 
     // Automatisch IDs von schueler-30 bis schueler-43 erzeugen
     const userIds = [];
-    for (let i = 31; i <= 41; i++) {
+    for (let i = 31; i <= 44; i++) {
         userIds.push(`schueler-${i}`);
     }
 
@@ -2678,13 +2678,24 @@ function zeigeRezeptPinnwand() {
                 const daten = snapshot.docs.map(doc => doc.data());
                 console.log("daten: ",daten);
                 const zutaten = daten
-                    .filter(e => e.aufgabe?.includes("Ingrédient"))
-                    .at(-1)?.antwort || "–";
+                    .filter(e => e.aufgabe?.includes("ingrédient"))
+                    .reduce((latest, current) => {
+                      const lt = latest?.timestamp?.seconds || 0;
+                      const ct = current?.timestamp?.seconds || 0;
+                      return ct > lt ? current : latest;
+                    }, null)?.antwort;
+                    // .filter(e => e.aufgabe?.includes("Ingrédient"))
+                    // .at(-1)?.antwort || "–";
                 console.log("zutaten: ", zutaten);
                 // const zubereitung = daten.find(e => e.level === 2)?.antwort || "–";
                 const zubereitung = daten
                     .filter(e => e.aufgabe?.includes("Préparation"))
-                    .at(-1)?.antwort || "–";
+                    .reduce((latest, current) => {
+                      const lt = latest?.timestamp?.seconds || 0;
+                      const ct = current?.timestamp?.seconds || 0;
+                      return ct > lt ? current : latest;
+                    }, null)?.antwort;
+                    // .at(-1)?.antwort || "–";
 
                 const block = document.createElement("div");
                 block.classList.add("rezept-block");
