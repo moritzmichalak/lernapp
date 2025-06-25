@@ -1226,7 +1226,7 @@ if (thema === "subjonctif") {
             woerter: ["manges", "bois", "mange"],
             korrekt: "manges",
             bild: "img/manger_boire.png"
-        }/*,
+        },
         {    
             ueberschrift: "Meike et Rose vont au Restaurant. Complétez avec les formes de <strong>manger</strong> et <strong>boire</strong>.",
             satz: "<ul>1. Meike: Qu'est-ce que tu <strong> bois </strong> ? Du vin ?</ul>"+
@@ -1321,7 +1321,6 @@ if (thema === "subjonctif") {
             korrekt: "mangeons",
             bild: "img/manger_boire.png"
         } 
-        */
     ]
 } else if (thema === "recette") {
     aufgaben = [
@@ -2341,7 +2340,8 @@ const erklaerungen = {
         }
 
 
-    }, mengen: {
+    }, 
+    mengen: {
         8: {
             titel: "Bravo ! 👏 Wir halten also fest:",
             text: "Bei bestimmten Mengen benutzt man <em>de</em> bzw.<em>d'</em> <br>"+
