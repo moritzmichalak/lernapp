@@ -2538,10 +2538,11 @@ async function ladeFalschBeantworteteAufgaben() {
     console.log("Zeig mir den rausgefischten Datensatz an:", snapshot);
     snapshot.forEach(doc => {
         const falsch = doc.data();
-        console.log("DatenSatz mit falsch:", falsch);
+        console.log("Datensatz geprüft:", falsch);
         
         // Finde die Original-Aufgabe basierend auf dem Satz
         const original = aufgaben[falsch.level - 1];
+        console.log("Original gefunden:", original);
         /*
         const original = aufgaben.find(a =>
             (a.satz?.includes(falsch.aufgabe) || falsch.aufgabe?.includes(a.satz)) &&
