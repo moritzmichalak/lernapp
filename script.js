@@ -1934,7 +1934,9 @@ function ladeLevel() {
     updateProgressBar();
 
     const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
+    console.log("Erklärugen für Popups1(lL):", erklaerung);
     if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
+        console.log("Erklärugen für Popups2(lL):", erklaerung);
         showPopup(erklaerung.titel, erklaerung.text);
         localStorage.setItem(`popupShown_${thema}_${aktuellesLevel}`, "true");
     }
@@ -2062,9 +2064,10 @@ function checkAnswer() {
                 // console.log("Richtige Antworten abgespeichert?", richtige);
 
                 const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
-                // console.log("Erklärugen für Popups:", erklaerung, erklaerungen);
+                console.log("Erklärugen für Popups1(cA):", erklaerung);
                 // Popups anzeigen:
                 if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
+                    console.log("Erklärugen für Popups2(cA):", erklaerung);
                     showPopup(erklaerung.titel, erklaerung.text);
                 }
                 aktuellesLevel++;
