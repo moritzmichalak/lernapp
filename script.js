@@ -267,9 +267,6 @@ if (thema === "subjonctif") {
             woerter: ["Ich bezweifele, dass ..."],
             korrekt: "Ich bezweifele, dass ..."
         },
-        //POPUP: Super ! Jetzt weißt du, dass man den Subjonctif verwendet wenn: 
-        // -man eine Unsicherheit oder einen Zweifel ausdrückt
-        // -nach bestimmten Ausdrücken (z.B. Il est important que ... , Il faut que ...  )
         { 
             ueberschrift: "Subjonctif bilden:",
             satz: "<small>Lass uns noch anschauen wie man den Subjonctif bildet?🤔 <br>"+
@@ -335,8 +332,7 @@ if (thema === "subjonctif") {
             woerter: ["vendent"],
             korrekt: "vendent"
         },
-        //POPUP: Sehr gut, jetzt weißt du wie man den Subjonctif bei regelmäßigen Verben bildet :) 
-        // Schauen wir uns noch ein paar unregelmäßige Verben an.
+
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Schauen wir uns einmal das Verb <em>prendre</em> an. Wir wollen den Subjonctif bilden.<br>"+
@@ -345,7 +341,6 @@ if (thema === "subjonctif") {
             woerter: ["prendent", "prennent"],
             korrekt: "prennent"
         },
-            //POPUP: Exaxtement ! prendre ist im Präsens für die 3. Person Plural unregelmäßig, nämlich. elles prennent
         { 
             ueberschrift: "Subjonctif bilden: Unregelmäßige Verben",
             satz: "<small>Schauen wir uns einmal das Verb <em>prendre</em> an. Wir wollen den Subjonctif bilden.<br>"+
@@ -610,7 +605,6 @@ if (thema === "subjonctif") {
             woerter: ["aient"],
             korrekt: "aient"
         },
-        //POPUP: Gut, jetzt haben wir auch wirklich alles wiederholt. Jetzt üben wir die unregelmäßigen Formen noch ein wenig 🔁🔎 
         { 
             ueberschrift: "Exprimer son opinion",
             satz: "Il est important qu'on➡️ ___  (être) actif/-ive dans la société.<br>"+
@@ -937,7 +931,6 @@ if (thema === "subjonctif") {
             woerter: ["être"],
             korrekt: "être"
         },
-        //POPUP: Très bien ! Jetzt üben wir die unregelmäßigen Formen noch ein wenig. Wir starten mit faire. Merke dir gut, der Stamm lautet fer-!
         {
             ueberschrift: "Unegelmäßige Formen: faire",
             satz: "Clément Mathieu ___ (faire) tout pour aider les élèves.<br>"+
@@ -962,7 +955,6 @@ if (thema === "subjonctif") {
             korrekt: "ferions",
             bild: "img/party.jpg"
         },
-        //POPUP: Très bien ! Weiter geht's mit pouvoir. Merke dir gut, der Stamm lautet pourr-!
         {
             ueberschrift: "Unegelmäßige Formen: pouvoir",
             satz: "Si Violette Morhange était moins distancée, elle ___ (pouvoir) avoir une meilleure relation avec son fils. <br>"+
@@ -987,7 +979,6 @@ if (thema === "subjonctif") {
             korrekt: "pourrait",
             bild: "img/rachin.jpg"
         },
-        //POPUP: Très bien ! Weiter geht's mit avoir. Merke dir gut, der Stamm lautet aur-!
         {
             ueberschrift: "Unegelmäßige Formen: avoir",
             satz: "Si Pierre n'était pas en colère, il ___ (avoir) une meilleure relation avec son père. <br>"+
@@ -1004,7 +995,6 @@ if (thema === "subjonctif") {
             korrekt: "auraient",
             bild: "img/chorale.png"
         },
-        //POPUP: Très bien ! Weiter geht's mit être. Merke dir gut, der Stamm lautet ser-!
         {
             ueberschrift: "Unegelmäßige Formen: être",
             satz: "Sans la chorale, les journées ____ (être) très monotones pour les garçons. <br>"+
@@ -1021,7 +1011,6 @@ if (thema === "subjonctif") {
             korrekt: "serait",
             bild: "img/rachin.jpg"
         },
-        //POPUP: Très bien ! Weiter geht's mit aller. Merke dir gut, der Stamm lautet ir-!
         {
             ueberschrift: "Unegelmäßige Formen: aller",
             satz: "À ta place, j' ____ (aller) voir Les Choristes, c'est un très bon film. <br>"+
@@ -1136,42 +1125,33 @@ if (thema === "subjonctif") {
         { satz: "Pépinot est un garçon  ___ .", woerter: ["intimidant", "attachant", "autoritaire", "timide", "violant"], korrekt: ["attachant", "timide"], bild: "img/pepinot.jpeg" },
         // Ende Adjektive  
         // Beginn aimer, détester, adorer, préférer
-        // POPUP: Wir schauen uns jetzt an mit welcher Art von Artikeln die vier Verben aimer, détester, adorer und préférer funktionieren. Probiere es zunächst einmal:
         { satz: "Clément Mathieu adore ___ musique.", woerter: ["la", "de la", "de"], korrekt: "la", bild: "img/mathieu.jpg"},
         { satz: "Clément Mathieu aime ___ travail avec les élèves.", woerter: ["le", "du", "de"], korrekt: "le", bild: "img/mathieu.jpg"},
         { satz: "Rachin préfère ___ autorité excessive à la bienveillance.", woerter: ["l'", "de l'", "d'"], korrekt: "l'", bild: "img/rachin.jpg"},
         { satz: "Pierre Morhange déteste ___ règles.", woerter: ["les", "de", "des"], korrekt: "les", bild: "img/pierre.jpeg"},
-        // POPUP: Die Besonderheit bei aimer, détester, adorer, préférer ist, dass immer der bestimmte Artikel folgt (le, la, les). Wir machen noch ein paar Beispiele zur Übung:
         { satz: "Elle aime ___  chocolat.", woerter: ["le", "du", "la"], korrekt: "le", bild: "img/chocolat.png" },
         { satz: "Elle adore ___  musique.", woerter: ["le", "de", "la", "de la", "du"], korrekt: "la", bild: "img/musique.png" },
         { satz: "Elle préfère ___  chiens aux chats.", woerter: ["les", "des", "d'", "du"], korrekt: "les", bild: "img/chiens.png" },
         { satz: "Il déteste ___  épinards.", woerter: ["des", "les", "d'", "de la"], korrekt: "les", bild: "img/épinards.png" },
-        // POPUP: Jetzt beschäftigen wir uns mit Fortbewegunsmitteln. Welche Präsposition passt zu welchem Fortbeweungsmittel? Es gibt hier eine Regel: Immer wenn ich den Kopf an der frischen Luft habe, so benutzt man 'à' (z.B. à pied, à vélo). Wenn man in einem geschlossenen Fortbewegungsmittel ist, nimmt man 'en' (z.B. en train)
         { satz: "Je m'appelle Léo. Je vais à l'école ___  pied.", woerter: ["à", "en", "avec"], korrekt: "à", bild: "img/schulweg.png" },
         { satz: "Ma mère va au travail ___ voiture.", woerter: ["à", "en", "avec"], korrekt: "en", bild: "img/mutter.jpeg" },
         { satz: "Mon père va au travail ___  vélo.", woerter: ["à", "en", "avec"], korrekt: "à", bild: "img/vater.jpg" },
         { satz: "Ma sœur va au lycée ___ bus.", woerter: ["à", "en", "avec"], korrekt: "en", bild: "img/schwester.png" },
-        // POPUP: Wie du siehst, benutzt man immer das Verb 'aller' - auch wenn man eigentlich gar nicht geht! Beispiele ... fett(aller)
         {    
             satz: "Ils vont en France ____ moto.",
             typ: "text",
             korrekt: "à",
             bild: "img/moto.png"
         },
-        // POPUP: Genau, beim Motorradfahren ist der Kopf an der frischen Luft, also à :)
         {    
             satz: "Elle va chez ses parents  ____ train.",
             typ: "text",
             korrekt: "en",
             bild: "img/train.jpg"
         },
-        // POPUP: Steigt man in den Zug ist man innerhalb eines Fortbewegungsmittels, also en :) Jetzt schauen wir uns das Verb jouer an. Auch hier benutzt man entweder die Präposition 'à' oder 'de'. Hier ist die Regel: Bei Instrumenten benutzt man 'de' und bei Sport oder anderen Spielen 'à'
         { satz: "Il joue ___ guitare.", woerter: ["de la", "à la"], korrekt: "de la", bild: "img/guitare.png" },
-        // POPUP: Vielleicht ist dir aufgefallen, dass man de + le/la/les verwendet.
         { satz: "Il joue ___ piano.", woerter: ["de la", "du", "à la"], korrekt: "du", bild: "img/piano.png" },
-        // POPUP: de + le verschmilzt zu 'du' und de + les verschmilzt zu 'des'
         { satz: "Ils jouent ___ volleyball (männlich).", woerter: ["au", "du", "à la", " à le"], korrekt: "au", bild: "img/volley.png" },
-        // POPUP: Volleyball ist kein Instrument, sondern ein Sport. à + le verschmilzt zu 'au' und à + les verschmilzt zu 'aux'
         { satz: "Ils jouent ___ boules.", woerter: ["aux", "du", "à la", " à le", "des"], korrekt: "aux", bild: "img/boules.jpg" },
         {    
             satz: "Clément Mathieu joue ____ piano.",
@@ -2558,12 +2538,15 @@ async function ladeFalschBeantworteteAufgaben() {
     snapshot.forEach(doc => {
         const falsch = doc.data();
         // Finde die Original-Aufgabe basierend auf dem Satz
-        const original = aufgaben.find(a => a.satz === falsch.aufgabe);
+        const original = aufgaben.find(a =>
+            (a.satz === falsch.aufgabe || a.ueberschrift === falsch.aufgabe || a.typ === "textarea") &&
+            (!falsch.level || a.typ === "textarea" || aufgaben.indexOf(a) === falsch.level - 1)
+        );
         if (original && !falschBeantwortete.find(a => a.satz === original.satz)) {
             falschBeantwortete.push(original);
         }
     });
-
+    console.log("Gefundene falsch beantwortete Aufgaben:", falschBeantwortete);
     if (falschBeantwortete.length > 0) {
         alert("Lass uns jetzt die Aufgaben wiederholen, mit denen du Probleme hattest :)");
         aufgaben = falschBeantwortete;
