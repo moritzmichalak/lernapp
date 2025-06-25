@@ -2720,6 +2720,7 @@ function zeigeRezeptPinnwand() {
                     <hr>
                 `;
                 container.appendChild(block);
-        }
+            })
+        } 
     });
 }
