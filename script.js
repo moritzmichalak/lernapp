@@ -2341,7 +2341,7 @@ const erklaerungen = {
         }
 
 
-    }, recette: {
+    }, mengen: {
         8: {
             titel: "Bravo ! 👏 Wir halten also fest:",
             text: "Bei bestimmten Mengen benutzt man <em>de</em> bzw.<em>d'</em> <br>"+
