@@ -2534,7 +2534,7 @@ async function ladeFalschBeantworteteAufgaben() {
         .get();
 
     const falschBeantwortete = [];
-    console.log("Zeig mir den rausgefischten Datensatz an:", doc);
+    console.log("Zeig mir den rausgefischten Datensatz an:", snapshot);
     snapshot.forEach(doc => {
         const falsch = doc.data();
         
