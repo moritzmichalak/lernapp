@@ -1364,7 +1364,7 @@ if (thema === "subjonctif") {
         korrekt: "rot"
     }
     ]
-} else if (thema === "recette") {
+} else if (thema === "mengenangaben") {
   aufgaben = [
     {    
         ueberschrift: "Bestimmte Mengen",
@@ -1556,7 +1556,7 @@ if (thema === "subjonctif") {
             "<ul><small>Mathieu</small>: Non, je n'ai pas <strong>de</strong> recette préférée. Et toi ? </ul>"+
             "<ul><small>Manon</small>: Oui, j'adore les crêpes !</ul>"+
             "<ul><small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a beaucoup ➡️ ___ recettes.</ul>"+
-            "Mais la recette de ma grand-mère est la meilleure. Tu veux l'avoir ?",
+            "Mais la recette de ma grand-mère est super ! Tu veux l'avoir ?",
         typ: "text",
         korrekt: "de",
         bild: "img/manonmathieu.png"
@@ -1568,10 +1568,10 @@ if (thema === "subjonctif") {
             "<ul><small>Mathieu</small>: Non, je n'ai pas <strong>de</strong> recette préférée. Et toi ? </ul>"+
             "<ul><small>Manon</small>: Oui, j'adore les crêpes !</ul>"+
             "<ul><small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a trop <strong>de</strong> recettes.</ul>"+
-            "<ul>Mais la recette de ma grand-mère est la meilleure. Tu veux l'avoir ?</ul>"+
+            "<ul>Mais la recette de ma grand-mère est super ! Tu veux l'avoir ?</ul>"+
             "<ul><small>Manon</small>: Oui, s'il te plaît !</ul>"+
             "<ul><small>Mathieu</small>: Alors, pour les ingrédients… Il faut 300 ➡️ ___ (Gramm Mehl), "+
-            "3 ____ (Esslöffel Zucker), 2 ____ (Esslöffel Öl), 50 ____ (Gramm Butter), ____ (ein wenig Salz), 3 oeufs et 0,1 ____ (Liter Milch).</ul>",
+            "3 ____ (Esslöffel Zucker), 2 <strong> cuillères à soupe d'huile </strong>(Esslöffel Öl), 50 ____ (Gramm Butter), ____ (ein wenig Salz), 3 oeufs et 0,1 ____ (Liter Milch).</ul>",
         woerter: ["grammes de farine", "litres de lait", "bouteilles de farine", "grammes de sucre"],
         korrekt: "grammes de farine",
         bild: "img/manonmathieu.png"
@@ -1583,10 +1583,10 @@ if (thema === "subjonctif") {
             "<ul><small>Mathieu</small>: Non, je n'ai pas <strong>de</strong> recette préférée. Et toi ? </ul>"+
             "<ul><small>Manon</small>: Oui, j'adore les crêpes !</ul>"+
             "<ul><small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a trop <strong>de</strong> recettes."+
-            "Mais la recette de ma grand-mère est la meilleure. Tu veux l'avoir ?</ul>"+
+            "Mais la recette de ma grand-mère est super ! Tu veux l'avoir ?</ul>"+
             "<ul><small>Manon</small>: Oui, s'il te plaît !</ul>"+
             "<ul><small>Mathieu</small>: Alors, pour les ingrédients… Il faut 300 <strong>grammes de farine</strong> (Gramm Mehl), "+
-            "3 ➡️ ____ (Esslöffel Zucker), 2 ____ (Esslöffel Öl), 50 ____ (Gramm Butter), ____ (ein wenig Salz), 3 oeufs et 0,1 ____ (Liter Milch).</ul>",
+            "3 ➡️ ____ (Esslöffel Zucker), 2 <strong> cuillères à soupe d'huile </strong>(Esslöffel Öl), 50 ____ (Gramm Butter), ____ (ein wenig Salz), 3 oeufs et 0,1 ____ (Liter Milch).</ul>",
         woerter: ["cuillères à café de sucre", "cuillères à soupe de sucre", "cuillères à soupe de farine"],
         korrekt: "cuillères à soupe de sucre",
         bild: "img/manonmathieu.png"
@@ -1598,25 +1598,10 @@ if (thema === "subjonctif") {
             "<ul><small>Mathieu</small>: Non, je n'ai pas <strong>de</strong> recette préférée. Et toi ? </ul>"+
             "<ul><small>Manon</small>: Oui, j'adore les crêpes !</ul>"+
             "<ul><small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a trop <strong>de</strong> recettes."+
-            "Mais la recette de ma grand-mère est la meilleure. Tu veux l'avoir ?</ul>"+
+            "Mais la recette de ma grand-mère est super ! Tu veux l'avoir ?</ul>"+
             "<ul><small>Manon</small>: Oui, s'il te plaît !</ul>"+
             "<ul><small>Mathieu</small>: Alors, pour les ingrédients… Il faut 300 <strong>grammes de farine</strong> (Gramm Mehl), "+
-            "3 <strong>cuillères à soupe de sucre</strong> (Esslöffel Zucker), 2 ➡️ ____ (Esslöffel Öl), 50 ____ (Gramm Butter), ____ (ein wenig Salz), 3 oeufs et 0,1 ____ (Liter Milch).</ul>",
-        typ: "text",
-        korrekt: "cuillères à soupe d'huile",
-        bild: "img/manonmathieu.png"
-    }, 
-    {    
-        ueberschrift: "Manon et Mathieu parlent de leurs plats préférés ... <br>",
-        satz: 
- 	        "<ul><small>Manon</small>: Est-ce que tu as une recette préférée ?</ul>"+
-            "<ul><small>Mathieu</small>: Non, je n'ai pas <strong>de</strong> recette préférée. Et toi ? </ul>"+
-            "<ul><small>Manon</small>: Oui, j'adore les crêpes !</ul>"+
-            "<ul><small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a trop <strong>de</strong> recettes."+
-            "Mais la recette de ma grand-mère est la meilleure. Tu veux l'avoir ?</ul>"+
-            "<ul><small>Manon</small>: Oui, s'il te plaît !</ul>"+
-            "<ul><small>Mathieu</small>: Alors, pour les ingrédients… Il faut 300 <strong>grammes de farine</strong> (Gramm Mehl), "+
-            "3 <strong>cuillères à soupe de sucre</strong> (Esslöffel Zucker), 2 <strong> cuillères à soupe d'huile</strong>(Esslöffel Öl), 50 ➡️ ____ (Gramm Butter), ____ (ein wenig Salz), 3 oeufs et 0,1 ____ (Liter Milch).</ul>",
+            "3 <strong>cuillères à soupe de sucre</strong> (Esslöffel Zucker), 2 <strong> cuillères à soupe d'huile </strong>(Esslöffel Öl), 50 ➡️ ____ (Gramm Butter), ____ (ein wenig Salz), 3 oeufs et 0,1 ____ (Liter Milch).</ul>",
         typ: "text",
         korrekt: "grammes de beurre",
         bild: "img/manonmathieu.png"
@@ -1628,7 +1613,7 @@ if (thema === "subjonctif") {
             "<ul><small>Mathieu</small>: Non, je n'ai pas <strong>de</strong> recette préférée. Et toi ? </ul>"+
             "<ul><small>Manon</small>: Oui, j'adore les crêpes !</ul>"+
             "<ul><small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a trop <strong>de</strong> recettes."+
-            "Mais la recette de ma grand-mère est la meilleure. Tu veux l'avoir ?</ul>"+
+            "Mais la recette de ma grand-mère est super ! Tu veux l'avoir ?</ul>"+
             "<ul><small>Manon</small>: Oui, s'il te plaît !</ul>"+
             "<ul><small>Mathieu</small>: Alors, pour les ingrédients… Il faut 300 <strong>grammes de farine</strong> (Gramm Mehl), "+
             "3 <strong>cuillères à soupe de sucre</strong> (Esslöffel Zucker), 2 <strong> cuillères à soupe d'huile</strong>(Esslöffel Öl), 50 <strong>grammes du beurre</strong> (Gramm Butter), ➡️ ____ (ein wenig) sel, 3 oeufs et 0,1 ____ (Liter Milch).</ul>",
@@ -1643,7 +1628,7 @@ if (thema === "subjonctif") {
             "<ul><small>Mathieu</small>: Non, je n'ai pas <strong>de</strong> recette préférée. Et toi ?</ul>"+
             "<ul><small>Manon</small>: Oui, j'adore les crêpes !</ul>"+
             "<ul><small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a trop <strong>de</strong> recettes."+
-            "Mais la recette de ma grand-mère est la meilleure. Tu veux l'avoir ?</ul>"+
+            "Mais la recette de ma grand-mère est super ! Tu veux l'avoir ?</ul>"+
             "<ul><small>Manon</small>: Oui, s'il te plaît !</ul>"+
             "<ul><small>Mathieu</small>: Alors, pour les ingrédients… Il faut 300 <strong>grammes de farine</strong> (Gramm Mehl), "+
             "3 <strong>cuillères à soupe de sucre</strong> (Esslöffel Zucker), 2 <strong> cuillères à soupe d'huile</strong>(Esslöffel Öl), "+
@@ -1659,7 +1644,7 @@ if (thema === "subjonctif") {
             "<ul><small>Mathieu</small>: Non, je n'ai pas <strong>de</strong> recette préférée. Et toi ? </ul>"+
             "<ul><small>Manon</small>: Oui, j'adore les crêpes !</ul>"+
             "<ul><small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a trop <strong>de</strong> recettes.</ul>"+
-            "Mais la recette de ma grand-mère est la meilleure. Tu veux l'avoir ?</ul>"+
+            "Mais la recette de ma grand-mère est super ! Tu veux l'avoir ?</ul>"+
             "<ul><small>Manon</small>: Oui, s'il te plaît !</ul>"+
             "<ul><small>Mathieu</small>: Alors, pour les ingrédients… Il faut 300 <strong>grammes de farine</strong> (Gramm Mehl), "+
             "3 <strong>cuillères à soupe de sucre</strong> (Esslöffel Zucker), 2 <strong> cuillères à soupe d'huile</strong>(Esslöffel Öl), "+
@@ -1676,7 +1661,7 @@ if (thema === "subjonctif") {
             "<ul><small>Mathieu</small>: Non, je n'ai pas <strong>de</strong> recette préférée. Et toi ?</ul>"+
             "<ul><small>Manon</small>: Oui, j'adore les crêpes !</ul>"+
             "<ul><small>Mathieu</small>: Ah oui, moi aussi ! Sur internet il y a trop <strong>de</strong> recettes."+
-            "Mais la recette de ma grand-mère est la meilleure. Tu veux l'avoir ?</ul>"+
+            "Mais la recette de ma grand-mère est super ! Tu veux l'avoir ?</ul>"+
             "<ul><small>Manon</small>: Oui, s'il te plaît !</ul>"+
             "<ul><small>Mathieu</small>: Alors, pour les ingrédients… Il faut 300 <strong>grammes de farine</strong> (Gramm Mehl), "+
             "3 <strong>cuillères à soupe de sucre</strong> (Esslöffel Zucker), 2 <strong> cuillères à soupe d'huile</strong>(Esslöffel Öl), "+
@@ -2697,7 +2682,7 @@ function zeigeRezeptPinnwand() {
                 `;
                 container.appendChild(block);
             });
-        } else if (thema === "test") {
+        } else if (thema === "recette") {
         db.collection("antworten")
             .where("schuelerId", "==", id)
             .where("thema", "==", "test")
