@@ -2086,11 +2086,6 @@ function checkAnswer() {
                 if (aktuellesLevel - 1 < aufgaben.length) {
                     console.log("Ich komm hier raus");
                     document.getElementById('nextLevelBtn').style.display = "inline-block";
-                // 23.06.2025
-                } else if (thema === "recette" || thema === "mengen") {
-                    console.log("Jetzt sollte Pinnwand geladen werden");
-                    zeigeRezeptPinnwand(); // statt ladeFalschBeantworteteAufgaben()
-                    return;
                 } else {
                     console.log("Ich komm da raus: Letzte Aufgabe erreicht.");
 
