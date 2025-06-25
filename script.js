@@ -2707,7 +2707,7 @@ function zeigeRezeptPinnwand() {
                 const daten = snapshot.docs.map(doc => doc.data());
                 console.log("daten: ",daten);
                 const farben = daten
-                    .filter(e => e.aufgabe?.includes("3"))
+                    .filter(e => e.aufgabe?.includes("irgendeine"))
                     .at(-1)?.antwort || "–";
                 console.log("Farben: ", farben);
                 const zubereitung = daten.find(e => e.level === 2)?.antwort || "–";
