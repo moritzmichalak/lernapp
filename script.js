@@ -2661,7 +2661,7 @@ function zeigeRezeptPinnwand() {
         userIds.push(`schueler-${i}`);
     }
 
-    container.innerHTML = "<h3>📌 Rezepte deiner Mitschüler:innen</h3>";
+    container.innerHTML = "<h3>📌 Übersicht</h3>";
     document.getElementById("words").style.display = "none";
     document.getElementById("textAntwortContainer").style.display = "none";
     document.getElementById("checkAnswerBtn").style.display = "none";
