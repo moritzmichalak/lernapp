@@ -2712,7 +2712,7 @@ function zeigeRezeptPinnwand() {
                       const lt = latest?.timestamp?.seconds || 0;
                       const ct = current?.timestamp?.seconds || 0;
                       return ct > lt ? current : latest;
-                    }, null);
+                    }, null).antwort;
                     // .at(-1)?.antwort || "–";
                 console.log("Farben: ", farben);
                 const zubereitung = daten.find(e => e.level === 2)?.antwort || "–";
