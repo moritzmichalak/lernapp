@@ -2655,7 +2655,7 @@ function saveTextarea() {
 function zeigeRezeptPinnwand() {
     const container = document.getElementById("sentence");
 
-    // Automatisch IDs von schueler-30 bis schueler-40 erzeugen
+    // Automatisch IDs von schueler-30 bis schueler-43 erzeugen
     const userIds = [];
     for (let i = 30; i <= 43; i++) {
         userIds.push(`schueler-${i}@schule.de`);
