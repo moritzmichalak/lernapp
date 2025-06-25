@@ -2657,7 +2657,7 @@ function zeigeRezeptPinnwand() {
 
     // Automatisch IDs von schueler-30 bis schueler-43 erzeugen
     const userIds = [];
-    for (let i = 31; i <= 46; i++) {
+    for (let i = 31; i <= 40; i++) {
         userIds.push(`schueler-${i}`);
     }
 
