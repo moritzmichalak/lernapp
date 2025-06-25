@@ -1483,7 +1483,7 @@ if (thema === "subjonctif") {
         satz:
         "<ul><em> Un pot </em> <strong>de</strong> yaourt.</ul>"+
         "<ul><em> Une bouteille </em><strong>d'</strong> eau.</ul>"+
-        "<ul><em> Une cuillère </em><strong>d'</strong> huile.</ul>"+
+        "<ul><em> Une cuillère </em><strong>d'</strong> huile. <small>(Ein Löffel Öl.)</small></ul>"+
         "<ul>Une ➡️ ___ </em><strong>d'</strong> œufs.<br>",
         woerter: ["boîte"],
         korrekt: "boîte",
@@ -1495,8 +1495,8 @@ if (thema === "subjonctif") {
         "Auch Wörter wie beaucoup (= viel) bestimmen die Menge. Versuche das passende Wort zu finden. Il y a combien d'eau ?:",
         satz: 
         "<ul>Il y a ➡️ ___ eau.</ul>",
-        woerter: [ "beaucoup de/d'", "un peu de/d'", "trop de/d'", "pas de/d'"],
-        korrekt: "un peu de/d'",
+        woerter: [ "beaucoup d'", "un peu d'", "trop d'", "pas d'"],
+        korrekt: "un peu d'",
         bild: "img/peu.jpg"
     },   
     {    
@@ -1505,8 +1505,8 @@ if (thema === "subjonctif") {
         satz: 
         "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong> Wasser.)</small></ul>"+
         "<ul>Il y a ➡️ ___ eau.</ul>",
-        woerter: [ "beaucoup de/d'", "trop de/d'", "pas de/d'"],
-        korrekt: "beaucoup de/d'",
+        woerter: [ "beaucoup d'", "trop d'", "pas d'"],
+        korrekt: "beaucoup d'",
         bild: "img/beaucoup.jpg"
     },  
     {    
@@ -1516,8 +1516,8 @@ if (thema === "subjonctif") {
         "<ul>Il y a <strong>un peu d'</strong>eau. <small>(Es gibt <strong>ein wenig</strong> Wasser.)</small></ul>"+
         "<ul>Il y a <strong>beaucoup d'</strong>eau. <small>(Es gibt <strong>viel</strong> Wasser.)</small></ul>"+
         "<ul>Il y a ➡️ ___ eau.</ul>",
-        woerter: ["trop de/d'", "pas de/d'"],
-        korrekt: "trop de/d'",
+        woerter: ["trop d'", "pas d'"],
+        korrekt: "trop d'",
         bild: "img/trop.jpg"
     }, 
     {    
@@ -1528,8 +1528,8 @@ if (thema === "subjonctif") {
         "<ul>Il y a <strong>beaucoup d'</strong>eau. <small>(Es gibt <strong>viel</strong> Wasser.)</small></ul>"+
         "<ul>Il y a <strong>trop d'</strong>eau. <small>(Es gibt <strong>zu viel</strong> Wasser.)</small></ul>"+
         "<ul>Il <strong>n'</strong>y a ➡️ ___ eau.</ul>",
-        woerter: ["pas de/d'"],
-        korrekt: "pas de/d'",
+        woerter: ["pas d'"],
+        korrekt: "pas d'",
         bild: "img/pas.png"
     }, 
     // Ein besonderer Fall der bestimmten Menge ist, wenn wir gar nichts von etwas haben. Man sagt auch leere Menge dazu.
