@@ -2679,7 +2679,7 @@ function zeigeRezeptPinnwand() {
                 const daten = snapshot.docs.map(doc => doc.data());
                 console.log("daten: ",daten);
                 const zutaten = daten
-                    .filter(e => e.aufgabe?.includes("Zutatenliste"))
+                    .filter(e => e.aufgabe?.includes("ton tour"))
                     .reduce((latest, current) => {
                       const lt = latest?.timestamp?.seconds || 0;
                       const ct = current?.timestamp?.seconds || 0;
