@@ -2658,7 +2658,7 @@ function zeigeRezeptPinnwand() {
     // Automatisch IDs von schueler-30 bis schueler-43 erzeugen
     const userIds = [];
     for (let i = 30; i <= 43; i++) {
-        userIds.push(`schueler-${i}@schule.de`);
+        userIds.push(`schueler-${i}`);
     }
 
     container.innerHTML = "<h3>📌 Rezepte deiner Mitschüler:innen</h3>";
@@ -2675,6 +2675,7 @@ function zeigeRezeptPinnwand() {
             .where("thema", "==", "recette")
             .get()
             .then(snapshot => {
+                console.log("schuelerId =? ",id);
                 const daten = snapshot.docs.map(doc => doc.data());
                 console.log("daten: ",daten);
                 const zutaten = daten.find(e => e.level === 1)?.antwort || "–";
