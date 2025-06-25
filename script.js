@@ -2534,10 +2534,10 @@ async function ladeFalschBeantworteteAufgaben() {
         .get();
 
     const falschBeantwortete = [];
-
+    console.log("Zeig mir den rausgefischten Datensatz an:", doc);
     snapshot.forEach(doc => {
         const falsch = doc.data();
-        console.log("Zeig mir alle falschen an:", falsch);
+        
         
         // Finde die Original-Aufgabe basierend auf dem Satz
         const original = aufgaben.find(a =>
