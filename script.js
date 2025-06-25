@@ -1729,7 +1729,7 @@ if (thema === "subjonctif") {
         woerter: ["éplucher", "couper"],
         korrekt: "éplucher",
         bild: "img/eplucher.png"
-    },
+    }/*,
     {    
         ueberschrift: "Quelques nouveaux mots ...",
         satz: "<small>Mathieu</small>: À la fin tu peux mettre de la banane, aussi. Il faut <strong>éplucher</strong> et après il faut la ___ (schneiden).",
@@ -1751,6 +1751,7 @@ if (thema === "subjonctif") {
       korrekt: "", // keine Bewertung nötig
       referenziert: "ingredients" // auf vorherige Antwort verweisen
     }
+      */
   ];
 }
 
