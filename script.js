@@ -1364,7 +1364,7 @@ if (thema === "subjonctif") {
         korrekt: "rot"
     }
     ]
-} else if (thema === "mengenangaben") {
+} else if (thema === "mengen") {
   aufgaben = [
     {    
         ueberschrift: "Bestimmte Mengen",
@@ -2086,7 +2086,7 @@ function checkAnswer() {
                     console.log("Ich komm hier raus");
                     document.getElementById('nextLevelBtn').style.display = "inline-block";
                 // 23.06.2025
-                } else if (thema === "recette" || thema === "test") {
+                } else if (thema === "recette" || thema === "mengen") {
                     console.log("Jetzt sollte Pinnwand geladen werden");
                     zeigeRezeptPinnwand(); // statt ladeFalschBeantworteteAufgaben()
                     return;
@@ -2682,10 +2682,10 @@ function zeigeRezeptPinnwand() {
                 `;
                 container.appendChild(block);
             });
-        } else if (thema === "recette") {
+        } else if (thema === "mengen") {
         db.collection("antworten")
             .where("schuelerId", "==", id)
-            .where("thema", "==", "test")
+            .where("thema", "==", "mengen")
             .get()
             .then(snapshot => {
                 console.log("schuelerId =? ",id);
