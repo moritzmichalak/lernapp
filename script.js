@@ -1325,6 +1325,20 @@ if (thema === "subjonctif") {
     ]
 } else if (thema === "recette") {
     aufgaben = [
+    {
+      ueberschrift: "🍎 Ingrédients",
+      typ: "textarea",
+      korrekt: "", // keine Bewertung nötig
+      speichereAls: "ingredients"
+    },
+    {
+      ueberschrift: "🍳 Préparation",
+      typ: "textarea",
+      satz: "Merci pour ta liste d'ingrédients : <strong>___</strong><br>Décris maintenant les étapes de la préparation :",
+      korrekt: "", // keine Bewertung nötig
+      referenziert: "ingredients" // auf vorherige Antwort verweisen
+    }
+    /*
     {    
         ueberschrift: "Testaufgabe 1",
         satz: "Bitte wähle das Wort <em>blau</em> aus: ➡️ ___",
@@ -1344,6 +1358,7 @@ if (thema === "subjonctif") {
         typ: "textarea",
         korrekt: "rot"
     }
+        */
     ]
 } else if (thema === "mengen") {
   aufgaben = [
@@ -2544,14 +2559,14 @@ async function ladeFalschBeantworteteAufgaben() {
         console.log("Datensatz geprüft:", falsch);
         
         // Finde die Original-Aufgabe basierend auf dem Satz
-        const original = aufgaben[falsch.level - 1];
+        // const original = aufgaben[falsch.level - 1];
         console.log("Original gefunden:", original);
-        /*
+        
         const original = aufgaben.find(a =>
             (a.satz?.includes(falsch.aufgabe) || falsch.aufgabe?.includes(a.satz)) &&
             (!falsch.level || aufgaben.indexOf(a) === falsch.level - 1)
         );
-        
+        /*
         const original = aufgaben.find(a =>
             (a.satz === falsch.aufgabe || a.ueberschrift === falsch.aufgabe || a.typ === "textarea") &&
             (!falsch.level || a.typ === "textarea"  || aufgaben.indexOf(a) === falsch.level - 1)
@@ -2666,7 +2681,10 @@ function zeigeRezeptPinnwand() {
                     .filter(e => e.aufgabe?.includes("Ingrédient"))
                     .at(-1)?.antwort || "–";
                 console.log("zutaten: ", zutaten);
-                const zubereitung = daten.find(e => e.level === 2)?.antwort || "–";
+                // const zubereitung = daten.find(e => e.level === 2)?.antwort || "–";
+                const zubereitung = daten
+                    .filter(e => e.aufgabe?.includes("Préparation"))
+                    .at(-1)?.antwort || "–";
 
                 const block = document.createElement("div");
                 block.classList.add("rezept-block");
