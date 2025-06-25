@@ -2716,7 +2716,7 @@ function zeigeRezeptPinnwand() {
                 block.classList.add("rezept-block");
                 block.innerHTML = `
                     <h4>👤 ${id}</h4>
-                    <p><strong>🎨 Farbe:</strong><br>${zutaten}</p>
+                    <p><strong>🎨 Farbe:</strong><br>${farben}</p>
                     <hr>
                 `;
                 container.appendChild(block);
