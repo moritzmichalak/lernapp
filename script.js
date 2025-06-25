@@ -1327,6 +1327,7 @@ if (thema === "subjonctif") {
     aufgaben = [
     {
       ueberschrift: "🍎 Ingrédients",
+      satz: "À ton tour, écris ta liste d'ingrédients <small> (Du bist dran, erstelle deine Zutatenliste) </small>  ",
       typ: "textarea",
       korrekt: "", // keine Bewertung nötig
       speichereAls: "ingredients"
@@ -2678,7 +2679,7 @@ function zeigeRezeptPinnwand() {
                 const daten = snapshot.docs.map(doc => doc.data());
                 console.log("daten: ",daten);
                 const zutaten = daten
-                    .filter(e => e.aufgabe?.includes("ingrédient"))
+                    .filter(e => e.aufgabe?.includes("Zutatenliste"))
                     .reduce((latest, current) => {
                       const lt = latest?.timestamp?.seconds || 0;
                       const ct = current?.timestamp?.seconds || 0;
@@ -2689,7 +2690,7 @@ function zeigeRezeptPinnwand() {
                 console.log("zutaten: ", zutaten);
                 // const zubereitung = daten.find(e => e.level === 2)?.antwort || "–";
                 const zubereitung = daten
-                    .filter(e => e.aufgabe?.includes("Préparation"))
+                    .filter(e => e.aufgabe?.includes("étapes"))
                     .reduce((latest, current) => {
                       const lt = latest?.timestamp?.seconds || 0;
                       const ct = current?.timestamp?.seconds || 0;
