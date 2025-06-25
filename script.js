@@ -2708,7 +2708,12 @@ function zeigeRezeptPinnwand() {
                 console.log("daten: ",daten);
                 const farben = daten
                     .filter(e => e.aufgabe?.includes("irgendeine"))
-                    .at(-1)?.antwort || "–";
+                    .reduce((latest, current) => {
+                      const lt = latest?.timestamp?.seconds || 0;
+                      const ct = current?.timestamp?.seconds || 0;
+                      return ct > lt ? current : latest;
+                    }, null);
+                    // .at(-1)?.antwort || "–";
                 console.log("Farben: ", farben);
                 const zubereitung = daten.find(e => e.level === 2)?.antwort || "–";
 
