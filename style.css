@@ -311,7 +311,7 @@ body {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url('1kg.jpg');
+  background-image: url('img/1kg.jpg');
   background-size: cover;
   vertical-align: middle;
 }
