@@ -57,8 +57,8 @@ const aufgaben_bilan = [
         "<ul><small>Alex: </small> On a fait une fête samedi, et on a mangé <strong>tous les</strong> "+
         "spaghettis et <strong>toute la</strong> viande hachée. Et <strong>toutes les</strong> tomates ...</ul>"+
         "<ul><small>Rose: </small> Vous avez aussi bu <strong>toutes les</strong> boissons ? <strong>Tout le</strong> vin et ➡️ ____ eau ?</ul>",
-        woerter: ["tout le", "toute la", "tous les", "toutes les"],
-        korrekt: "toute la"
+        woerter: ["tout l'", "toute l'", "tous les", "toutes les"],
+        korrekt: "toute l'"
     },
     //POPUP: Titel: Bravo ! Text: eau steht im Singular/Einzahl und es ist weiblich -> toute l'eau (das ganze Wasser). 
     {
@@ -77,7 +77,8 @@ const aufgaben_bilan = [
     
     // p. 65 ex 2 La fête
     {
-        ueberschrift: "Pour la salade, il me faut <img src='1kg.jpg' alt='1K Gewicht' width='24' height='24'></img> et ainsi",
+        ueberschrift: "Test",
+        text: "Pour la salade, il me faut <img src='1kg.jpg' alt='1K Gewicht' width='24' height='24'></img> ➡️ ____  et ainsi",
         woerter: ["tout le", "toute la", "tous les", "toutes les"],
         korrekt: "toutes les"
     }
