@@ -306,3 +306,12 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
+
+.emoji-gewicht {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url('1kg.jpg');
+  background-size: cover;
+  vertical-align: middle;
+}
