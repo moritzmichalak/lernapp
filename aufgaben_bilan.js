@@ -74,17 +74,16 @@ const aufgaben_bilan = [
         korrekt: "toutes les"
     },
         //POPUP: Titel: Oui, c'est vrai ! Text: courses steht im Plural und es ist weiblich -> toutes les courses (alle Einkäufe). 
-    
     // p. 65 ex 2 La fête
     {
         ueberschrift: "Test 1",
-        text: "Pour la salade, il me faut  ➡️ ____  et ainsi",
+        satz: "Pour la salade, il me faut <img src='1kg.jpg' alt='1K Gewicht' width='24' height='24'> ➡️ ____  et ainsi",
         woerter: ["tout le", "toute la", "tous les", "toutes les"],
         korrekt: "toutes les"
     },
         {
         ueberschrift: "Test 2",
-        text: "Pour la salade, il me faut <img src='1kg.jpg' alt='1K Gewicht' width='24' height='24'></img> ➡️ ____  et ainsi",
+        satz: "Pour la salade, il me faut <img src='1kg.jpg' alt='1K Gewicht' width='24' height='24'></img> ➡️ ____  et ainsi",
         woerter: ["tout le", "toute la", "tous les", "toutes les"],
         korrekt: "toutes les"
     }
