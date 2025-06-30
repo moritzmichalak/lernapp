@@ -83,7 +83,7 @@ const aufgaben_bilan = [
     },
         {
         ueberschrift: "Test 2",
-        satz: "Pour la salade, il me faut <img src='img/1kg.jpg' alt='1K Gewicht' width='24' height='24'></img> ➡️ ____  et ainsi",
+        satz: "Pour la salade, il me faut <img src='img/1kg.jpg' alt='1K Gewicht' width='30' height='30'></img> ➡️ ____  et ainsi",
         woerter: ["tout le", "toute la", "tous les", "toutes les"],
         korrekt: "toutes les"
     }
