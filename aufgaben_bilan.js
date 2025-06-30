@@ -85,10 +85,10 @@ const aufgaben_bilan = [
         ueberschrift: "Test 2",
         satz: "<img src='img/500g.png' alt='500g Gewicht' width='40' height='50'></img>"+
         "<img src='img/250g.png' alt='250g Gewicht' width='40' height='50'></img>"+
-        "<img src='img/10bouteilles.png' alt='10 Flaschen' width='60' height='40'></img>"+
+        "<img src='img/10bouteilles.png' alt='10 Flaschen' width='80' height='40'></img>"+
         "<img src='img/5bouteilles.png' alt='5 Flaschen' width='60' height='40'></img>"+
         "<img src='img/1pot.png' alt='1 Becker' width='40' height='50'></img>"+
-        "<img src='img/1litre.png' alt='1 Liter' width='40' height='50'></img>"+
+        "<img src='img/1litre.png' alt='1 Liter' width='50' height='70'></img>"+
         "<img src='img/1boite.png' alt='1 Schachtel' width='60' height='50'></img>"+
         "Pour la salade, il me faut <img src='img/1kg.jpg' alt='1K Gewicht' width='40' height='50'></img> ➡️ ____  et ainsi",
         woerter: ["tout le", "toute la", "tous les", "toutes les"],
