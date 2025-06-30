@@ -1,113 +1,84 @@
-// aufgaben_bilan.js
-
 const aufgaben_bilan = [
-    {    
-        ueberschrift: "Meike et Rose vont au Restaurant. Complétez avec les formes de <strong>manger</strong> et <strong>boire</strong>.",
-        satz: "1. Meike: Qu'est-ce que tu ➡️ ____ ? Du vin ?",
-        typ: "text",
-        korrekt: "bois",
-        bild: "img/manger_boire.png"
+    {
+        ueberschrift: "Rose kommt aus dem Urlaub zurück und schaut entsetzt in den Kühlschrank ... <br>"+
+        "Complétez avec <strong><em>tout le / toute la / tous les / toutes les</em></strong>",
+        satz: "<ul><small>Rose: </small> Alex, ce n'est pas possible, vous avez tout mangé !</ul>"+
+        "<ul><small>Alex: </small> On a fait une fête samedi, et on a mangé ➡️ ____ spaghettis et ____ viande hachée. Et ____ tomates ...</ul>",
+        woerter: ["tout le", "toute la", "tous les", "toutes les"],
+        korrekt: "tous les"
     },
-    {    
-        ueberschrift: "Meike et Rose vont au Restaurant. Complétez avec les formes de <strong>manger</strong> et <strong>boire</strong>.",
-        satz: "<ul>1. Meike: Qu'est-ce que tu <strong> bois </strong> ? Du vin ?</ul>"+
-        "<ul>2. Rose: Si tu ➡️ ____ de la viande, on prend du vin rouge, d'accord ? On prend aussi un apéritif ?</ul>",
-        woerter: ["manges", "bois", "mange"],
-        korrekt: "manges",
-        bild: "img/manger_boire.png"
+    //POPUP: Titel: Gut erkannt! Text: spaghettis steht im Plural und ist männlich, also tous les. 
+    {
+        ueberschrift: "Rose kommt aus dem Urlaub zurück und schaut entsetzt in den Kühlschrank ... <br>"+
+        "Complétez avec <strong><em>tout le / toute la / tous les / toutes les</em></strong>",
+        satz: "<ul><small>Rose: </small> Alex, ce n'est pas possible, vous avez tout mangé !</ul>"+
+        "<ul><small>Alex: </small> On a fait une fête samedi, et on a mangé <strong>tous les</strong> "+
+        "spaghettis et ➡️ ____ viande hachée. Et ____ tomates ...</ul>",
+        woerter: ["tout le", "toute la", "tous les", "toutes les"],
+        korrekt: "toute la"
     },
-    {    
-        ueberschrift: "Meike et Rose vont au Restaurant. Complétez avec les formes de <strong>manger</strong> et <strong>boire</strong>.",
-        satz: "<ul>1. Meike: Qu'est-ce que tu <strong> bois </strong> ? Du vin ?</ul>"+
-        "<ul>2. Rose: Si tu <strong> manges </strong> de la viande, on prend du vin rouge, d'accord ? On prend aussi un apéritif ?</ul>"+
-        "<ul>3. Meike: Non, merci. J'ai déjà ➡️ ____ un apéritif avec Alex à la maison.</ul>",
-        typ: "text",
-        korrekt: "bu",
-        bild: "img/manger_boire.png"
+    //POPUP: Titel: Bien joué ! Text: viande steht im Singular/Einzahl und es ist weiblich -> toute la viande (das ganze Fleisch). 
+    {
+        ueberschrift: "Rose kommt aus dem Urlaub zurück und schaut entsetzt in den Kühlschrank ... <br>"+
+        "Complétez avec <strong><em>tout le / toute la / tous les / toutes les</em></strong>",
+        satz: "<ul><small>Rose: </small> Alex, ce n'est pas possible, vous avez tout mangé !</ul>"+
+        "<ul><small>Alex: </small> On a fait une fête samedi, et on a mangé <strong>tous les</strong> "+
+        "spaghettis et <strong>toute la</strong> viande hachée. Et ➡️ ____ tomates ...</ul>",
+        woerter: ["tout le", "toute la", "tous les", "toutes les"],
+        korrekt: "toutes les"
     },
-    {    
-        ueberschrift: "Meike et Rose vont au Restaurant. Complétez avec les formes de <strong>manger</strong> et <strong>boire</strong>.",
-        satz: "<ul>1. Meike: Qu'est-ce que tu <strong> bois </strong> ? Du vin ?</ul>"+
-        "<ul>2. Rose: Si tu <strong> manges </strong> de la viande, on prend du vin rouge, d'accord ? On prend aussi un apéritif ?</ul>"+
-        "<ul>3. Meike: Non, merci. J'ai déjà <strong> bu </strong> un apéritif avec Alex à la maison.</ul>"+
-        "<ul>4. Rose: D'accord. En Allemagne, vous ➡️ ____ souvent de la bière, hein ? </ul>",
-        typ: "text",
-        korrekt: "buvez",
-        bild: "img/manger_boire.png"
+    //POPUP: Titel: Super ! Text: tomates steht im Plural und es ist weiblich -> toutes les tomates (alle Tomaten). 
+    {
+        ueberschrift: "Rose kommt aus dem Urlaub zurück und schaut entsetzt in den Kühlschrank ... <br>"+
+        "Complétez avec <strong><em>tout le / toute la / tous les / toutes les</em></strong>",
+        satz: "<ul><small>Rose: </small> Alex, ce n'est pas possible, vous avez tout mangé !</ul>"+
+        "<ul><small>Alex: </small> On a fait une fête samedi, et on a mangé <strong>tous les</strong> "+
+        "spaghettis et <strong>toute la</strong> viande hachée. Et <strong>toutes les</strong> tomates ...</ul>"+
+        "<ul><small>Rose: </small> Vous avez aussi bu ➡️ ____ boissons ? ____ vin et ____ eau ?</ul>",
+        woerter: ["tout le", "toute la", "tous les", "toutes les"],
+        korrekt: "toutes les"
     },
-    {    
-        ueberschrift: "Meike et Rose vont au Restaurant. Complétez avec les formes de <strong>manger</strong> et <strong>boire</strong>.",
-        satz: "<ul>1. Meike: Qu'est-ce que tu <strong> bois </strong> ? Du vin ?</ul>"+
-        "<ul>2. Rose: Si tu <strong> manges </strong> de la viande, on prend du vin rouge, d'accord ? On prend aussi un apéritif ?</ul>"+
-        "<ul>3. Meike: Non, merci. J'ai déjà <strong> bu </strong> un apéritif avec Alex à la maison.</ul>"+
-        "<ul>4. Rose: D'accord. En Allemagne, vous ➡️ ____ souvent de la bière, hein ? </ul>",
-        typ: "text",
-        korrekt: "buvez",
-        bild: "img/manger_boire.png"
+    //POPUP: Titel: Exactement ! Text: boissons steht im Plural und es ist weiblich -> toutes les boissons (alle Getränke). 
+    {
+        ueberschrift: "Rose kommt aus dem Urlaub zurück und schaut entsetzt in den Kühlschrank ... <br>"+
+        "Complétez avec <strong><em>tout le / toute la / tous les / toutes les</em></strong>",
+        satz: "<ul><small>Rose: </small> Alex, ce n'est pas possible, vous avez tout mangé !</ul>"+
+        "<ul><small>Alex: </small> On a fait une fête samedi, et on a mangé <strong>tous les</strong> "+
+        "spaghettis et <strong>toute la</strong> viande hachée. Et <strong>toutes les</strong> tomates ...</ul>"+
+        "<ul><small>Rose: </small> Vous avez aussi bu <strong>toutes les</strong> boissons ? ➡️ ____ vin et ____ eau ?</ul>",
+        woerter: ["Tout le", "Toute la", "Tous les", "Toutes les"],
+        korrekt: "Tout le"
     },
-    {    
-        ueberschrift: "Meike et Rose vont au Restaurant. Complétez avec les formes de <strong>manger</strong> et <strong>boire</strong>.",
-        satz: "<ul>1. Meike: Qu'est-ce que tu <strong> bois </strong> ? Du vin ?</ul>"+
-        "<ul>2. Rose: Si tu <strong> manges </strong> de la viande, on prend du vin rouge, d'accord ? On prend aussi un apéritif ?</ul>"+
-        "<ul>3. Meike: Non, merci. J'ai déjà <strong> bu </strong> un apéritif avec Alex à la maison.</ul>"+
-        "<ul>4. Rose: D'accord. En Allemagne, vous <strong> buvez </strong>  souvent de la bière, hein ? </ul>"+
-        "<ul>5. Meike: Oui, et on ne ➡️ ____ pas de café après le repas. </ul>",
-        typ: "text",
-        korrekt: "boit",
-        bild: "img/manger_boire.png"
+    //POPUP: Titel: Bien joué ! Text: vin steht im Singular/Einzahl und es ist männlich -> tout le vin (der ganze Wein). 
+    {
+        ueberschrift: "Rose kommt aus dem Urlaub zurück und schaut entsetzt in den Kühlschrank ... <br>"+
+        "Complétez avec <strong><em>tout le / toute la / tous les / toutes les</em></strong>",
+        satz: "<ul><small>Rose: </small> Alex, ce n'est pas possible, vous avez tout mangé !</ul>"+
+        "<ul><small>Alex: </small> On a fait une fête samedi, et on a mangé <strong>tous les</strong> "+
+        "spaghettis et <strong>toute la</strong> viande hachée. Et <strong>toutes les</strong> tomates ...</ul>"+
+        "<ul><small>Rose: </small> Vous avez aussi bu <strong>toutes les</strong> boissons ? <strong>Tout le</strong> vin et ➡️ ____ eau ?</ul>",
+        woerter: ["tout le", "toute la", "tous les", "toutes les"],
+        korrekt: "toute la"
     },
-    {    
-        ueberschrift: "Meike et Rose vont au Restaurant. Complétez avec les formes de <strong>manger</strong> et <strong>boire</strong>.",
-        satz: "<ul>1. Meike: Qu'est-ce que tu <strong> bois </strong> ? Du vin ?</ul>"+
-        "<ul>2. Rose: Si tu <strong> manges </strong> de la viande, on prend du vin rouge, d'accord ? On prend aussi un apéritif ?</ul>"+
-        "<ul>3. Meike: Non, merci. J'ai déjà <strong> bu </strong> un apéritif avec Alex à la maison.</ul>"+
-        "<ul>4. Rose: D'accord. En Allemagne, vous <strong> buvez </strong>  souvent de la bière, hein ? </ul>"+
-        "<ul>5. Meike: Oui, et on ne <strong> boit </strong> pas de café après le repas. </ul>"+
-        "<ul>6. Rose: Et quand vous ➡️ ____, vous ne buvez pas d'eau. C'est vrai ? </ul>",
-        typ: "text",
-        korrekt: "mangez",
-        bild: "img/manger_boire.png"
+    //POPUP: Titel: Bravo ! Text: eau steht im Singular/Einzahl und es ist weiblich -> toute l'eau (das ganze Wasser). 
+    {
+        ueberschrift: "Rose kommt aus dem Urlaub zurück und schaut entsetzt in den Kühlschrank ... <br>"+
+        "Complétez avec <strong><em>tout le / toute la / tous les / toutes les</em></strong>",
+        satz: "<ul><small>Rose: </small> Alex, ce n'est pas possible, vous avez tout mangé !</ul>"+
+        "<ul><small>Alex: </small> On a fait une fête samedi, et on a mangé <strong>tous les</strong> "+
+        "spaghettis et <strong>toute la</strong> viande hachée. Et <strong>toutes les</strong> tomates ...</ul>"+
+        "<ul><small>Rose: </small> Vous avez aussi bu <strong>toutes les</strong> boissons ? <strong>Tout le</strong> vin et ➡️ ____ eau ?</ul>"+
+        "<ul><small>Alex: </small> Eh ... oui ..."+
+        "<ul><small>Rose: </small> Demain, tu vas faire ➡️ ____ courses !</ul>",
+        woerter: ["tout le", "toute la", "tous les", "toutes les"],
+        korrekt: "toutes les"
     },
-    {    
-        ueberschrift: "Meike et Rose vont au Restaurant. Complétez avec les formes de <strong>manger</strong> et <strong>boire</strong>.",
-        satz: "<ul>1. Meike: Qu'est-ce que tu <strong> bois </strong> ? Du vin ?</ul>"+
-        "<ul>2. Rose: Si tu <strong> manges </strong> de la viande, on prend du vin rouge, d'accord ? On prend aussi un apéritif ?</ul>"+
-        "<ul>3. Meike: Non, merci. J'ai déjà <strong> bu </strong> un apéritif avec Alex à la maison.</ul>"+
-        "<ul>4. Rose: D'accord. En Allemagne, vous <strong> buvez </strong>  souvent de la bière, hein ? </ul>"+
-        "<ul>5. Meike: Oui, et on ne <strong> boit </strong> pas de café après le repas. </ul>"+
-        "<ul>6. Rose: Et quand vous <strong> mangez </strong>, vous ne buvez pas d'eau. C'est vrai ? </ul>"+
-        "<ul>7. Meike: Oui, c'est vrai, et souvent, on ➡️ ____trop... et trop vite ! </ul>",
-        typ: "text",
-        korrekt: "mange",
-        bild: "img/manger_boire.png"
-    },
-    {    
-        ueberschrift: "Meike et Rose vont au Restaurant. Complétez avec les formes de <strong>manger</strong> et <strong>boire</strong>.",
-        satz: "<ul>1. Meike: Qu'est-ce que tu <strong> bois </strong> ? Du vin ?</ul>"+
-        "<ul>2. Rose: Si tu <strong> manges </strong> de la viande, on prend du vin rouge, d'accord ? On prend aussi un apéritif ?</ul>"+
-        "<ul>3. Meike: Non, merci. J'ai déjà <strong> bu </strong> un apéritif avec Alex à la maison.</ul>"+
-        "<ul>4. Rose: D'accord. En Allemagne, vous <strong> buvez </strong>  souvent de la bière, hein ? </ul>"+
-        "<ul>5. Meike: Oui, et on ne <strong> boit </strong> pas de café après le repas. </ul>"+
-        "<ul>6. Rose: Et quand vous <strong> mangez </strong>, vous ne buvez pas d'eau. C'est vrai ? </ul>"+
-        "<ul>7. Meike: Oui, c'est vrai, et souvent, on <strong> mange </strong> trop... et trop vite ! </ul>"+
-        "<ul>8. Rose: Tiens, les gens là-bas ➡️ ____ déjà leurs entrées.... hmm ! On commande aussi ? ... </ul>",
-        typ: "text",
-        korrekt: "mangent",
-        bild: "img/manger_boire.png"
-    },
-    {    
-        ueberschrift: "Meike et Rose vont au Restaurant. Complétez avec les formes de <strong>manger</strong> et <strong>boire</strong>.",
-        satz: "<ul>1. Meike: Qu'est-ce que tu <strong> bois </strong> ? Du vin ?</ul>"+
-        "<ul>2. Rose: Si tu <strong> manges </strong> de la viande, on prend du vin rouge, d'accord ? On prend aussi un apéritif ?</ul>"+
-        "<ul>3. Meike: Non, merci. J'ai déjà <strong> bu </strong> un apéritif avec Alex à la maison.</ul>"+
-        "<ul>4. Rose: D'accord. En Allemagne, vous <strong> buvez </strong>  souvent de la bière, hein ? </ul>"+
-        "<ul>5. Meike: Oui, et on ne <strong> boit </strong> pas de café après le repas. </ul>"+
-        "<ul>6. Rose: Et quand vous <strong> mangez </strong>, vous ne buvez pas d'eau. C'est vrai ? </ul>"+
-        "<ul>7. Meike: Oui, c'est vrai, et souvent, on <strong> mange </strong> trop... et trop vite ! </ul>"+
-        "<ul>8. Rose: Tiens, les gens là-bas <strong> mangez </strong> déjà leurs entrées.... hmm ! On commande aussi ? ... </ul>"+
-        "<ul>9. (plus tard) <br> Rose: Ah, voilà nos salades. ➡️ ____, j'ai faim !</ul>",
-        typ: "text",
-        korrekt: "mangeons",
-        bild: "img/manger_boire.png"
-    } 
+        //POPUP: Titel: Oui, c'est vrai ! Text: courses steht im Plural und es ist weiblich -> toutes les courses (alle Einkäufe). 
+    
+    // p. 65 ex 2 La fête
+    {
+        ueberschrift: "Pour la salade, il me faut <img src='1kg.jpg' alt='1K Gewicht' width='24' height='24'></img> et ainsi",
+        woerter: ["tout le", "toute la", "tous les", "toutes les"],
+        korrekt: "toutes les"
+    }
 ]

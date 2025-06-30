@@ -72,6 +72,9 @@ switch (thema) {
   case "partie1":
     aufgaben = aufgaben_partie1;
     break;
+  case "extra":
+    aufgaben = aufgaben_extra;
+    break;
   case "bilan":
     aufgaben = aufgaben_bilan;
     break;
