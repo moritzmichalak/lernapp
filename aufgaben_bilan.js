@@ -78,7 +78,7 @@ const aufgaben_bilan = [
     // p. 65 ex 2 La fête
     {
         ueberschrift: "Test 1",
-        text: "Pour la salade, il me faut <img src='1kg.jpg' alt='1K Gewicht' width='24' height='24'></img> ➡️ ____  et ainsi",
+        text: "Pour la salade, il me faut  ➡️ ____  et ainsi",
         woerter: ["tout le", "toute la", "tous les", "toutes les"],
         korrekt: "toutes les"
     },
