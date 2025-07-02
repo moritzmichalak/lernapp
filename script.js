@@ -562,6 +562,19 @@ function closePopup() {
 
 // 12.05.25
 const erklaerungen = {
+    bilan: {
+        1: {
+            titel: "Gut erkannt! 🕵️‍♂️",
+            text: "spaghettis steht im Plural und ist männlich, also <em>tous les</em>."
+        },
+        2:  {
+            titel: "Bien joué !",
+            text: "<em>viande</em> steht im Singular/Einzahl und es ist weiblich -> <em>toute la viande (das ganze Fleisch)</em>."
+        },
+
+
+    
+    },
     conditionnel: {
         1: {
             titel: "Wann verwendet man das Conditionnel?",
