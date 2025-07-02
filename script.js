@@ -2,6 +2,7 @@ const db = firebase.firestore();
 let schuelerId = "";
 let istWiederholung = false;
 let userAntworten = {};
+let wiederholung = false;
 
 function entferneAccents(str) {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -296,8 +297,8 @@ function ladeLevel() {
 
     const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
     console.log("Erklärugen für Popups1(lL):", erklaerung);
-    if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
-    // if (erklaerung) {
+    // if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
+    if (erklaerung && wiederholung === false) {
         console.log("Erklärugen für Popups2(lL):", erklaerung);
         showPopup(erklaerung.titel, erklaerung.text);
         localStorage.setItem(`popupShown_${thema}_${aktuellesLevel}`, "true");
@@ -430,12 +431,13 @@ function checkAnswer() {
                 
                 console.log("Erklärugen für Popups1(cA):", erklaerung);
                 // Popups anzeigen:
+                /*
                 if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
                 // if (erklaerung) {
                     console.log("Erklärugen für Popups2(cA):", erklaerung);
                     showPopup(erklaerung.titel, erklaerung.text);
                 }
-                
+                */
                 aktuellesLevel++;
                 const istHalbzeit = aktuellesLevel === Math.ceil(aufgaben.length / 2);
                 if (istHalbzeit) {
@@ -862,7 +864,7 @@ function checkTextarea() {
     // 23.06.2025
     } else {
         console.log("Jetzt sollte Pinnwand geladen werden");
-        zeigeRezeptPinnwand(); // statt ladeFalschBeantworteteAufgaben()
+        zeigeRezeptPinnwand(); 
         return;
     }
 }
@@ -1014,6 +1016,7 @@ async function ladeFalschBeantworteteAufgaben() {
         .get();
 
     const falschBeantwortete = [];
+    wiederholung = true;
     console.log("Zeig mir den rausgefischten Datensatz an:", snapshot);
     snapshot.forEach(doc => {
       console.log("Antwort:", doc.data());
