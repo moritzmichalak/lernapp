@@ -296,8 +296,8 @@ function ladeLevel() {
 
     const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
     console.log("Erklärugen für Popups1(lL):", erklaerung);
-    // if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
-    if (erklaerung) {
+    if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
+    // if (erklaerung) {
         console.log("Erklärugen für Popups2(lL):", erklaerung);
         showPopup(erklaerung.titel, erklaerung.text);
         localStorage.setItem(`popupShown_${thema}_${aktuellesLevel}`, "true");
@@ -430,8 +430,8 @@ function checkAnswer() {
                 /*
                 console.log("Erklärugen für Popups1(cA):", erklaerung);
                 // Popups anzeigen:
-                // if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
-                if (erklaerung) {
+                if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
+                // if (erklaerung) {
                     console.log("Erklärugen für Popups2(cA):", erklaerung);
                     showPopup(erklaerung.titel, erklaerung.text);
                 }
@@ -597,7 +597,7 @@ const erklaerungen = {
         8:  {
             titel: "Auf zur nächsten Aufgabe 👉 ",
             text: "<ul>Hier muss du entweder den <em>article partitif (du, de la, des)</em> für unbestimmten Mengen oder <em>de</em> für bestimmte Mengen angeben.</ul>"+
-            "<ul>Zahlen von bis einschließlich 10 solltest du ausschreiben, also z.B. <em>trois</em> statt <em>3</em>, Zahlen >10 kanst du als Zahlen schreiben, also z.B. <em>100 grammes de beurre</em>.</ul>"+
+            "<ul>Zahlen von bis einschließlich 10 solltest du ausschreiben, also z.B. <em>trois</em> statt <em>3</em>, Zahlen >10 kannst du als Zahlen schreiben, also z.B. <em>100 grammes de beurre</em>.</ul>"+
             "<ul>Kilogramme(s), kannst du mit kilo(s) abkürzen</ul>"
         },
         9:  {
@@ -631,27 +631,27 @@ const erklaerungen = {
             text: "Bei der Verneinung spricht man von einer bestimmten Menge, man bestimmt die Menge nämlich auf 0 bzw. nichts (<em>leere Menge</em>). -> Also : <em><strong>de</strong> viande</em>"
         },
         // Ex 4
-        27:  {
+        25:  {
             titel: "Nouvelle exercice !",
             text: "In dieser Übung üben wir die drei Verben <em>venir</em>, <em>boire</em> und <em>manger</em>. Falls du die Vergangenheitsform Passé Composé benutzen musst, ist dies mit <strong>p.c.</strong> gekennzeichnet. Ansonsten benutzt du den Präsens."
         },
-        31:  {
+        30:  {
             titel: "⚠️ Attention",
             text: "Im folgenden Satz ist das Passé Composé zu verwenden!"
         },
-        42:  {
+        40:  {
             titel: "Die fünfte und letzte Übung 💪",
             text: "Wir unterscheiden wieder zwischen <em>de</em> für bestimmte Mengen, <em>du/de la/des</em> für unbestimmte Mengen und müssen an manchen Stellen auch wieder das Pronom <em>en</em> verwenden. Falls du die Vergangenheitsform Passé Composé benutzen musst, ist dies mit p.c. gekennzeichnet. Ansonsten benutzt die den Präsens"
         },
-        43: {
+        41: {
             titel: "Was war nochmal 'ne ... plus' 🤔",
             text: "Es gibt die normale Form der Verneinung, z.B. <em>Elle ne vient pas (=Sie kommt nicht.)</em>. Es gibt aber auch eine besondere Form der Verneinung: <em>Elle ne vient <strong>plus</strong> (=Sie kommt <strong>nicht mehr</strong>.)</em>"
         },
-        47:  {
+        45:  {
             titel: "⚠️ Attention",
             text: "Im folgenden Satz ist das Passé Composé zu verwenden!"
         },
-        48:  {
+        46:  {
             titel: "⚠️ Attention",
             text: "Im folgenden Satz ist das Passé Composé zu verwenden!"
         }
