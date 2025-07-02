@@ -925,8 +925,8 @@ async function ladeFalschBeantworteteAufgaben() {
         console.log("Datensatz geprüft:", falsch);
         
         // Finde die Original-Aufgabe basierend auf dem Satz
-        const original = aufgaben[falsch.level - 1];
-        console.log("Original gefunden:", original);
+        // const original = aufgaben[falsch.level - 1];
+        
         /*
         const original = aufgaben.find(a =>
             (a.satz?.includes(falsch.aufgabe) || falsch.aufgabe?.includes(a.satz)) &&
@@ -937,6 +937,7 @@ async function ladeFalschBeantworteteAufgaben() {
             (a.satz === falsch.aufgabe || a.ueberschrift === falsch.aufgabe ) &&
             (!falsch.level || aufgaben.indexOf(a) === falsch.level - 1)
         );
+        console.log("Original gefunden:", original);
         
         if (original && !falschBeantwortete.find(a => a.satz === original.satz)) {
             falschBeantwortete.push(original);
