@@ -384,6 +384,7 @@ function checkAnswer() {
                 // Speichern
                 db.collection("antworten").add({
                   schuelerId,
+                  thema,
                   level: aktuellesLevel,
                   aufgabe: aufgabe.satz,
                   antwort: droppedWord,
@@ -478,6 +479,7 @@ function checkAnswer() {
                 }
                 db.collection("antworten").add({
                     schuelerId: schuelerId,
+                    thema,
                     level: aktuellesLevel,
                     aufgabe: aufgaben[aktuellesLevel - 2].satz,
                     antwort: droppedWord,
@@ -842,6 +844,7 @@ function checkTextAnswer() {
 
         db.collection("antworten").add({
             schuelerId,
+            thema,
             level: aktuellesLevel,
             aufgabe: aufgabe.satz,
             antwort: antwort,
