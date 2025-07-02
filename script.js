@@ -501,6 +501,7 @@ function checkAnswer() {
             dropzone.style.border = "2px solid #FF0000";
             db.collection("antworten").add({
                 schuelerId: schuelerId,
+                thema,
                 level: aktuellesLevel,
                 aufgabe: aufgaben[aktuellesLevel - 1].satz,
                 antwort: droppedWord,
