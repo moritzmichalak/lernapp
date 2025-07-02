@@ -248,5 +248,31 @@ const aufgaben_bilan = [
         "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>",
         typ: "text",
         korrekt: "un litre de"
-    }
+    },
+    {
+        ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
+        satz: 
+        "<strong>a) Au restaurant</strong> <br><br>"+
+        "<ul><small>Le garçon:</small> Alors, vous ➡️ ____ <em>(prendre / agneau)</em> ?</ul>",
+        typ: "text",
+        korrekt: "prenez de l'agneau"
+    },
+    {
+        ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
+        satz: 
+        "<strong>a) Au restaurant</strong> <br><br>"+
+        "<ul><small>Le garçon:</small> Alors, vous <strong>prenez de l'agneau</strong><em>(prendre / agneau)</em> ?</ul>"+
+        "<ul><small>Meike:</small> Non merci, je ➡️ ____ <em>(ne pas vouloir)</em> ?</ul>",
+        typ: "text",
+        korrekt: "n'en veux pas"
+    },
+    {
+        ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
+        satz: 
+        "<strong>a) Au restaurant</strong> <br><br>"+
+        "<ul><small>Le garçon:</small> Alors, vous <strong>prenez de l'agneau</strong><em>(prendre / agneau)</em> ?</ul>"+
+        "<ul><small>Meike:</small> Non merci, je ➡️ ____ <em>(ne pas vouloir)</em> ?</ul>",
+        typ: "text",
+        korrekt: "n'en veux pas"
+    },
 ]
