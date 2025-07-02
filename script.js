@@ -564,13 +564,22 @@ function closePopup() {
 const erklaerungen = {
     bilan: {
         1: {
+            titel: "Exercice 1, <em>c'est parti (=los geht's)</em> 🚀",
+            text: "Wir üben den Unterschied zwischen tout le / toute la und tous les / toutes les."
+        },
+        2: {
             titel: "Gut erkannt! 🕵️‍♂️",
             text: "spaghettis steht im Plural und ist männlich, also <em>tous les</em>."
         },
-        2:  {
+        3:  {
             titel: "Bien joué !",
             text: "<em>viande</em> steht im Singular/Einzahl und es ist weiblich -> <em>toute la viande (das ganze Fleisch)</em>."
         },
+        4:  {
+            titel: "C'est ça ! ",
+            text: "tomates steht im Plural 🍅🍅🍅 und es ist weiblich -> <em>toutes les tomates (alle Tomaten)</em>."
+        },
+
 
 
     
