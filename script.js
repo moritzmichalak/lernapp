@@ -563,6 +563,7 @@ function closePopup() {
 // 12.05.25
 const erklaerungen = {
     bilan: {
+        // Ex. 1
         1: {
             titel: "Exercice 1, <em>c'est parti (=los geht's)</em> 🚀",
             text: "Wir üben den Unterschied zwischen tout le / toute la und tous les / toutes les."
@@ -579,10 +580,80 @@ const erklaerungen = {
             titel: "C'est ça ! ",
             text: "tomates steht im Plural 🍅🍅🍅 und es ist weiblich -> <em>toutes les tomates (alle Tomaten)</em>."
         },
-
-
-
-    
+        5:  {
+            titel: "🍹 🥤 🍸 🍺",
+            text: "boissons steht im Plural und es ist weiblich -> <em>toutes les boissons (alle Getränke)</em>."
+        },
+        6:  {
+            titel: "Bien joué ! ",
+            text: "vin steht im Singular/Einzahl und es ist männlich -> <em>tout le vin (der ganze Wein)</em>."
+        },
+        7:  {
+            titel: "Bravo !👏 ",
+            text: "eau steht im Singular/Einzahl und es ist weiblich -> <em>toute l'eau (das ganze Wasser)</em>."
+        },
+        // Ex. 2
+        8:  {
+            titel: "Auf zur nächsten Aufgabe 👉 ",
+            text: "<ul>Hier muss du entweder den <em>article partitif (du, de la, des)</em> für unbestimmten Mengen oder <em>de</em> für bestimmte Mengen angeben.</ul>"+
+            "<ul>Zahlen von bis einschließlich 10 solltest du ausschreiben, also z.B. <em>trois</em> statt <em>3</em>, Zahlen >10 kanst du als Zahlen schreiben, also z.B. <em>100 grammes de beurre</em>.</ul>"+
+            "<ul>Kilogramme(s), kannst du mit kilo(s) abkürzen</ul>"
+        },
+        9:  {
+            titel: "Bien joué !",
+            text: "Hier wird die Menge an Tomaten durch die Angabe 1 Kilo bestimmt -> Also bestimmte Menge mit <em>de</em> ✅"
+        },
+        10:  {
+            titel: "Exactement !",
+            text: "Hier wird die Menge an Fleisch durch die 500 Gramm bestimmt  -> Also bestimmte Menge mit <em>de</em> ✅"
+        },
+        11:  {
+            titel: "Gut gemacht !",
+            text: "Hier ist die Menge an Wasser unbestimmt -> Also unbestimmte Menge mit <em>article partitif: de la</em> ✅"
+        },
+        // Ex. 3
+        20:  {
+            titel: "Troisième exercice ! ⏳",
+            text: "<ul>In dieser Übung unterscheiden wir nicht nur zwischen <em>de</em> für bestimmte und <em>du/de la/des</em> für unbestimmte Mengen. Es gibt auch stellen an denen das Pronom <em>en</em> zu verwenden ist (zu deutsch: <em>davon</em>)</ul>."+ 
+            "<ul>Falls du die Vergangenheitsform Passé Composé benutzen musst, ist dies mit <strong>p.c.</strong> gekennzeichnet. Ansonsten benutzt du den Präsens.</ul>"
+        },
+        21:  {
+            titel: "Bien joué 👏",
+            text: "Die Menge von agneau wird nicht bestimmt, also article partitif: <em>de l'</em>"
+        },
+        22:  {
+            titel: "Exactement !",
+            text: "Das <em>en</em> bezieht sich auf agneau. Meike will nichts <em>davon</em> (von agneau). Das <em>en</em> steht <strong>vor dem Verbs</strong>, auch bei der Verneinung und steht so mit <strong>nach dem <em>ne</em></strong> der Verneinungsform: n'<em>en</em> (Verb) pas."
+        },
+        23:  {
+            titel: "⚠️ Attention",
+            text: "Bei der Verneinung spricht man von einer bestimmten Menge, man bestimmt die Menge nämlich auf 0 bzw. nichts (<em>leere Menge</em>). -> Also : <em><strong>de</strong> viande</em>"
+        },
+        // Ex 4
+        27:  {
+            titel: "Nouvelle exercice !",
+            text: "In dieser Übung üben wir die drei Verben <em>venir</em>, <em>boire</em> und <em>manger</em>. Falls du die Vergangenheitsform Passé Composé benutzen musst, ist dies mit <strong>p.c.</strong> gekennzeichnet. Ansonsten benutzt du den Präsens."
+        },
+        31:  {
+            titel: "⚠️ Attention",
+            text: "Im folgenden Satz ist das Passé Composé zu verwenden!"
+        },
+        42:  {
+            titel: "Die fünfte und letzte Übung 💪",
+            text: "Wir unterscheiden wieder zwischen <em>de</em> für bestimmte Mengen, <em>du/de la/des</em> für unbestimmte Mengen und müssen an manchen Stellen auch wieder das Pronom <em>en</em> verwenden. Falls du die Vergangenheitsform Passé Composé benutzen musst, ist dies mit p.c. gekennzeichnet. Ansonsten benutzt die den Präsens"
+        },
+        43: {
+            titel: "Was war nochmal 'ne ... plus' 🤔",
+            text: "Es gibt die normale Form der Verneinung, z.B. <em>Elle ne vient pas (=Sie kommt nicht.)</em>. Es gibt aber auch eine besondere Form der Verneinung: <em>Elle ne vient <strong>plus</strong> (=Sie kommt <strong>nicht mehr</strong>.)</em>"
+        },
+        47:  {
+            titel: "⚠️ Attention",
+            text: "Im folgenden Satz ist das Passé Composé zu verwenden!"
+        },
+        48:  {
+            titel: "⚠️ Attention",
+            text: "Im folgenden Satz ist das Passé Composé zu verwenden!"
+        }
     },
     conditionnel: {
         1: {
