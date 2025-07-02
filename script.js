@@ -532,6 +532,7 @@ function naechstesLevel() {
 
 function logout() {
     firebase.auth().signOut().then(() => {
+        wiederholung = false;
         window.location.href = "index.html";
     }).catch((error) => {
         alert("Fehler beim Logout: " + error.message);
@@ -539,6 +540,7 @@ function logout() {
 }
 
 function zurueckThemenwahl() {
+    wiederholung = false;
     window.location.href = "themenwahl.html";
 }
 
