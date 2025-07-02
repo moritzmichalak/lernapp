@@ -73,7 +73,7 @@ const aufgaben_bilan = [
         woerter: ["tout le", "toute la", "tous les", "toutes les"],
         korrekt: "toutes les"
     },
-    
+
 
     // POPUP 8: Titel: Beginnen wir mit der nächsten Aufgabe, Text: Hier muss du entweder den article partitif (du, de la, des) für unbestimmten Mengen oder "de" für bestimmte Mengen angeben. Zahlen von bis einschließlich 10 solltest du ausschreiben, also z.B. "trois" statt 3, Zahlen >10 kanst du als Zahlen schreiben, also z.B. 100 grammes de beurre. Kilogramme(s), kannst du mit kilo(s) abkürzen
     {
@@ -95,7 +95,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "500 grammes de"
     },
-    // POPUP 9: Titel: Exactement !, Text: Hier wird die Menge an Fleisch durch die 500 Gramm bestimmt -> Also bestimmte Menge mit "de" 
+    // POPUP 10: Titel: Exactement !, Text: Hier wird die Menge an Fleisch durch die 500 Gramm bestimmt -> Also bestimmte Menge mit "de" 
     {
         ueberschrift: "Exercice 2 (Cahier, p. 66) La fête: Samedi matin, les trois colocs préparent la fête. <br> Complétez avec les <u>quantités</u>  ou avec <u> l'article partitif</u>",
         satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
@@ -107,7 +107,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "De l'"
     },
-    // POPUP 9: Titel: Gut gemacht !, Text: Hier ist die Menge an Wasser unbestimmt -> Also unbestimmte Menge mit article partitif: de la  
+    // POPUP 11: Titel: Gut gemacht !, Text: Hier ist die Menge an Wasser unbestimmt -> Also unbestimmte Menge mit article partitif: de la  
     {
         ueberschrift: "Exercice 2 (Cahier, p. 66) La fête: Samedi matin, les trois colocs préparent la fête. <br> Complétez avec les <u>quantités</u>  ou avec <u> l'article partitif</u>",
         satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
@@ -119,7 +119,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "cinq bouteilles de"
     },
-        // POPUP 10
+        // POPUP 12
     {
         ueberschrift: "Exercice 2 (Cahier, p. 66) La fête: Samedi matin, les trois colocs préparent la fête. <br> Complétez avec les <u>quantités</u>  ou avec <u> l'article partitif</u>",
         satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
@@ -132,7 +132,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "de la"
     },
-        // POPUP 11
+        // POPUP 13
     {
         ueberschrift: "Exercice 2 (Cahier, p. 66) La fête: Samedi matin, les trois colocs préparent la fête. <br> Complétez avec les <u>quantités</u>  ou avec <u> l'article partitif</u>",
         satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
@@ -146,7 +146,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "dix bouteilles de"
     },
-        // POPUP 12
+        // POPUP 14
     {
         ueberschrift: "Exercice 2 (Cahier, p. 66) La fête: Samedi matin, les trois colocs préparent la fête. <br> Complétez avec les <u>quantités</u>  ou avec <u> l'article partitif</u>",
         satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
@@ -161,7 +161,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "du"
     },
-        // POPUP 13
+        // POPUP 15
     {
         ueberschrift: "Exercice 2 (Cahier, p. 66) La fête: Samedi matin, les trois colocs préparent la fête. <br> Complétez avec les <u>quantités</u>  ou avec <u> l'article partitif</u>",
         satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
@@ -177,7 +177,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "trois bouteilles de"
     },
-        // POPUP 14
+        // POPUP 16
     {
         ueberschrift: "Exercice 2 (Cahier, p. 66) La fête: Samedi matin, les trois colocs préparent la fête. <br> Complétez avec les <u>quantités</u>  ou avec <u> l'article partitif</u>",
         satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
@@ -198,7 +198,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "250 grammes de"
     },
-        // POPUP 15
+        // POPUP 17
     {
         ueberschrift: "Exercice 2 (Cahier, p. 66) La fête: Samedi matin, les trois colocs préparent la fête. <br> Complétez avec les <u>quantités</u>  ou avec <u> l'article partitif</u>",
         satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
@@ -219,7 +219,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "une boîte d'"
     },
-        // POPUP 16
+        // POPUP 18
     {
         ueberschrift: "Exercice 2 (Cahier, p. 66) La fête: Samedi matin, les trois colocs préparent la fête. <br> Complétez avec les <u>quantités</u>  ou avec <u> l'article partitif</u>",
         satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
@@ -240,7 +240,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "un pot de"
     },
-        // POPUP17
+        // POPUP19
     {
         ueberschrift: "Exercice 2 (Cahier, p. 65) La fête: Samedi matin, les trois colocs préparent la fête. <br> Complétez avec les <u>quantités</u>  ou avec <u> l'article partitif</u>",
         satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
@@ -262,7 +262,7 @@ const aufgaben_bilan = [
         korrekt: "un litre de"
     },
 
-     // POPUP 18: Titel: Troisième exercice !, TExt: In dieser Übung unterscheiden wir nicht nur zwischen "de" für bestimmte und du/de la/des für unbestimmte Mengen. Es gibt auch stellen an denen das Pronom "en" zu verwenden ist (zu deutsch: "davon"). Falls du die Vergangenheitsform Passé Composé benutzen musst, ist dies mit p.c. gekennzeichnet. Ansonsten benutzt die den Präsens.
+     // POPUP 20: Titel: Troisième exercice !, TExt: In dieser Übung unterscheiden wir nicht nur zwischen "de" für bestimmte und du/de la/des für unbestimmte Mengen. Es gibt auch stellen an denen das Pronom "en" zu verwenden ist (zu deutsch: "davon"). Falls du die Vergangenheitsform Passé Composé benutzen musst, ist dies mit p.c. gekennzeichnet. Ansonsten benutzt die den Präsens.
     {
         ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
         satz: 
@@ -271,7 +271,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "prenez de l'agneau"
     },
-    // POPUP 19: Sehr gut, die Menge von agneau wird nicht bestimmt, also article partitif: de l' !
+    // POPUP 21: Sehr gut, die Menge von agneau wird nicht bestimmt, also article partitif: de l' !
     {
         ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
         satz: 
@@ -281,7 +281,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "n'en veux pas"
     },
-    // POPUP 19: Titel: Genau! Text: Das en bezieht sich auf agneau. Meike will nichts "davon". Das en steht vor dem Verb, auch bei der Verneinung und steht so mit nach dem ne der Verneinungsform: n'en (Verb) pas.
+    // POPUP 22: Titel: Genau! Text: Das en bezieht sich auf agneau. Meike will nichts "davon". Das en steht vor dem Verb, auch bei der Verneinung und steht so mit nach dem ne der Verneinungsform: n'en (Verb) pas.
     {
         ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
         satz: 
@@ -292,7 +292,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "ne manges pas de viande"
     },
-    // POPUP 20: Bei Verneinung spricht man von einer bestimmten Menge, man bestimmt die Menge nämlich auf 0 bzw. nichts. -> Also : de viande
+    // POPUP 23: Bei Verneinung spricht man von einer bestimmten Menge, man bestimmt die Menge nämlich auf 0 bzw. nichts. -> Also : de viande
     {
         ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
         satz: 
@@ -305,7 +305,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "n'en mange pas"
     },
-    // POPUP 21
+    // POPUP 24
     {
         ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
         satz: 
@@ -318,7 +318,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "mange du poisson"
     },
-  // POPUP 22
+  // POPUP 25
     {
         ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
         satz: 
@@ -332,61 +332,80 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "prends du gigot"
     },
-  // POPUP 23
+  // POPUP 26
 
 
-    // POPUP 24: Titel: Nouvelle exercice !, TExt: In dieser Übung üben wir die drei Verben venir, boire und manger. Falls du die Vergangenheitsform Passé Composé benutzen musst, ist dies mit p.c. gekennzeichnet. Ansonsten benutzt die den Präsens.
+    // POPUP 27: Titel: Nouvelle exercice !, TExt: In dieser Übung üben wir die drei Verben venir, boire und manger. Falls du die Vergangenheitsform Passé Composé benutzen musst, ist dies mit p.c. gekennzeichnet. Ansonsten benutzt die den Präsens.
     {
         ueberschrift: "Exercixe 4: Tu viens ? Meike et Christophe rencontrent Manon dans la rue. <br>"+
         "Complétez avec les formes correctes de <em>venir</em>, <em>boire</em> et <em>manger</em>.",
         satz: 
-        "<ul><small>Manon:</small> Salut ! Vous ➡️ ____ d'où ?</ul>",
+        "<ul><small>Manon:</small> Salut ! Vous ➡️ ____ d'où ?</ul>"+
+        "<ul><small>Meike:</small> Nous ____ de l'appart. Et toi, tu ____ d'où ? </ul>"+
+        "<ul><small>Manon:</small> Je ____ du lycée. Vous ____(<strong>p.c.</strong>) ?</ul>"+
+        "<ul><small>Christoph:</small> Non, pas encore. Et toi, tu ne ____ pas à la cantine aujourdhui ?</ul>"+
+        "<ul><small>Manon:</small> Non. Lucie et Farid ____ à la cantine, mais le menu ne me plaît pas.</ul>"+
+        "<ul><small>Meike:</small> Alors ____  avec nous !</ul>",
         typ: "text",
         korrekt: "venez"
     },
-     // POPUP 25:
+     // POPUP 28:
     {
         ueberschrift: "Exercixe 4: Tu viens ? Meike et Christophe rencontrent Manon dans la rue. <br>"+
         "Complétez avec les formes correctes de <em>venir</em>, <em>boire</em> et <em>manger</em>.",
         satz: 
         "<ul><small>Manon:</small> Salut ! Vous <strong>venez</strong> d'où ?</ul>"+
-        "<ul><small>Meike:</small> Nous ➡️ ____ de l'appart. Et toi, tu ____ d'où ? </ul>",
+        "<ul><small>Meike:</small> Nous ➡️ ____ de l'appart. Et toi, tu ____ d'où ? </ul>"+
+            "<ul><small>Manon:</small> Je ____ du lycée. Vous ____(<strong>p.c.</strong>) ?</ul>"+
+        "<ul><small>Christoph:</small> Non, pas encore. Et toi, tu ne ____ pas à la cantine aujourdhui ?</ul>"+
+        "<ul><small>Manon:</small> Non. Lucie et Farid ____ à la cantine, mais le menu ne me plaît pas.</ul>"+
+        "<ul><small>Meike:</small> Alors ____  avec nous !</ul>",
         typ: "text",
         korrekt: "venons"
     },
-     // POPUP 26:
+     // POPUP 29:
     {
         ueberschrift: "Exercixe 4: Tu viens ? Meike et Christophe rencontrent Manon dans la rue. <br>"+
         "Complétez avec les formes correctes de <em>venir</em>, <em>boire</em> et <em>manger</em>.",
         satz: 
         "<ul><small>Manon:</small> Salut ! Vous <strong>venez</strong> d'où ?</ul>"+
-        "<ul><small>Meike:</small> Nous strong>venons</strong> de l'appart. Et toi, tu ➡️ ____ d'où ? </ul>",
+        "<ul><small>Meike:</small> Nous strong>venons</strong> de l'appart. Et toi, tu ➡️ ____ d'où ? </ul>"+
+        "<ul><small>Manon:</small> Je ____ du lycée. Vous ____(<strong>p.c.</strong>) ?</ul>"+
+        "<ul><small>Christoph:</small> Non, pas encore. Et toi, tu ne ____ pas à la cantine aujourdhui ?</ul>"+
+        "<ul><small>Manon:</small> Non. Lucie et Farid ____ à la cantine, mais le menu ne me plaît pas.</ul>"+
+        "<ul><small>Meike:</small> Alors ____  avec nous !</ul>",
         typ: "text",
         korrekt: "viens"
     },
-     // POPUP 27
+     // POPUP 30
+    {
+        ueberschrift: "Exercixe 4: Tu viens ? Meike et Christophe rencontrent Manon dans la rue. <br>"+
+        "Complétez avec les formes correctes de <em>venir</em>, <em>boire</em> et <em>manger</em>.",
+        satz: 
+        "<ul><small>Manon:</small> Salut ! Vous <strong>venez</strong> d'où ?</ul>"+
+        "<ul><small>Meike:</small> Nous <strong>venons</strong> de l'appart. Et toi, tu <strong>viens</strong> d'où ? </ul>"+
+        "<ul><small>Manon:</small> Je ➡️ ____ du lycée. Vous ____ (<strong>p.c.</strong>) </ul>"+
+        "<ul><small>Christoph:</small> Non, pas encore. Et toi, tu ne ____ pas à la cantine aujourdhui ?</ul>"+
+        "<ul><small>Manon:</small> Non. Lucie et Farid ____ à la cantine, mais le menu ne me plaît pas.</ul>"+
+        "<ul><small>Meike:</small> Alors ____  avec nous !</ul>",
+        typ: "text",
+        korrekt: "viens"
+    },
+     // POPUP 31: Titel: Attention !, Text: Jetzt ist das Passé Composé zu verwenden!
     {
         ueberschrift: "Exercixe 4: Tu viens ? Meike et Christophe rencontrent Manon dans la rue. <br>"+
         "Complétez avec les formes correctes de <em>venir</em>, <em>boire</em> et <em>manger</em>.",
         satz: 
         "<ul><small>Manon:</small> Salut ! Vous <strong>venez</strong> d'où ?</ul>"+
         "<ul><small>Meike:</small> Nous strong>venons</strong> de l'appart. Et toi, tu <strong>viens</strong> d'où ? </ul>"+
-        "<ul><small>Manon:</small> Je ➡️ ____ du lycée. Vous ____ (<strong>p.c.</strong>) </ul>",
-        typ: "text",
-        korrekt: "viens"
-    },
-     // POPUP 28: Titel: Attention !, Text: Jetzt ist das Passé Composé zu verwenden!
-    {
-        ueberschrift: "Exercixe 4: Tu viens ? Meike et Christophe rencontrent Manon dans la rue. <br>"+
-        "Complétez avec les formes correctes de <em>venir</em>, <em>boire</em> et <em>manger</em>.",
-        satz: 
-        "<ul><small>Manon:</small> Salut ! Vous <strong>venez</strong> d'où ?</ul>"+
-        "<ul><small>Meike:</small> Nous strong>venons</strong> de l'appart. Et toi, tu <strong>viens</strong> d'où ? </ul>"+
-        "<ul><small>Manon:</small> Je <strong>viens</strong> du lycée. Vous ➡️ ____ (<strong>p.c.</strong>) </ul>",
+        "<ul><small>Manon:</small> Je <strong>viens</strong> du lycée. Vous ➡️ ____ (<strong>p.c.</strong>) </ul>"+
+        "<ul><small>Christoph:</small> Non, pas encore. Et toi, tu ne ____ pas à la cantine aujourdhui ?</ul>"+
+        "<ul><small>Manon:</small> Non. Lucie et Farid ____ à la cantine, mais le menu ne me plaît pas.</ul>"+
+        "<ul><small>Meike:</small> Alors ____  avec nous !</ul>",
         typ: "text",
         korrekt: "avez mangé"
     },
-     // POPUP 29: Titel: Bien joué ! Text: Die Passé Composé-Form von manger ist regelmäßig: mangé
+     // POPUP 32: Titel: Bien joué ! Text: Die Passé Composé-Form von manger ist regelmäßig: mangé
     {
         ueberschrift: "Exercixe 4: Tu viens ? Meike et Christophe rencontrent Manon dans la rue. <br>"+
         "Complétez avec les formes correctes de <em>venir</em>, <em>boire</em> et <em>manger</em>.",
@@ -394,11 +413,13 @@ const aufgaben_bilan = [
         "<ul><small>Manon:</small> Salut ! Vous <strong>venez</strong> d'où ?</ul>"+
         "<ul><small>Meike:</small> Nous strong>venons</strong> de l'appart. Et toi, tu <strong>viens</strong> d'où ? </ul>"+
         "<ul><small>Manon:</small> Je <strong>viens</strong> du lycée. Vous <strong>avez mangé</strong>(<strong>p.c.</strong>) </ul>"+
-        "<ul><small>Christoph:</small> Non, pas encore. Et toi, tu ne ➡️ ____ pas à la cantine aujourdhui ?</ul>",
+        "<ul><small>Christoph:</small> Non, pas encore. Et toi, tu ne ➡️ ____ pas à la cantine aujourdhui ?</ul>"+
+        "<ul><small>Manon:</small> Non. Lucie et Farid ____ à la cantine, mais le menu ne me plaît pas.</ul>"+
+        "<ul><small>Meike:</small> Alors ____  avec nous !</ul>",
         typ: "text",
         korrekt: "manges"
     },
-     // POPUP 30
+     // POPUP 33
     {
         ueberschrift: "Exercixe 4: Tu viens ? Meike et Christophe rencontrent Manon dans la rue. <br>"+
         "Complétez avec les formes correctes de <em>venir</em>, <em>boire</em> et <em>manger</em>.",
@@ -407,11 +428,12 @@ const aufgaben_bilan = [
         "<ul><small>Meike:</small> Nous strong>venons</strong> de l'appart. Et toi, tu <strong>viens</strong> d'où ? </ul>"+
         "<ul><small>Manon:</small> Je <strong>viens</strong> du lycée. Vous <strong>avez mangé</strong>(<strong>p.c.</strong>) </ul>"+
         "<ul><small>Christoph:</small> Non, pas encore. Et toi, tu ne <strong>manges</strong> pas à la cantine aujourdhui ?</ul>"+
-        "<ul><small>Manon:</small> Non. Lucie et Farid ➡️ ____ à la cantine, mais le menu ne me plaît pas.</ul>",
+        "<ul><small>Manon:</small> Non. Lucie et Farid ➡️ ____ à la cantine, mais le menu ne me plaît pas.</ul>"+
+        "<ul><small>Meike:</small> Alors ____  avec nous !</ul>",
         typ: "text",
         korrekt: "mangent"
     },
-     // POPUP 31
+     // POPUP 34
     {
         ueberschrift: "Exercixe 4: Tu viens ? Meike et Christophe rencontrent Manon dans la rue. <br>"+
         "Complétez avec les formes correctes de <em>venir</em>, <em>boire</em> et <em>manger</em>.",
@@ -425,7 +447,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "viens"
     },
-     // POPUP 32
+     // POPUP 35
     {
         ueberschrift: "Exercixe 4: Tu viens ? Meike et Christophe rencontrent Manon dans la rue. <br>"+
         "Complétez avec les formes correctes de <em>venir</em>, <em>boire</em> et <em>manger</em>.",
@@ -434,7 +456,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "mangez"
     },
-     // POPUP 33
+     // POPUP 36
     {
         ueberschrift: "Exercixe 4: Tu viens ? Meike et Christophe rencontrent Manon dans la rue. <br>"+
         "Complétez avec les formes correctes de <em>venir</em>, <em>boire</em> et <em>manger</em>.",
@@ -444,7 +466,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "mange"
     },
-     // POPUP 34
+     // POPUP 37
     {
         ueberschrift: "Exercixe 4: Tu viens ? Meike et Christophe rencontrent Manon dans la rue. <br>"+
         "Complétez avec les formes correctes de <em>venir</em>, <em>boire</em> et <em>manger</em>.",
@@ -454,7 +476,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "buvons"
     },
-     // POPUP 35
+     // POPUP 38
     {
         ueberschrift: "Exercixe 4: Tu viens ? Meike et Christophe rencontrent Manon dans la rue. <br>"+
         "Complétez avec les formes correctes de <em>venir</em>, <em>boire</em> et <em>manger</em>.",
@@ -465,7 +487,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "boivent"
     },
-     // POPUP 36
+     // POPUP 39
     {
         ueberschrift: "Exercixe 4: Tu viens ? Meike et Christophe rencontrent Manon dans la rue. <br>"+
         "Complétez avec les formes correctes de <em>venir</em>, <em>boire</em> et <em>manger</em>.",
@@ -476,7 +498,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "bois"
     },
-     // POPUP 37
+     // POPUP 40
     {
         ueberschrift: "Exercixe 4: Tu viens ? Meike et Christophe rencontrent Manon dans la rue. <br>"+
         "Complétez avec les formes correctes de <em>venir</em>, <em>boire</em> et <em>manger</em>.",
@@ -489,9 +511,9 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "bois"
     },
-    // POPUP 38
+    // POPUP 41
     
-    //POPUP 38: Titel: Die fünfte und letzte Übung 💪, Text: Wir unterscheiden wieder zwischen "de" für bestimmte Mengen, du/de la/des für unbestimmte Mengen und müssen an manchen Stellen auch wieder das Pronom "en" verwenden. Falls du die Vergangenheitsform Passé Composé benutzen musst, ist dies mit p.c. gekennzeichnet. Ansonsten benutzt die den Präsens.
+    //POPUP 42: Titel: Die fünfte und letzte Übung 💪, Text: Wir unterscheiden wieder zwischen "de" für bestimmte Mengen, du/de la/des für unbestimmte Mengen und müssen an manchen Stellen auch wieder das Pronom "en" verwenden. Falls du die Vergangenheitsform Passé Composé benutzen musst, ist dies mit p.c. gekennzeichnet. Ansonsten benutzt die den Präsens.
 
    {
         ueberschrift: "Exercixe 5 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
@@ -501,7 +523,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "a de l'eau"
     },
-     //POPUP 39:  Titel: Reminder ;), Text: Es gibt die normale Form der Verneinung, z.B. <em>Elle ne vient pas (=Sie kommt nicht.)</em> , aber auch eine besondere Form der Verneinung: <em>Elle ne vient <strong>plus</strong> (=Sie kommt <strong>nicht mehr</strong>.)</em>
+     //POPUP 43:  Titel: Reminder ;), Text: Es gibt die normale Form der Verneinung, z.B. <em>Elle ne vient pas (=Sie kommt nicht.)</em> , aber auch eine besondere Form der Verneinung: <em>Elle ne vient <strong>plus</strong> (=Sie kommt <strong>nicht mehr</strong>.)</em>
     {
         ueberschrift: "Exercixe 5 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
         satz: 
@@ -512,7 +534,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "n'en a plus"
     },
-     //POPUP 40:
+     //POPUP 44:
     {
         ueberschrift: "Exercixe 5 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
         satz: 
@@ -523,7 +545,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "en prend trois bouteilles"
     },
-     //POPUP 41
+     //POPUP 45
     {
         ueberschrift: "Exercixe 5 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
         satz: 
@@ -535,7 +557,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "il faut du vin"
     },
-     //POPUP 42
+     //POPUP 46
     {
         ueberschrift: "Exercixe 5 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
         satz: 
@@ -548,7 +570,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "en avons pris"
     },
-     //POPUP 43: Titel: Attention ⚠️, Text: Il faut utiliser le passé composé !
+     //POPUP47: Titel: Attention ⚠️, Text: Il faut utiliser le passé composé !
     {
         ueberschrift: "Exercixe 5 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
         satz: 
@@ -562,7 +584,7 @@ const aufgaben_bilan = [
         typ: "text",
         korrekt: "ont bu deux bouteilles de vin rouge"
     },
-     //POPUP 44: Titel: Attention ⚠️, Text: Il faut utiliser le passé composé !
+     //POPUP 48: Titel: Attention ⚠️, Text: Il faut utiliser le passé composé !
     {
         ueberschrift: "Exercixe 5 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
         satz: 

@@ -615,7 +615,7 @@ const erklaerungen = {
         // Ex. 3
         20:  {
             titel: "Troisième exercice ! ⏳",
-            text: "<ul>In dieser Übung unterscheiden wir nicht nur zwischen <em>de</em> für bestimmte und <em>du/de la/des</em> für unbestimmte Mengen. Es gibt auch stellen an denen das Pronom <em>en</em> zu verwenden ist (zu deutsch: <em>davon</em>)</ul>."+ 
+            text: "<ul>In dieser Übung unterscheiden wir nicht nur zwischen <em>de</em> für bestimmte und <em>du/de la/des</em> für unbestimmte Mengen. Es gibt auch Stellen an denen das Pronom <em>en</em> zu verwenden ist (zu deutsch: <em>davon</em>)</ul>."+ 
             "<ul>Falls du die Vergangenheitsform Passé Composé benutzen musst, ist dies mit <strong>p.c.</strong> gekennzeichnet. Ansonsten benutzt du den Präsens.</ul>"
         },
         21:  {
@@ -624,7 +624,7 @@ const erklaerungen = {
         },
         22:  {
             titel: "Exactement !",
-            text: "Das <em>en</em> bezieht sich auf agneau. Meike will nichts <em>davon</em> (von agneau). Das <em>en</em> steht <strong>vor dem Verbs</strong>, auch bei der Verneinung und steht so mit <strong>nach dem <em>ne</em></strong> der Verneinungsform: n'<em>en</em> (Verb) pas."
+            text: "Das <em>en</em> bezieht sich auf agneau. Meike will nichts <em>davon</em> (von agneau). Das <em>en</em> steht <strong>vor dem Verb</strong>, auch bei der Verneinung und steht somit <strong>nach dem <em>ne</em></strong> der Verneinungsform: n'<em>en</em> (Verb) pas."
         },
         23:  {
             titel: "⚠️ Attention",
