@@ -925,7 +925,7 @@ async function ladeFalschBeantworteteAufgaben() {
         console.log("Datensatz geprüft:", falsch);
         
         // Finde die Original-Aufgabe basierend auf dem Satz
-        // const original = aufgaben[falsch.level - 1];
+        const original = aufgaben[falsch.level - 1];
         console.log("Original gefunden:", original);
         /*
         const original = aufgaben.find(a =>
