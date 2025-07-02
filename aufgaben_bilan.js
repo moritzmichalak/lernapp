@@ -67,7 +67,7 @@ const aufgaben_bilan = [
         satz: "<ul><small>Rose: </small> Alex, ce n'est pas possible, vous avez tout mangé !</ul>"+
         "<ul><small>Alex: </small> On a fait une fête samedi, et on a mangé <strong>tous les</strong> "+
         "spaghettis et <strong>toute la</strong> viande hachée. Et <strong>toutes les</strong> tomates ...</ul>"+
-        "<ul><small>Rose: </small> Vous avez aussi bu <strong>toutes les</strong> boissons ? <strong>Tout le</strong> vin et ➡️ ____ eau ?</ul>"+
+        "<ul><small>Rose: </small> Vous avez aussi bu <strong>toutes les</strong> boissons ? <strong>Tout le</strong> vin et <strong>toute l'</strong>eau ?</ul>"+
         "<ul><small>Alex: </small> Eh ... oui ..."+
         "<ul><small>Rose: </small> Demain, tu vas faire ➡️ ____ courses !</ul>",
         woerter: ["tout le", "toute la", "tous les", "toutes les"],
@@ -78,23 +78,188 @@ const aufgaben_bilan = [
     {
         ueberschrift: "2 La fête",
         satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
-        "<ul><small>Doriane: </small> Pour la salade, il me faut<sup>*</sup> <img src='img/1kg.jpg' alt='1K Gewicht' width='40' height='50'></img> ➡️ ____  "+
+        "<ul><small>Doriane: </small> Pour la salade, il me faut<sup>*</sup> <img src='img/1kg.png' alt='1K Gewicht' width='40' height='50'></img> ➡️ ____  "+
         "tomates et pour les spaghettis, <img src='img/500g.png' alt='500g Gewicht' width='40' height='50'></img> ____ viande hachée."+
         "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>",
         typ: "text",
         korrekt: "un kilo de"
     },
-        {
-        ueberschrift: "Test 2",
-        satz: "<img src='img/500g.png' alt='500g Gewicht' width='40' height='50'></img>"+
-        "<img src='img/250g.png' alt='250g Gewicht' width='40' height='50'></img>"+
-        "<img src='img/10bouteilles.png' alt='10 Flaschen' width='80' height='40'></img>"+
-        "<img src='img/5bouteilles.png' alt='5 Flaschen' width='60' height='40'></img>"+
-        "<img src='img/1pot.png' alt='1 Becker' width='40' height='50'></img>"+
-        "<img src='img/1litre.png' alt='1 Liter' width='50' height='70'></img>"+
-        "<img src='img/1boite.png' alt='1 Schachtel' width='60' height='50'></img>"+
-        "Pour la salade, il me faut <img src='img/1kg.jpg' alt='1K Gewicht' width='40' height='50'></img> ➡️ ____  et ainsi",
-        woerter: ["tout le", "toute la", "tous les", "toutes les"],
-        korrekt: "toutes les"
+    {
+        ueberschrift: "2 La fête",
+        satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
+        "<ul><small>Doriane: </small> Pour la salade, il me faut<sup>*</sup> <img src='img/1kg.png' alt='1K Gewicht' width='40' height='50'></img> <strong>un kilo de</strong>  "+
+        "tomates et pour les spaghettis, <img src='img/500g.png' alt='500g Gewicht' width='40' height='50'></img> ➡️ ____ viande hachée."+
+        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>",
+        typ: "text",
+        korrekt: "500 grammes de"
+    },
+    {
+        ueberschrift: "2 La fête",
+        satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
+        "<ul><small>Doriane: </small> Pour la salade, il me faut<sup>*</sup> <img src='img/1kg.png' alt='1K Gewicht' width='40' height='50'></img> <strong>un kilo de</strong>  "+
+        "tomates et pour les spaghettis, <img src='img/500g.png' alt='500g Gewicht' width='40' height='50'></img> <strong>500 grammes de</strong> viande hachée."+
+        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>"+
+        "<ul><small>Yohann: </small> Et comme boisson, qu'est-ce qu'on prend ?</ul>"+
+        "<ul><small>Marine: </small> ➡️ ____eau et <img src='img/5bouteilles.png' alt='5 Flaschen' width='60' height='40'></img> ____ coca. </ul>",
+        typ: "text",
+        korrekt: "De l'"
+    },
+    {
+        ueberschrift: "2 La fête",
+        satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
+        "<ul><small>Doriane: </small> Pour la salade, il me faut<sup>*</sup> <img src='img/1kg.png' alt='1K Gewicht' width='40' height='50'></img> <strong>un kilo de</strong>  "+
+        "tomates et pour les spaghettis, <img src='img/500g.png' alt='500g Gewicht' width='40' height='50'></img> <strong>500 grammes de</strong> viande hachée."+
+        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>"+
+        "<ul><small>Yohann: </small> Et comme boisson, qu'est-ce qu'on prend ?</ul>"+
+        "<ul><small>Marine: </small> <strong>De l'</strong>eau et <img src='img/5bouteilles.png' alt='5 Flaschen' width='60' height='40'></img> ➡️ ____ coca. </ul>",
+        typ: "text",
+        korrekt: "de"
+    },
+    {
+        ueberschrift: "2 La fête",
+        satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
+        "<ul><small>Doriane: </small> Pour la salade, il me faut<sup>*</sup> <img src='img/1kg.png' alt='1K Gewicht' width='40' height='50'></img> <strong>un kilo de</strong>  "+
+        "tomates et pour les spaghettis, <img src='img/500g.png' alt='500g Gewicht' width='40' height='50'></img> <strong>500 grammes de</strong> viande hachée."+
+        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>"+
+        "<ul><small>Yohann: </small> Et comme boisson, qu'est-ce qu'on prend ?</ul>"+
+        "<ul><small>Marine: </small> <strong>De l'</strong>eau et <img src='img/5bouteilles.png' alt='5 Flaschen' width='60' height='40'></img> <strong>De l'</strong> coca. </ul>"+
+        "<ul><small>Yohann: </small> Et aussi ➡️ ____ bière ?</ul>",
+        typ: "text",
+        korrekt: "dela"
+    },
+    {
+        ueberschrift: "2 La fête",
+        satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
+        "<ul><small>Doriane: </small> Pour la salade, il me faut<sup>*</sup> <img src='img/1kg.png' alt='1K Gewicht' width='40' height='50'></img> <strong>un kilo de</strong>  "+
+        "tomates et pour les spaghettis, <img src='img/500g.png' alt='500g Gewicht' width='40' height='50'></img> <strong>500 grammes de</strong> viande hachée."+
+        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>"+
+        "<ul><small>Yohann: </small> Et comme boisson, qu'est-ce qu'on prend ?</ul>"+
+        "<ul><small>Marine: </small> <strong>De l'</strong>eau et <img src='img/5bouteilles.png' alt='5 Flaschen' width='60' height='40'></img> <strong>De l'</strong> coca. </ul>"+
+        "<ul><small>Yohann: </small> Et aussi <strong>de la</strong> bière ?</ul>"+
+        "<ul><small>Doriane: </small> Bien sûr. <img src='img/10bouteilles.png' alt='10 Flaschen' width='80' height='40'></img> ➡️ ____ bière, c'est assez ? </ul>",
+        typ: "text",
+        korrekt: "de"
+    },
+    {
+        ueberschrift: "2 La fête",
+        satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
+        "<ul><small>Doriane: </small> Pour la salade, il me faut<sup>*</sup> <img src='img/1kg.png' alt='1K Gewicht' width='40' height='50'></img> <strong>un kilo de</strong>  "+
+        "tomates et pour les spaghettis, <img src='img/500g.png' alt='500g Gewicht' width='40' height='50'></img> <strong>500 grammes de</strong> viande hachée."+
+        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>"+
+        "<ul><small>Yohann: </small> Et comme boisson, qu'est-ce qu'on prend ?</ul>"+
+        "<ul><small>Marine: </small> <strong>De l'</strong>eau et <img src='img/5bouteilles.png' alt='5 Flaschen' width='60' height='40'></img> <strong>De l'</strong> coca. </ul>"+
+        "<ul><small>Yohann: </small> Et aussi <strong>de la</strong> bière ?</ul>"+
+        "<ul><small>Doriane: </small> Bien sûr. <img src='img/10bouteilles.png' alt='10 Flaschen' width='80' height='40'></img> ➡️ ____ bière, c'est assez ? </ul>",
+        typ: "text",
+        korrekt: "de"
+    },
+    {
+        ueberschrift: "2 La fête",
+        satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
+        "<ul><small>Doriane: </small> Pour la salade, il me faut<sup>*</sup> <img src='img/1kg.png' alt='1K Gewicht' width='40' height='50'></img> <strong>un kilo de</strong>  "+
+        "tomates et pour les spaghettis, <img src='img/500g.png' alt='500g Gewicht' width='40' height='50'></img> <strong>500 grammes de</strong> viande hachée."+
+        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>"+
+        "<ul><small>Yohann: </small> Et comme boisson, qu'est-ce qu'on prend ?</ul>"+
+        "<ul><small>Marine: </small> <strong>De l'</strong>eau et <img src='img/5bouteilles.png' alt='5 Flaschen' width='60' height='40'></img> <strong>De l'</strong> coca. </ul>"+
+        "<ul><small>Yohann: </small> Et aussi <strong>de la</strong> bière ?</ul>"+
+        "<ul><small>Doriane: </small> Bien sûr. <img src='img/10bouteilles.png' alt='10 Flaschen' width='80' height='40'></img> <strong>de</strong> bière, c'est assez ? </ul>"+
+        "<ul><small>Marine: </small> Oui, il y a aussi ➡️ ____ vin.</ul>",
+        typ: "text",
+        korrekt: "du"
+    },
+    {
+        ueberschrift: "2 La fête",
+        satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
+        "<ul><small>Doriane: </small> Pour la salade, il me faut<sup>*</sup> <img src='img/1kg.png' alt='1K Gewicht' width='40' height='50'></img> <strong>un kilo de</strong>  "+
+        "tomates et pour les spaghettis, <img src='img/500g.png' alt='500g Gewicht' width='40' height='50'></img> <strong>500 grammes de</strong> viande hachée."+
+        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>"+
+        "<ul><small>Yohann: </small> Et comme boisson, qu'est-ce qu'on prend ?</ul>"+
+        "<ul><small>Marine: </small> <strong>De l'</strong>eau et <img src='img/5bouteilles.png' alt='5 Flaschen' width='60' height='40'></img> <strong>De l'</strong> coca. </ul>"+
+        "<ul><small>Yohann: </small> Et aussi <strong>de la</strong> bière ?</ul>"+
+        "<ul><small>Doriane: </small> Bien sûr. <img src='img/10bouteilles.png' alt='10 Flaschen' width='80' height='40'></img> <strong>de</strong> bière, c'est assez ? </ul>"+
+        "<ul><small>Marine: </small> Oui, il y a aussi <strong>du</strong> vin.</ul>"+
+        "<ul><small>Yohann: </small> Pour l'apéritif, je prends <img src='img/3bouteilles.png' alt='3 Flaschen' width='60' height='40'></img> ➡️ ____ vin blanc ?</ul>",
+        typ: "text",
+        korrekt: "de"
+    },
+    {
+        ueberschrift: "2 La fête",
+        satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
+        "<ul><small>Doriane: </small> Pour la salade, il me faut<sup>*</sup> <img src='img/1kg.png' alt='1K Gewicht' width='40' height='50'></img> <strong>un kilo de</strong>  "+
+        "tomates et pour les spaghettis, <img src='img/500g.png' alt='500g Gewicht' width='40' height='50'></img> <strong>500 grammes de</strong> viande hachée."+
+        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>"+
+        "<ul><small>Yohann: </small> Et comme boisson, qu'est-ce qu'on prend ?</ul>"+
+        "<ul><small>Marine: </small> <strong>De l'</strong>eau et <img src='img/5bouteilles.png' alt='5 Flaschen' width='60' height='40'></img> <strong>De l'</strong> coca. </ul>"+
+        "<ul><small>Yohann: </small> Et aussi <strong>de la</strong> bière ?</ul>"+
+        "<ul><small>Doriane: </small> Bien sûr. <img src='img/10bouteilles.png' alt='10 Flaschen' width='80' height='40'></img> <strong>de</strong> bière, c'est assez ? </ul>"+
+        "<ul><small>Marine: </small> Oui, il y a aussi <strong>du</strong> vin.</ul>"+
+        "<ul><small>Yohann: </small> Pour l'apéritif, je prends <img src='img/3bouteilles.png' alt='3 Flaschen' width='60' height='40'></img> <strong>de</strong> vin blanc ?</ul>"+
+        "<ul><small>Marine: </small> Bonne idée ! Et pour le dessert, je fais un gâteau. Il me faut encore <img src='img/250g.png' alt='250g Gewicht' width='40' height='50'></img> "+
+        " ➡️ ____ beurre, <img src='img/1boite.png' alt='1 Schachtel' width='60' height='50'></img> ____ œufs, "+
+        " <img src='img/1pot.png' alt='1 Becker' width='40' height='50'></img> ____ crème fraiche et "+
+        "<img src='img/1litre.png' alt='1 Liter' width='50' height='70'></img> ____ lait.</ul>"+
+        "<ul><small>Yohann: </small> D'accord. C'est noté. Alors, à plus tard.</ul>",
+        typ: "text",
+        korrekt: "de"
+    },
+    {
+        ueberschrift: "2 La fête",
+        satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
+        "<ul><small>Doriane: </small> Pour la salade, il me faut<sup>*</sup> <img src='img/1kg.png' alt='1K Gewicht' width='40' height='50'></img> <strong>un kilo de</strong>  "+
+        "tomates et pour les spaghettis, <img src='img/500g.png' alt='500g Gewicht' width='40' height='50'></img> <strong>500 grammes de</strong> viande hachée."+
+        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>"+
+        "<ul><small>Yohann: </small> Et comme boisson, qu'est-ce qu'on prend ?</ul>"+
+        "<ul><small>Marine: </small> <strong>De l'</strong>eau et <img src='img/5bouteilles.png' alt='5 Flaschen' width='60' height='40'></img> <strong>De l'</strong> coca. </ul>"+
+        "<ul><small>Yohann: </small> Et aussi <strong>de la</strong> bière ?</ul>"+
+        "<ul><small>Doriane: </small> Bien sûr. <img src='img/10bouteilles.png' alt='10 Flaschen' width='80' height='40'></img> <strong>de</strong> bière, c'est assez ? </ul>"+
+        "<ul><small>Marine: </small> Oui, il y a aussi <strong>du</strong> vin.</ul>"+
+        "<ul><small>Yohann: </small> Pour l'apéritif, je prends <img src='img/3bouteilles.png' alt='3 Flaschen' width='60' height='40'></img> <strong>de</strong> vin blanc ?</ul>"+
+        "<ul><small>Marine: </small> Bonne idée ! Et pour le dessert, je fais un gâteau. Il me faut encore <img src='img/250g.png' alt='250g Gewicht' width='40' height='50'></img> "+
+        " <strong>de</strong> beurre, <img src='img/1boite.png' alt='1 Schachtel' width='60' height='50'></img>➡️ ____ œufs, "+
+        " <img src='img/1pot.png' alt='1 Becker' width='40' height='50'></img> ____ crème fraiche et "+
+        "<img src='img/1litre.png' alt='1 Liter' width='50' height='70'></img> ____ lait.</ul>"+
+        "<ul><small>Yohann: </small> D'accord. C'est noté. Alors, à plus tard.</ul>",
+        typ: "text",
+        korrekt: "d'"
+    },
+    {
+        ueberschrift: "2 La fête",
+        satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
+        "<ul><small>Doriane: </small> Pour la salade, il me faut<sup>*</sup> <img src='img/1kg.png' alt='1K Gewicht' width='40' height='50'></img> <strong>un kilo de</strong>  "+
+        "tomates et pour les spaghettis, <img src='img/500g.png' alt='500g Gewicht' width='40' height='50'></img> <strong>500 grammes de</strong> viande hachée."+
+        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>"+
+        "<ul><small>Yohann: </small> Et comme boisson, qu'est-ce qu'on prend ?</ul>"+
+        "<ul><small>Marine: </small> <strong>De l'</strong>eau et <img src='img/5bouteilles.png' alt='5 Flaschen' width='60' height='40'></img> <strong>De l'</strong> coca. </ul>"+
+        "<ul><small>Yohann: </small> Et aussi <strong>de la</strong> bière ?</ul>"+
+        "<ul><small>Doriane: </small> Bien sûr. <img src='img/10bouteilles.png' alt='10 Flaschen' width='80' height='40'></img> <strong>de</strong> bière, c'est assez ? </ul>"+
+        "<ul><small>Marine: </small> Oui, il y a aussi <strong>du</strong> vin.</ul>"+
+        "<ul><small>Yohann: </small> Pour l'apéritif, je prends <img src='img/3bouteilles.png' alt='3 Flaschen' width='60' height='40'></img> <strong>de</strong> vin blanc ?</ul>"+
+        "<ul><small>Marine: </small> Bonne idée ! Et pour le dessert, je fais un gâteau. Il me faut encore <img src='img/250g.png' alt='250g Gewicht' width='40' height='50'></img> "+
+        " <strong>de</strong> beurre, <img src='img/1boite.png' alt='1 Schachtel' width='60' height='50'></img><strong>d'</strong>œufs, "+
+        " <img src='img/1pot.png' alt='1 Becker' width='40' height='50'></img> ➡️ ____ crème fraiche et "+
+        "<img src='img/1litre.png' alt='1 Liter' width='50' height='70'></img> ____ lait.</ul>"+
+        "<ul><small>Yohann: </small> D'accord. C'est noté. Alors, à plus tard.</ul>",
+        typ: "text",
+        korrekt: "de"
+    },
+    {
+        ueberschrift: "2 La fête",
+        satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
+        "<ul><small>Doriane: </small> Pour la salade, il me faut<sup>*</sup> <img src='img/1kg.png' alt='1K Gewicht' width='40' height='50'></img> <strong>un kilo de</strong>  "+
+        "tomates et pour les spaghettis, <img src='img/500g.png' alt='500g Gewicht' width='40' height='50'></img> <strong>500 grammes de</strong> viande hachée."+
+        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>"+
+        "<ul><small>Yohann: </small> Et comme boisson, qu'est-ce qu'on prend ?</ul>"+
+        "<ul><small>Marine: </small> <strong>De l'</strong>eau et <img src='img/5bouteilles.png' alt='5 Flaschen' width='60' height='40'></img> <strong>De l'</strong> coca. </ul>"+
+        "<ul><small>Yohann: </small> Et aussi <strong>de la</strong> bière ?</ul>"+
+        "<ul><small>Doriane: </small> Bien sûr. <img src='img/10bouteilles.png' alt='10 Flaschen' width='80' height='40'></img> <strong>de</strong> bière, c'est assez ? </ul>"+
+        "<ul><small>Marine: </small> Oui, il y a aussi <strong>du</strong> vin.</ul>"+
+        "<ul><small>Yohann: </small> Pour l'apéritif, je prends <img src='img/3bouteilles.png' alt='3 Flaschen' width='60' height='40'></img> <strong>de</strong> vin blanc ?</ul>"+
+        "<ul><small>Marine: </small> Bonne idée ! Et pour le dessert, je fais un gâteau. Il me faut encore <img src='img/250g.png' alt='250g Gewicht' width='40' height='50'></img> "+
+        " <strong>de</strong> beurre, <img src='img/1boite.png' alt='1 Schachtel' width='60' height='50'></img><strong>d'</strong>œufs, "+
+        " <img src='img/1pot.png' alt='1 Becker' width='40' height='50'></img> <strong>de</strong> crème fraiche et "+
+        "<img src='img/1litre.png' alt='1 Liter' width='50' height='70'></img> ➡️ ____ lait.</ul>"+
+        "<ul><small>Yohann: </small> D'accord. C'est noté. Alors, à plus tard.</ul>",
+        typ: "text",
+        korrekt: "de"
     }
 ]
