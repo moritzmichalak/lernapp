@@ -80,7 +80,7 @@ const aufgaben_bilan = [
         satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
         "<ul><small>Doriane: </small> Pour la salade, il me faut<sup>*</sup> <img src='img/1kg.png' alt='1K Gewicht' width='40' height='50'></img> ➡️ ____  "+
         "tomates et pour les spaghettis, <img src='img/500g.png' alt='500g Gewicht' width='40' height='50'></img><small>(500)</small> ____ viande hachée."+
-        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>",
+        "<br><br>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small>",
         typ: "text",
         korrekt: "un kilo de"
     },
@@ -89,7 +89,7 @@ const aufgaben_bilan = [
         satz: "<ul><small>Yohann: </small> Je vais faire les courses pour la fête. Qu'est-ce qu'il nous faut<sup>*</sup> ?</ul>"+
         "<ul><small>Doriane: </small> Pour la salade, il me faut<sup>*</sup> <img src='img/1kg.png' alt='1K Gewicht' width='40' height='50'></img> <strong>un kilo de</strong>  "+
         "tomates et pour les spaghettis, <img src='img/500g.png' alt='500g Gewicht' width='40' height='50'></img><small>(500)</small><small>(500)</small>  ➡️ ____ viande hachée."+
-        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>",
+        "<br><br>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small>",
         typ: "text",
         korrekt: "500 grammes de"
     },
@@ -100,7 +100,7 @@ const aufgaben_bilan = [
         "tomates et pour les spaghettis, <img src='img/500g.png' alt='500g Gewicht' width='40' height='50'></img><small>(500)</small> <strong>500 grammes de</strong> viande hachée."+
         "<ul><small>Yohann: </small> Et comme boisson, qu'est-ce qu'on prend ?</ul>"+
         "<ul><small>Marine: </small> ➡️ ____eau et <img src='img/5bouteilles.png' alt='5 Flaschen' width='60' height='40'></img> ____ coca. </ul>"+
-        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>",
+        "<br><br>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small>",
         typ: "text",
         korrekt: "De l'"
     },
@@ -111,7 +111,7 @@ const aufgaben_bilan = [
         "tomates et pour les spaghettis, <img src='img/500g.png' alt='500g Gewicht' width='40' height='50'></img><small>(500)</small> <strong>500 grammes de</strong> viande hachée."+
         "<ul><small>Yohann: </small> Et comme boisson, qu'est-ce qu'on prend ?</ul>"+
         "<ul><small>Marine: </small> <strong>De l'</strong>eau et <img src='img/5bouteilles.png' alt='5 Flaschen' width='60' height='40'></img> ➡️ ____ coca. </ul>"+
-        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>",
+        "<br><br>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small>",
         typ: "text",
         korrekt: "cinq bouteilles de"
     },
@@ -123,7 +123,7 @@ const aufgaben_bilan = [
         "<ul><small>Yohann: </small> Et comme boisson, qu'est-ce qu'on prend ?</ul>"+
         "<ul><small>Marine: </small> <strong>De l'</strong>eau et <img src='img/5bouteilles.png' alt='5 Flaschen' width='60' height='40'></img> <strong>cinq bouteilles de</strong> coca. </ul>"+
         "<ul><small>Yohann: </small> Et aussi ➡️ ____ bière ?</ul>"+
-        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>",
+        "<br><br>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small>",
         typ: "text",
         korrekt: "de la"
     },
@@ -136,7 +136,7 @@ const aufgaben_bilan = [
         "<ul><small>Marine: </small> <strong>De l'</strong>eau et <img src='img/5bouteilles.png' alt='5 Flaschen' width='60' height='40'></img> <strong>cinq bouteilles de</strong> coca. </ul>"+
         "<ul><small>Yohann: </small> Et aussi <strong>de la</strong> bière ?</ul>"+
         "<ul><small>Doriane: </small> Bien sûr. <img src='img/10bouteilles.png' alt='10 Flaschen' width='80' height='40'></img> ➡️ ____ bière, c'est assez ? </ul>"+
-        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>",
+        "<br><br>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small>",
         typ: "text",
         korrekt: "dix bouteilles de"
     },
@@ -150,7 +150,7 @@ const aufgaben_bilan = [
         "<ul><small>Yohann: </small> Et aussi <strong>de la</strong> bière ?</ul>"+
         "<ul><small>Doriane: </small> Bien sûr. <img src='img/10bouteilles.png' alt='10 Flaschen' width='80' height='40'></img> <strong>dix bouteilles de</strong> bière, c'est assez ? </ul>"+
         "<ul><small>Marine: </small> Oui, il y a aussi ➡️ ____ vin.</ul>"+
-        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>",
+        "<br><br>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small>",
         typ: "text",
         korrekt: "du"
     },
@@ -165,7 +165,7 @@ const aufgaben_bilan = [
         "<ul><small>Doriane: </small> Bien sûr. <img src='img/10bouteilles.png' alt='10 Flaschen' width='80' height='40'></img> <strong>dix bouteilles de</strong> bière, c'est assez ? </ul>"+
         "<ul><small>Marine: </small> Oui, il y a aussi <strong>du</strong> vin.</ul>"+
         "<ul><small>Yohann: </small> Pour l'apéritif, je prends <img src='img/3bouteilles.png' alt='3 Flaschen' width='60' height='40'></img> ➡️ ____ vin blanc ?</ul>"+
-        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>",
+        "<br><br>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small>",
         typ: "text",
         korrekt: "trois bouteilles de"
     },
@@ -185,7 +185,7 @@ const aufgaben_bilan = [
         " <img src='img/1pot.png' alt='1 Becker' width='40' height='50'></img> ____ crème fraiche et "+
         "<img src='img/1litre.png' alt='1 Liter' width='50' height='70'></img> ____ lait.</ul>"+
         "<ul><small>Yohann: </small> D'accord. C'est noté. Alors, à plus tard.</ul>"+
-        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>",
+        "<br><br>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small>",
         typ: "text",
         korrekt: "250 grammes de"
     },
@@ -205,7 +205,7 @@ const aufgaben_bilan = [
         " <img src='img/1pot.png' alt='1 Becker' width='40' height='50'></img> ____ crème fraiche et "+
         "<img src='img/1litre.png' alt='1 Liter' width='50' height='70'></img> ____ lait.</ul>"+
         "<ul><small>Yohann: </small> D'accord. C'est noté. Alors, à plus tard.</ul>"+
-        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>",
+        "<br><br>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small>",
         typ: "text",
         korrekt: "une boîte d'"
     },
@@ -225,7 +225,7 @@ const aufgaben_bilan = [
         " <img src='img/1pot.png' alt='1 Becker' width='40' height='50'></img> ➡️ ____ crème fraiche et "+
         "<img src='img/1litre.png' alt='1 Liter' width='50' height='70'></img> ____ lait.</ul>"+
         "<ul><small>Yohann: </small> D'accord. C'est noté. Alors, à plus tard.</ul>"+
-        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>",
+        "<br><br>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small>",
         typ: "text",
         korrekt: "un pot de"
     },
@@ -245,7 +245,7 @@ const aufgaben_bilan = [
         " <img src='img/1pot.png' alt='1 Becker' width='40' height='50'></img> <strong>un pot de</strong> crème fraiche et "+
         "<img src='img/1litre.png' alt='1 Liter' width='50' height='70'></img> ➡️ ____ lait.</ul>"+
         "<ul><small>Yohann: </small> D'accord. C'est noté. Alors, à plus tard.</ul>"+
-        "<ul>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small></ul>",
+        "<br><br>(<small><sup>*</sup> <strong> il nous / me fait</strong> = wir brauchen / ich brauche ) </small>",
         typ: "text",
         korrekt: "un litre de"
     },
@@ -261,7 +261,7 @@ const aufgaben_bilan = [
         ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
         satz: 
         "<strong>a) Au restaurant</strong> <br><br>"+
-        "<ul><small>Le garçon:</small> Alors, vous <strong>prenez de l'agneau</strong><em>(prendre / agneau)</em> ?</ul>"+
+        "<ul><small>Le garçon:</small> Alors, vous <strong>prenez de l'agneau</strong><em> (prendre / agneau)</em> ?</ul>"+
         "<ul><small>Meike:</small> Non merci, je ➡️ ____ <em>(ne pas vouloir)</em> ?</ul>",
         typ: "text",
         korrekt: "n'en veux pas"
@@ -270,9 +270,140 @@ const aufgaben_bilan = [
         ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
         satz: 
         "<strong>a) Au restaurant</strong> <br><br>"+
-        "<ul><small>Le garçon:</small> Alors, vous <strong>prenez de l'agneau</strong><em>(prendre / agneau)</em> ?</ul>"+
+        "<ul><small>Le garçon:</small> Alors, vous <strong>prenez de l'agneau</strong><em> (prendre / agneau)</em> ?</ul>"+
         "<ul><small>Meike:</small> Non merci, je ➡️ ____ <em>(ne pas vouloir)</em> ?</ul>",
         typ: "text",
         korrekt: "n'en veux pas"
     },
+    {
+        ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
+        satz: 
+        "<strong>a) Au restaurant</strong> <br><br>"+
+        "<ul><small>Le garçon:</small> Alors, vous <strong>prenez de l'agneau</strong><em> (prendre / agneau)</em> ?</ul>"+
+        "<ul><small>Meike:</small> Non merci, je <strong>n'en veux pas</strong> <em>(ne pas vouloir)</em> ?</ul>"+
+        "<ul><small>Christoph:</small> Tu , ➡️ ____  <em>(ne pas manger / viande)</em> ?</ul>",
+        typ: "text",
+        korrekt: "ne manges pas de viande"
+    },
+    {
+        ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
+        satz: 
+        "<strong>a) Au restaurant</strong> <br><br>"+
+        "<ul><small>Le garçon:</small> Alors, vous <strong>prenez de l'agneau</strong><em> (prendre / agneau)</em> ?</ul>"+
+        "<ul><small>Meike:</small> Non merci, je <strong>n'en veux pas</strong> <em>(ne pas vouloir)</em> ?</ul>"+
+        "<ul><small>Christoph:</small> Tu , <strong>ne manges pas de viande</strong> <em>(ne pas manger / viande)</em> ?</ul>"+
+        "<ul><small>Meike:</small> Non, je ➡️ ____  <em>(ne pas manger)</em> aujourd'hui. "+
+        "Mais je ____ <em>(manger / poisson)</em>.</ul>",
+        typ: "text",
+        korrekt: "n'en mange pas"
+    },
+    {
+        ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
+        satz: 
+        "<strong>a) Au restaurant</strong> <br><br>"+
+        "<ul><small>Le garçon:</small> Alors, vous <strong>prenez de l'agneau</strong><em> (prendre / agneau)</em> ?</ul>"+
+        "<ul><small>Meike:</small> Non merci, je <strong>n'en veux pas</strong> <em>(ne pas vouloir)</em> ?</ul>"+
+        "<ul><small>Christoph:</small> Tu , <strong>ne manges pas de viande</strong> <em>(ne pas manger / viande)</em> ?</ul>"+
+        "<ul><small>Meike:</small> Non, je <strong>n'en mange pas</strong><em>(ne pas manger)</em> aujourd'hui. "+
+        "Mais je ➡️ ____ <em>(manger / poisson)</em>.</ul>",
+        typ: "text",
+        korrekt: "mange du poisson"
+    },
+    {
+        ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
+        satz: 
+        "<strong>a) Au restaurant</strong> <br><br>"+
+        "<ul><small>Le garçon:</small> Alors, vous <strong>prenez de l'agneau</strong><em> (prendre / agneau)</em> ?</ul>"+
+        "<ul><small>Meike:</small> Non merci, je <strong>n'en veux pas</strong> <em>(ne pas vouloir)</em> ?</ul>"+
+        "<ul><small>Christoph:</small> Tu , <strong>ne manges pas de viande</strong> <em>(ne pas manger / viande)</em> ?</ul>"+
+        "<ul><small>Meike:</small> Non, je <strong>n'en mange pas</strong><em>(ne pas manger)</em> aujourd'hui. "+
+        "Mais je <strong>mange du poisson</strong> <em>(manger / poisson)</em>.</ul>"+
+        "<ul><small>Christoph:</small> Moi, j'adore la viande, alors je  ➡️ ____ <em>(prendre / gigot)</em>.</ul>",
+        typ: "text",
+        korrekt: "prends du gigot"
+    },
+
+
+    
+
+
+   {
+        ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
+        satz: 
+        "<strong>b) Au supermarché</strong> <br><br>"+
+        "<ul><small>Alex:</small> On ➡️ ____ <em>(avoir / eau)</em> ?</ul>",
+        typ: "text",
+        korrekt: "a de l'eau"
+    },
+    {
+        ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
+        satz: 
+        "<strong>b) Au supermarché</strong> <br><br>"+
+        "<ul><small>Alex:</small> On <strong>a de l'eau</strong> <em>(avoir / eau)</em> ?</ul>"+
+        "<ul><small>Rose:</small> A mon avis, on ➡️ ____ <em>(ne plus avoir)</em>.<br> "+
+        "Alors on ____  <em>(prendre / trois bouteilles)</em></ul>.",
+        typ: "text",
+        korrekt: "n'en a plus"
+    },
+    {
+        ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
+        satz: 
+        "<strong>b) Au supermarché</strong> <br><br>"+
+        "<ul><small>Alex:</small> On <strong>a de l'eau</strong> <em>(avoir / eau)</em> ?</ul>"+
+        "<ul><small>Rose:</small> A mon avis, on <strong>n'en a plus</strong> <em>(ne plus avoir)</em>.<br> "+
+        "Alors on ➡️ ____  <em>(prendre / trois bouteilles)</em></ul>.",
+        typ: "text",
+        korrekt: "en prend trois bouteilles"
+    },
+    {
+        ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
+        satz: 
+        "<strong>b) Au supermarché</strong> <br><br>"+
+        "<ul><small>Alex:</small> On <strong>a de l'eau</strong> <em>(avoir / eau)</em> ?</ul>"+
+        "<ul><small>Rose:</small> A mon avis, on <strong>n'en a plus</strong> <em>(ne plus avoir)</em>.<br> "+
+        "Alors on <strong>en prend trois bouteilles</strong> <em>(prendre / trois bouteilles)</em></ul>."+
+        "<ul><small>Alex:</small> Et ➡️ ____  <em>((il faut / vin)</em> ?</ul>",
+        typ: "text",
+        korrekt: "il faut du vin"
+    },
+    {
+        ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
+        satz: 
+        "<strong>b) Au supermarché</strong> <br><br>"+
+        "<ul><small>Alex:</small> On <strong>a de l'eau</strong> <em>(avoir / eau)</em> ?</ul>"+
+        "<ul><small>Rose:</small> A mon avis, on <strong>n'en a plus</strong> <em>(ne plus avoir)</em>.<br> "+
+        "Alors on <strong>en prend trois bouteilles</strong> <em>(prendre / trois bouteilles)</em></ul>."+
+        "<ul><small>Alex:</small> Et <strong>il faut du vin</strong> <em>(il faut / vin)</em> ?</ul>"+
+        "<ul><small>Rose:</small> Ah non, nous ➡️ ____ <em>(prendre, <strong>p.c.</strong>)</em> la dernière fois.</ul>",
+        typ: "text",
+        korrekt: "en avons pris"
+    },
+    {
+        ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
+        satz: 
+        "<strong>b) Au supermarché</strong> <br><br>"+
+        "<ul><small>Alex:</small> On <strong>a de l'eau</strong> <em>(avoir / eau)</em> ?</ul>"+
+        "<ul><small>Rose:</small> A mon avis, on <strong>n'en a plus</strong> <em>(ne plus avoir)</em>.<br> "+
+        "Alors on <strong>en prend trois bouteilles</strong> <em>(prendre / trois bouteilles)</em></ul>."+
+        "<ul><small>Alex:</small> Et <strong>il faut du vin</strong> <em>(il faut / vin)</em> ?</ul>"+
+        "<ul><small>Rose:</small> Ah non, nous <strong>en avons pris</strong> <em>(prendre, <strong>p.c.</strong>)</em> la dernière fois.</ul>"+
+        "<ul><small>Alex:</small> Mais les parents de Meike ➡️ ____ <em>(boire/deux bouteilles/vin rouge, <strong>p.c.</strong>)</em> pendant leur visite ...</ul>",
+        typ: "text",
+        korrekt: "ont bu deux bouteilles de vin rouge"
+    },
+    {
+        ueberschrift: "Exercixe 3 (Cahier, p. 66) Vous en voulez ? Complétez les dialoges. Mettez aussi les <em>articles partitifs</em>, <em>de</em> et <em>en</em>, là où c'est nécessaire.",
+        satz: 
+        "<strong>b) Au supermarché</strong> <br><br>"+
+        "<ul><small>Alex:</small> On <strong>a de l'eau</strong> <em>(avoir / eau)</em> ?</ul>"+
+        "<ul><small>Rose:</small> A mon avis, on <strong>n'en a plus</strong> <em>(ne plus avoir)</em>.<br> "+
+        "Alors on <strong>en prend trois bouteilles</strong> <em>(prendre / trois bouteilles)</em></ul>."+
+        "<ul><small>Alex:</small> Et <strong>il faut du vin</strong> <em>(il faut / vin)</em> ?</ul>"+
+        "<ul><small>Rose:</small> Ah non, nous <strong>en avons pris</strong> <em>(prendre, <strong>p.c.</strong>)</em> la dernière fois.</ul>"+
+        "<ul><small>Alex:</small> Mais les parents de Meike <strong>ont bu deux bouteilles de vin rouge</strong> <em>(boire/deux bouteilles/vin rouge, <strong>p.c.</strong>)</em> pendant leur visite ...</ul>"+
+        "<ul><small>Rose:</small> Alex, ce nest pas vrai ! <br> Ils ➡️ ____ <em>(boire / bière, <strong>p.c.</strong>)</em> !</ul>",
+        typ: "text",
+        korrekt: "ont bu de la bière"
+    }
+
 ]
