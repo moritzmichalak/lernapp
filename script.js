@@ -296,7 +296,8 @@ function ladeLevel() {
 
     const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
     console.log("Erklärugen für Popups1(lL):", erklaerung);
-    if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
+    // if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
+    if (erklaerung) {
         console.log("Erklärugen für Popups2(lL):", erklaerung);
         showPopup(erklaerung.titel, erklaerung.text);
         localStorage.setItem(`popupShown_${thema}_${aktuellesLevel}`, "true");
@@ -425,9 +426,11 @@ function checkAnswer() {
                 // console.log("Richtige Antworten abgespeichert?", richtige);
 
                 const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
+
                 console.log("Erklärugen für Popups1(cA):", erklaerung);
                 // Popups anzeigen:
-                if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
+                // if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
+                if (erklaerung) {
                     console.log("Erklärugen für Popups2(cA):", erklaerung);
                     showPopup(erklaerung.titel, erklaerung.text);
                 }
@@ -702,8 +705,6 @@ const erklaerungen = {
             titel: "Fast regelmäßig...",
             text: "Wie du siehst, verhält sich <em>manger</em> bisher regelmäßig. Nur bei <em>nous</em>, gibt es eine kleine Unregelmäßigkeit..."
         }
-
-
     }, 
     mengen: {
         8: {
