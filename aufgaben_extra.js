@@ -24,7 +24,9 @@ const aufgaben_extra = [
         typ: "text",
         korrekt: "bu",
         bild: "img/manger_boire.png"
-    },
+    }
+    
+    /*,
     {    
         ueberschrift: "Meike et Rose vont au Restaurant. Complétez avec les formes de <strong>manger</strong> et <strong>boire</strong>.",
         satz: "<ul>1. Meike: Qu'est-ce que tu <strong> bois </strong> ? Du vin ?</ul>"+
@@ -110,4 +112,5 @@ const aufgaben_extra = [
         korrekt: "mangeons",
         bild: "img/manger_boire.png"
     } 
+        */
 ]

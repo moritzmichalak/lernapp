@@ -692,7 +692,7 @@ const erklaerungen = {
             text: "Vervollständige den Steckbrief von Emma!"
         },
     }, 
-    bilan: {
+    extra: {
         2: {
             titel: "Très bien !👏",
             text: "Sicher ist dir schon aufgefallen, dass <em>boire</em> ist ein unregelmäßiges Verb."
