@@ -427,7 +427,7 @@ function checkAnswer() {
                 // console.log("Richtige Antworten abgespeichert?", richtige);
 
                 const erklaerung = erklaerungen[thema]?.[aktuellesLevel];
-
+                /*
                 console.log("Erklärugen für Popups1(cA):", erklaerung);
                 // Popups anzeigen:
                 // if (erklaerung && !localStorage.getItem(`popupShown_${thema}_${aktuellesLevel}`)) {
@@ -435,6 +435,7 @@ function checkAnswer() {
                     console.log("Erklärugen für Popups2(cA):", erklaerung);
                     showPopup(erklaerung.titel, erklaerung.text);
                 }
+                    */
                 aktuellesLevel++;
                 const istHalbzeit = aktuellesLevel === Math.ceil(aufgaben.length / 2);
                 if (istHalbzeit) {
