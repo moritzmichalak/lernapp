@@ -586,7 +586,7 @@ const erklaerungen = {
         },
         4:  {
             titel: "C'est ça ! ",
-            text: "Der Satz enthält keine Mengenangabe für <em>viande</em>, also handelt es sich um eine unbestimmte Menge. Da <em>viande</em> weiblich ist und in Einzahl steht: <em>du</em>"
+            text: "Der Satz enthält keine Mengenangabe für <em>viande</em>, also handelt es sich um eine unbestimmte Menge. Da <em>viande</em> weiblich ist und in Einzahl steht: <em>de la</em>"
         },
         7:  {
             titel: "Gut erkannt! 🕵️‍♂️",
