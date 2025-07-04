@@ -12,7 +12,7 @@ body {
 }
 
 .popup-overlay {
-    position: fixed; /* GANZ oben fest positioniert */
+    position: fixed; 
     top: 25%;
     left: 25%;
     width: 100vw;
@@ -266,16 +266,6 @@ body {
     color: #1d3557;
     margin-top: 20px;
     margin-bottom: 10px;
-}
-
-.popup-overlay {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
 }
 
 .popup-content {
