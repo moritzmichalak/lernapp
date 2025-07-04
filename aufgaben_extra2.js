@@ -9,8 +9,7 @@ const aufgaben_extra2 = [
         "<ul><small>Alex:</small> Comme entrée, on va faire une quiche. Alors, prends une boîte ➡️ ____ œufs et un pot crème fraîche.<br>"+
         "Il faut aussi ____ fromage.</ul>",
         woerter: ["de", "d'","du", "de la", "de l'", "des"],
-        korrekt: ["d'"],
-        bild: "img/manger_boire.png"
+        korrekt: ["d'"]
     },
 //Popup2: <em>une boîte</em> als Mengenangabe bestimmt die Menge, also <em>de</em>, was wegen des <strong>Vokals œ</strong>ufs zu <em>d'</em> wird.
     {    
@@ -20,8 +19,7 @@ const aufgaben_extra2 = [
         "<ul><small>Alex:</small> Comme entrée, on va faire une quiche. Alors, prends une boîte <strong>d'</strong> œufs et un pot crème fraîche.<br>"+
         "Il faut aussi ➡️ ____ fromage.</ul>",
         woerter: ["de", "d'","du", "de la", "de l'", "des"],
-        korrekt: "du",
-        bild: "img/manger_boire.png"
+        korrekt: "du"
     },
 //Popup3: Der Satz enthält keine Mengenangabe für <em>fromage</em>, also handelt es sich um eine unbestimmte Menge. Da <em>fromage</em> männlich ist und in Einzahl steht: <em>du</em>
     {    
@@ -33,8 +31,7 @@ const aufgaben_extra2 = [
         "<ul><small>Christoph:</small> Et comme plat ?</ul>"+
         "<ul><small>Alex:</small> On peut faire des spaghettis, on a ➡️ ____ viande hachée.</ul>",
         woerter: ["de", "d'","du", "de la", "de l'", "des"],
-        korrekt: "de la",
-        bild: "img/manger_boire.png"
+        korrekt: "de la"
     },
 //Popup4: Der Satz enthält keine Mengenangabe für <em>viande</em>, also handelt es sich um eine unbestimmte Menge. Da <em>viande</em> weiblich ist und in Einzahl steht: <em>du</em>
     {    
@@ -47,8 +44,7 @@ const aufgaben_extra2 = [
         "<ul><small>Alex:</small> On peut faire des spaghettis, on a <strong>de la</strong> viande hachée.</ul>"+
         "<ul><small>Rose:</small> Ah non, pour les parents de Meike, les spaghettis, ça ne va pas ! On peut faire ➡️ ____ saumon avec ____ riz.</ul>",
         woerter: ["de", "d'","du", "de la", "de l'", "des"],
-        korrekt: "du",
-        bild: "img/manger_boire.png"
+        korrekt: "du"
     },
 
     {    
@@ -61,8 +57,7 @@ const aufgaben_extra2 = [
         "<ul><small>Alex:</small> On peut faire des spaghettis, on a <strong>de la</strong> viande hachée.</ul>"+
         "<ul><small>Rose:</small> Ah non, pour les parents de Meike, les spaghettis, ça ne va pas ! On peut faire <strong>du</strong> saumon avec ➡️ ____ riz.</ul>",
         woerter: ["de", "d'","du", "de la", "de l'", "des"],
-        korrekt: "du",
-        bild: "img/manger_boire.png"
+        korrekt: "du"
     },
 
     {    
@@ -77,8 +72,7 @@ const aufgaben_extra2 = [
         "<ul><small>Christoph:</small> Alors on fait des légumes. Rose, tu peux prendre un kilo ➡️ ____ carottes ?<br>"+
         "Et comme dessert, es crêpes ! Tu prends aussi un litre ____ lait ?</ul>",
         woerter: ["de", "d'","du", "de la", "de l'", "des"],
-        korrekt: "de",
-        bild: "img/manger_boire.png"
+        korrekt: "de"
     },
 //Popup7: <em>un kilo</em> als Mengenangabe bestimmt die Menge, also <em>de</em>.
     {    
@@ -93,8 +87,7 @@ const aufgaben_extra2 = [
         "<ul><small>Christoph:</small> Alors on fait des légumes. Rose, tu peux prendre un kilo <strong>de</strong> carottes ?<br>"+
         "Et comme dessert, es crêpes ! Tu prends aussi un litre ➡️ ____ lait ?</ul>",
         woerter: ["de", "d'","du", "de la", "de l'", "des"],
-        korrekt: "de",
-        bild: "img/manger_boire.png"
+        korrekt: "de"
     },
 //Popup8: <em>un litre</em> als Mengenangabe bestimmt die Menge, also <em>de</em>.  
     {    
@@ -110,8 +103,7 @@ const aufgaben_extra2 = [
         "Et comme dessert, es crêpes ! Tu prends aussi un litre <strong>de</strong> lait ?</ul>"+
         "<ul><small>Rose:</small> D'accord ! On a encore ➡️ ____ eau ?</ul>",
         woerter: ["de", "d'","du", "de la", "de l'", "des"],
-        korrekt: "de l'",
-        bild: "img/manger_boire.png"
+        korrekt: "de l'"
     },
     //Popup9: Der Satz enthält keine Mengenangabe für <em>eau</em>, also <em>de la</em>, weil <em>eau</em> weiblich ist und in Einzahl steht. Wegen des <strong>Vokals e</strong>au, wird es zu <em>de l'</em>.
     {    
@@ -128,8 +120,7 @@ const aufgaben_extra2 = [
         "<ul><small>Rose:</small> D'accord ! On a encore <strong>de l'</strong>eau ?</ul>"+
         "<ul><small>Alex:</small> Non. Prends deux bouteilles ➡️ ____ eau et puis une bouteille ____ vin blanc : ça va bien avec le saumon !</ul>",
         woerter: ["de", "d'","du", "de la", "de l'", "des"],
-        korrekt: "d'",
-        bild: "img/manger_boire.png"
+        korrekt: "d'"
     },
 
     {    
@@ -146,7 +137,6 @@ const aufgaben_extra2 = [
         "<ul><small>Rose:</small> D'accord ! On a encore <strong>de l'</strong>eau ?</ul>"+
         "<ul><small>Alex:</small> Non. Prends deux bouteilles <strong>d'</strong> eau et puis une bouteille ➡️ ____ vin blanc : ça va bien avec le saumon !</ul>",
         woerter: ["de", "d'","du", "de la", "de l'", "des"],
-        korrekt: "de",
-        bild: "img/manger_boire.png"
+        korrekt: "de"
     }
 ]
