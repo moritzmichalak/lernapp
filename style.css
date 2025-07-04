@@ -13,8 +13,8 @@ body {
 
 .popup-overlay {
     position: fixed; 
-    top: 25%;
-    left: 25%;
+    top: 50%;
+    left: 50%;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6); /* Abdunkelung */
