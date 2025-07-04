@@ -567,6 +567,39 @@ function closePopup() {
 
 // 12.05.25
 const erklaerungen = {
+    extra2: {
+        // Ex. 1
+        1: {
+            titel: "Exercice 1, <em>c'est parti (=los geht's)</em> 🚀",
+            text: "Wir üben den Unterschied zwischen <em>de/d'</em> für bestimmte Mengen und <em>du/de la/de l'/des</em> für unbestimmte Mengen."
+        },
+        2: {
+            titel: "Gut erkannt! 🕵️‍♂️",
+            text: "<em>une boîte</em> als Mengenangabe bestimmt die Menge, also <em>de</em>, was wegen des <strong>Vokals œ</strong>ufs zu <em>d'</em> wird."
+        },
+        3:  {
+            titel: "Bien joué !",
+            text: "Der Satz enthält keine Mengenangabe für <em>fromage</em>, also handelt es sich um eine unbestimmte Menge. Da <em>fromage</em> männlich ist und in Einzahl steht: <em>du</em>"
+        },
+        4:  {
+            titel: "C'est ça ! ",
+            text: "Der Satz enthält keine Mengenangabe für <em>viande</em>, also handelt es sich um eine unbestimmte Menge. Da <em>viande</em> weiblich ist und in Einzahl steht: <em>du</em>"
+        },
+        7:  {
+            titel: "Gut erkannt! 🕵️‍♂️",
+            text: "<em>un kilo</em> als Mengenangabe bestimmt die Menge, also <em>de</em>."
+        },
+        8:  {
+            titel: "Bien joué ! ",
+            text: "<em>un litre</em> als Mengenangabe bestimmt die Menge, also <em>de</em>"
+        },
+        9:  {
+            titel: "Bravo !👏 ",
+            text: "Der Satz enthält keine Mengenangabe für <em>eau</em>, also <em>de la</em>, weil <em>eau</em> weiblich ist und in Einzahl steht. Wegen des <strong>Vokals e</strong>au, wird es zu <em>de l'</em>"
+        }
+    },
+
+
     bilan: {
         // Ex. 1
         1: {
