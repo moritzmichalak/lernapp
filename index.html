@@ -54,8 +54,10 @@
 
                 if (userCredential.user.email === "lehrerFG@schule.de") {
                     window.location.href = "auswertung.html";
+                    console.log("Lehrerwahl");
                 } else {
                     window.location.href = "themenwahl.html";
+                    console.log("Schuelerwahl");
                 }
             /*
             .then((userCredential) => {
