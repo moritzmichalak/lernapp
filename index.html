@@ -52,7 +52,7 @@
             .then((userCredential) => {
                 console.log("Persistenter Login erfolgreich:", userCredential.user);
 
-                if (userCredential.user.email === "lehrer@schule.de") {
+                if (userCredential.user.email === "lehrerFG@schule.de") {
                     window.location.href = "auswertung.html";
                 } else {
                     window.location.href = "themenwahl.html";
