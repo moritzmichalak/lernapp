@@ -3,126 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lehrer‑Auswertung – Dashboard</title>
+  <title>Auswertung – Letzte korrekte Antworten (14.05. 08:45–10:00)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23121833'/%3E%3Ctext x='50' y='60' font-size='48' text-anchor='middle' fill='%236ea8fe' font-family='Inter, Arial'%3EFR%3C/text%3E%3C/svg%3E"/>
   <style>
-    :root { --bg:#0b1020; --card:#121a33; --muted:#93a4c7; --text:#e8eeff; --accent:#6ea8fe; --accent2:#9b8cff; }
+    :root{--bg:#0b1020;--card:#121a33;--muted:#93a4c7;--text:#e8eeff}
     *{box-sizing:border-box}
-    html,body{height:100%}
-    body{ margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; background:linear-gradient(180deg,#0b1020 0%, #0f1530 100%); color:var(--text);} 
-    header{display:flex;align-items:center;gap:16px;padding:20px 28px;border-bottom:1px solid #1f2a4d;position:sticky;top:0;background:rgba(11,16,32,.8);backdrop-filter:blur(8px);z-index:10}
-    header h1{font-size:22px;margin:0;font-weight:700}
-    header .meta{font-size:12px;color:var(--muted)}
-    main{padding:24px;display:grid;grid-template-columns: 340px 1fr;gap:24px;}
-    .panel{background:var(--card);border:1px solid #1f2a4d;border-radius:16px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
-    .panel h2{font-size:16px;margin:0 0 10px 0}
-    .panel h3{font-size:14px;margin:18px 0 8px 0;color:var(--muted);font-weight:600}
-    .kpi{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    .kpi .card{background:#0f1731;border:1px solid #243160;border-radius:12px;padding:12px}
-    .kpi .n{font-size:20px;font-weight:700}
-    .kpi .l{font-size:12px;color:var(--muted)}
-    .legend{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0}
-    .legend span{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
-    .legend b{display:inline-block;width:10px;height:10px;border-radius:2px}
-    .grid{display:grid;gap:24px}
-    .card{background:var(--card);border:1px solid #1f2a4d;border-radius:16px;padding:16px}
-    .row{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b1020 0%,#0f1530 100%);color:var(--text)}
+    header{display:flex;align-items:center;gap:12px;padding:18px 22px;border-bottom:1px solid #1f2a4d;background:rgba(11,16,32,.8);backdrop-filter:blur(6px)}
+    h1{font-size:18px;margin:0}
+    .meta{font-size:12px;color:var(--muted)}
+    main{padding:22px;max-width:1100px;margin:0 auto}
+    .card{background:#121a33;border:1px solid #1f2a4d;border-radius:14px;padding:16px}
     .table{width:100%;border-collapse:collapse;border:1px solid #1f2a4d;border-radius:12px;overflow:hidden}
     .table th,.table td{border-bottom:1px solid #1f2a4d;padding:8px 10px;text-align:left;font-size:13px}
     .table th{background:#0f1731;color:var(--muted);font-weight:600}
-    .pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;border:1px solid #2a3869;color:var(--muted)}
-    .toolbar{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-bottom:8px}
-    select, input[type="search"]{background:#0f1731;color:var(--text);border:1px solid #243160;border-radius:10px;padding:8px 10px;font-size:13px}
-    .muted{color:var(--muted)}
-    canvas{max-height:360px}
-    .footer{color:var(--muted);font-size:12px;padding:16px 24px}
     .nowrap{white-space:nowrap}
+    .muted{color:var(--muted)}
+    .badge{display:inline-block;padding:2px 8px;border:1px solid #2a3869;border-radius:999px;font-size:11px;color:var(--muted)}
   </style>
 </head>
 <body>
   <header>
-    <img alt="logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 24 24' fill='none' stroke='%236ea8fe' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15V6a2 2 0 0 0-2-2h-7'/%3E%3Cpath d='M3 9v9a2 2 0 0 0 2 2h7'/%3E%3Cpath d='M3 9l7-7'/%3E%3Cpath d='M21 15l-7 7'/%3E%3C/svg%3E"/>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6ea8fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15V6a2 2 0 0 0-2-2h-7"/><path d="M3 9v9a2 2 0 0 0 2 2h7"/><path d="M3 9l7-7"/><path d="M21 15l-7 7"/></svg>
     <div>
-      <h1>Lehrer‑Auswertung</h1>
-      <div class="meta">Bilan · Conditionnel · Subjonctif — Live aus Firebase</div>
+      <h1>Auswertung – Letzte korrekte Antworten</h1>
+      <div class="meta">Zeitraum: <b>14.05.2025, 08:45–10:00 (Europe/Berlin)</b> · Schüler: <span class="badge">schueler‑1 … schueler‑26</span></div>
     </div>
   </header>
 
   <main>
-    <aside class="panel">
-      <h2>Überblick</h2>
-      <div class="kpi" id="kpis">
-        <div class="card"><div class="n" id="kpi-answers">–</div><div class="l">Antworten gesamt</div></div>
-        <div class="card"><div class="n" id="kpi-students">–</div><div class="l">aktive Schüler</div></div>
-        <div class="card"><div class="n" id="kpi-accuracy">–</div><div class="l">Trefferquote</div></div>
-        <div class="card"><div class="n" id="kpi-mostWrong">–</div><div class="l">meist fehlerhafte Aufgabe (#)</div></div>
-      </div>
-
-      <h3>Filter</h3>
-      <div class="filters">
-        <label class="pill">Doppelstunde
-          <select id="filter-lesson">
-            <option value="all">Alle</option>
-            <option value="bilan">Bilan</option>
-            <option value="conditionnel">Conditionnel</option>
-            <option value="subjonctif">Subjonctif</option>
-          </select>
-        </label>
-        <label class="pill">Schüler
-          <select id="filter-student">
-            <option value="all">Alle</option>
-          </select>
-        </label>
-      </div>
-      <p class="muted" style="margin-top:8px">Tipp: Über den Schüler‑Filter lassen sich alle Diagramme sofort für einzelne Lernstände umschalten.</p>
-
-      <h3>Datentabelle</h3>
-      <div style="max-height:45vh; overflow:auto; border:1px solid #1f2a4d; border-radius:12px">
-        <table class="table" id="tbl-answers">
+    <section class="card">
+      <p class="muted" style="margin-top:0">Für jeden Schüler wird die <b>letzte</b> (zeitlich jüngste) Antwort mit <code>korrekt = true</code> innerhalb des Zeitfensters angezeigt.</p>
+      <div style="overflow:auto;border:1px solid #1f2a4d;border-radius:12px">
+        <table class="table" id="tbl-last-true">
           <thead>
-            <tr><th>Schüler</th><th class="nowrap">Zeit</th><th>Lesson</th><th>Satz‑Nr.</th><th>Antwort</th><th>Korrekt</th></tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </aside>
-
-    <section class="grid">
-      <div class="card">
-        <div class="toolbar">
-          <h2>1) Progress (letzte richtige Aufgabe)</h2>
-          <span class="muted">Pro Schüler · je Doppelstunde</span>
-        </div>
-        <canvas id="chartProgress"></canvas>
-        <div class="legend" id="legendProgress"></div>
-      </div>
-
-      <div class="row">
-        <div class="card">
-          <div class="toolbar">
-            <h2>2) Meiste Fehlversuche</h2>
-            <span class="muted">Top‑Aufgaben nach falschen Antworten</span>
-          </div>
-          <canvas id="chartWrong"></canvas>
-        </div>
-        <div class="card">
-          <div class="toolbar">
-            <h2>3) Detailanalyse</h2>
-            <span class="muted">nach Pronomen / Verben / Kategorien</span>
-          </div>
-          <canvas id="chartPronoun"></canvas>
-          <canvas id="chartVerb" style="margin-top:24px"></canvas>
-        </div>
-      </div>
-
-      <div class="card">
-        <h2>Top‑Problemzonen (Tabelle)</h2>
-        <table class="table" id="tbl-detailed">
-          <thead>
-            <tr><th>Dimension</th><th>Wert</th><th>falsch (#)</th><th>Versuche (#)</th><th>Fehlquote</th></tr>
+            <tr>
+              <th>Schüler</th>
+              <th>Zeit</th>
+              <th>Aufgabe – Vorschau (gekürzt)</th>
+              <th>Antwort</th>
+            </tr>
           </thead>
           <tbody></tbody>
         </table>
@@ -130,22 +52,12 @@
     </section>
   </main>
 
-  <div class="footer">Datenquelle: Firestore‑Sammlung <code>antworten</code>. Matching gegen Aufgabenpools (Bilan / Conditionnel / Subjonctif). Stand: <span id="stamp"></span></div>
-
   <!-- Firebase SDKs (Compat) -->
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
 
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-
-  <!-- Aufgabenpools -->
-  <script src="aufgaben_bilan.js"></script>
-  <script src="aufgaben_conditionnel.js"></script>
-  <script src="aufgaben_subjonctif.js"></script>
-
   <script>
-  // ==== Firebase Init (vollständige Config) ====
+  // ===== Firebase Init (ersetzen, falls bei dir anders) =====
   const firebaseConfig = {
     apiKey: "AIzaSyB-_wWnWQp4ErY0bNEgZFbxsA9gCm0OJek",
     authDomain: "e-learning-francais.firebaseapp.com",
@@ -158,229 +70,71 @@
   firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
 
-  // ==== Erlaubte Schüler-IDs (fix) ====
-  const ALLOWED_IDS = Array.from({length:25}, (_,i)=>`schueler-${i+2}`);
-  const ALLOWED_SET = new Set(ALLOWED_IDS);
+  // ===== Parameter =====
+  const STUDENTS = Array.from({length:26}, (_,i)=>`schueler-${i+1}`);
+  const STUDENTS_SET = new Set(STUDENTS);
+  // Zeitraum als Berlin‑Zeit (CEST am 14.05. = +02:00)
+  const start = new Date('2025-05-14T08:45:00+02:00');
+  const end   = new Date('2025-05-14T10:00:00+02:00');
 
-  // ==== Aufgaben‑Index bauen ====
-  const LESSONS = {
-    bilan: {label:'Bilan', list: (typeof aufgaben_bilan!=="undefined"? aufgaben_bilan:[])},
-    conditionnel: {label:'Conditionnel', list: (typeof aufgaben_conditionnel!=="undefined"? aufgaben_conditionnel:[])},
-    subjonctif: {label:'Subjonctif', list: (typeof aufgaben_subjonctif!=="undefined"? aufgaben_subjonctif:[])}
-  };
-
-  function normalizeHTML(s){
-    return (s||'').replace(/\s+/g,' ').replace(/>\s+</g,'><').trim();
+  function toJSDate(ts){
+    if(ts && typeof ts.toDate === 'function') return ts.toDate();
+    if(ts && typeof ts.seconds === 'number') return new Date(ts.seconds*1000);
+    if(typeof ts === 'string') return new Date(ts);
+    return new Date(ts||Date.now());
   }
 
-  function buildIndex(){
-    const idx = new Map(); // key = normalized HTML, val = {lesson, satzNr, ref}
-    for(const [lessonKey, meta] of Object.entries(LESSONS)){
-      meta.list.forEach((entry, i)=>{
-        const key = normalizeHTML((entry.ueberschrift||'') + (entry.satz||''));
-        if(!key) return;
-        const satzNr = i+1;
-        idx.set(key, {lesson: lessonKey, satzNr, ref: entry});
-      });
-    }
-    return idx;
-  }
-  const AUFGABEN_INDEX = buildIndex();
-
-  // ==== Klassifikation gemäß deiner Vorgaben ====
-  function classify(lesson, satzNr){
-    const c = { lesson, category: '—', pronoun: null, verb: null };
-    const n = Number(satzNr||0);
-    if(lesson==='bilan'){
-      if(n>=1 && n<=5) c.category='Adjektive';
-      else if(n>=6 && n<=13) c.category='aimer/adorer/préférer/détester + Artikel';
-      else if((n>=14 && n<=19) || n===26) c.category='aller à vs en';
-      else if((n>=20 && n<=25) || n===27 || n===28) c.category='jouer à vs de (+ le/la/les)';
-      else if(n===29 || n===30) c.category='Adjektive';
-      else if(n===31 || n===32) c.category='aimer‑Gruppe + Artikel';
-    }
-    if(lesson==='conditionnel'){
-      if(n>=1 && n<=4) c.category='Anwendungsfälle (Rat/Wunsch/Möglichkeit)';
-      else if(n>=5 && n<=12) c.category='Regeln: regelmäßig';
-      else if(n>=13 && n<=21){ c.category='Anwendung: regelmäßig';
-        if([13,14,17,18,21].includes(n)) c.pronoun='je';
-        if([15,19,20].includes(n)) c.pronoun='nous';
-        if(n===16) c.pronoun='il';
-      }
-      else if(n>=22 && n<=33) c.category='Regeln: unregelmäßig';
-      else if(n===34) {c.category='Anwendung unreg.'; c.pronoun='il'; c.verb='faire';}
-      else if(n===35) {c.category='Anwendung unreg.'; c.pronoun='je'; c.verb='faire';}
-      else if(n===36) {c.category='Anwendung unreg.'; c.pronoun='nous'; c.verb='faire';}
-      else if(n===37) {c.category='Anwendung unreg.'; c.pronoun='elle'; c.verb='pouvoir';}
-      else if(n===38) {c.category='Anwendung unreg.'; c.pronoun='ils'; c.verb='pouvoir';}
-      else if(n===39) {c.category='Anwendung unreg.'; c.pronoun='il'; c.verb='pouvoir';}
-      else if(n===40) {c.category='Anwendung unreg.'; c.pronoun='il'; c.verb='avoir';}
-      else if(n===41) {c.category='Anwendung unreg.'; c.pronoun='ils'; c.verb='avoir';}
-      else if(n===42) {c.category='Anwendung unreg.'; c.pronoun='ils'; c.verb='être';}
-      else if(n===43) {c.category='Anwendung unreg.'; c.pronoun='il'; c.verb='être';}
-      else if(n===44) {c.category='Anwendung unreg.'; c.pronoun='je'; c.verb='aller';}
-      else if(n===45) {c.category='Anwendung unreg.'; c.pronoun='il'; c.verb='aller';}
-      else if(n>=46 && n<=56) {c.category='Wiederholung gemischt';
-        const map = {46:['je','faire'],47:['je','aller'],48:['je','continuer'],49:['je','pouvoir'],50:['je','garder'],51:['je','mettre'],52:['je','pouvoir'],53:['je','devoir'],54:['je','aller'],55:['je','rentrer'],56:['je','coucher']};
-        if(map[n]){c.pronoun=map[n][0]; c.verb=map[n][1];}
-      }
-    }
-    if(lesson==='subjonctif'){
-      if(n===1) c.category='Meinung (Indikativ) – sicher';
-      else if(n>=2 && n<=9) c.category='Formulierungen (Indikativ)';
-      else if(n>=10 && n<=13) c.category='Indikativ Präsens – Anwendungen';
-      else if(n>=14 && n<=15) c.category='Subjonctif – Unsicherheit';
-      else if(n>=16 && n<=20) c.category='Bestimmte Ausdrücke → Subjonctif';
-      else if(n>=21 && n<=33) c.category='Bildung Subjonctif – regelmäßig';
-      else if(n>=34 && n<=51) c.category='Bildung Subjonctif – unregelmäßig';
-      else if(n===52){c.category='Wiederholung gemischt'; c.pronoun='il/elle/on'; c.verb='être (soit)';}
-      else if(n===53){c.category='Wiederholung gemischt'; c.pronoun='nous'; c.verb='protéger (protégions)';}
-      else if(n===54){c.category='Wiederholung gemischt'; c.pronoun='il/elle/on'; c.verb='être (soit)';}
-      else if(n===55){c.category='Wiederholung gemischt'; c.pronoun='vous'; c.verb='utiliser (utilisez) [Indikativ]';}
-      else if(n===56){c.category='Wiederholung gemischt'; c.pronoun='nous'; c.verb='lutter (luttions)';}
-      else if(n===57){c.category='Wiederholung gemischt'; c.pronoun='il/elle/on'; c.verb='faire (fasse)';}
-    }
-    return c;
+  function textPreview(html){
+    const div = document.createElement('div');
+    div.innerHTML = String(html||'');
+    return (div.textContent||'').replace(/\s+/g,' ').trim().slice(0,140);
   }
 
-  // ==== Charts Setup ====
-  let chartProgress, chartWrong, chartPronoun, chartVerb;
-  function makeBar(ctx, labels, data, title){
-    return new Chart(ctx, { type:'bar', data:{ labels, datasets:[{label:title, data}] }, options:{ responsive:true, maintainAspectRatio:false, scales:{x:{grid:{color:'#1c2549'}}, y:{grid:{color:'#1c2549'}, beginAtZero:true}}, plugins:{legend:{display:false}, tooltip:{callbacks:{label:(ctx)=>`${ctx.parsed.y ?? ctx.parsed.x}`}}}} });
-  }
-  function makeHorizStackedProgress(ctx, labels, datasets){
-    return new Chart(ctx, {type:'bar', data:{labels, datasets}, options:{indexAxis:'y', responsive:true, maintainAspectRatio:false, scales:{x:{stacked:true, grid:{color:'#1c2549'}, beginAtZero:true}, y:{stacked:true, grid:{color:'#1c2549'}}}, plugins:{legend:{position:'bottom'}}}});
-  }
-
-  // ==== Daten laden & aufbereiten ====
-  const ALL = [];
-
-  function upsertStudentFilter(){
-    const sel = document.getElementById('filter-student');
-    const prev = sel.value;
-    sel.innerHTML = '<option value="all">Alle</option>' + ALLOWED_IDS.map(s=>`<option>${s}</option>`).join('');
-    if([...ALLOWED_IDS, 'all'].includes(prev)) sel.value = prev;
-  }
-
-  function pushRow(r){
-    const tb = document.querySelector('#tbl-answers tbody');
+  function renderRow(tbody, id, rec){
     const tr = document.createElement('tr');
-    tr.innerHTML = `<td>${r.schuelerId}</td><td class="nowrap">${new Date(r.ts).toLocaleString()}</td><td>${r.lessonLabel}</td><td>${r.satzNr||'–'}</td><td>${(r.antwort||'').toString()}</td><td>${r.korrekt?'✅':'❌'}</td>`;
-    tb.appendChild(tr);
-  }
-
-  function aggregateAndDraw(){
-    const filterLesson = document.getElementById('filter-lesson').value;
-    const filterStudent = document.getElementById('filter-student').value;
-
-    const data = ALL.filter(r=> (filterLesson==='all'||r.lesson===filterLesson) && (filterStudent==='all'||r.schuelerId===filterStudent));
-
-    // KPIs
-    const uniqueStudents = new Set(data.map(d=>d.schuelerId));
-    const accuracy = data.length? Math.round(100*data.filter(d=>d.korrekt).length/data.length):0;
-    document.getElementById('kpi-answers').textContent = data.length.toString();
-    document.getElementById('kpi-students').textContent = uniqueStudents.size.toString();
-    document.getElementById('kpi-accuracy').textContent = accuracy + '%';
-
-    // 1) Progress: letzte richtige Aufgabe je Schüler *pro Lesson*
-    const byStudentLesson = new Map();
-    data.filter(d=>d.korrekt).forEach(d=>{
-      const key = `${d.schuelerId}|${d.lesson}`;
-      const cur = byStudentLesson.get(key) || 0;
-      if((d.satzNr||0) > cur) byStudentLesson.set(key, d.satzNr||0);
-    });
-    const students = ALLOWED_IDS.slice();
-    const dsColors = {bilan:'#6ea8fe', conditionnel:'#9b8cff', subjonctif:'#6efedd'};
-    const lessons = filterLesson==='all' ? ['bilan','conditionnel','subjonctif'] : [filterLesson];
-    const datasets = lessons.map(lesson=>({ label: LESSONS[lesson].label, backgroundColor: dsColors[lesson]||'#6ea8fe', data: students.map(s=> byStudentLesson.get(`${s}|${lesson}`) || 0) }));
-
-    if(chartProgress) chartProgress.destroy();
-    chartProgress = makeHorizStackedProgress(document.getElementById('chartProgress'), students, datasets);
-    document.getElementById('legendProgress').innerHTML = lessons.map(l=>`<span><b style="background:${dsColors[l]}"></b>${LESSONS[l].label}</span>`).join('');
-
-    // 2) Meiste Fehlversuche: nach Aufgabe (Satz)
-    const wrongByTask = new Map();
-    data.forEach(d=>{
-      const key = `${d.lesson}#${d.satzNr||'?'}`;
-      const o = wrongByTask.get(key) || {attempts:0, wrong:0, label:`${LESSONS[d.lesson]?.label||'?' } · Satz ${d.satzNr||'?'} `};
-      o.attempts++;
-      if(!d.korrekt) o.wrong++;
-      wrongByTask.set(key, o);
-    });
-    const top = Array.from(wrongByTask.values()).sort((a,b)=> b.wrong - a.wrong).slice(0,10);
-    if(chartWrong) chartWrong.destroy();
-    chartWrong = makeBar(document.getElementById('chartWrong'), top.map(x=>x.label), top.map(x=>x.wrong), 'falsche Antworten');
-    document.getElementById('kpi-mostWrong').textContent = top[0]? top[0].wrong : '–';
-
-    // 3) Detailanalyse: nach Pronomen / Verb / Kategorie
-    const buckets = {pronoun:new Map(), verb:new Map(), category:new Map()};
-    data.forEach(d=>{
-      if(!d.cls) return;
-      const dims = [ ['pronoun', d.cls.pronoun], ['verb', d.cls.verb], ['category', d.cls.category] ];
-      dims.forEach(([dim,val])=>{
-        if(!val) return;
-        const o = buckets[dim].get(val) || {attempts:0, wrong:0};
-        o.attempts++;
-        if(!d.korrekt) o.wrong++;
-        buckets[dim].set(val, o);
-      });
-    });
-    function topN(map, n=10){
-      return Array.from(map.entries()).map(([k,v])=>({k, ...v, rate: v.attempts? v.wrong/v.attempts:0})).sort((a,b)=> b.wrong - a.wrong).slice(0,n);
+    if(rec){
+      tr.innerHTML = `<td>${id}</td><td class="nowrap">${rec.ts.toLocaleString()}</td><td>${rec.preview}…</td><td>${String(rec.answer||'')}</td>`;
+    }else{
+      tr.innerHTML = `<td>${id}</td><td colspan="3" class="muted">— keine korrekte Antwort im Zeitraum gefunden —</td>`;
     }
-    const topPron = topN(buckets.pronoun), topVerb = topN(buckets.verb), topCat = topN(buckets.category);
-
-    if(chartPronoun) chartPronoun.destroy();
-    chartPronoun = makeBar(document.getElementById('chartPronoun'), topPron.map(x=>x.k), topPron.map(x=>x.wrong), 'falsch nach Pronomen');
-    if(chartVerb) chartVerb.destroy();
-    chartVerb = makeBar(document.getElementById('chartVerb'), topVerb.map(x=>x.k), topVerb.map(x=>x.wrong), 'falsch nach Verb/Typ');
-
-    // Tabelle Problemzonen
-    const tbody = document.querySelector('#tbl-detailed tbody');
-    tbody.innerHTML = '';
-    const rows = [ ['Kategorie', topCat], ['Pronomen', topPron], ['Verb/Typ', topVerb] ];
-    rows.forEach(([dim, list])=>{
-      list.forEach(x=>{
-        const tr = document.createElement('tr');
-        tr.innerHTML = `<td>${dim}</td><td>${x.k}</td><td>${x.wrong}</td><td>${x.attempts}</td><td>${(x.rate*100).toFixed(0)}%</td>`;
-        tbody.appendChild(tr);
-      })
-    })
+    tbody.appendChild(tr);
   }
 
-  async function loadData(){
-    document.getElementById('stamp').textContent = new Date().toLocaleString();
+  async function run(){
+    const tbody = document.querySelector('#tbl-last-true tbody');
+    tbody.innerHTML = '';
 
-    const snapshot = await db.collection('antworten').orderBy('timestamp', 'asc').get();
-    const tblBody = document.querySelector('#tbl-answers tbody');
-    tblBody.innerHTML = '';
-    ALL.length = 0;
+    const snap = await db.collection('antworten')
+      .where('timestamp', '>=', start)
+      .where('timestamp', '<=', end)
+      .where('korrekt', '==', true)
+      .get();
 
-    snapshot.forEach(doc=>{
+    const latest = new Map(); // id -> {ts, preview, answer}
+
+    snap.forEach(doc=>{
       const d = doc.data();
-      if(!ALLOWED_SET.has(d.schuelerId)) return; // nur Schüler 2–26 zulassen
+      const id = d.schuelerId || d.SchuelerID || d.schuelerID || '';
+      if(!STUDENTS_SET.has(id)) return;
 
-      const key = normalizeHTML(String(d.aufgabe||''));
-      const match = AUFGABEN_INDEX.get(key);
-      const lesson = match?.lesson || 'unknown';
-      const satzNr = match?.satzNr || null;
-      const lessonLabel = LESSONS[lesson]?.label || '—';
-      const ts = d.timestamp?.seconds ? d.timestamp.seconds*1000 : (d.timestamp ? Date.parse(d.timestamp) : Date.now());
-      const cls = match? classify(lesson, satzNr) : null;
-
-      const rec = { schuelerId: d.schuelerId || '—', antwort: d.antwort, korrekt: !!d.korrekt, ts, lesson, lessonLabel, satzNr, cls };
-      ALL.push(rec);
-      pushRow(rec);
+      const ts = toJSDate(d.timestamp);
+      const cur = latest.get(id);
+      if(!cur || ts > cur.ts){
+        latest.set(id, { ts, preview: textPreview(d.aufgabe), answer: d.antwort });
+      }
     });
 
-    upsertStudentFilter();
-    aggregateAndDraw();
+    // Ausgabe in fixer Reihenfolge schueler-1 … -26
+    STUDENTS.forEach(id=> renderRow(tbody, id, latest.get(id)) );
   }
 
-  // Filter-Events + Start
-  document.getElementById('filter-lesson').addEventListener('change', aggregateAndDraw);
-  document.getElementById('filter-student').addEventListener('change', aggregateAndDraw);
-  loadData().catch(err=>{ console.error(err); alert('Fehler beim Laden der Daten: '+ err.message); });
+  run().catch(err=>{
+    console.error(err);
+    const tbody = document.querySelector('#tbl-last-true tbody');
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td colspan="4">Fehler: ${err.message}</td>`;
+    tbody.appendChild(tr);
+  });
   </script>
 </body>
 </html>
