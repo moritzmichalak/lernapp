@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Auswertung – Letzte korrekte Antworten (14.05. 08:45–10:00)</title>
+  <title>Auswertung – Letzte korrekte (14.05. 08:45–10:00)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -35,7 +35,7 @@
 
   <main>
     <section class="card">
-      <p class="muted" style="margin-top:0">Für jeden Schüler wird die <b>letzte</b> (zeitlich jüngste) Antwort mit <code>korrekt = true</code> innerhalb des Zeitfensters angezeigt.</p>
+      <p class="muted" style="margin-top:0">Pro Schüler die <b>letzte</b> (zeitlich jüngste) Antwort mit <code>korrekt = true</code> im Zeitfenster.</p>
       <div style="overflow:auto;border:1px solid #1f2a4d;border-radius:12px">
         <table class="table" id="tbl-last-true">
           <thead>
@@ -57,7 +57,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
 
   <script>
-  // ===== Firebase Init (ersetzen, falls bei dir anders) =====
+  // ===== Firebase Init =====
   const firebaseConfig = {
     apiKey: "AIzaSyB-_wWnWQp4ErY0bNEgZFbxsA9gCm0OJek",
     authDomain: "e-learning-francais.firebaseapp.com",
@@ -73,7 +73,6 @@
   // ===== Parameter =====
   const STUDENTS = Array.from({length:26}, (_,i)=>`schueler-${i+1}`);
   const STUDENTS_SET = new Set(STUDENTS);
-  // Zeitraum als Berlin‑Zeit (CEST am 14.05. = +02:00)
   const start = new Date('2025-05-14T08:45:00+02:00');
   const end   = new Date('2025-05-14T10:00:00+02:00');
 
@@ -90,30 +89,22 @@
     return (div.textContent||'').replace(/\s+/g,' ').trim().slice(0,140);
   }
 
-  function renderRow(tbody, id, rec){
-    const tr = document.createElement('tr');
-    if(rec){
-      tr.innerHTML = `<td>${id}</td><td class="nowrap">${rec.ts.toLocaleString()}</td><td>${rec.preview}…</td><td>${String(rec.answer||'')}</td>`;
-    }else{
-      tr.innerHTML = `<td>${id}</td><td colspan="3" class="muted">— keine korrekte Antwort im Zeitraum gefunden —</td>`;
-    }
-    tbody.appendChild(tr);
-  }
-
   async function run(){
     const tbody = document.querySelector('#tbl-last-true tbody');
     tbody.innerHTML = '';
 
+    // **No-Index-Fix**: nur Zeitraum filtern; korrekt=true clientseitig filtern
     const snap = await db.collection('antworten')
       .where('timestamp', '>=', start)
       .where('timestamp', '<=', end)
-      .where('korrekt', '==', true)
       .get();
 
     const latest = new Map(); // id -> {ts, preview, answer}
 
     snap.forEach(doc=>{
       const d = doc.data();
+      if(!d || d.korrekt !== true) return;  // <- wichtig: korrekt=true hier
+
       const id = d.schuelerId || d.SchuelerID || d.schuelerID || '';
       if(!STUDENTS_SET.has(id)) return;
 
@@ -125,7 +116,16 @@
     });
 
     // Ausgabe in fixer Reihenfolge schueler-1 … -26
-    STUDENTS.forEach(id=> renderRow(tbody, id, latest.get(id)) );
+    STUDENTS.forEach(id=>{
+      const tr = document.createElement('tr');
+      const rec = latest.get(id);
+      if(rec){
+        tr.innerHTML = `<td>${id}</td><td class="nowrap">${rec.ts.toLocaleString()}</td><td>${rec.preview}…</td><td>${String(rec.answer||'')}</td>`;
+      } else {
+        tr.innerHTML = `<td>${id}</td><td colspan="3" class="muted">— keine korrekte Antwort im Zeitraum gefunden —</td>`;
+      }
+      tbody.appendChild(tr);
+    });
   }
 
   run().catch(err=>{
