@@ -425,7 +425,7 @@ function renderAll(studentId){
     const counts = new Map(); for(const rec of _allDocs){ if(rec.korrekt === false){ counts.set(rec.key, (counts.get(rec.key)||0)+1); } }
     const mapping = {
       "Adjektive": [1,2,3,4,5,29,30],
-      "ad./aim./préf./dét. + Artikel": [6,7,8,9,10,11,12,13,31,32],
+      "adorer/aimer/préférer/détester + Artikel": [6,7,8,9,10,11,12,13,31,32],
       "aller à vs en": [14,15,16,17,18,19,26],
       "jouer à vs de": [20,21,22,23,24,25,27,28]
     };
