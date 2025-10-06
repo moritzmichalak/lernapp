@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auswertung – Fortschritt + 4 Diagramme + Aufgabenliste (Pfad 32) · bilan · 03.07.2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1020;--card:#121a33;--muted:#93a4c7;--text:#e8eeff;--accent:#6ea8fe}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b1020 0%,#0f1530 100%);color:var(--text)}
+    header{display:flex;align-items:center;gap:12px;padding:18px 22px;border-bottom:1px solid #1f2a4d;background:rgba(11,16,32,.8);backdrop-filter:blur(6px)}
+    h1{font-size:18px;margin:0}
+    .meta{font-size:12px;color:var(--muted)}
+    main{padding:22px;max-width:1200px;margin:0 auto;display:grid;gap:18px}
+    .card{background:#121a33;border:1px solid #1f2a4d;border-radius:14px;padding:16px}
+    .ctrls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:8px}
+    select,button{background:#0f1731;border:1px solid #2a3869;border-radius:10px;color:var(--text);padding:8px 10px;font-size:13px}
+    .table{width:100%;border-collapse:collapse;border:1px solid #1f2a4d;border-radius:12px;overflow:hidden}
+    .table th,.table td{border-bottom:1px solid #1f2a4d;padding:8px 10px;text-align:left;font-size:13px;vertical-align:top}
+    .table th{background:#0f1731;color:var(--muted);font-weight:600}
+    .small{font-size:12px;color:var(--muted)}
+    .nowrap{white-space:nowrap}
+    .pill{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid #2a3869;background:#0f1731;color:#c7d2fe}
+    .highlight{background:rgba(110,168,254,.08)}
+    .right{text-align:right}
+    .num{font-weight:700; color:#c7d2fe}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .chart-wrap{padding:12px;border:1px solid #1f2a4d;border-radius:12px;background:#0f1731}
+  </style>
+</head>
+<body>
+<header>
+  <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6ea8fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15V6a2 2 0 0 0-2-2h-7"></path>
+    <path d="M3 9v9a2 2 0 0 0 2 2h7"></path>
+    <path d="M3 9l7-7"></path>
+    <path d="M21 15l-7 7"></path>
+  </svg>
+  <div>
+    <h1>Fortschritt + 4 Diagramme + Aufgabenliste nach Pfad von <code class="pill">schueler-32</code> (bilan)</h1>
+    <div class="meta">Zeitraum: <b>03.07.2025, 08:00–09:11</b> · Schülerbasis: <span class="pill">schueler-31 … schueler-40</span></div>
+  </div>
+</header>
+
+<main>
+  <!-- NEW: Fortschrittstabelle ganz oben -->
+  <section class="card">
+    <h2 style="font-size:14px;margin:0 0 10px 0;color:#c7d2fe">Lernfortschritt: Wie weit sind die SchülerInnen gekommen</h2>
+    <div class="small" style="margin-bottom:8px">Anzeige: Insgesamt gab es 46 Aufgaben.  <b>Fortschritt</b> in % (abgerundet) und <b>wie viele Schüler</b> dort endeten.</div>
+    <table class="table" id="tblProgress">
+      <thead>
+        <tr>
+          <th class="right">Aufgabe</th>
+          <th class="right">Fortschritt</th>
+          <th class="right">Anzahl Schüler</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <!-- Controls + Themen-Ø Tabelle -->
+  <section class="card">
+    
+    <div class="ctrls">
+      <label class="small" for="student">Pfad-Hervorhebung (optional):</label>
+      <select id="student">
+        <option>schueler-32</option>
+        <option>schueler-36</option>
+      </select>
+      <button id="reload">Neu laden</button>
+      <span class="small">Nummerierung 1–46 = chronologische Abfolge der Antworten.</span>
+    </div>
+    
+    <div class="grid2">
+      <div>
+        <table class="table" id="tblThemes">
+          <thead>
+            <tr>
+              <th>Thema</th>
+              <th class="right">Aufgaben</th>
+              <th class="right">Ø Fehlversuche / Aufgabe</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="small" style="margin-top:10px">Aufgaben werden per <code>aufgabeId</code>/<code>taskId</code> gruppiert; wenn nicht vorhanden, per stabiler Hash. Ø auf 2 Dezimalstellen gerundet.</div>
+      </div>
+      <div>
+        <div class="chart-wrap">
+          <canvas id="avgChart" height="220"></canvas>
+        </div>
+        <div class="small" style="margin-top:8px">Ø Fehlversuche pro Thema (Bilan, 4 Themen)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drei zusätzliche Diagramme -->
+  <section class="card">
+    <h2 style="font-size:14px;margin:0 0 10px 0;color:#c7d2fe">Ø Fehlversuche – Thema: de / Artikel / en</h2>
+    <div class="small" style="margin-bottom:8px">Basis: Aufgaben 8–19 sowie 20–25 & 40–46. Artikel = „du“, „de la“, „de l’“.</div>
+    <div class="chart-wrap">
+      <canvas id="solutionChart" height="220"></canvas>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2 style="font-size:14px;margin:0 0 10px 0;color:#c7d2fe">Ø Fehlversuche – Thema: Verben (manger, boire, venir) (Aufgaben 26–39)</h2>
+    <div class="chart-wrap">
+      <canvas id="verbsChart" height="220"></canvas>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2 style="font-size:14px;margin:0 0 10px 0;color:#c7d2fe">Ø Fehlversuche – nach Subjektpronomen</h2>
+    <div class="small" style="margin-bottom:8px">Basis: Aufgaben 26–39 sowie 45–46. Nur Pronomen mit mindestens einer Aufgabe werden gezeigt.</div>
+    <div class="chart-wrap">
+      <canvas id="pronounsChart" height="220"></canvas>
+    </div>
+  </section>
+
+  <!-- Moved to bottom: große Aufgabenliste 1–46 -->
+  <section class="card">
+    <h2 style="font-size:14px;margin:0 0 10px 0;color:#c7d2fe">Fehlversuche je Aufgabe</h2>
+    <table class="table" id="tblMain">
+      <thead>
+        <tr>
+          <th class="right">#</th>
+          <th>Aufgabe – Vorschau</th>
+          <th class="right">Endstation<br><span class="small">(letzte korrekte pro Schüler)</span></th>
+          <th class="right">Fehlversuche<br><span class="small">(alle inkorrekten im Fenster)</span></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+</main>
+
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyB-_wWnWQp4ErY0bNEgZFbxsA9gCm0OJek",
+  authDomain: "e-learning-francais.firebaseapp.com",
+  projectId: "e-learning-francais",
+  storageBucket: "e-learning-francais.appspot.com",
+  messagingSenderId: "806897329547",
+  appId: "1:806897329547:web:9852a0b728381264f4fb8e",
+  measurementId: "G-793SPC6M7Q"
+};
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+// ===== Parameters =====
+const STUDENTS = Array.from({length:10}, (_,i)=>`schueler-${i+31}`);
+const STUDENTS_SET = new Set(STUDENTS);
+const THEMA = "bilan";
+const start = new Date('2025-07-03T08:00:00+02:00'); // Europe/Berlin
+const end   = new Date('2025-07-03T09:11:00+02:00');
+const nf = new Intl.NumberFormat('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+function toJSDate(ts){
+  if(ts && typeof ts.toDate === 'function') return ts.toDate();
+  if(ts && typeof ts.seconds === 'number') return new Date(ts.seconds*1000);
+  if(typeof ts === 'string') return new Date(ts);
+  return new Date(ts||Date.now());
+}
+function textPreview(html){
+  const div = document.createElement('div');
+  div.innerHTML = String(html||'');
+  return (div.textContent||'').replace(/\\s+/g,' ').trim().slice(0,160);
+}
+function getTaskId(d){
+  const id = d.aufgabeId || d.taskId || d.AufgabeId || d.AUFGABEID;
+  if(id) return String(id);
+  const raw = String(d.aufgabe || d.Aufgabe || '');
+  let h=0; for(let i=0;i<raw.length;i++){h=((h<<5)-h)+raw.charCodeAt(i); h|=0;}
+  return 'hash_'+h;
+}
+
+async function fetchWindow(){
+  const snap = await db.collection('antworten')
+    .where('timestamp','>=', start)
+    .where('timestamp','<=', end)
+    .get();
+  const rows = [];
+  snap.forEach(doc=>{
+    const d = doc.data()||{};
+    const id = d.schuelerId || d.SchuelerID || d.schuelerID || '';
+    if(!STUDENTS_SET.has(id)) return;
+    const thema = (d.thema || d.Thema || d.topic || '').toString().toLowerCase();
+    if(thema !== THEMA) return;
+    const ts = toJSDate(d.timestamp);
+    rows.push({
+      id,
+      ts,
+      korrekt: d.korrekt === true,
+      answer: d.antwort,
+      taskPreview: textPreview(d.aufgabe),
+      taskId: getTaskId(d)
+    });
+  });
+  return rows;
+}
+
+function buildReferenceOrder(rows){
+  // Chronologischer Pfad von schueler-32 für korrekt=true
+  const path = rows
+    .filter(r=>r.id==='schueler-32' && r.korrekt)
+    .sort((a,b)=>a.ts-b.ts);
+
+  // Deduplicate by taskId to get 1..N order
+  const seen = new Set();
+  const order = [];
+  for(const r of path){
+    if(!seen.has(r.taskId)){
+      seen.add(r.taskId);
+      order.push({taskId:r.taskId, preview:r.taskPreview});
+    }
+  }
+  return order;
+}
+
+function computeEndstationCounts(rows){
+  // Last korrekt=true per student -> taskId counts
+  const lastByStudent = new Map();
+  for(const r of rows){
+    if(!r.korrekt) continue;
+    const cur = lastByStudent.get(r.id);
+    if(!cur || r.ts > cur.ts) lastByStudent.set(r.id, r);
+  }
+  const counts = new Map();
+  for(const [sid, rec] of lastByStudent){
+    const c = counts.get(rec.taskId) || 0;
+    counts.set(rec.taskId, c+1);
+  }
+  return { counts, lastByStudent };
+}
+
+function computeFehlversuche(rows){
+  // Count all incorrect attempts per taskId in window
+  const counts = new Map();
+  for(const r of rows){
+    if(r.korrekt) continue;
+    const c = counts.get(r.taskId) || 0;
+    counts.set(r.taskId, c+1);
+  }
+  return counts;
+}
+
+function renderThemeAveragesTable(themeAvgs){
+  const tbody = document.querySelector('#tblThemes tbody');
+  tbody.innerHTML='';
+  for(const r of themeAvgs){
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${r.theme}</td>
+                    <td class="right">${r.labelRanges}</td>
+                    <td class="right">${nf.format(r.avg)}</td>`;
+    tbody.appendChild(tr);
+  }
+}
+
+// === Themenzuordnung & Ø-Berechnung ===
+const THEMES = [
+  { name: "tout le / toute la / tous les / toutes les", ranges: [[1,7]] },
+  { name: "du / de la / des (article partitif) VS de", ranges: [[8,19]] },
+  { name: "verbes: venir, boire, manger", ranges: [[26,39]] },
+  { name: "du / de la / des (article partitif) VS de VS en", ranges: [[20,25],[40,46]] }
+];
+function taskNumberToTheme(num){
+  for(const t of THEMES){
+    for(const [a,b] of t.ranges){
+      if(num>=a && num<=b) return t.name;
+    }
+  }
+  return null;
+}
+function computeThemeAverages(order, falschCounts){
+  const sums = new Map(); const counts = new Map();
+  for(let i=0;i<order.length;i++){
+    const num = i+1;
+    const theme = taskNumberToTheme(num);
+    if(!theme) continue;
+    const taskId = order[i].taskId;
+    const wrongs = falschCounts.get(taskId) || 0;
+    sums.set(theme, (sums.get(theme)||0) + wrongs);
+    counts.set(theme, (counts.get(theme)||0) + 1);
+  }
+  return THEMES.map(t=>{
+    const sumWrong = sums.get(t.name) || 0;
+    const denom = counts.get(t.name) || 0;
+    const avg = denom>0 ? sumWrong/denom : 0;
+    return { theme: t.name, avg, labelRanges: t.ranges.map(([a,b])=>`${a}–${b}`).join(", ") };
+  });
+}
+
+// === New analytics helpers for charts ===
+function avgOverTasks(taskNums, order, falschCounts){
+  if(!taskNums.length) return 0;
+  let sum = 0, n = 0;
+  for(const num of taskNums){
+    if(num<1 || num>order.length) continue;
+    const taskId = order[num-1].taskId;
+    sum += (falschCounts.get(taskId) || 0);
+    n += 1;
+  }
+  return n>0 ? sum/n : 0;
+}
+function inRanges(num, ranges){ return ranges.some(([a,b])=> num>=a && num<=b); }
+
+const TASK_META = {
+  1:{sol:"tous les"}, 2:{sol:"toute la"}, 3:{sol:"toutes les"}, 4:{sol:"toutes les"}, 5:{sol:"tout le"}, 6:{sol:"toute la"}, 7:{sol:"toutes les"},
+  8:{sol:"de"}, 9:{sol:"de"}, 10:{sol:"de la"}, 11:{sol:"de"}, 12:{sol:"de la"}, 13:{sol:"de"}, 14:{sol:"du"}, 15:{sol:"de"}, 16:{sol:"de"}, 17:{sol:"de"}, 18:{sol:"de"}, 19:{sol:"de"},
+  20:{sol:"de l’"}, 21:{sol:"en"}, 22:{sol:"de"}, 23:{sol:"en"}, 24:{sol:"du"}, 25:{sol:"du"},
+  26:{verb:"venir", pron:"vous"}, 27:{verb:"venir", pron:"nous"}, 28:{verb:"venir", pron:"tu"}, 29:{verb:"venir", pron:"je"},
+  30:{verb:"manger", pron:"vous"}, 31:{verb:"manger", pron:"tu"}, 32:{verb:"manger", pron:"ils/elles"},
+  33:{verb:"venir", pron:"tu"}, 34:{verb:"manger", pron:"vous"}, 35:{verb:"manger", pron:"je"},
+  36:{verb:"boire", pron:"nous"}, 37:{verb:"boire", pron:"ils/elles"}, 38:{verb:"boire", pron:"je"}, 39:{verb:"boire", pron:"tu"},
+  40:{sol:"de l’"}, 41:{sol:"en"}, 42:{sol:"en"}, 43:{sol:"du"},
+  44:{sol:"en"},
+  45:{sol:"de", verb:"boire", pron:"ils/elles"},
+  46:{sol:"de la", verb:"boire", pron:"ils/elles"}
+};
+
+function computeSolutionAverages(order, falschCounts){
+  const ranges = [[8,19],[20,25],[40,46]];
+  const nums = []; for(let i=1;i<=order.length;i++){ if(inRanges(i, ranges)) nums.push(i); }
+  const isArticle = (s)=>{
+    if(!s) return false;
+    const norm = s.toLowerCase().replace("’","'").trim();
+    return norm==="de la" || norm==="du" || norm==="de l'" || norm.startsWith("de l");
+  };
+  const buckets = { de:[], article:[], en:[] };
+  for(const num of nums){
+    const sol = ((TASK_META[num]||{}).sol||"").toLowerCase();
+    if(sol==="de"){ buckets.de.push(num); }
+    else if(sol==="en"){ buckets.en.push(num); }
+    else if(isArticle(sol)){ buckets.article.push(num); }
+  }
+  return [
+    {label:"de", avg: avgOverTasks(buckets.de, order, falschCounts)},
+    {label:"Artikel (du / de la / de l’)", avg: avgOverTasks(buckets.article, order, falschCounts)},
+    {label:"en", avg: avgOverTasks(buckets.en, order, falschCounts)}
+  ];
+}
+function computeVerbAverages(order, falschCounts){
+  const ranges = [[26,39]];
+  const byVerb = { manger:[], boire:[], venir:[] };
+  for(let num=1; num<=order.length; num++){
+    if(!inRanges(num, ranges)) continue;
+    const v = (TASK_META[num]||{}).verb;
+    if(v && byVerb[v]) byVerb[v].push(num);
+  }
+  return [
+    {label:"manger", avg: avgOverTasks(byVerb.manger, order, falschCounts)},
+    {label:"boire",  avg: avgOverTasks(byVerb.boire,  order, falschCounts)},
+    {label:"venir",  avg: avgOverTasks(byVerb.venir,  order, falschCounts)}
+  ];
+}
+function computePronounAverages(order, falschCounts){
+  const ranges = [[26,39],[45,46]];
+  const map = new Map();
+  for(let num=1; num<=order.length; num++){
+    if(!inRanges(num, ranges)) continue;
+    const p = (TASK_META[num]||{}).pron;
+    if(!p) continue;
+    if(!map.has(p)) map.set(p, []);
+    map.get(p).push(num);
+  }
+  const result = [];
+  for(const [pron, nums] of map.entries()){
+    result.push({label: pron, avg: avgOverTasks(nums, order, falschCounts)});
+  }
+  const orderMap = { "je":1,"tu":2,"nous":3,"vous":4,"ils/elles":5 };
+  result.sort((a,b)=>(orderMap[a.label]||99)-(orderMap[b.label]||99));
+  return result;
+}
+
+// === Charts rendering ===
+let chartAvg, chartSol, chartVerb, chartPron;
+function renderBarChart(ctxId, labels, data, labelText){
+  const ctx = document.getElementById(ctxId);
+  if(!ctx) return;
+  const existing = { avgChart:chartAvg, solutionChart:chartSol, verbsChart:chartVerb, pronounsChart:chartPron }[ctxId];
+  if(existing){ existing.destroy(); }
+  const chart = new Chart(ctx, {
+    type: 'bar',
+    data: { labels, datasets: [{ label: labelText, data, borderWidth: 1 }] },
+    options: {
+      plugins: {
+        legend: { display: false },
+        datalabels: {
+          anchor: 'end',
+          align: 'end',
+          formatter: (v)=> v.toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2}),
+        },
+        tooltip: { callbacks: { label: (c)=> `Ø ${c.raw.toLocaleString('de-DE',{minimumFractionDigits:2, maximumFractionDigits:2})}` } }
+      },
+      scales: {
+        y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.08)' }, ticks: { color: '#e8eeff' } },
+        x: { grid: { display: false }, ticks: { color: '#e8eeff' } }
+      }
+    },
+    plugins: [ChartDataLabels]
+  });
+  if(ctxId==="avgChart") chartAvg = chart;
+  if(ctxId==="solutionChart") chartSol = chart;
+  if(ctxId==="verbsChart") chartVerb = chart;
+  if(ctxId==="pronounsChart") chartPron = chart;
+}
+
+// === NEW: Fortschrittstabelle ===
+function renderProgressTable(order, lastByStudent){
+  const tbody = document.querySelector('#tblProgress tbody');
+  tbody.innerHTML = '';
+  if(order.length===0){
+    tbody.innerHTML = `<tr><td colspan="3" class="small">Keine Daten.</td></tr>`;
+    return;
+  }
+  const numByTask = new Map(order.map((it,idx)=>[it.taskId, idx+1]));
+  const countByNum = new Map();
+  for(const [sid, rec] of lastByStudent){
+    const num = numByTask.get(rec.taskId);
+    if(!num) continue;
+    countByNum.set(num, (countByNum.get(num)||0) + 1);
+  }
+  const entries = Array.from(countByNum.entries()).sort((a,b)=>b[0]-a[0]);
+  if(entries.length===0){
+    tbody.innerHTML = `<tr><td colspan="3" class="small">Keine Endstationen im Zeitraum.</td></tr>`;
+    return;
+  }
+  for(const [num, cnt] of entries){
+    const pct = Math.floor((num/46)*100);
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td class="right">${num}</td>
+                    <td class="right">${pct} %</td>
+                    <td class="right">${cnt} Schüler</td>`;
+    tbody.appendChild(tr);
+  }
+}
+
+// === Main Table (moved to bottom) ===
+function renderMainTable(order, endstationCounts, falschCounts, highlightSet){
+  const tbody = document.querySelector('#tblMain tbody');
+  tbody.innerHTML='';
+  if(order.length===0){
+    tbody.innerHTML = `<tr><td colspan="4" class="small">Kein Pfad für schueler-32 gefunden.</td></tr>`;
+    return;
+  }
+  let num = 1;
+  for(const item of order){
+    const tr = document.createElement('tr');
+    if(highlightSet && highlightSet.has(item.taskId)){
+      tr.classList.add('highlight');
+    }
+    const endCount = endstationCounts.get(item.taskId) || 0;
+    const wrongs   = falschCounts.get(item.taskId) || 0;
+    tr.innerHTML = `<td class="right num">${num}</td>
+                    <td>${item.preview}…</td>
+                    <td class="right">${endCount}</td>
+                    <td class="right">${wrongs}</td>`;
+    tbody.appendChild(tr);
+    num++;
+  }
+}
+
+async function run(){
+  const selected = document.getElementById('student').value;
+  const rows = await fetchWindow();
+  const order = buildReferenceOrder(rows); // 1..N by schueler-32
+  const { counts: endstationCounts, lastByStudent } = computeEndstationCounts(rows);
+  const falschCounts = computeFehlversuche(rows);
+  // Top progress table
+  renderProgressTable(order, lastByStudent);
+  // Themes + avg chart
+  const themeAvgs = computeThemeAverages(order, falschCounts);
+  renderThemeAveragesTable(themeAvgs);
+  renderBarChart('avgChart', themeAvgs.map(r=>r.theme), themeAvgs.map(r=>Number(r.avg.toFixed(2))), 'Ø Fehlversuche / Aufgabe');
+  // Other charts
+  const solAvgs = computeSolutionAverages(order, falschCounts);
+  renderBarChart('solutionChart', solAvgs.map(r=>r.label), solAvgs.map(r=>Number(r.avg.toFixed(2))), 'Ø Fehlversuche / Aufgabe');
+  const verbAvgs = computeVerbAverages(order, falschCounts);
+  renderBarChart('verbsChart', verbAvgs.map(r=>r.label), verbAvgs.map(r=>Number(r.avg.toFixed(2))), 'Ø Fehlversuche / Aufgabe');
+  const pronAvgs = computePronounAverages(order, falschCounts);
+  renderBarChart('pronounsChart', pronAvgs.map(r=>r.label), pronAvgs.map(r=>Number(r.avg.toFixed(2))), 'Ø Fehlversuche / Aufgabe');
+  // Bottom list
+  const highlightSet = new Set(rows.filter(r=>r.id===selected && r.korrekt).map(r=>r.taskId));
+  renderMainTable(order, endstationCounts, falschCounts, highlightSet);
+}
+
+document.getElementById('reload').addEventListener('click', run);
+document.getElementById('student').addEventListener('change', run);
+
+run().catch(err=>{
+  console.error(err);
+  document.querySelector('#tblProgress tbody').innerHTML = `<tr><td colspan="3" class="small">Fehler beim Laden.</td></tr>`;
+  document.querySelector('#tblThemes tbody').innerHTML = `<tr><td colspan="3" class="small">Fehler beim Laden.</td></tr>`;
+  document.querySelector('#tblMain tbody').innerHTML = `<tr><td colspan="4" class="small">Fehler beim Laden.</td></tr>`;
+});
+</script>
+</body>
+</html>

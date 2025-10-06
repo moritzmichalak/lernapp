@@ -1,20 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Auswertung – Letzte korrekte (14.05. 08:45–10:00)</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Auswertung – Letzte korrekte · Chronologie · Fehlversuche · Themen · Verteilung · Extra-Charts</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
     :root{--bg:#0b1020;--card:#121a33;--muted:#93a4c7;--text:#e8eeff}
     *{box-sizing:border-box}
     body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b1020 0%,#0f1530 100%);color:var(--text)}
     header{display:flex;align-items:center;gap:12px;padding:18px 22px;border-bottom:1px solid #1f2a4d;background:rgba(11,16,32,.8);backdrop-filter:blur(6px)}
     h1{font-size:18px;margin:0}
     .meta{font-size:12px;color:var(--muted)}
-    main{padding:22px;max-width:1100px;margin:0 auto}
+    main{padding:22px;max-width:1200px;margin:0 auto;display:grid;gap:18px}
     .card{background:#121a33;border:1px solid #1f2a4d;border-radius:14px;padding:16px}
     .table{width:100%;border-collapse:collapse;border:1px solid #1f2a4d;border-radius:12px;overflow:hidden}
     .table th,.table td{border-bottom:1px solid #1f2a4d;padding:8px 10px;text-align:left;font-size:13px}
@@ -22,41 +23,114 @@
     .nowrap{white-space:nowrap}
     .muted{color:var(--muted)}
     .badge{display:inline-block;padding:2px 8px;border:1px solid #2a3869;border-radius:999px;font-size:11px;color:var(--muted)}
+    .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    select{background:#0f1731;color:var(--text);border:1px solid #2a3869;border-radius:10px;padding:8px 10px}
+    .pill{border:1px solid #2a3869;border-radius:999px;padding:2px 8px;font-size:11px;color:var(--muted)}
+    ol.tasks{margin:0;padding-left:1.2rem}
+    ol.tasks li{margin:6px 0}
+    .small{font-size:12px;color:var(--muted)}
+    .right{text-align:right}
+    .center{text-align:center}
+    .foot{background:#0f1731;font-weight:600}
+    .chart-wrap{background:#0f1731;border:1px solid #1f2a4d;border-radius:12px;padding:12px}
+    canvas{max-width:100%; display:block;}
   </style>
 </head>
 <body>
-  <header>
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6ea8fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15V6a2 2 0 0 0-2-2h-7"/><path d="M3 9v9a2 2 0 0 0 2 2h7"/><path d="M3 9l7-7"/><path d="M21 15l-7 7"/></svg>
-    <div>
-      <h1>Auswertung – Letzte korrekte Antworten</h1>
-      <div class="meta">Zeitraum: <b>14.05.2025, 08:45–10:00 (Europe/Berlin)</b> · Schüler: <span class="badge">schueler‑1 … schueler‑26</span></div>
-    </div>
-  </header>
-
-  <main>
-    <section class="card">
-      <p class="muted" style="margin-top:0">Pro Schüler die <b>letzte</b> (zeitlich jüngste) Antwort mit <code>korrekt = true</code> im Zeitfenster.</p>
-      <div style="overflow:auto;border:1px solid #1f2a4d;border-radius:12px">
-        <table class="table" id="tbl-last-true">
-          <thead>
-            <tr>
-              <th>Schüler</th>
-              <th>Zeit</th>
-              <th>Aufgabe – Vorschau (gekürzt)</th>
-              <th>Antwort</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </section>
-  </main>
-
-  <!-- Firebase SDKs (Compat) -->
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
-
-  <script>
+<header>
+<svg aria-hidden="true" fill="none" height="22" stroke="#6ea8fe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M21 15V6a2 2 0 0 0-2-2h-7"></path><path d="M3 9v9a2 2 0 0 0 2 2h7"></path><path d="M3 9l7-7"></path><path d="M21 15l-7 7"></path></svg>
+<div>
+<h1>Auswertung – Letzte korrekte Antworten &amp; Aufgabenfolge</h1>
+<div class="meta">Zeitraum A: <b>14.05.2025, 08:45–10:00</b> · Zeitraum B: <b>21.05.2025, 08:40–09:15</b> · Schüler: <span class="badge">schueler-1 … schueler-26</span></div>
+</div>
+</header>
+<main>
+<!-- A: Letzte korrekte 14.05 -->
+<!-- A2: Letzte korrekte 21.05 -->
+<!-- B: Chronologie 14.05 -->
+<!-- B2: Chronologie 21.05 -->
+<!-- C: Fehlversuche 14.05 -->
+<!-- C2: Fehlversuche 21.05 -->
+<!-- D: Ø Fehlversuche pro Thema (14.05) -->
+<!-- E: Verteilung letzte korrekte (14.05) -->
+<!-- E2: Verteilung letzte korrekte (21.05) -->
+<!-- F2: Drei neue Charts (21.05) -->
+<section class="card">
+<div class="row" style="justify-content:space-between">
+<div class="row"><strong>Letzte korrekte Antwort je Aufgabe (14.05)</strong></div>
+<div class="small muted" id="activeInfo"></div>
+<div class="row"><label class="small" for="studentSel">Schüler (14.05):</label><select id="studentSel"></select></div></div>
+<div style="overflow:auto;border:1px solid #1f2a4d;border-radius:12px;margin-top:10px">
+<table class="table" id="tbl-lasttrue-per-task">
+<thead><tr><th class="center">#</th><th>Aufgabe – Vorschau</th><th class="right">Anzahl Schüler</th><th class="right">Prozent</th></tr></thead>
+<tbody></tbody>
+<tfoot><tr class="foot"><td class="right" colspan="2">Summe</td><td class="right" id="sumLastTrueCount">0</td><td class="right" id="sumLastTruePct">—</td></tr></tfoot>
+</table>
+</div>
+</section><section class="card">
+<div class="row" style="justify-content:space-between">
+<div class="row"><strong>Fehlversuche pro Aufgabe (14.05)</strong></div>
+<div class="small muted">Basis: Aufgabenfolge des gewählten Schülers (14.05)</div>
+</div>
+<div style="overflow:auto;border:1px solid #1f2a4d;border-radius:12px;margin-top:10px">
+<table class="table" id="tbl-errors">
+<thead><tr><th class="center">#</th><th>Aufgabe – Vorschau</th><th class="right">Fehlversuche</th></tr></thead>
+<tbody></tbody>
+<tfoot><tr class="foot"><td class="right" colspan="2">Summe</td><td class="right" id="sumErrors">0</td></tr></tfoot>
+</table>
+</div>
+</section><section class="card">
+<div class="row" style="justify-content:space-between">
+<div class="row"><strong>Durchschnittliche Fehlversuche pro Thema</strong><span class="pill">x: Themen · y: Ø Fehlversuche (14.05)</span></div>
+</div>
+<div class="chart-wrap"><canvas height="260" id="topicChart"></canvas></div>
+</section><section class="card">
+<div class="row" style="justify-content:space-between">
+<div class="row"><strong>Letzte korrekte Antwort je Aufgabe (21.05)</strong></div>
+<div class="small muted" id="activeInfo21"></div>
+<div class="row"><label class="small" for="studentSel21">Schüler (21.05):</label><select id="studentSel21"></select></div></div>
+<div style="overflow:auto;border:1px solid #1f2a4d;border-radius:12px;margin-top:10px">
+<table class="table" id="tbl-lasttrue-per-task-21">
+<thead><tr><th class="center">#</th><th>Aufgabe – Vorschau</th><th class="right">Anzahl Schüler</th><th class="right">Prozent</th></tr></thead>
+<tbody></tbody>
+<tfoot><tr class="foot"><td class="right" colspan="2">Summe</td><td class="right" id="sumLastTrueCount21">0</td><td class="right" id="sumLastTruePct21">—</td></tr></tfoot>
+</table>
+</div>
+</section><section class="card">
+<div class="row" style="justify-content:space-between">
+<div class="row"><strong>Fehlversuche pro Aufgabe (21.05)</strong></div>
+<div class="small muted">Basis: Aufgabenfolge des gewählten Schülers (21.05)</div>
+</div>
+<div style="overflow:auto;border:1px solid #1f2a4d;border-radius:12px;margin-top:10px">
+<table class="table" id="tbl-errors-21">
+<thead><tr><th class="center">#</th><th>Aufgabe – Vorschau</th><th class="right">Fehlversuche</th></tr></thead>
+<tbody></tbody>
+<tfoot><tr class="foot"><td class="right" colspan="2">Summe</td><td class="right" id="sumErrors21">0</td></tr></tfoot>
+</table>
+</div>
+</section><section class="card">
+<div class="row" style="justify-content:space-between">
+<div class="row"><strong>Ø Falschantworten (21.05)</strong><span class="pill">Indikativ (1–20) vs. Subjonctif (21–57)</span></div>
+<div class="small muted">Reihenfolge der Aufgaben wird aus der längsten Schülersequenz im Zeitraum abgeleitet.</div>
+</div>
+<div class="chart-wrap"><canvas height="220" id="chart21_mode"></canvas></div>
+</section><section class="card">
+<div class="row" style="justify-content:space-between">
+<div class="row"><strong>Ø Falschantworten (21.05)</strong><span class="pill">Indikativ (1–20): regelmäßig vs. unregelmäßig</span></div>
+<div class="small muted">Heuristik: Aufgaben 10–13 = unregelmäßig (être, devoir, faire), übrige 1–20 = regelmäßig.</div>
+</div>
+<div class="chart-wrap"><canvas height="220" id="chart21_reg_irreg"></canvas></div>
+</section><section class="card">
+<div class="row" style="justify-content:space-between">
+<div class="row"><strong>Ø Falschantworten (21.05)</strong><span class="pill">Indikativ (1–20): nach Subjektpronomen</span></div>
+<div class="small muted">Nur Pronomen anzeigen, die im Aufgaben­text vorkommen.</div>
+</div>
+<div class="chart-wrap"><canvas height="220" id="chart21_pronouns"></canvas></div>
+</section><section style="display:none"><h2>Hidden 14.05 (compat)</h2><table id="tbl-last-true"><tbody></tbody></table><ul id="taskList"></ul></section><section style="display:none"><h2>Hidden 21.05 (compat)</h2><table id="tbl-last-true-21"><tbody></tbody></table><ul id="taskList21"></ul></section></main>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
   // ===== Firebase Init =====
   const firebaseConfig = {
     apiKey: "AIzaSyB-_wWnWQp4ErY0bNEgZFbxsA9gCm0OJek",
@@ -75,6 +149,8 @@
   const STUDENTS_SET = new Set(STUDENTS);
   const start = new Date('2025-05-14T08:45:00+02:00');
   const end   = new Date('2025-05-14T10:00:00+02:00');
+  const start2 = new Date('2025-05-21T08:40:00+02:00');
+  const end2   = new Date('2025-05-21T09:15:00+02:00');
 
   function toJSDate(ts){
     if(ts && typeof ts.toDate === 'function') return ts.toDate();
@@ -89,36 +165,63 @@
     return (div.textContent||'').replace(/\s+/g,' ').trim().slice(0,140);
   }
 
+  function normalizeTask(html){
+    const div = document.createElement('div');
+    div.innerHTML = String(html||'');
+    return (div.textContent||'').replace(/\s+/g,' ').trim();
+  }
+
+  // ===== Caches 14.05 =====
+  let _allDocs = [];
+  let _latest = new Map();
+  let _activeStudents = new Set();
+
+  // ===== Caches 21.05 =====
+  let _allDocs21 = [];
+  let _latest21 = new Map();
+  let _activeStudents21 = new Set();
+
+  // -------------------- 14.05 Lauf --------------------
   async function run(){
     const tbody = document.querySelector('#tbl-last-true tbody');
-    tbody.innerHTML = '';
+    const studentSel = document.getElementById('studentSel');
+    const taskList = document.getElementById('taskList');
+    tbody.innerHTML = ''; studentSel.innerHTML=''; taskList.innerHTML='';
 
-    // **No-Index-Fix**: nur Zeitraum filtern; korrekt=true clientseitig filtern
     const snap = await db.collection('antworten')
       .where('timestamp', '>=', start)
       .where('timestamp', '<=', end)
       .get();
 
-    const latest = new Map(); // id -> {ts, preview, answer}
+    _allDocs = [];
+    _latest = new Map();
+    _activeStudents = new Set();
 
     snap.forEach(doc=>{
-      const d = doc.data();
-      if(!d || d.korrekt !== true) return;  // <- wichtig: korrekt=true hier
-
+      const d = doc.data(); if(!d) return;
       const id = d.schuelerId || d.SchuelerID || d.schuelerID || '';
       if(!STUDENTS_SET.has(id)) return;
+      _activeStudents.add(id);
 
       const ts = toJSDate(d.timestamp);
-      const cur = latest.get(id);
-      if(!cur || ts > cur.ts){
-        latest.set(id, { ts, preview: textPreview(d.aufgabe), answer: d.antwort });
+      const korrekt = d.korrekt === true;
+      const key = normalizeTask(d.aufgabe);
+
+      const rec = { id, ts, korrekt, aufgabe: d.aufgabe, antwort: d.antwort, key };
+      _allDocs.push(rec);
+
+      if(korrekt){
+        const cur = _latest.get(id);
+        if(!cur || ts > cur.ts){
+          _latest.set(id, { ts, preview: textPreview(d.aufgabe), answer: d.antwort, key });
+        }
       }
     });
 
-    // Ausgabe in fixer Reihenfolge schueler-1 … -26
+    // Tabelle A
     STUDENTS.forEach(id=>{
       const tr = document.createElement('tr');
-      const rec = latest.get(id);
+      const rec = _latest.get(id);
       if(rec){
         tr.innerHTML = `<td>${id}</td><td class="nowrap">${rec.ts.toLocaleString()}</td><td>${rec.preview}…</td><td>${String(rec.answer||'')}</td>`;
       } else {
@@ -126,15 +229,391 @@
       }
       tbody.appendChild(tr);
     });
+
+    // Dropdown 14.05
+    const candidates = Array.from(_latest.keys());
+    if(candidates.length === 0){
+      const opt = document.createElement('option'); opt.value = ''; opt.textContent = '— keine Kandidaten —';
+      studentSel.appendChild(opt);
+    } else {
+      let preferred = candidates.includes('schueler-3') ? 'schueler-3'
+                    : candidates.includes('schueler-2') ? 'schueler-2'
+                    : candidates[0];
+      candidates.sort((a,b)=> parseInt(a.split('-')[1]) - parseInt(b.split('-')[1]))
+        .forEach(id=>{
+          const rec = _latest.get(id);
+          const opt = document.createElement('option');
+          opt.value = id; opt.textContent = rec ? `${id} – letzte korrekte: ${rec.ts.toLocaleTimeString()}` : id;
+          if(id === preferred) opt.selected = true;
+          studentSel.appendChild(opt);
+        });
+      renderAll(preferred);
+      studentSel.addEventListener('change', (e)=> renderAll(e.target.value));
+    }
   }
 
-  run().catch(err=>{
-    console.error(err);
-    const tbody = document.querySelector('#tbl-last-true tbody');
-    const tr = document.createElement('tr');
-    tr.innerHTML = `<td colspan="4">Fehler: ${err.message}</td>`;
-    tbody.appendChild(tr);
-  });
+  // -------------------- 21.05 Lauf --------------------
+  async function runSecond(){
+    const tbody2 = document.querySelector('#tbl-last-true-21 tbody');
+    const studentSel21 = document.getElementById('studentSel21');
+    const taskList21 = document.getElementById('taskList21');
+    tbody2.innerHTML = ''; studentSel21.innerHTML = ''; taskList21.innerHTML = '';
+
+    const snap2 = await db.collection('antworten')
+      .where('timestamp', '>=', start2)
+      .where('timestamp', '<=', end2)
+      .get();
+
+    _allDocs21 = [];
+    _latest21 = new Map();
+    _activeStudents21 = new Set();
+
+    const latestByStudent = new Map();
+
+    snap2.forEach(doc=>{
+      const d = doc.data(); if(!d) return;
+      const id = d.schuelerId || d.SchuelerID || d.schuelerID || '';
+      if(!STUDENTS_SET.has(id)) return;
+      _activeStudents21.add(id);
+
+      const ts = toJSDate(d.timestamp);
+      const korrekt = d.korrekt === true;
+      const key = normalizeTask(d.aufgabe);
+      const rec = { id, ts, korrekt, aufgabe: d.aufgabe, antwort: d.antwort, key };
+      _allDocs21.push(rec);
+
+      if(korrekt){
+        const cur = latestByStudent.get(id);
+        if(!cur || ts > cur.ts){
+          latestByStudent.set(id, { ts, preview: textPreview(d.aufgabe), answer: d.antwort, key });
+        }
+      }
+    });
+
+    // Tabelle A2
+    STUDENTS.forEach(id=>{
+      const tr = document.createElement('tr');
+      const rec = latestByStudent.get(id);
+      if(rec){
+        tr.innerHTML = `<td>${id}</td><td class="nowrap">${rec.ts.toLocaleString()}</td><td>${rec.preview}…</td><td>${String(rec.answer||'')}</td>`;
+      } else {
+        tr.innerHTML = `<td>${id}</td><td colspan="3" class="muted">— keine korrekte Antwort im Zeitraum gefunden —</td>`;
+      }
+      tbody2.appendChild(tr);
+    });
+
+    _latest21 = latestByStudent;
+
+    // Dropdown 21.05
+    const candidates21 = Array.from(_latest21.keys());
+    if(candidates21.length === 0){
+      const opt = document.createElement('option'); opt.value = ''; opt.textContent = '— keine Kandidaten —';
+      studentSel21.appendChild(opt);
+    } else {
+      let preferred21 = candidates21.includes('schueler-3') ? 'schueler-3'
+                      : candidates21.includes('schueler-2') ? 'schueler-2'
+                      : candidates21[0];
+      candidates21.sort((a,b)=> parseInt(a.split('-')[1]) - parseInt(b.split('-')[1]))
+        .forEach(id=>{
+          const rec = _latest21.get(id);
+          const opt = document.createElement('option');
+          opt.value = id; opt.textContent = rec ? `${id} – letzte korrekte: ${rec.ts.toLocaleTimeString()}` : id;
+          if(id === preferred21) opt.selected = true;
+          studentSel21.appendChild(opt);
+        });
+      renderAll21(preferred21);
+      studentSel21.addEventListener('change', (e)=> { renderAll21(e.target.value); renderCharts21(); });
+    }
+
+    // Charts (21.05) nach Laden der Daten
+    renderCharts21();
+  }
+
+  // ---------- Render Helpers 14.05 ----------
+  function renderAll(studentId){
+    renderSequence(studentId);
+    renderErrorsForCurrentSequence(studentId);
+    renderTopicChart(studentId);
+    renderLastTrueDistribution(studentId);
+  }
+
+  function getUniqueCorrectTasksFor(studentId){
+    const items = _allDocs.filter(r => r.id === studentId && r.korrekt).sort((a,b)=> a.ts - b.ts);
+    const seen = new Set(); const uniqueTasks = [];
+    for(const it of items){
+      const key = it.key; if(!key || seen.has(key)) continue;
+      seen.add(key);
+      uniqueTasks.push({ key, ts: it.ts, preview: textPreview(it.aufgabe) });
+    }
+    return uniqueTasks;
+  }
+
+  function renderSequence(studentId){
+    const taskList = document.getElementById('taskList');
+    taskList.innerHTML = ''; if(!studentId) return;
+    const uniqueTasks = getUniqueCorrectTasksFor(studentId);
+    if(uniqueTasks.length === 0){
+      const li = document.createElement('li'); li.className = 'muted'; li.textContent = 'Keine korrekten Antworten im Zeitraum.'; taskList.appendChild(li); return;
+    }
+    uniqueTasks.forEach((it, idx)=>{
+      const li = document.createElement('li');
+      li.innerHTML = `<strong>Aufgabe ${idx+1}:</strong> ${it.preview}… <span class="small">(um ${it.ts.toLocaleTimeString()})</span>`;
+      taskList.appendChild(li);
+    });
+  }
+
+  function renderErrorsForCurrentSequence(studentId){
+    const tbody = document.querySelector('#tbl-errors tbody'); const sumEl = document.getElementById('sumErrors');
+    tbody.innerHTML = ''; sumEl.textContent = '0'; if(!studentId) return;
+    const uniqueTasks = getUniqueCorrectTasksFor(studentId);
+    if(uniqueTasks.length === 0){ const tr = document.createElement('tr'); tr.innerHTML = `<td colspan="3" class="center muted">Keine Aufgabenbasis.</td>`; tbody.appendChild(tr); return; }
+    const counts = new Map(); for(const rec of _allDocs){ if(rec.korrekt === false){ counts.set(rec.key, (counts.get(rec.key)||0)+1); } }
+    let sum = 0;
+    uniqueTasks.forEach((task, idx)=>{
+      const c = counts.get(task.key) || 0; sum += c;
+      const tr = document.createElement('tr'); tr.innerHTML = `<td class="center">${idx+1}</td><td>${task.preview}…</td><td class="right">${c}</td>`; tbody.appendChild(tr);
+    });
+    sumEl.textContent = String(sum);
+  }
+
+  function renderTopicChart(studentId){
+    const ctx = document.getElementById('topicChart').getContext('2d');
+    if(window._topicChart){ window._topicChart.destroy(); }
+    if(!studentId) return;
+    const uniqueTasks = getUniqueCorrectTasksFor(studentId);
+    if(uniqueTasks.length === 0) return;
+    const counts = new Map(); for(const rec of _allDocs){ if(rec.korrekt === false){ counts.set(rec.key, (counts.get(rec.key)||0)+1); } }
+    const mapping = {
+      "Adjektive": [1,2,3,4,5,29,30],
+      "ad./aim./préf./dét. + Artikel": [6,7,8,9,10,11,12,13,31,32],
+      "aller à vs en": [14,15,16,17,18,19,26],
+      "jouer à vs de": [20,21,22,23,24,25,27,28]
+    };
+    const labels = [], data = [];
+    for(const [theme, nums] of Object.entries(mapping)){
+      let sum=0, n=0;
+      nums.forEach(num=>{
+        const task = uniqueTasks[num-1];
+        if(task){ const c = counts.get(task.key) || 0; sum += c; n++; }
+      });
+      labels.push(theme); data.push(n>0 ? +(sum/n).toFixed(2) : 0);
+    }
+    window._topicChart = new Chart(ctx, {
+      type:'bar', data:{ labels, datasets:[{label:'Ø Fehlversuche', data, barPercentage:0.5, categoryPercentage:0.6}]},
+      options:{ responsive:true, maintainAspectRatio:false, scales:{ y:{beginAtZero:true,title:{display:true,text:'Ø Fehlversuche'},ticks:{precision:0},grid:{color:'rgba(255,255,255,0.12)'}}, x:{grid:{display:false}}}, plugins:{legend:{display:false}} }
+    });
+  }
+
+  function renderLastTrueDistribution(studentId){
+    const tbody = document.querySelector('#tbl-lasttrue-per-task tbody');
+    const sumCountEl = document.getElementById('sumLastTrueCount');
+    const sumPctEl = document.getElementById('sumLastTruePct');
+    const activeInfo = document.getElementById('activeInfo');
+    tbody.innerHTML = ''; sumCountEl.textContent='0'; sumPctEl.textContent='—';
+    const activeCount = _activeStudents.size; activeInfo.textContent = `Aktive Schüler (14.05): ${activeCount}`;
+    if(!studentId) return;
+    const uniqueTasks = getUniqueCorrectTasksFor(studentId);
+    if(uniqueTasks.length === 0){ const tr = document.createElement('tr'); tr.innerHTML = `<td colspan="4" class="center muted">Keine Aufgabenbasis.</td>`; tbody.appendChild(tr); return; }
+    const indexByKey = new Map(); uniqueTasks.forEach((t, idx)=> indexByKey.set(t.key, idx+1));
+    const counts = new Array(uniqueTasks.length).fill(0);
+    for(const id of _activeStudents){
+      const rec = _latest.get(id);
+      if(rec && indexByKey.has(rec.key)){ counts[indexByKey.get(rec.key)-1] += 1; }
+    }
+    let sum=0;
+    counts.forEach((c,i)=>{
+      const pct = activeCount ? ((c/activeCount)*100) : 0; sum += c;
+      const tr = document.createElement('tr'); tr.innerHTML = `<td class="center">${i+1}</td><td>${uniqueTasks[i].preview}…</td><td class="right">${c}</td><td class="right">${pct.toFixed(1)}%</td>`; tbody.appendChild(tr);
+    });
+    sumCountEl.textContent = String(sum);
+    sumPctEl.textContent = activeCount ? `${((sum/activeCount)*100).toFixed(1)}%` : '—';
+  }
+
+  // ---------- Render Helpers 21.05 ----------
+  function renderAll21(studentId){
+    renderSequence21(studentId);
+    renderErrorsForCurrentSequence21(studentId);
+    renderLastTrueDistribution21(studentId);
+  }
+
+  function getUniqueCorrectTasksFor21(studentId){
+    const items = _allDocs21.filter(r => r.id === studentId && r.korrekt).sort((a,b)=> a.ts - b.ts);
+    const seen = new Set(); const uniqueTasks = [];
+    for(const it of items){
+      const key = it.key; if(!key || seen.has(key)) continue;
+      seen.add(key);
+      uniqueTasks.push({ key, ts: it.ts, preview: textPreview(it.aufgabe) });
+    }
+    return uniqueTasks;
+  }
+
+  function renderSequence21(studentId){
+    const taskList = document.getElementById('taskList21');
+    taskList.innerHTML = ''; if(!studentId) return;
+    const uniqueTasks = getUniqueCorrectTasksFor21(studentId);
+    if(uniqueTasks.length === 0){ const li = document.createElement('li'); li.className='muted'; li.textContent='Keine korrekten Antworten im Zeitraum.'; taskList.appendChild(li); return; }
+    uniqueTasks.forEach((it, idx)=>{
+      const li = document.createElement('li');
+      li.innerHTML = `<strong>Aufgabe ${idx+1}:</strong> ${it.preview}… <span class="small">(um ${it.ts.toLocaleTimeString()})</span>`;
+      taskList.appendChild(li);
+    });
+  }
+
+  function renderErrorsForCurrentSequence21(studentId){
+    const tbody = document.querySelector('#tbl-errors-21 tbody'); const sumEl = document.getElementById('sumErrors21');
+    tbody.innerHTML = ''; sumEl.textContent = '0'; if(!studentId) return;
+    const uniqueTasks = getUniqueCorrectTasksFor21(studentId);
+    if(uniqueTasks.length === 0){ const tr = document.createElement('tr'); tr.innerHTML = `<td colspan="3" class="center muted">Keine Aufgabenbasis.</td>`; tbody.appendChild(tr); return; }
+    const counts = new Map(); for(const rec of _allDocs21){ if(rec.korrekt === false){ counts.set(rec.key, (counts.get(rec.key)||0)+1); } }
+    let sum = 0;
+    uniqueTasks.forEach((task, idx)=>{
+      const c = counts.get(task.key) || 0; sum += c;
+      const tr = document.createElement('tr'); tr.innerHTML = `<td class="center">${idx+1}</td><td>${task.preview}…</td><td class="right">${c}</td>`; tbody.appendChild(tr);
+    });
+    sumEl.textContent = String(sum);
+  }
+
+  function renderLastTrueDistribution21(studentId){
+    const tbody = document.querySelector('#tbl-lasttrue-per-task-21 tbody');
+    const sumCountEl = document.getElementById('sumLastTrueCount21');
+    const sumPctEl = document.getElementById('sumLastTruePct21');
+    const activeInfo = document.getElementById('activeInfo21');
+    tbody.innerHTML = ''; sumCountEl.textContent='0'; sumPctEl.textContent='—';
+    const activeCount = _activeStudents21.size; activeInfo.textContent = `Aktive Schüler (21.05): ${activeCount}`;
+    if(!studentId) return;
+    const uniqueTasks = getUniqueCorrectTasksFor21(studentId);
+    if(uniqueTasks.length === 0){ const tr = document.createElement('tr'); tr.innerHTML = `<td colspan="4" class="center muted">Keine Aufgabenbasis.</td>`; tbody.appendChild(tr); return; }
+    const indexByKey = new Map(); uniqueTasks.forEach((t, idx)=> indexByKey.set(t.key, idx+1));
+    const counts = new Array(uniqueTasks.length).fill(0);
+    for(const id of _activeStudents21){
+      const rec = _latest21.get(id);
+      if(rec && indexByKey.has(rec.key)){ counts[indexByKey.get(rec.key)-1] += 1; }
+    }
+    let sum=0;
+    counts.forEach((c,i)=>{
+      const pct = activeCount ? ((c/activeCount)*100) : 0; sum += c;
+      const tr = document.createElement('tr'); tr.innerHTML = `<td class="center">${i+1}</td><td>${uniqueTasks[i].preview}…</td><td class="right">${c}</td><td class="right">${pct.toFixed(1)}%</td>`; tbody.appendChild(tr);
+    });
+    sumCountEl.textContent = String(sum);
+    sumPctEl.textContent = activeCount ? `${((sum/activeCount)*100).toFixed(1)}%` : '—';
+  }
+
+  // ===== Zusatz-Utilities & Charts (21.05) =====
+  function buildFalseCountsByKey21(){
+    const counts = new Map();
+    for(const rec of _allDocs21){
+      if(rec.korrekt === false){
+        counts.set(rec.key, (counts.get(rec.key)||0)+1);
+      }
+    }
+    return counts;
+  }
+
+  function averageFalseForNumbers(numberSet, numberByKey, falseByKey){
+    let sum = 0;
+    const seenNumbers = new Set();
+    for(const [key, num] of numberByKey.entries()){
+      if(numberSet.has(num)){
+        const c = falseByKey.get(key) || 0;
+        sum += c;
+        seenNumbers.add(num);
+      }
+    }
+    const nTasks = seenNumbers.size;
+    return nTasks > 0 ? sum / nTasks : 0;
+  }
+
+  function detectPronounFromText(text){
+    const t = String(text||'').toLowerCase();
+    if(/ils?\s*\/\s*elles/.test(t) || /(\bils\b|\belles\b)/.test(t)) return "ils/elles";
+    if(/il\s*\/\s*elle\s*\/\s*on/.test(t) || /il\/elle\/on/.test(t) || /\bil\b|\belle\b|\bon\b/.test(t)) return "il/elle/on";
+    if(/\bnous\b/.test(t)) return "nous";
+    if(/\bvous\b/.test(t)) return "vous";
+    if(/\bje\b/.test(t)) return "je";
+    if(/\btu\b/.test(t)) return "tu";
+    return null;
+  }
+
+  function buildReferenceNumbering21(){
+    const students = Array.from(_activeStudents21);
+    let bestSeq = [];
+    for(const id of students){
+      const seq = getUniqueCorrectTasksFor21(id);
+      if(seq.length > bestSeq.length){
+        bestSeq = seq;
+      }
+    }
+    const map = new Map();
+    bestSeq.forEach((t, idx)=> map.set(t.key, idx+1));
+    return map;
+  }
+
+  function buildPronounAverages21(numberByKey, falseByKey){
+    const buckets = new Map(); // pronoun -> {sum, nums:Set}
+    for(const [key, num] of numberByKey.entries()){
+      if(num>=1 && num<=20){
+        const pron = detectPronounFromText(key);
+        const c = falseByKey.get(key) || 0;
+        if(pron){
+          if(!buckets.has(pron)) buckets.set(pron, {sum:0, nums:new Set()});
+          const obj = buckets.get(pron);
+          obj.sum += c;
+          obj.nums.add(num);
+        }
+      }
+    }
+    const labels = [], data = [];
+    for(const [p, obj] of buckets.entries()){
+      const avg = obj.nums.size > 0 ? obj.sum / obj.nums.size : 0;
+      labels.push(p); data.push(+avg.toFixed(2));
+    }
+    return {labels, data};
+  }
+
+  function renderCharts21(){
+    if(window._chart21_mode){ window._chart21_mode.destroy(); }
+    if(window._chart21_regirreg){ window._chart21_regirreg.destroy(); }
+    if(window._chart21_pron){ window._chart21_pron.destroy(); }
+
+    const numberByKey = buildReferenceNumbering21();
+    const falseByKey = buildFalseCountsByKey21();
+
+    const indicSet = new Set(Array.from({length:20}, (_,i)=> i+1));
+    const subjSet   = new Set(Array.from({length:37}, (_,i)=> i+21)); // 21..57
+    const avgIndic = averageFalseForNumbers(indicSet, numberByKey, falseByKey);
+    const avgSubj  = averageFalseForNumbers(subjSet,   numberByKey, falseByKey);
+
+    const ctx1 = document.getElementById('chart21_mode').getContext('2d');
+    window._chart21_mode = new Chart(ctx1, {
+      type:'bar',
+      data:{ labels:['Indikativ (1–20)','Subjonctif (21–57)'], datasets:[{label:'Ø Fehlversuche', data:[+avgIndic.toFixed(2), +avgSubj.toFixed(2)], barPercentage:0.5, categoryPercentage:0.6}]},
+      options:{ responsive:true, maintainAspectRatio:false, scales:{ y:{beginAtZero:true,title:{display:true,text:'Ø Falschantworten'}}, x:{grid:{display:false}}}, plugins:{legend:{display:false}} }
+    });
+
+    const irregular = new Set([10,11,12,13]);
+    const regular = new Set([...Array.from({length:20},(_,i)=>i+1)].filter(n=> !irregular.has(n)));
+    const avgReg = averageFalseForNumbers(regular, numberByKey, falseByKey);
+    const avgIrreg = averageFalseForNumbers(irregular, numberByKey, falseByKey);
+
+    const ctx2 = document.getElementById('chart21_reg_irreg').getContext('2d');
+    window._chart21_regirreg = new Chart(ctx2, {
+      type:'bar',
+      data:{ labels:['regelmäßig','unregelmäßig'], datasets:[{label:'Ø Fehlversuche', data:[+avgReg.toFixed(2), +avgIrreg.toFixed(2)], barPercentage:0.5, categoryPercentage:0.6}]},
+      options:{ responsive:true, maintainAspectRatio:false, scales:{ y:{beginAtZero:true,title:{display:true,text:'Ø Falschantworten'}}, x:{grid:{display:false}}}, plugins:{legend:{display:false}} }
+    });
+
+    const pr = buildPronounAverages21(numberByKey, falseByKey);
+    const ctx3 = document.getElementById('chart21_pronouns').getContext('2d');
+    window._chart21_pron = new Chart(ctx3, {
+      type:'bar',
+      data:{ labels: pr.labels, datasets:[{label:'Ø Fehlversuche', data: pr.data, barPercentage:0.5, categoryPercentage:0.6}]},
+      options:{ responsive:true, maintainAspectRatio:false, scales:{ y:{beginAtZero:true,title:{display:true,text:'Ø Falschantworten'}}, x:{grid:{display:false}}}, plugins:{legend:{display:false}} }
+    });
+  }
+
+  // Start
+  run().catch(console.error);
+  runSecond().catch(console.error);
   </script>
 </body>
 </html>
