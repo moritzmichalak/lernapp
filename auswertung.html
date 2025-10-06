@@ -56,17 +56,36 @@
 <!-- E2: Verteilung letzte korrekte (21.05) -->
 <!-- F2: Drei neue Charts (21.05) -->
 <section class="card">
-<div class="row" style="justify-content:space-between">
-<div class="row"><strong>Letzte korrekte Antwort je Aufgabe (14.05)</strong></div>
-<div class="small muted" id="activeInfo"></div>
-<div class="row"><label class="small" for="studentSel">Schüler (14.05):</label><select id="studentSel"></select></div></div>
-<div style="overflow:auto;border:1px solid #1f2a4d;border-radius:12px;margin-top:10px">
-<table class="table" id="tbl-lasttrue-per-task">
-<thead><tr><th class="center">#</th><th>Aufgabe – Vorschau</th><th class="right">Anzahl Schüler</th><th class="right">Prozent</th></tr></thead>
-<tbody></tbody>
-<tfoot><tr class="foot"><td class="right" colspan="2">Summe</td><td class="right" id="sumLastTrueCount">0</td><td class="right" id="sumLastTruePct">—</td></tr></tfoot>
-</table>
-</div>
+  <div class="row" style="justify-content:space-between">
+    <div class="row"><strong>Fortschritt (kompakt) – 14.05</strong></div>
+    <div class="small muted" id="activeInfo"></div>
+    <div class="row">
+      <label class="small" for="studentSel">Schüler (14.05):</label>
+      <select id="studentSel"></select>
+    </div>
+  </div>
+
+  <div style="overflow:auto;border:1px solid #1f2a4d;border-radius:12px;margin-top:10px">
+    <table class="table" id="tbl-progress-compact-14">
+      <thead>
+        <tr>
+          <th class="right">Fortschritt</th>
+          <th class="right">Anzahl Schüler</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot>
+        <tr class="foot">
+          <td class="right">Aktive Schüler</td>
+          <td class="right" id="activeCount14">0</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</section>
+
+
+
 </section><section class="card">
 <div class="row" style="justify-content:space-between">
 <div class="row"><strong>Fehlversuche pro Aufgabe (14.05)</strong></div>
@@ -84,19 +103,38 @@
 <div class="row"><strong>Durchschnittliche Fehlversuche pro Thema</strong><span class="pill">x: Themen · y: Ø Fehlversuche (14.05)</span></div>
 </div>
 <div class="chart-wrap"><canvas height="260" id="topicChart"></canvas></div>
-</section><section class="card">
-<div class="row" style="justify-content:space-between">
-<div class="row"><strong>Letzte korrekte Antwort je Aufgabe (21.05)</strong></div>
-<div class="small muted" id="activeInfo21"></div>
-<div class="row"><label class="small" for="studentSel21">Schüler (21.05):</label><select id="studentSel21"></select></div></div>
-<div style="overflow:auto;border:1px solid #1f2a4d;border-radius:12px;margin-top:10px">
-<table class="table" id="tbl-lasttrue-per-task-21">
-<thead><tr><th class="center">#</th><th>Aufgabe – Vorschau</th><th class="right">Anzahl Schüler</th><th class="right">Prozent</th></tr></thead>
-<tbody></tbody>
-<tfoot><tr class="foot"><td class="right" colspan="2">Summe</td><td class="right" id="sumLastTrueCount21">0</td><td class="right" id="sumLastTruePct21">—</td></tr></tfoot>
-</table>
-</div>
-</section><section class="card">
+</section>
+
+<section class="card">
+  <div class="row" style="justify-content:space-between">
+    <div class="row"><strong>Fortschritt (kompakt) – 21.05</strong></div>
+    <div class="small muted" id="activeInfo21"></div>
+    <div class="row">
+      <label class="small" for="studentSel21">Schüler (21.05):</label>
+      <select id="studentSel21"></select>
+    </div>
+  </div>
+
+  <div style="overflow:auto;border:1px solid #1f2a4d;border-radius:12px;margin-top:10px">
+    <table class="table" id="tbl-progress-compact-21">
+      <thead>
+        <tr>
+          <th class="right">Fortschritt</th>
+          <th class="right">Anzahl Schüler</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <tfoot>
+        <tr class="foot">
+          <td class="right">Aktive Schüler</td>
+          <td class="right" id="activeCount21">0</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</section>
+
+<section class="card">
 <div class="row" style="justify-content:space-between">
 <div class="row"><strong>Fehlversuche pro Aufgabe (21.05)</strong></div>
 <div class="small muted">Basis: Aufgabenfolge des gewählten Schülers (21.05)</div>
@@ -131,6 +169,8 @@
 <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
+  const TOTAL_TASKS_14 = 32;
+  const TOTAL_TASKS_21 = 57;
   // ===== Firebase Init =====
   const firebaseConfig = {
     apiKey: "AIzaSyB-_wWnWQp4ErY0bNEgZFbxsA9gCm0OJek",
@@ -330,13 +370,13 @@
   }
 
   // ---------- Render Helpers 14.05 ----------
-  function renderAll(studentId){
-    renderSequence(studentId);
-    renderErrorsForCurrentSequence(studentId);
-    renderTopicChart(studentId);
-    renderLastTrueDistribution(studentId);
-  }
-
+function renderAll(studentId){
+  renderSequence(studentId);
+  renderErrorsForCurrentSequence(studentId);
+  renderTopicChart(studentId);
+  // ALT: renderLastTrueDistribution(studentId);
+  renderProgressCompact14(); // NEU
+}
   function getUniqueCorrectTasksFor(studentId){
     const items = _allDocs.filter(r => r.id === studentId && r.korrekt).sort((a,b)=> a.ts - b.ts);
     const seen = new Set(); const uniqueTasks = [];
@@ -428,13 +468,66 @@
     sumCountEl.textContent = String(sum);
     sumPctEl.textContent = activeCount ? `${((sum/activeCount)*100).toFixed(1)}%` : '—';
   }
+  // längste einmalige (korrekte) Aufgabenfolge im Zeitraum 14.05
+function buildLongestSequenceKeys14(){
+  let best = [];
+  for (const id of _activeStudents) {
+    const seq = getUniqueCorrectTasksFor(id); // existiert bereits
+    if (seq.length > best.length) best = seq;
+  }
+  return best.map(t => t.key); // Array von keys in Reihenfolge
+}
+
+// Kompakte Tabelle: "x % : y Schüler" (14.05)
+function renderProgressCompact14(){
+  const tbody = document.querySelector('#tbl-progress-compact-14 tbody');
+  const activeInfo = document.getElementById('activeInfo');
+  const activeCountEl = document.getElementById('activeCount14');
+  tbody.innerHTML = '';
+
+  const activeCount = _activeStudents.size;
+  activeInfo.textContent = `Aktive Schüler (14.05): ${activeCount}`;
+  activeCountEl.textContent = String(activeCount);
+
+  // Index-Abbildung per längster Schüler-Sequenz
+  const longestKeys = buildLongestSequenceKeys14();
+  const indexByKey = new Map(longestKeys.map((k, i) => [k, i + 1])); // 1..N
+
+  // letzte korrekte pro Schüler -> Index zählen
+  const countsByIndex = new Map();
+  for (const id of _activeStudents) {
+    const rec = _latest.get(id);          // wird in run() befüllt
+    if (!rec) continue;
+    const num = indexByKey.get(rec.key);  // Position der letzten Aufgabe
+    if (!num) continue;                   // Task kommt evtl. nicht in longestKeys vor
+    countsByIndex.set(num, (countsByIndex.get(num) || 0) + 1);
+  }
+
+  // Zeilen: Prozent = floor( num / 32 * 100 ), nur Indizes mit >=1 Schüler
+  const rows = Array.from(countsByIndex.entries())
+    .map(([num, cnt]) => ({ pct: Math.floor((num / TOTAL_TASKS_14) * 100), cnt }))
+    .sort((a, b) => b.pct - a.pct);
+
+  if (rows.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="2" class="center small">Keine Endstationen im Zeitraum.</td></tr>`;
+    return;
+  }
+
+  for (const r of rows) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td class="right">${r.pct} %</td><td class="right">${r.cnt} Schüler</td>`;
+    tbody.appendChild(tr);
+  }
+}
 
   // ---------- Render Helpers 21.05 ----------
-  function renderAll21(studentId){
-    renderSequence21(studentId);
-    renderErrorsForCurrentSequence21(studentId);
-    renderLastTrueDistribution21(studentId);
-  }
+function renderAll21(studentId){
+  renderSequence21(studentId);
+  renderErrorsForCurrentSequence21(studentId);
+  // ALT: renderLastTrueDistribution21(studentId);
+  renderProgressCompact21(); // NEU
+}
+
 
   function getUniqueCorrectTasksFor21(studentId){
     const items = _allDocs21.filter(r => r.id === studentId && r.korrekt).sort((a,b)=> a.ts - b.ts);
@@ -497,6 +590,58 @@
     sumCountEl.textContent = String(sum);
     sumPctEl.textContent = activeCount ? `${((sum/activeCount)*100).toFixed(1)}%` : '—';
   }
+  // längste einmalige (korrekte) Aufgabenfolge im Zeitraum 21.05
+function buildLongestSequenceKeys21(){
+  let best = [];
+  for (const id of _activeStudents21) {
+    const seq = getUniqueCorrectTasksFor21(id);
+    if (seq.length > best.length) best = seq;
+  }
+  return best.map(t => t.key); // Array von keys in Reihenfolge
+}
+
+// Kompakte Tabelle: "x % : y Schüler" (21.05)
+function renderProgressCompact21(){
+  const tbody = document.querySelector('#tbl-progress-compact-21 tbody');
+  const activeInfo = document.getElementById('activeInfo21');
+  const activeCountEl = document.getElementById('activeCount21');
+  tbody.innerHTML = '';
+
+  const activeCount = _activeStudents21.size;
+  activeInfo.textContent = `Aktive Schüler (21.05): ${activeCount}`;
+  activeCountEl.textContent = String(activeCount);
+
+  // Index-Abbildung per längster Schüler-Sequenz (liefert 1..N)
+  const longestKeys = buildLongestSequenceKeys21();
+  const indexByKey = new Map(longestKeys.map((k, i) => [k, i + 1]));
+
+  // letzte korrekte pro Schüler -> Index zählen
+  const countsByIndex = new Map();
+  for (const id of _activeStudents21) {
+    const rec = _latest21.get(id);     // in runSecond() befüllt
+    if (!rec) continue;
+    const num = indexByKey.get(rec.key);
+    if (!num) continue;                 // falls Task nicht in longestKeys
+    countsByIndex.set(num, (countsByIndex.get(num) || 0) + 1);
+  }
+
+  // Prozent = floor( num / 57 * 100 ), nur Einträge mit >= 1 Schüler
+  const rows = Array.from(countsByIndex.entries())
+    .map(([num, cnt]) => ({ pct: Math.floor((num / TOTAL_TASKS_21) * 100), cnt }))
+    .sort((a, b) => b.pct - a.pct);
+
+  if (rows.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="2" class="center small">Keine Endstationen im Zeitraum.</td></tr>`;
+    return;
+  }
+
+  for (const r of rows) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td class="right">${r.pct} %</td><td class="right">${r.cnt} Schüler</td>`;
+    tbody.appendChild(tr);
+  }
+}
+
 
   // ===== Zusatz-Utilities & Charts (21.05) =====
   function buildFalseCountsByKey21(){
