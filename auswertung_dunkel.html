@@ -10,26 +10,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
     :root{
-  --bg:#ffffff;
-  --card:#f5f5f5;
-  --muted:#555555;
-  --text:#000000;
-}
+      --bg:#ffffff;
+      --card:#f5f5f5;
+      --muted:#555555;
+      --text:#000000;
+    }
     *{box-sizing:border-box}
     body{
-  margin:0;
-  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-  background:#ffffff;
-  color:var(--text);
-}
-    header{display:flex;align-items:center;gap:12px;padding:18px 22px;border-bottom:1px solid #ddd;background:#ffffff;}
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:#ffffff;
+      color:var(--text);
+    }
+    header{display:flex;align-items:center;gap:12px;padding:18px 22px;border-bottom:1px solid #1f2a4d;background:rgba(11,16,32,.8);backdrop-filter:blur(6px)}
     h1{font-size:18px;margin:0}
     .meta{font-size:12px;color:var(--muted)}
     main{padding:22px;max-width:1200px;margin:0 auto;display:grid;gap:18px}
-    .card{background:#f9f9f9;border:1px solid #1f2a4d;border-radius:14px;padding:16px}
-    .table{width:100%;border-collapse:collapse;border:1px solid #1f2a4d;border-radius:12px;overflow:hidden}
-    .table th,.table td{border-bottom:1px solid #1f2a4d;padding:8px 10px;text-align:left;font-size:13px}
-    .table th{background:#f0f0f0;color:var(--muted);font-weight:600}
+    .card{background:#f9f9f9;border:1px solid #ddd;}
+    .table th{background:#f0f0f0;color:#333;}
+    .table td{border-bottom:1px solid #ddd;}
+    header{background:#ffffff;border-bottom:1px solid #ddd;}
+    .chart-wrap{background:#ffffff;border:1px solid #ddd;}
     .nowrap{white-space:nowrap}
     .muted{color:var(--muted)}
     .badge{display:inline-block;padding:2px 8px;border:1px solid #2a3869;border-radius:999px;font-size:11px;color:var(--muted)}
@@ -41,8 +42,8 @@
     .small{font-size:12px;color:var(--muted)}
     .right{text-align:right}
     .center{text-align:center}
-    .foot{background:#f0f0f0;font-weight:600;color:#000;}
-    .chart-wrap{background:#ffffff;border:1px solid #1f2a4d;border-radius:12px;padding:12px}
+    .foot{background:#0f1731;font-weight:600}
+    .chart-wrap{background:#0f1731;border:1px solid #1f2a4d;border-radius:12px;padding:12px}
     canvas{max-width:100%; display:block;}
   </style>
 </head>
